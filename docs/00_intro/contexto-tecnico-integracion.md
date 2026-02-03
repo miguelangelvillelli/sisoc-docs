@@ -8,6 +8,7 @@
 
 ## Contexto
 SISOC ya existe como aplicación web para técnicos del Programa, con:
+
 - Base de datos existente (**MySQL**) con información de comedores/espacios
 - Backoffice existente (**Django**) que opera sobre esa base y concentra la lógica operativa
 
@@ -16,6 +17,7 @@ El MVP de app móvil para espacios comunitarios se implementa como una **extensi
 ## Principio clave
 La app móvil **no accede directo a la base MySQL**.
 Todo consumo y escritura se realiza mediante el **backoffice Django (API)** para garantizar:
+
 - RBAC real (del lado servidor)
 - Auditoría y trazabilidad
 - Validaciones y estados coherentes
@@ -24,6 +26,7 @@ Todo consumo y escritura se realiza mediante el **backoffice Django (API)** para
 
 ## Estrategia de integración (v0)
 - Exponer endpoints específicos (DRF u otra capa API en Django) para el MVP:
+- 
   - lectura (información institucional, prestación alimentaria, listados)
   - escritura controlada (nóminas, rendiciones) según permisos
 - Reutilizar tablas existentes donde aplique.
@@ -34,6 +37,7 @@ Todo consumo y escritura se realiza mediante el **backoffice Django (API)** para
 ## Compatibilidad y migraciones
 - Evitar cambios destructivos en tablas existentes.
 - Si se requieren agregados, preferir:
+  
   - tablas nuevas relacionadas
   - vistas SQL (MySQL VIEW) para lecturas optimizadas
   - índices para búsquedas críticas
