@@ -34,11 +34,11 @@ Este documento está orientado a destrabar decisiones por sprint (qué nos bloqu
 
 **Salida esperada**
 - Decisión: **JWT vs Session** (y por qué).
-- Endpoints necesarios:
-    - `POST /auth/login` (si aplica)
-    - `POST /auth/refresh` (si aplica)
-    - `GET /me`
-- Definición de **roles reales** y cómo se vinculan a permisos (RBAC).
+  - Endpoints necesarios:
+      - `POST /auth/login` (si aplica)
+      - `POST /auth/refresh` (si aplica)
+      - `GET /me`
+  - Definición de **roles reales** y cómo se vinculan a permisos (RBAC).
 
 ---
 
