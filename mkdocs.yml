@@ -102,3 +102,11 @@ nav:
       - ADR-0001 · Alcance MVP: adr/ADR-0001-alcance-mvp.md
       - ADR-0002 · Usuario organización: adr/ADR-0002-usuario-organizacion.md
       - ADR-0003 · Integración SISOC existente: adr/ADR-0003-integracion-sisoc-existente.md
+      - ADR-0004 · Auth móvil: adr/ADR-0004-auth-movil.md
+      - ADR-0005 · Storage archivos: adr/ADR-0005-storage-archivos.md
+      - ADR-0006 · Estrategia integración módulos: adr/ADR-0006-estrategia-integracion-modulos.md
+
+  - REUNIONES:
+      - Reunión · 2026-02-04: reuniones/reunion-2026-02-04-ux.md
+      - Reunión · 2026-02-06: reuniones/reunion-2026-02-06-analistas.md
+      
