@@ -644,6 +644,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#-exponer-endpoints-especificos-drf-u-otra-capa-api-en-django-para-el-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      - Exponer endpoints específicos (DRF u otra capa API en Django) para el MVP:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#compatibilidad-y-migraciones" class="md-nav__link">
     <span class="md-ellipsis">
       Compatibilidad y migraciones
@@ -2083,6 +2092,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#-exponer-endpoints-especificos-drf-u-otra-capa-api-en-django-para-el-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      - Exponer endpoints específicos (DRF u otra capa API en Django) para el MVP:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#compatibilidad-y-migraciones" class="md-nav__link">
     <span class="md-ellipsis">
       Compatibilidad y migraciones
@@ -2127,21 +2145,25 @@
 <strong>Nivel:</strong> Interno</p>
 </div>
 <h2 id="contexto">Contexto<a class="headerlink" href="#contexto" title="Permanent link">&para;</a></h2>
-<p>SISOC ya existe como aplicación web para técnicos del Programa, con:
-- Base de datos existente (<strong>MySQL</strong>) con información de comedores/espacios
-- Backoffice existente (<strong>Django</strong>) que opera sobre esa base y concentra la lógica operativa</p>
+<p>SISOC ya existe como aplicación web para técnicos del Programa, con:</p>
+<ul>
+<li>Base de datos existente (<strong>MySQL</strong>) con información de comedores/espacios</li>
+<li>Backoffice existente (<strong>Django</strong>) que opera sobre esa base y concentra la lógica operativa</li>
+</ul>
 <p>El MVP de app móvil para espacios comunitarios se implementa como una <strong>extensión</strong> del ecosistema SISOC.</p>
 <h2 id="principio-clave">Principio clave<a class="headerlink" href="#principio-clave" title="Permanent link">&para;</a></h2>
 <p>La app móvil <strong>no accede directo a la base MySQL</strong>.
-Todo consumo y escritura se realiza mediante el <strong>backoffice Django (API)</strong> para garantizar:
-- RBAC real (del lado servidor)
-- Auditoría y trazabilidad
-- Validaciones y estados coherentes
-- Control de performance (paginación, filtros, caché)
-- Evolución sin romper clientes</p>
-<h2 id="estrategia-de-integracion-v0">Estrategia de integración (v0)<a class="headerlink" href="#estrategia-de-integracion-v0" title="Permanent link">&para;</a></h2>
+Todo consumo y escritura se realiza mediante el <strong>backoffice Django (API)</strong> para garantizar:</p>
 <ul>
-<li>Exponer endpoints específicos (DRF u otra capa API en Django) para el MVP:</li>
+<li>RBAC real (del lado servidor)</li>
+<li>Auditoría y trazabilidad</li>
+<li>Validaciones y estados coherentes</li>
+<li>Control de performance (paginación, filtros, caché)</li>
+<li>Evolución sin romper clientes</li>
+</ul>
+<h2 id="estrategia-de-integracion-v0">Estrategia de integración (v0)<a class="headerlink" href="#estrategia-de-integracion-v0" title="Permanent link">&para;</a></h2>
+<h2 id="-exponer-endpoints-especificos-drf-u-otra-capa-api-en-django-para-el-mvp">- Exponer endpoints específicos (DRF u otra capa API en Django) para el MVP:<a class="headerlink" href="#-exponer-endpoints-especificos-drf-u-otra-capa-api-en-django-para-el-mvp" title="Permanent link">&para;</a></h2>
+<ul>
 <li>lectura (información institucional, prestación alimentaria, listados)</li>
 <li>escritura controlada (nóminas, rendiciones) según permisos</li>
 <li>Reutilizar tablas existentes donde aplique.</li>
@@ -2152,8 +2174,12 @@ Todo consumo y escritura se realiza mediante el <strong>backoffice Django (API)<
 <h2 id="compatibilidad-y-migraciones">Compatibilidad y migraciones<a class="headerlink" href="#compatibilidad-y-migraciones" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Evitar cambios destructivos en tablas existentes.</li>
-<li>Si se requieren agregados, preferir:</li>
-<li>tablas nuevas relacionadas</li>
+<li>
+<p>Si se requieren agregados, preferir:</p>
+</li>
+<li>
+<p>tablas nuevas relacionadas</p>
+</li>
 <li>vistas SQL (MySQL VIEW) para lecturas optimizadas</li>
 <li>índices para búsquedas críticas</li>
 </ul>
