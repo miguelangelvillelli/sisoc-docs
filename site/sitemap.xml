@@ -148,4 +148,28 @@
          <loc>https://miguelangelvillelli.github.io/sisoc-docs/adr/ADR-0003-integracion-sisoc-existente/</loc>
          <lastmod>2026-02-03</lastmod>
     </url>
+    <url>
+         <loc>https://miguelangelvillelli.github.io/sisoc-docs/adr/ADR-0004-autenticacion/</loc>
+         <lastmod>2026-02-03</lastmod>
+    </url>
+    <url>
+         <loc>https://miguelangelvillelli.github.io/sisoc-docs/adr/ADR-0005-storage/</loc>
+         <lastmod>2026-02-03</lastmod>
+    </url>
+    <url>
+         <loc>https://miguelangelvillelli.github.io/sisoc-docs/adr/ADR-0006-estrategia-integracion/</loc>
+         <lastmod>2026-02-03</lastmod>
+    </url>
+    <url>
+         <loc>https://miguelangelvillelli.github.io/sisoc-docs/adr/ADR-000X-modelo-adr/</loc>
+         <lastmod>2026-02-03</lastmod>
+    </url>
+    <url>
+         <loc>https://miguelangelvillelli.github.io/sisoc-docs/reuniones/reunion-2026-02-04-ux/</loc>
+         <lastmod>2026-02-03</lastmod>
+    </url>
+    <url>
+         <loc>https://miguelangelvillelli.github.io/sisoc-docs/reuniones/reunion-2026-02-06-analistas/</loc>
+         <lastmod>2026-02-03</lastmod>
+    </url>
 </urlset>
