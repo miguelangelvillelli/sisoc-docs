@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#plan-de-sprints-mvp-app-movil-legajo-de-espacio" class="md-skip">
+        <a href="#plan-de-sprints-mvp-app-movil-sisoc-legajo-de-espacio" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -844,18 +844,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#supuestos-de-trabajo" class="md-nav__link">
+  <a href="#supuestos-a-confirmar" class="md-nav__link">
     <span class="md-ellipsis">
-      Supuestos de trabajo
+      Supuestos (a confirmar)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#definicion-de-done-dod-para-todos-los-sprints" class="md-nav__link">
+  <a href="#definicion-de-done-por-sprint-regla" class="md-nav__link">
     <span class="md-ellipsis">
-      Definición de Done (DoD) para todos los sprints
+      Definición de “Done” por sprint (regla)
     </span>
   </a>
   
@@ -1814,18 +1814,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#supuestos-de-trabajo" class="md-nav__link">
+  <a href="#supuestos-a-confirmar" class="md-nav__link">
     <span class="md-ellipsis">
-      Supuestos de trabajo
+      Supuestos (a confirmar)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#definicion-de-done-dod-para-todos-los-sprints" class="md-nav__link">
+  <a href="#definicion-de-done-por-sprint-regla" class="md-nav__link">
     <span class="md-ellipsis">
-      Definición de Done (DoD) para todos los sprints
+      Definición de “Done” por sprint (regla)
     </span>
   </a>
   
@@ -1849,222 +1849,265 @@
   
 
 
-<h1 id="plan-de-sprints-mvp-app-movil-legajo-de-espacio">Plan de Sprints — MVP App móvil (Legajo de Espacio)<a class="headerlink" href="#plan-de-sprints-mvp-app-movil-legajo-de-espacio" title="Permanent link">&para;</a></h1>
+<h1 id="plan-de-sprints-mvp-app-movil-sisoc-legajo-de-espacio">Plan de Sprints — MVP App móvil (SISOC · Legajo de Espacio)<a class="headerlink" href="#plan-de-sprints-mvp-app-movil-sisoc-legajo-de-espacio" title="Permanent link">&para;</a></h1>
 <div class="admonition info">
 <p class="admonition-title">Estado</p>
 <p><strong>Versión:</strong> v0.1<br />
 <strong>Última actualización:</strong> 2026-02-03<br />
-<strong>Responsable:</strong> PLAN_Vibe / ARQ_Nav / QA_Test<br />
+<strong>Responsable:</strong> PLAN_Vibe / DEV_Impl / QA_Test<br />
 <strong>Nivel:</strong> Interno</p>
 </div>
 <h2 id="objetivo">Objetivo<a class="headerlink" href="#objetivo" title="Permanent link">&para;</a></h2>
-<p>Ejecutar el MVP por iteraciones cortas, priorizando:
-- flujo end-to-end funcional,
-- integración segura con SISOC (Django + MySQL) vía API,
-- RBAC server-side,
-- QA smoke desde el Sprint 1.</p>
-<h2 id="supuestos-de-trabajo">Supuestos de trabajo<a class="headerlink" href="#supuestos-de-trabajo" title="Permanent link">&para;</a></h2>
+<p>Planificar la entrega del MVP en sprints cortos, priorizando:
+- integración no destructiva con SISOC existente (MySQL + Django),
+- contratos claros (API v0),
+- prototipos UX como guía,
+- QA smoke por incremento.</p>
+<blockquote>
+<p>Nota: la duración sugerida es <strong>1 semana por sprint</strong>. Si el equipo decide 2 semanas, los contenidos se mantienen y se ajusta la granularidad.</p>
+</blockquote>
+<hr />
+<h2 id="supuestos-a-confirmar">Supuestos (a confirmar)<a class="headerlink" href="#supuestos-a-confirmar" title="Permanent link">&para;</a></h2>
 <ul>
-<li>SISOC existente: backoffice Django + base MySQL (fuente de verdad).</li>
-<li>La app móvil consume <strong>solo API</strong>, nunca MySQL directo.</li>
-<li>La autenticación queda “placeholder” hasta reunión, pero se implementa el esqueleto.</li>
-<li>Cada sprint deja algo usable (aunque sea con datos mínimos o mock).</li>
-</ul>
-<h2 id="definicion-de-done-dod-para-todos-los-sprints">Definición de Done (DoD) para todos los sprints<a class="headerlink" href="#definicion-de-done-dod-para-todos-los-sprints" title="Permanent link">&para;</a></h2>
-<ul>
-<li>RBAC aplicado server-side y probado con al menos 2 roles.</li>
-<li>Estados UI cubiertos: vacío / sin datos / sin permiso / error red.</li>
-<li>Errores con mensajes claros (no técnicos).</li>
-<li>Logs/auditoría mínima en backend para acciones relevantes (cuando aplique).</li>
-<li>QA Smoke actualizado y pasado (ver <code>06_calidad/plan-qa-smoke.md</code>).</li>
-<li>Documentación actualizada (pantallas + contratos API si cambian).</li>
+<li>La app móvil <strong>no accede directo a MySQL</strong>: todo via API Django.</li>
+<li>Se implementa RBAC server-side según <code>02_roles_y_accesos/rbac.md</code>.</li>
+<li>Los estados de dominio se alinean a <code>04_datos/catalogos.md</code>.</li>
+<li>Prototipos UX en Figma: <code>08_wireflows/pantallas-mvp.md</code> y <code>ui-data-contracts.md</code>.</li>
+<li>La autenticación queda definida en reunión con equipo SISOC.</li>
 </ul>
 <hr />
-<h1 id="sprint-0-setup-acuerdos-de-integracion-rapido-pero-critico">Sprint 0 — Setup + acuerdos de integración (rápido pero crítico)<a class="headerlink" href="#sprint-0-setup-acuerdos-de-integracion-rapido-pero-critico" title="Permanent link">&para;</a></h1>
-<h2 id="objetivo_1">Objetivo<a class="headerlink" href="#objetivo_1" title="Permanent link">&para;</a></h2>
-<p>Dejar el proyecto listo para desarrollar sin fricción y llegar a reunión SISOC con preguntas cerradas.</p>
-<h2 id="entregables">Entregables<a class="headerlink" href="#entregables" title="Permanent link">&para;</a></h2>
+<h2 id="definicion-de-done-por-sprint-regla">Definición de “Done” por sprint (regla)<a class="headerlink" href="#definicion-de-done-por-sprint-regla" title="Permanent link">&para;</a></h2>
+<p>Un ítem se considera Done cuando:
+- está implementado (backend + mobile cuando aplica),
+- tiene validación de permisos,
+- está testeado con smoke (ver <code>06_calidad/plan-qa-smoke.md</code>),
+- queda documentado (pantalla / endpoint / reglas si cambió algo).</p>
+<hr />
+<h1 id="sprint-0-alineacion-base-tecnica-y-decisiones-setup">Sprint 0 — Alineación, base técnica y decisiones (Setup)<a class="headerlink" href="#sprint-0-alineacion-base-tecnica-y-decisiones-setup" title="Permanent link">&para;</a></h1>
+<p><strong>Objetivo:</strong> dejar el equipo listo para construir sin bloqueos.</p>
+<h3 id="entregables">Entregables<a class="headerlink" href="#entregables" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Repo/estructura docs + MkDocs funcionando (listo).</li>
-<li>Contratos API v0 en borrador y lista de endpoints del MVP.</li>
-<li>Preguntas de reunión SISOC completas y priorizadas.</li>
-<li>Decisión preliminar: <strong>Auth Opción A (JWT)</strong> como default (confirmable).</li>
+<li>Repo + MkDocs publicado y actualizado.</li>
+<li>Prototipo low-fi navegable (mínimo) para el MVP.</li>
+<li>Decisiones cerradas: <code>space_id</code>, auth, existencia de módulos (nómina/rendiciones/documentos/mensajes).</li>
+<li>Contratos API v0 ajustados con nombres reales SISOC.</li>
 </ul>
-<h2 id="tareas">Tareas<a class="headerlink" href="#tareas" title="Permanent link">&para;</a></h2>
+<h3 id="user-stories-tareas">User stories / tareas<a class="headerlink" href="#user-stories-tareas" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Confirmar con SISOC:</li>
-<li>Auth (JWT/session), login/refresh</li>
-<li>IDs reales (space_id/person_id/claim_id)</li>
-<li>existencia de módulos (nómina/rendiciones/documentos/mensajes)</li>
-<li>storage de archivos (descarga/URL firmada)</li>
-<li>Alinear catálogos de estados reales (prestación/rendiciones).</li>
-<li>Definir entorno dev: URL base API + CORS + versionado <code>/api/mobile/v1/</code>.</li>
+<li>Como equipo, queremos confirmar <strong>la entidad Espacio</strong> (tabla/modelo + <code>space_id</code>) para asegurar integración estable.</li>
+<li>Como equipo, queremos definir <strong>auth</strong> (JWT vs Session) para habilitar login y sesión móvil.</li>
+<li>Como backend, quiero definir estructura <code>api/mobile/v1/</code> para estandarizar endpoints.</li>
+<li>Como QA, quiero acordar dataset y usuarios de prueba para repetir smoke.</li>
 </ul>
-<h2 id="criterio-de-salida">Criterio de salida<a class="headerlink" href="#criterio-de-salida" title="Permanent link">&para;</a></h2>
+<h3 id="criterios-de-aceptacion">Criterios de aceptación<a class="headerlink" href="#criterios-de-aceptacion" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Quedan “cerradas” las incógnitas principales o documentadas como pendientes con owner y fecha.</li>
+<li>Existe documento de decisiones (ADR-0003 actualizado si aplica).</li>
+<li>El contrato <code>05_api/contratos-v0.md</code> refleja nombres reales confirmados.</li>
+<li>Existe ambiente o estrategia de testing (staging o datos controlados).</li>
 </ul>
 <hr />
-<h1 id="sprint-1-app-usable-acceso-home-info-institucional-mensajes">Sprint 1 — “App usable” (Acceso + Home + Info institucional + Mensajes)<a class="headerlink" href="#sprint-1-app-usable-acceso-home-info-institucional-mensajes" title="Permanent link">&para;</a></h1>
-<h2 id="objetivo_2">Objetivo<a class="headerlink" href="#objetivo_2" title="Permanent link">&para;</a></h2>
-<p>Que el espacio pueda entrar, elegir espacio si aplica, navegar, ver perfil institucional y leer mensajes.</p>
-<h2 id="historias-referencia">Historias (referencia)<a class="headerlink" href="#historias-referencia" title="Permanent link">&para;</a></h2>
+<h1 id="sprint-1-acceso-contexto-home-hub">Sprint 1 — Acceso + Contexto + Home (Hub)<a class="headerlink" href="#sprint-1-acceso-contexto-home-hub" title="Permanent link">&para;</a></h1>
+<p><strong>Objetivo:</strong> habilitar uso real de la app: entrar, resolver alcance y navegar.</p>
+<h3 id="alcance-funcional-pantallas">Alcance funcional (pantallas)<a class="headerlink" href="#alcance-funcional-pantallas" title="Permanent link">&para;</a></h3>
 <ul>
-<li>US-0001 / US-0002 (contexto y selector)</li>
-<li>US-0101 (Home)</li>
-<li>US-0201 / US-0202 / US-0203 (perfil + docs)</li>
-<li>US-0301 / US-0302 (mensajes)</li>
+<li>Login / Acceso (placeholder si auth aún en definición final)</li>
+<li>Selector de espacio (si multi-espacio)</li>
+<li>Home (Hub)</li>
 </ul>
-<h2 id="backendapi">Backend/API<a class="headerlink" href="#backendapi" title="Permanent link">&para;</a></h2>
+<h3 id="user-stories">User stories<a class="headerlink" href="#user-stories" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>GET /me</code> (contexto)</li>
+<li>Como usuario, quiero <strong>iniciar sesión</strong> para acceder a la app.</li>
+<li>Como usuario con más de un espacio, quiero <strong>seleccionar el espacio</strong> a operar.</li>
+<li>Como usuario, quiero ver un <strong>Home</strong> con accesos a los módulos habilitados por mi rol.</li>
+</ul>
+<h3 id="contratos-api-referencia">Contratos API (referencia)<a class="headerlink" href="#contratos-api-referencia" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>GET /me</code></li>
+<li>(si aplica) <code>POST /auth/login</code>, <code>POST /auth/refresh</code> (placeholder a confirmar)</li>
+</ul>
+<h3 id="criterios-de-aceptacion_1">Criterios de aceptación<a class="headerlink" href="#criterios-de-aceptacion_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>RBAC aplicado: un usuario sin espacio ve mensaje “no asignado”.</li>
+<li>Si multi-espacio, selector aparece y guarda última elección.</li>
+<li>Home muestra módulos según permisos (ocultar o deshabilitar definido por UX).</li>
+</ul>
+<h3 id="qa-smoke-minimo">QA smoke (mínimo)<a class="headerlink" href="#qa-smoke-minimo" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Login OK / login inválido</li>
+<li>Usuario sin espacios</li>
+<li>Usuario con 1 espacio / con varios</li>
+</ul>
+<hr />
+<h1 id="sprint-2-informacion-institucional-documentos-mensajes">Sprint 2 — Información institucional + Documentos + Mensajes<a class="headerlink" href="#sprint-2-informacion-institucional-documentos-mensajes" title="Permanent link">&para;</a></h1>
+<p><strong>Objetivo:</strong> entregar “valor inmediato” (consulta) con datos de SISOC.</p>
+<h3 id="alcance-funcional-pantallas_1">Alcance funcional (pantallas)<a class="headerlink" href="#alcance-funcional-pantallas_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Perfil del espacio</li>
+<li>Documentos (lista) + Documento (detalle/descarga)</li>
+<li>Mensajes (lista) + Mensaje (detalle)</li>
+</ul>
+<h3 id="user-stories_1">User stories<a class="headerlink" href="#user-stories_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Como usuario, quiero ver el <strong>perfil del espacio</strong> para conocer mi información institucional.</li>
+<li>Como usuario, quiero consultar <strong>documentos y convenios</strong> asociados al espacio.</li>
+<li>Como usuario, quiero leer <strong>mensajes operativos</strong> del programa para estar al día.</li>
+</ul>
+<h3 id="contratos-api-referencia_1">Contratos API (referencia)<a class="headerlink" href="#contratos-api-referencia_1" title="Permanent link">&para;</a></h3>
+<ul>
 <li><code>GET /spaces/{space_id}/profile</code></li>
 <li><code>GET /spaces/{space_id}/documents</code></li>
-<li><code>GET /spaces/{space_id}/messages</code></li>
+<li><code>GET /spaces/{space_id}/messages?page&amp;page_size</code></li>
 </ul>
-<h2 id="front-movil-pantallas">Front móvil (pantallas)<a class="headerlink" href="#front-movil-pantallas" title="Permanent link">&para;</a></h2>
+<h3 id="criterios-de-aceptacion_2">Criterios de aceptación<a class="headerlink" href="#criterios-de-aceptacion_2" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Login/Acceso (si aplica) + manejo de sesión</li>
-<li>Selector de espacio (si aplica)</li>
-<li>Home (hub)</li>
-<li>Perfil del espacio</li>
-<li>Documentos (lista + abrir/descargar)</li>
-<li>Mensajes (lista + detalle)</li>
+<li>Soporta “sin datos” y “vacío” con mensajes claros.</li>
+<li>Descarga/visualización de documentos funciona (definición según storage).</li>
+<li>Paginación en mensajes.</li>
 </ul>
-<h2 id="qa-smoke-sprint-1">QA Smoke (Sprint 1)<a class="headerlink" href="#qa-smoke-sprint-1" title="Permanent link">&para;</a></h2>
+<h3 id="qa-smoke-minimo_1">QA smoke (mínimo)<a class="headerlink" href="#qa-smoke-minimo_1" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Acceso OK / sin espacios / multi-espacio</li>
-<li>Perfil carga OK / sin datos</li>
-<li>Documentos: lista / vacío / descarga error</li>
-<li>Mensajes: lista / vacío / detalle</li>
-</ul>
-<h2 id="criterio-de-salida_1">Criterio de salida<a class="headerlink" href="#criterio-de-salida_1" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Usuario real (o de prueba) entra y navega end-to-end.</li>
-<li>Documentos y mensajes visibles con estados UI correctos.</li>
-<li>RBAC aplicado al menos en lectura (403 controlado).</li>
+<li>Perfil OK / sin datos / 404</li>
+<li>Documentos vacío</li>
+<li>Mensajes paginados</li>
 </ul>
 <hr />
-<h1 id="sprint-2-nomina-listado-alta-rapida-edicion-basica">Sprint 2 — Nómina (listado + alta rápida + edición básica)<a class="headerlink" href="#sprint-2-nomina-listado-alta-rapida-edicion-basica" title="Permanent link">&para;</a></h1>
-<h2 id="objetivo_3">Objetivo<a class="headerlink" href="#objetivo_3" title="Permanent link">&para;</a></h2>
-<p>Que el espacio gestione su nómina mínima desde el celular.</p>
-<h2 id="historias">Historias<a class="headerlink" href="#historias" title="Permanent link">&para;</a></h2>
+<h1 id="sprint-3-nomina-crud-minimo-validaciones-opcional-csv">Sprint 3 — Nómina (CRUD mínimo + validaciones + opcional CSV)<a class="headerlink" href="#sprint-3-nomina-crud-minimo-validaciones-opcional-csv" title="Permanent link">&para;</a></h1>
+<p><strong>Objetivo:</strong> habilitar gestión mínima de personas.</p>
+<h3 id="alcance-funcional-pantallas_2">Alcance funcional (pantallas)<a class="headerlink" href="#alcance-funcional-pantallas_2" title="Permanent link">&para;</a></h3>
 <ul>
-<li>US-0401 (lista + búsqueda + filtros)</li>
-<li>US-0402 (detalle)</li>
-<li>US-0403 (alta rápida)</li>
-<li>US-0404 (editar)</li>
-<li>US-0405 (activar/desactivar)</li>
-<li>US-0406 (CSV) <strong>solo si aplica</strong> (si no, mensaje “solo web”).</li>
+<li>Nómina: lista + búsqueda + filtros</li>
+<li>Persona: detalle</li>
+<li>Persona: alta rápida</li>
+<li>Persona: edición</li>
+<li>Importación CSV (solo si se habilita en MVP móvil)</li>
 </ul>
-<h2 id="backendapi_1">Backend/API<a class="headerlink" href="#backendapi_1" title="Permanent link">&para;</a></h2>
+<h3 id="user-stories_2">User stories<a class="headerlink" href="#user-stories_2" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>GET /spaces/{space_id}/people</code></li>
+<li>Como usuario, quiero ver la <strong>lista de personas</strong> de mi espacio con búsqueda/filtros.</li>
+<li>Como usuario, quiero dar de alta una persona con <strong>nombre y apellido</strong> como mínimo.</li>
+<li>Como usuario, quiero editar datos y activar/desactivar una persona según permisos.</li>
+<li>Como referente (opcional), quiero importar un CSV para carga masiva.</li>
+</ul>
+<h3 id="contratos-api-referencia_2">Contratos API (referencia)<a class="headerlink" href="#contratos-api-referencia_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>GET /spaces/{space_id}/people?q&amp;active&amp;page&amp;page_size</code></li>
 <li><code>POST /spaces/{space_id}/people</code></li>
 <li><code>PATCH /spaces/{space_id}/people/{person_id}</code></li>
-<li><code>POST /spaces/{space_id}/people/import</code> (si aplica)</li>
+<li><code>POST /spaces/{space_id}/people/import</code> (opcional)</li>
 </ul>
-<h2 id="qa-smoke-sprint-2">QA Smoke (Sprint 2)<a class="headerlink" href="#qa-smoke-sprint-2" title="Permanent link">&para;</a></h2>
+<h3 id="criterios-de-aceptacion_3">Criterios de aceptación<a class="headerlink" href="#criterios-de-aceptacion_3" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Lista con paginación + búsqueda</li>
-<li>Alta rápida valida campos obligatorios</li>
-<li>Duplicado probable (warning/409) manejado</li>
-<li>Editar y activar/desactivar con permisos</li>
+<li>Validaciones 400 con mensajes por campo.</li>
+<li>Manejo de duplicado probable (409 o warning).</li>
+<li>Auditoría mínima para create/update/status-change.</li>
 </ul>
-<h2 id="criterio-de-salida_2">Criterio de salida<a class="headerlink" href="#criterio-de-salida_2" title="Permanent link">&para;</a></h2>
+<h3 id="qa-smoke-minimo_2">QA smoke (mínimo)<a class="headerlink" href="#qa-smoke-minimo_2" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Se puede crear y editar personas sin fricción.</li>
-<li>Los roles restringen acciones (403).</li>
-<li>Estados UI y errores están cubiertos.</li>
+<li>Alta rápida OK / validación</li>
+<li>Búsqueda + filtros</li>
+<li>Editar OK</li>
 </ul>
 <hr />
-<h1 id="sprint-3-rendiciones-listar-adjuntar-presentar">Sprint 3 — Rendiciones (listar + adjuntar + presentar)<a class="headerlink" href="#sprint-3-rendiciones-listar-adjuntar-presentar" title="Permanent link">&para;</a></h1>
-<h2 id="objetivo_4">Objetivo<a class="headerlink" href="#objetivo_4" title="Permanent link">&para;</a></h2>
-<p>Que el espacio pueda ver rendiciones, adjuntar comprobantes y presentar.</p>
-<h2 id="historias_1">Historias<a class="headerlink" href="#historias_1" title="Permanent link">&para;</a></h2>
+<h1 id="sprint-4-rendiciones-listadetalleadjuntarpresentar-archivos">Sprint 4 — Rendiciones (lista/detalle/adjuntar/presentar) + archivos<a class="headerlink" href="#sprint-4-rendiciones-listadetalleadjuntarpresentar-archivos" title="Permanent link">&para;</a></h1>
+<p><strong>Objetivo:</strong> permitir ciclo mínimo de rendición desde el espacio.</p>
+<h3 id="alcance-funcional-pantallas_3">Alcance funcional (pantallas)<a class="headerlink" href="#alcance-funcional-pantallas_3" title="Permanent link">&para;</a></h3>
 <ul>
-<li>US-0601 (lista)</li>
-<li>US-0602 (detalle)</li>
-<li>US-0603 (adjuntar comprobante)</li>
-<li>US-0604 (presentar)</li>
+<li>Rendiciones: lista</li>
+<li>Rendición: detalle</li>
+<li>Adjuntar comprobante</li>
+<li>Presentar rendición (confirmación)</li>
 </ul>
-<h2 id="backendapi_2">Backend/API<a class="headerlink" href="#backendapi_2" title="Permanent link">&para;</a></h2>
+<h3 id="user-stories_3">User stories<a class="headerlink" href="#user-stories_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Como usuario, quiero ver mis rendiciones por período y su estado.</li>
+<li>Como usuario, quiero adjuntar comprobantes (pdf/jpg/png) con reglas de tamaño.</li>
+<li>Como referente, quiero presentar una rendición cuando tenga al menos 1 comprobante.</li>
+</ul>
+<h3 id="contratos-api-referencia_3">Contratos API (referencia)<a class="headerlink" href="#contratos-api-referencia_3" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>GET /spaces/{space_id}/accounting/claims</code></li>
 <li><code>GET /spaces/{space_id}/accounting/claims/{claim_id}</code></li>
 <li><code>POST /spaces/{space_id}/accounting/claims/{claim_id}/attachments</code></li>
 <li><code>POST /spaces/{space_id}/accounting/claims/{claim_id}/submit</code></li>
 </ul>
-<h2 id="reglas-clave">Reglas clave<a class="headerlink" href="#reglas-clave" title="Permanent link">&para;</a></h2>
+<h3 id="criterios-de-aceptacion_4">Criterios de aceptación<a class="headerlink" href="#criterios-de-aceptacion_4" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Tamaño y tipo de archivo (pdf/jpg/png, límite definido).</li>
-<li>Presentar solo si:</li>
-<li>rol habilitado (referente)</li>
-<li>al menos 1 comprobante</li>
-<li>Estado de rendición se refleja en lista y detalle.</li>
+<li>RBAC: solo referente puede “presentar”.</li>
+<li>Validaciones: tamaño/tipo archivo, mínimo 1 adjunto.</li>
+<li>Estado y observaciones se muestran correctamente.</li>
+<li>URLs de descarga/preview (si aplica) definidas.</li>
 </ul>
-<h2 id="qa-smoke-sprint-3">QA Smoke (Sprint 3)<a class="headerlink" href="#qa-smoke-sprint-3" title="Permanent link">&para;</a></h2>
+<h3 id="qa-smoke-minimo_3">QA smoke (mínimo)<a class="headerlink" href="#qa-smoke-minimo_3" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Adjuntar archivo válido / inválido / demasiado grande</li>
-<li>Presentar con adjuntos OK</li>
-<li>Presentar sin adjuntos → error claro</li>
-<li>Sin permiso → 403 controlado</li>
-</ul>
-<h2 id="criterio-de-salida_3">Criterio de salida<a class="headerlink" href="#criterio-de-salida_3" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Un referente puede completar el circuito de rendición desde la app.</li>
-<li>El sistema es estable y auditable (mínimo).</li>
+<li>Adjuntar archivo válido / inválido</li>
+<li>Presentar sin adjuntos (400)</li>
+<li>Presentar con rol no referente (403)</li>
 </ul>
 <hr />
-<h1 id="sprint-4-prestacion-alimentaria-solo-lectura-hardening">Sprint 4 — Prestación alimentaria (solo lectura) + hardening<a class="headerlink" href="#sprint-4-prestacion-alimentaria-solo-lectura-hardening" title="Permanent link">&para;</a></h1>
-<h2 id="objetivo_5">Objetivo<a class="headerlink" href="#objetivo_5" title="Permanent link">&para;</a></h2>
-<p>Cerrar el MVP con prestación (solo lectura) y mejoras de calidad/performance.</p>
-<h2 id="historias_2">Historias<a class="headerlink" href="#historias_2" title="Permanent link">&para;</a></h2>
+<h1 id="sprint-5-formacion-actividades-participantes-prestacion-lectura">Sprint 5 — Formación (actividades + participantes) + Prestación (lectura)<a class="headerlink" href="#sprint-5-formacion-actividades-participantes-prestacion-lectura" title="Permanent link">&para;</a></h1>
+<p><strong>Objetivo:</strong> cerrar módulos restantes del MVP.</p>
+<h3 id="alcance-funcional-pantallas_4">Alcance funcional (pantallas)<a class="headerlink" href="#alcance-funcional-pantallas_4" title="Permanent link">&para;</a></h3>
 <ul>
-<li>US-0501 (estado actual)</li>
-<li>US-0502 (historial)</li>
+<li>Formación: lista + crear/editar + participantes</li>
+<li>Prestación alimentaria: estado actual + historial + detalle período</li>
 </ul>
-<h2 id="backendapi_3">Backend/API<a class="headerlink" href="#backendapi_3" title="Permanent link">&para;</a></h2>
+<h3 id="user-stories_4">User stories<a class="headerlink" href="#user-stories_4" title="Permanent link">&para;</a></h3>
 <ul>
+<li>Como usuario, quiero registrar actividades de formación del espacio.</li>
+<li>Como usuario, quiero gestionar participantes de una actividad a partir de la nómina.</li>
+<li>Como usuario, quiero ver el estado de la prestación alimentaria y observaciones (solo lectura).</li>
+</ul>
+<h3 id="contratos-api-referencia_4">Contratos API (referencia)<a class="headerlink" href="#contratos-api-referencia_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>GET /spaces/{space_id}/training</code></li>
+<li><code>POST /spaces/{space_id}/training</code></li>
+<li><code>PATCH /spaces/{space_id}/training/{activity_id}</code></li>
+<li><code>POST /spaces/{space_id}/training/{activity_id}/participants</code></li>
+<li><code>DELETE /spaces/{space_id}/training/{activity_id}/participants/{person_id}</code></li>
 <li><code>GET /spaces/{space_id}/benefit</code></li>
 <li><code>GET /spaces/{space_id}/benefit/{period}</code></li>
 </ul>
-<h2 id="hardening">Hardening<a class="headerlink" href="#hardening" title="Permanent link">&para;</a></h2>
+<h3 id="criterios-de-aceptacion_5">Criterios de aceptación<a class="headerlink" href="#criterios-de-aceptacion_5" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Paginación y performance (índices/queries)</li>
-<li>Caching simple si aplica (server-side)</li>
-<li>Telemetría mínima (logs + métricas básicas)</li>
-<li>Ajustes UX (mensajes, vacíos, reintentos)</li>
+<li>Solo se edita actividad si <code>status=planificada</code>.</li>
+<li>Participantes se agregan desde nómina con manejo de duplicados.</li>
+<li>Prestación: mostrar <code>sin_datos</code> sin romper UX.</li>
 </ul>
-<h2 id="qa-smoke-sprint-4">QA Smoke (Sprint 4)<a class="headerlink" href="#qa-smoke-sprint-4" title="Permanent link">&para;</a></h2>
+<h3 id="qa-smoke-minimo_4">QA smoke (mínimo)<a class="headerlink" href="#qa-smoke-minimo_4" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Beneficio con datos / sin datos / error backend</li>
-<li>Historial OK / vacío</li>
-<li>Reintentos por red</li>
-</ul>
-<h2 id="criterio-de-salida_4">Criterio de salida<a class="headerlink" href="#criterio-de-salida_4" title="Permanent link">&para;</a></h2>
-<ul>
-<li>MVP completo con módulos principales funcionando y documentados.</li>
+<li>Crear actividad / editar / cambiar estado</li>
+<li>Agregar/quitar participante</li>
+<li>Prestación sin datos / con datos</li>
 </ul>
 <hr />
-<h1 id="sprint-5-opcional-formacion-si-entra-en-alcance">Sprint 5 (Opcional) — Formación (si entra en alcance)<a class="headerlink" href="#sprint-5-opcional-formacion-si-entra-en-alcance" title="Permanent link">&para;</a></h1>
-<p>Si se decide incluir Formación en MVP:
-- US-0701 (lista)
-- US-0702 (crear/editar)
-- US-0703 (participantes)</p>
-<p>Caso contrario: queda en roadmap post-MVP.</p>
-<hr />
-<h2 id="pendientes-para-reunion-sisoc-bloqueantes-de-planificacion-fina">Pendientes para reunión SISOC (bloqueantes de planificación fina)<a class="headerlink" href="#pendientes-para-reunion-sisoc-bloqueantes-de-planificacion-fina" title="Permanent link">&para;</a></h2>
+<h1 id="sprint-6-hardening-performance-auditoria-seguridad-ux-polish">Sprint 6 — Hardening (performance, auditoría, seguridad, UX polish)<a class="headerlink" href="#sprint-6-hardening-performance-auditoria-seguridad-ux-polish" title="Permanent link">&para;</a></h1>
+<p><strong>Objetivo:</strong> estabilizar para piloto.</p>
+<h3 id="alcances">Alcances<a class="headerlink" href="#alcances" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Auth definitivo (JWT/session) y endpoint de login/refresh.</li>
-<li>Modelos reales de:</li>
-<li>documentos (storage)</li>
-<li>mensajes</li>
-<li>nómina</li>
-<li>rendiciones</li>
-<li>prestación alimentaria</li>
-<li>Catálogo real de estados y mapeos.</li>
-<li>Volúmenes esperados (performance + paginación).</li>
+<li>Paginación consistente + límites</li>
+<li>Caché donde aplique (si existe Redis)</li>
+<li>Auditoría completa mínima (eventos clave)</li>
+<li>Manejo de errores unificado</li>
+<li>Ajustes UX (estados, textos, accesibilidad)</li>
+<li>Revisión seguridad (RBAC, validación server-side, archivos)</li>
+</ul>
+<h3 id="criterios-de-aceptacion_6">Criterios de aceptación<a class="headerlink" href="#criterios-de-aceptacion_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Smoke completo pasa end-to-end en ambiente de prueba.</li>
+<li>Checklist de seguridad y performance mínimo aprobado.</li>
+<li>Documentación final actualizada (contratos + catálogos + decisiones).</li>
+</ul>
+<hr />
+<h2 id="dependencias-externas-para-gestionar">Dependencias externas (para gestionar)<a class="headerlink" href="#dependencias-externas-para-gestionar" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Confirmación SISOC: auth, modelos existentes, storage, estados reales.</li>
+<li>UX: prototipos navegables y componentes base.</li>
+<li>Datos de prueba y usuarios por rol.</li>
+</ul>
+<h2 id="proximos-pasos-inmediatos">Próximos pasos inmediatos<a class="headerlink" href="#proximos-pasos-inmediatos" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Mañana: reunión UX → entregar prototipo navegable + estados UI.</li>
+<li>Viernes: reunión técnica → cerrar decisiones + ajustar contratos API v0 → arrancar Sprint 1.</li>
 </ul>
 
 
