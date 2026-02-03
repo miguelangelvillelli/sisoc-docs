@@ -28,6 +28,7 @@ Planificar la entrega del MVP en sprints cortos, priorizando:
 
 ## Definición de “Done” por sprint (regla)
 Un ítem se considera Done cuando:
+
 - está implementado (backend + mobile cuando aplica),
 - tiene validación de permisos,
 - está testeado con smoke (ver `06_calidad/plan-qa-smoke.md`),
