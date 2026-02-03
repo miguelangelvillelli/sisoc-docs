@@ -1,0 +1,5091 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentación funcional y operativa del MVP para espacios comunitarios.">
+      
+      
+        <meta name="author" content="Equipo SISOC">
+      
+      
+        <link rel="canonical" href="https://miguelangelvillelli.github.io/sisoc-docs/reuniones/analisis-equipo-roles-proyecto/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.33">
+    
+    
+      
+        <title>Análisis Multi-Rol del Proyecto SISOC MVP - SISOC · Legajo de Espacio (MVP)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#analisis-multi-rol-del-proyecto-sisoc-mvp" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="SISOC · Legajo de Espacio (MVP)" class="md-header__button md-logo" aria-label="SISOC · Legajo de Espacio (MVP)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SISOC · Legajo de Espacio (MVP)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Análisis Multi-Rol del Proyecto SISOC MVP
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/miguelangelvillelli/sisoc-docs" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sisoc/docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../00_intro/proposito-alcance/" class="md-tabs__link">
+          
+  
+  00 · Introducción
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../01_mvp/alcance-mvp/" class="md-tabs__link">
+          
+  
+  01 · MVP
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../02_roles_y_accesos/rbac/" class="md-tabs__link">
+          
+  
+  02 · Roles y accesos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../03_modulos/informacion-institucional/" class="md-tabs__link">
+          
+  
+  03 · Módulos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../04_datos/modelo-conceptual/" class="md-tabs__link">
+          
+  
+  04 · Datos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../05_api/contratos-v0/" class="md-tabs__link">
+          
+  
+  05 · API
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../06_calidad/criterios-aceptacion/" class="md-tabs__link">
+          
+  
+  06 · Calidad
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../07_seguridad/baseline/" class="md-tabs__link">
+          
+  
+  07 · Seguridad
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../08_wireflows/" class="md-tabs__link">
+          
+  
+  08 · Wireflows
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../adr/ADR-0001-alcance-mvp/" class="md-tabs__link">
+          
+  
+  ADR
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../reunion-2026-02-04-ux/" class="md-tabs__link">
+          
+  
+  REUNIONES
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SISOC · Legajo de Espacio (MVP)" class="md-nav__button md-logo" aria-label="SISOC · Legajo de Espacio (MVP)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    SISOC · Legajo de Espacio (MVP)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/miguelangelvillelli/sisoc-docs" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sisoc/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    00 · Introducción
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            00 · Introducción
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00_intro/proposito-alcance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Propósito y alcance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00_intro/contexto-tecnico-integracion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contexto técnico e integración
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00_intro/preguntas-reunion-sisoc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preguntas para reunión SISOC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00_intro/minuta-reunion-sisoc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Minuta reunión SISOC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00_intro/principios-mvp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Principios del MVP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00_intro/glosario/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glosario
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    01 · MVP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            01 · MVP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_mvp/alcance-mvp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alcance MVP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_mvp/fuera-de-alcance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fuera de alcance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_mvp/roadmap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Roadmap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_mvp/user-stories-mvp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User stories MVP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_mvp/plan-sprints/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plan de sprints
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_mvp/mvp-one-pager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MVP One Pager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_mvp/stack-tecnologico-mvp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Stack tecnológico
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    02 · Roles y accesos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            02 · Roles y accesos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_roles_y_accesos/rbac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RBAC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_roles_y_accesos/auditoria-trazabilidad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Auditoría y trazabilidad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    03 · Módulos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            03 · Módulos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_modulos/informacion-institucional/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Información institucional
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_modulos/nominas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nóminas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_modulos/prestacion-alimentaria/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prestación alimentaria
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_modulos/formacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Formación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_modulos/rendiciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rendiciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    04 · Datos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            04 · Datos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_datos/modelo-conceptual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo conceptual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_datos/estados-y-reglas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estados y reglas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_datos/importacion-csv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Importación CSV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_datos/catalogos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Catálogos y estados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    05 · API
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            05 · API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05_api/contratos-v0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contratos v0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    06 · Calidad
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            06 · Calidad
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_calidad/criterios-aceptacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Criterios de aceptación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_calidad/plan-qa-smoke/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plan QA smoke
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    07 · Seguridad
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            07 · Seguridad
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07_seguridad/baseline/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Baseline
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    08 · Wireflows
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            08 · Wireflows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08_wireflows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mapa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08_wireflows/wireflow-mvp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wireflow MVP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08_wireflows/pantallas-mvp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pantallas MVP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08_wireflows/estados-ui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estados UI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08_wireflows/navigation-map/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mapa navegación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08_wireflows/ui-data-contracts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI Data Contracts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ADR
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            ADR
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adr/ADR-0001-alcance-mvp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ADR-0001 · Alcance MVP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adr/ADR-0002-usuario-organizacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ADR-0002 · Usuario organización
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adr/ADR-0003-integracion-sisoc-existente/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ADR-0003 · Integración SISOC existente
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adr/ADR-0004-auth-movil/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ADR-0004 · Auth móvil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adr/ADR-0005-storage-archivos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ADR-0005 · Storage archivos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adr/ADR-0006-estrategia-integracion-modulos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ADR-0006 · Estrategia integración módulos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    REUNIONES
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            REUNIONES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reunion-2026-02-04-ux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reunión · 2026-02-04
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reunion-2026-02-06-analistas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reunión · 2026-02-06
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-ejecutivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resumen ejecutivo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-plan_vibe-orquestador-de-sesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1️⃣ PLAN_Vibe — Orquestador de Sesión
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1️⃣ PLAN_Vibe — Orquestador de Sesión">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opinion-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Opinión general
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propuesta-de-planificacion-iteracion-por-valor" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Propuesta de planificación (iteración por valor)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Propuesta de planificación (iteración por valor)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sprint-0-fundacion-2-semanas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint 0 — Fundación (2 semanas)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprint-1-acceso-contexto-2-semanas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint 1 — Acceso + Contexto (2 semanas)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprint-2-informacion-institucional-mensajes-2-semanas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint 2 — Información institucional + Mensajes (2 semanas)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprint-3-nominas-lectura-alta-basica-2-semanas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint 3 — Nóminas (lectura + alta básica) (2 semanas)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprint-4-prestacion-alimentaria-formacion-2-semanas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint 4 — Prestación alimentaria + Formación (2 semanas)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprint-5-rendiciones-2-semanas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint 5 — Rendiciones (2 semanas)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprint-6-pulido-qa-final-1-2-semanas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint 6 — Pulido + QA final (1-2 semanas)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estrategia-de-iteracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Estrategia de iteración
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-arq_nav-arquitecto-navegador" class="md-nav__link">
+    <span class="md-ellipsis">
+      2️⃣ ARQ_Nav — Arquitecto Navegador
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2️⃣ ARQ_Nav — Arquitecto Navegador">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opinion-general_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏗️ Opinión general
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plan-arquitectonico-c4-propuesta" class="md-nav__link">
+    <span class="md-ellipsis">
+      📐 Plan arquitectónico (C4 - propuesta)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📐 Plan arquitectónico (C4 - propuesta)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nivel-1-contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nivel 1 — Contexto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nivel-2-containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nivel 2 — Containers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nivel-3-componentes-clave-backend-django" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nivel 3 — Componentes clave (Backend Django)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decisiones-arquitectonicas-criticas-para-sprint-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Decisiones arquitectónicas críticas (para Sprint 0)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Decisiones arquitectónicas críticas (para Sprint 0)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-autenticacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Autenticación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-storage-de-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Storage de archivos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-schema-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Schema extensión
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-api-contract" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. API contract
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#riesgos-tecnicos-y-mitigaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔥 Riesgos técnicos y mitigaciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interfaces-y-contratos-criticos-para-dev_impl" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Interfaces y contratos críticos (para DEV_Impl)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-db_model-especialista-en-modelo-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3️⃣ DB_Model — Especialista en Modelo de Datos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3️⃣ DB_Model — Especialista en Modelo de Datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opinion-general_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🗄️ Opinión general
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propuesta-de-modelo-extension-sisoc-existente" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Propuesta de modelo (extensión SISOC existente)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Propuesta de modelo (extensión SISOC existente)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entidades-nuevas-sugeridas-si-no-existen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entidades nuevas sugeridas (si no existen)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entidades nuevas sugeridas (si no existen)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usuarioespacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      UsuarioEspacio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#persona-nomina" class="md-nav__link">
+    <span class="md-ellipsis">
+      Persona (Nómina)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actividadformacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      ActividadFormacion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actividadparticipante-tabla-intermedia" class="md-nav__link">
+    <span class="md-ellipsis">
+      ActividadParticipante (tabla intermedia)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rendicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rendicion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprobante" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprobante
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auditevent-auditoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      AuditEvent (auditoría)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indices-criticos-para-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Índices críticos (para performance)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hot-spots-y-metricas-para-perf_tune" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔥 Hot spots y métricas (para PERF_Tune)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migraciones-estrategia" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Migraciones (estrategia)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-dev_impl-implementador-guiado" class="md-nav__link">
+    <span class="md-ellipsis">
+      4️⃣ DEV_Impl — Implementador Guiado
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4️⃣ DEV_Impl — Implementador Guiado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opinion-general_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 Opinión general
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propuesta-de-stack-tecnico" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Propuesta de stack técnico
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Propuesta de stack técnico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backend-django" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backend (Django)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mobile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mobile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cicd" class="md-nav__link">
+    <span class="md-ellipsis">
+      CI/CD
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-repo-sugerida" class="md-nav__link">
+    <span class="md-ellipsis">
+      📂 Estructura de repo sugerida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementacion-por-sprint-detalle-tecnico" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Implementación por sprint (detalle técnico)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Implementación por sprint (detalle técnico)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sprint-0-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint 0 — Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprint-1-acceso-contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint 1 — Acceso + Contexto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprint-2-informacion-institucional-mensajes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint 2 — Información institucional + Mensajes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprint-3-nominas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint 3 — Nóminas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprint-4-prestacion-formacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint 4 — Prestación + Formación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprint-5-rendiciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint 5 — Rendiciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprint-6-pulido-qa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint 6 — Pulido + QA
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estandares-de-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      📏 Estándares de código
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📏 Estándares de código">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backend-pythondjango" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backend (Python/Django)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mobile-javascripttypescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mobile (JavaScript/TypeScript)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-qa_test-pruebas-y-calidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      5️⃣ QA_Test — Pruebas y Calidad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5️⃣ QA_Test — Pruebas y Calidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opinion-general_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Opinión general
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estrategia-de-testing-por-capa" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Estrategia de testing (por capa)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Estrategia de testing (por capa)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-tests-unitarios-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Tests unitarios (backend)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-tests-de-integracion-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Tests de integración (backend)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-tests-e2e-mobile" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Tests E2E (mobile)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-smoke-tests-manual-plan-qa" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Smoke tests (manual) — Plan QA
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cobertura-objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Cobertura objetivo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estrategia-de-bugs" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Estrategia de bugs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-sec_shield-seguridad-aplicada" class="md-nav__link">
+    <span class="md-ellipsis">
+      6️⃣ SEC_Shield — Seguridad Aplicada
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6️⃣ SEC_Shield — Seguridad Aplicada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opinion-general_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔒 Opinión general
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#baseline-de-seguridad-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛡️ Baseline de seguridad (MVP)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛡️ Baseline de seguridad (MVP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-autenticacion-y-autorizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Autenticación y autorización
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-validacion-de-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Validación de inputs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-manejo-de-secretos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Manejo de secretos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-https-y-cors" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. HTTPS y CORS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-rate-limiting" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Rate limiting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-logs-y-monitoreo" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Logs y monitoreo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checklist-owasp-top-10-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Checklist OWASP Top 10 (MVP)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-ui_ux-frontend-y-accesibilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      7️⃣ UI_UX — Frontend y Accesibilidad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7️⃣ UI_UX — Frontend y Accesibilidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opinion-general_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 Opinión general
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propuesta-de-design-system-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      📱 Propuesta de design system (MVP)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📱 Propuesta de design system (MVP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-libreria-de-componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Librería de componentes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-paleta-de-colores-sugerencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Paleta de colores (sugerencia)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-tipografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Tipografía
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-estados-ui-criticos" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Estados UI (críticos)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Estados UI (críticos)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loading
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#empty-vacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Empty (vacío)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sin-permiso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sin permiso
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-navegacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Navegación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Navegación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    <span class="md-ellipsis">
+      Header:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-formularios-mobile-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Formularios (mobile-first)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-carga-de-archivos-critico-para-rendiciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Carga de archivos (crítico para Rendiciones)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-accesibilidad-wcag-21-aa-basico-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Accesibilidad (WCAG 2.1 AA — básico MVP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-microcopys-ux-writing" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Microcopys (UX writing)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-fix_bug-cazador-de-errores" class="md-nav__link">
+    <span class="md-ellipsis">
+      8️⃣ FIX_Bug — Cazador de Errores
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8️⃣ FIX_Bug — Cazador de Errores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opinion-general_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Opinión general
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propuesta-de-workflow-de-bugs" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Propuesta de workflow de bugs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Propuesta de workflow de bugs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-reproduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Reproducción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-captura-de-contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Captura de contexto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-causa-raiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Causa raíz
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-parche-minimo" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Parche mínimo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-verificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Verificación
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bugs-comunes-anticipados-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔥 Bugs comunes anticipados (MVP)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-perf_tune-desempeno" class="md-nav__link">
+    <span class="md-ellipsis">
+      9️⃣ PERF_Tune — Desempeño
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9️⃣ PERF_Tune — Desempeño">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opinion-general_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚡ Opinión general
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hot-spots-anticipados" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Hot spots anticipados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Hot spots anticipados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Backend
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-mobile" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Mobile
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metricas-objetivo-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Métricas objetivo (MVP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimizaciones-sprint-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Optimizaciones Sprint 6
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docs_scribe-documentacion-viva" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔟 DOCS_Scribe — Documentación Viva
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔟 DOCS_Scribe — Documentación Viva">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opinion-general_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Opinión general
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentacion-a-crear-sprint-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Documentación a crear (Sprint 0)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Documentación a crear (Sprint 0)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-readmemd-root" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. README.md (root)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mobile_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mobile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contribuir" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contribuir
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      License
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="License">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-changelogmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. CHANGELOG.md
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-api-documentation-swaggeropenapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. API Documentation (Swagger/OpenAPI)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-runbooks-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Runbooks (troubleshooting)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-access-denied-for-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error: "Access denied for user"
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobile_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mobile
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mobile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#error-unable-to-resolve-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error: "Unable to resolve module"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#app-no-se-conecta-a-api-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      App no se conecta a API local
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plan-de-accion-consolidado" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Plan de Acción Consolidado
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Plan de Acción Consolidado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hitos-criticos-roadmap-ejecutivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Hitos críticos (roadmap ejecutivo)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependencias-criticas-sprint-0-bloqueantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Dependencias críticas (Sprint 0 — bloqueantes)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proximos-pasos-inmediatos-semana-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Próximos pasos inmediatos (semana 1)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion-del-equipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      💬 Conclusión del equipo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💬 Conclusión del equipo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fortalezas-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Fortalezas del proyecto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#riesgos-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Riesgos principales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recomendaciones-finales" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Recomendaciones finales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="analisis-multi-rol-del-proyecto-sisoc-mvp">Análisis Multi-Rol del Proyecto SISOC MVP<a class="headerlink" href="#analisis-multi-rol-del-proyecto-sisoc-mvp" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Documento de análisis</p>
+<p><strong>Fecha:</strong> 2026-02-04<br />
+<strong>Responsable:</strong> Equipo completo SISOC<br />
+<strong>Estado:</strong> Documento de análisis y planificación inicial<br />
+<strong>Nivel:</strong> Interno</p>
+</div>
+<hr />
+<h2 id="resumen-ejecutivo">Resumen ejecutivo<a class="headerlink" href="#resumen-ejecutivo" title="Permanent link">&para;</a></h2>
+<p>Después de revisar toda la documentación del proyecto SISOC (Legajo de Espacio - MVP), cada rol del equipo ha analizado el proyecto desde su perspectiva especializada. Este documento consolida el análisis, observaciones críticas y planificación propuesta por cada rol.</p>
+<p><strong>Proyecto:</strong> Sistema móvil (app) para espacios comunitarios que gestionen información institucional, nóminas, prestación alimentaria, formación y rendiciones, consumiendo backend Django + MySQL existente (SISOC).</p>
+<p><strong>Contexto:</strong> MVP mobile-first para generar valor rápido en territorio, con enfoque en usabilidad, seguridad y trazabilidad.</p>
+<hr />
+<h2 id="1-plan_vibe-orquestador-de-sesion">1️⃣ PLAN_Vibe — Orquestador de Sesión<a class="headerlink" href="#1-plan_vibe-orquestador-de-sesion" title="Permanent link">&para;</a></h2>
+<h3 id="opinion-general">🎯 Opinión general<a class="headerlink" href="#opinion-general" title="Permanent link">&para;</a></h3>
+<p>Este proyecto está <strong>bien estructurado</strong> desde la planificación inicial:
+- Alcance MVP claro con ADR de decisiones
+- User stories con criterios BDD bien definidos
+- Roadmap por horizontes evitando feature creep
+- Documentación viva (MkDocs) como single source of truth</p>
+<p><strong>Riesgos identificados:</strong>
+1. <strong>Dependencias externas no confirmadas</strong>: integración con SISOC existente (schema real, endpoints, autenticación)
+2. <strong>Ambigüedad en "Prestación alimentaria"</strong>: solo visualización vs carga mínima
+3. <strong>Usuario organización</strong>: concepto propuesto pero sin decisión firme
+4. <strong>Storage de archivos</strong>: sin estrategia definida (filesystem/S3/otro)</p>
+<h3 id="propuesta-de-planificacion-iteracion-por-valor">📋 Propuesta de planificación (iteración por valor)<a class="headerlink" href="#propuesta-de-planificacion-iteracion-por-valor" title="Permanent link">&para;</a></h3>
+<h4 id="sprint-0-fundacion-2-semanas"><strong>Sprint 0 — Fundación (2 semanas)</strong><a class="headerlink" href="#sprint-0-fundacion-2-semanas" title="Permanent link">&para;</a></h4>
+<p><strong>Objetivo:</strong> Resolver dependencias críticas y establecer base técnica.</p>
+<p><strong>Hitos:</strong>
+- ✅ Reunión técnica con equipo SISOC: confirmar schema, endpoints reales, autenticación
+- ✅ Definir estrategia de storage (ADR-0005)
+- ✅ Setup de entorno dev (repo, CI/CD mínimo, linting, tests)
+- ✅ Diseño de arquitectura C4 (contexto + containers + componentes)
+- ✅ Spike técnico: API Django + mobile (React Native/Flutter) + autenticación JWT
+- ✅ Setup de auditoría base (log events)</p>
+<p><strong>Entregables:</strong>
+- ADR actualizados con decisiones confirmadas
+- Diagrama arquitectónico
+- Repo con estructura base funcional
+- Ambiente de desarrollo listo</p>
+<hr />
+<h4 id="sprint-1-acceso-contexto-2-semanas"><strong>Sprint 1 — Acceso + Contexto (2 semanas)</strong><a class="headerlink" href="#sprint-1-acceso-contexto-2-semanas" title="Permanent link">&para;</a></h4>
+<p><strong>Objetivo:</strong> Usuario se autentica, ve su contexto y accede al Home.</p>
+<p><strong>Features:</strong>
+- US-0001: Ver contexto usuario (<code>GET /me</code>)
+- US-0002: Selector de espacio (si multi-espacio)
+- US-0101: Home con navegación a módulos
+- Setup de RBAC base (middleware/decoradores)</p>
+<p><strong>Criterio de éxito:</strong>
+- Usuario autentica → ve su espacio → navega a Home → ve módulos disponibles</p>
+<hr />
+<h4 id="sprint-2-informacion-institucional-mensajes-2-semanas"><strong>Sprint 2 — Información institucional + Mensajes (2 semanas)</strong><a class="headerlink" href="#sprint-2-informacion-institucional-mensajes-2-semanas" title="Permanent link">&para;</a></h4>
+<p><strong>Objetivo:</strong> Valor visible mínimo (consulta).</p>
+<p><strong>Features:</strong>
+- US-0201: Ver perfil del espacio
+- US-0202: Listar documentos
+- US-0203: Abrir/descargar documento
+- US-0301: Listar mensajes operativos
+- US-0302: Ver detalle mensaje</p>
+<p><strong>Criterio de éxito:</strong>
+- Usuario ve información básica del espacio y accede a documentos institucionales</p>
+<hr />
+<h4 id="sprint-3-nominas-lectura-alta-basica-2-semanas"><strong>Sprint 3 — Nóminas (lectura + alta básica) (2 semanas)</strong><a class="headerlink" href="#sprint-3-nominas-lectura-alta-basica-2-semanas" title="Permanent link">&para;</a></h4>
+<p><strong>Objetivo:</strong> Primera funcionalidad de gestión (alta/edición).</p>
+<p><strong>Features:</strong>
+- US-0401: Listar nómina con búsqueda y filtros
+- US-0402: Ver detalle persona
+- US-0403: Alta rápida persona
+- US-0404: Editar persona
+- Auditoría: <code>persona_create</code>, <code>persona_update</code></p>
+<p><strong>Criterio de éxito:</strong>
+- Referente puede crear y editar personas desde el teléfono</p>
+<hr />
+<h4 id="sprint-4-prestacion-alimentaria-formacion-2-semanas"><strong>Sprint 4 — Prestación alimentaria + Formación (2 semanas)</strong><a class="headerlink" href="#sprint-4-prestacion-alimentaria-formacion-2-semanas" title="Permanent link">&para;</a></h4>
+<p><strong>Objetivo:</strong> Módulos de visualización + gestión liviana.</p>
+<p><strong>Features:</strong>
+- Prestación alimentaria (solo visualización):
+  - Ver estado y período
+  - Ver detalle período
+  - Historial
+- Formación:
+  - Crear actividad
+  - Asociar participantes desde nómina
+  - Ver listado y detalle</p>
+<p><strong>Criterio de éxito:</strong>
+- Usuario visualiza prestaciones y crea/gestiona actividades de formación</p>
+<hr />
+<h4 id="sprint-5-rendiciones-2-semanas"><strong>Sprint 5 — Rendiciones (2 semanas)</strong><a class="headerlink" href="#sprint-5-rendiciones-2-semanas" title="Permanent link">&para;</a></h4>
+<p><strong>Objetivo:</strong> Completar MVP funcional.</p>
+<p><strong>Features:</strong>
+- Crear rendición (borrador)
+- Adjuntar comprobantes
+- Presentar rendición
+- Ver observaciones y responder</p>
+<p><strong>Criterio de éxito:</strong>
+- Referente puede presentar rendición completa con comprobantes desde móvil</p>
+<hr />
+<h4 id="sprint-6-pulido-qa-final-1-2-semanas"><strong>Sprint 6 — Pulido + QA final (1-2 semanas)</strong><a class="headerlink" href="#sprint-6-pulido-qa-final-1-2-semanas" title="Permanent link">&para;</a></h4>
+<p><strong>Objetivo:</strong> UX, performance, seguridad, smoke tests.</p>
+<p><strong>Tareas:</strong>
+- Refinamiento UX (estados vacíos, errores, loading)
+- Performance (lazy loading, cache, paginación)
+- Smoke tests (plan QA)
+- Revisión de seguridad (SEC_Shield)
+- Deploy a ambiente de piloto</p>
+<p><strong>Criterio de éxito:</strong>
+- App lista para piloto controlado con espacios seleccionados</p>
+<hr />
+<h3 id="estrategia-de-iteracion">🔄 Estrategia de iteración<a class="headerlink" href="#estrategia-de-iteracion" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Checkpoints cada 20-40 min</strong> en sesiones de vibe coding</li>
+<li><strong>Demo al final de cada sprint</strong> con stakeholders (show &amp; tell)</li>
+<li><strong>WIP limitado</strong>: 1-2 features en paralelo máximo</li>
+<li><strong>Decisiones no resueltas</strong>: abrir ADR, escalar y no bloquear sprint</li>
+</ul>
+<hr />
+<h2 id="2-arq_nav-arquitecto-navegador">2️⃣ ARQ_Nav — Arquitecto Navegador<a class="headerlink" href="#2-arq_nav-arquitecto-navegador" title="Permanent link">&para;</a></h2>
+<h3 id="opinion-general_1">🏗️ Opinión general<a class="headerlink" href="#opinion-general_1" title="Permanent link">&para;</a></h3>
+<p>El proyecto tiene <strong>bases sólidas</strong> de arquitectura:
+- Separación clara cliente-servidor (app móvil → API Django → MySQL)
+- Decisión correcta de no acceso directo a BD desde móvil
+- Concepto de auditoría y RBAC desde el diseño</p>
+<p><strong>Alertas arquitectónicas:</strong>
+1. <strong>Falta diagrama C4</strong>: necesario para alinear al equipo
+2. <strong>Dependencia crítica no confirmada</strong>: schema real de SISOC
+3. <strong>Storage de archivos sin definir</strong>: puede ser bloqueante para rendiciones
+4. <strong>Autenticación ambigua</strong>: JWT vs Session Django</p>
+<h3 id="plan-arquitectonico-c4-propuesta">📐 Plan arquitectónico (C4 - propuesta)<a class="headerlink" href="#plan-arquitectonico-c4-propuesta" title="Permanent link">&para;</a></h3>
+<h4 id="nivel-1-contexto"><strong>Nivel 1 — Contexto</strong><a class="headerlink" href="#nivel-1-contexto" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>[Usuario Espacio] ─── usa ──→ [App Móvil SISOC]
+                                    ↓
+                              consume API
+                                    ↓
+                            [Backend Django SISOC]
+                                    ↓
+                            accede a datos
+                                    ↓
+                              [Base de datos MySQL]
+                                    ↓
+                            almacena archivos
+                                    ↓
+                        [Storage: S3/Filesystem]
+</code></pre></div>
+<h4 id="nivel-2-containers"><strong>Nivel 2 — Containers</strong><a class="headerlink" href="#nivel-2-containers" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>App Móvil (React Native/Flutter)</strong></li>
+<li>UI/UX + navegación</li>
+<li>Almacenamiento local mínimo (token, cache)</li>
+<li>
+<p>Comunicación vía HTTPS (API REST)</p>
+</li>
+<li>
+<p><strong>Backend Django</strong></p>
+</li>
+<li>API REST endpoints (<code>/api/mobile/v1/...</code>)</li>
+<li>RBAC (permisos por rol y alcance)</li>
+<li>Auditoría (registro de eventos)</li>
+<li>Validaciones de negocio</li>
+<li>
+<p>Integración con storage</p>
+</li>
+<li>
+<p><strong>MySQL</strong></p>
+</li>
+<li>Esquema existente SISOC + extensiones MVP</li>
+<li>Transacciones ACID</li>
+<li>
+<p>Índices en campos de búsqueda</p>
+</li>
+<li>
+<p><strong>Storage (S3 o equivalente)</strong></p>
+</li>
+<li>Archivos: documentos, comprobantes</li>
+<li>URLs firmadas con expiración</li>
+<li>Validación de tipo/tamaño</li>
+</ul>
+<h4 id="nivel-3-componentes-clave-backend-django"><strong>Nivel 3 — Componentes clave (Backend Django)</strong><a class="headerlink" href="#nivel-3-componentes-clave-backend-django" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>API Layer (views/endpoints)
+    ↓
+Business Logic (services)
+    ↓
+Data Access (models/repositories)
+    ↓
+Audit Service (event logging)
+    ↓
+RBAC Service (permissions)
+    ↓
+Storage Service (file handling)
+</code></pre></div>
+<h3 id="decisiones-arquitectonicas-criticas-para-sprint-0">🎯 Decisiones arquitectónicas críticas (para Sprint 0)<a class="headerlink" href="#decisiones-arquitectonicas-criticas-para-sprint-0" title="Permanent link">&para;</a></h3>
+<h4 id="1-autenticacion"><strong>1. Autenticación</strong><a class="headerlink" href="#1-autenticacion" title="Permanent link">&para;</a></h4>
+<p><strong>Propuesta:</strong> JWT Bearer Token
+- <strong>Pro:</strong> estándar para móvil, stateless, fácil renovación
+- <strong>Contra:</strong> requiere refresh token y manejo de expiración
+- <strong>Alternativa:</strong> Session Django (más complejo en móvil por cookies/CSRF)</p>
+<p><strong>ADR:</strong> ADR-0004 (Auth móvil) — confirmar con equipo</p>
+<h4 id="2-storage-de-archivos"><strong>2. Storage de archivos</strong><a class="headerlink" href="#2-storage-de-archivos" title="Permanent link">&para;</a></h4>
+<p><strong>Propuesta:</strong> S3 (o compatible: MinIO, Google Cloud Storage)
+- <strong>Pro:</strong> escalable, URLs firmadas, backup automático
+- <strong>Contra:</strong> costo, dependencia externa
+- <strong>Alternativa:</strong> Filesystem + Nginx (más simple, menos escalable)</p>
+<p><strong>ADR:</strong> ADR-0005 (Storage archivos) — confirmar con equipo</p>
+<h4 id="3-schema-extension"><strong>3. Schema extensión</strong><a class="headerlink" href="#3-schema-extension" title="Permanent link">&para;</a></h4>
+<p><strong>Propuesta:</strong> reutilizar máximo existente, agregar tablas solo si no existen:
+- <code>usuario_espacio</code> (si no hay relación user-space-role)
+- <code>persona</code> (nómina, si no existe)
+- <code>actividad_formacion</code> (si no existe)
+- <code>rendicion</code> + <code>comprobante</code> (si no existen)
+- <code>mensaje_operativo</code> (si no existe)
+- <code>audit_event</code> (si no existe mecanismo de auditoría)</p>
+<p><strong>ADR:</strong> ADR-0003 (Integración SISOC existente) — actualizar con decisiones reales</p>
+<h4 id="4-api-contract"><strong>4. API contract</strong><a class="headerlink" href="#4-api-contract" title="Permanent link">&para;</a></h4>
+<p><strong>Propuesta:</strong> REST + JSON, paginación estándar (<code>page</code>, <code>page_size</code>, <code>total</code>)
+- Base path: <code>/api/mobile/v1/</code>
+- Versionado explícito para evolución sin romper clientes
+- Respuestas estandarizadas (error codes, metadata)</p>
+<p><strong>Contrato:</strong> <code>05_api/contratos-v0.md</code> — confirmar endpoints reales</p>
+<hr />
+<h3 id="riesgos-tecnicos-y-mitigaciones">🔥 Riesgos técnicos y mitigaciones<a class="headerlink" href="#riesgos-tecnicos-y-mitigaciones" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Riesgo</th>
+<th>Probabilidad</th>
+<th>Impacto</th>
+<th>Mitigación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Schema SISOC no compatible</td>
+<td>Media</td>
+<td>Alto</td>
+<td>Reunión técnica Sprint 0, spike de integración</td>
+</tr>
+<tr>
+<td>Storage no definido</td>
+<td>Alta</td>
+<td>Alto</td>
+<td>Decisión en Sprint 0, priorizar S3 o equivalente</td>
+</tr>
+<tr>
+<td>Performance con nóminas grandes</td>
+<td>Media</td>
+<td>Medio</td>
+<td>Paginación, índices, lazy loading</td>
+</tr>
+<tr>
+<td>Conflictos multi-espacio</td>
+<td>Baja</td>
+<td>Medio</td>
+<td>Selector de espacio + cache de contexto</td>
+</tr>
+<tr>
+<td>Falla de red en territorio</td>
+<td>Alta</td>
+<td>Alto</td>
+<td>Mensajes claros, retry automático, validación offline (Release 2)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="interfaces-y-contratos-criticos-para-dev_impl">📊 Interfaces y contratos críticos (para DEV_Impl)<a class="headerlink" href="#interfaces-y-contratos-criticos-para-dev_impl" title="Permanent link">&para;</a></h3>
+<p><strong>Endpoints clave Sprint 0-1:</strong>
+- <code>POST /auth/login</code> → JWT token
+- <code>POST /auth/refresh</code> → nuevo token
+- <code>GET /me</code> → contexto usuario (rol + espacios)</p>
+<p><strong>Endpoints Sprint 2:</strong>
+- <code>GET /spaces/{space_id}/profile</code>
+- <code>GET /spaces/{space_id}/documents</code>
+- <code>GET /spaces/{space_id}/messages</code></p>
+<p><strong>Endpoints Sprint 3:</strong>
+- <code>GET /spaces/{space_id}/persons</code> (paginado, búsqueda, filtros)
+- <code>POST /spaces/{space_id}/persons</code>
+- <code>PUT /spaces/{space_id}/persons/{person_id}</code></p>
+<p><strong>Endpoints Sprint 4:</strong>
+- <code>GET /spaces/{space_id}/benefits</code> (prestación alimentaria)
+- <code>POST /spaces/{space_id}/activities</code> (formación)</p>
+<p><strong>Endpoints Sprint 5:</strong>
+- <code>POST /spaces/{space_id}/claims</code> (rendiciones)
+- <code>POST /spaces/{space_id}/claims/{claim_id}/attachments</code></p>
+<hr />
+<h2 id="3-db_model-especialista-en-modelo-de-datos">3️⃣ DB_Model — Especialista en Modelo de Datos<a class="headerlink" href="#3-db_model-especialista-en-modelo-de-datos" title="Permanent link">&para;</a></h2>
+<h3 id="opinion-general_2">🗄️ Opinión general<a class="headerlink" href="#opinion-general_2" title="Permanent link">&para;</a></h3>
+<p>El modelo conceptual está <strong>bien pensado</strong> para MVP:
+- Entidades claras (Espacio, Persona, Actividad, Rendición, Comprobante)
+- Relaciones simples (1:N, N:N via tabla intermedia)
+- Auditoría contemplada desde el diseño</p>
+<p><strong>Alertas de datos:</strong>
+1. <strong>Schema real desconocido</strong>: nombres de tablas, PKs, FKs reales de SISOC
+2. <strong>Índices no definidos</strong>: búsquedas por nombre/apellido/documento pueden ser lentas
+3. <strong>Sin estrategia de migraciones</strong>: forward/backward, seeds
+4. <strong>Cardinalidad no estimada</strong>: ¿cuántas personas por espacio? ¿cuántos comprobantes por rendición?</p>
+<h3 id="propuesta-de-modelo-extension-sisoc-existente">📋 Propuesta de modelo (extensión SISOC existente)<a class="headerlink" href="#propuesta-de-modelo-extension-sisoc-existente" title="Permanent link">&para;</a></h3>
+<h4 id="entidades-nuevas-sugeridas-si-no-existen"><strong>Entidades nuevas sugeridas (si no existen)</strong><a class="headerlink" href="#entidades-nuevas-sugeridas-si-no-existen" title="Permanent link">&para;</a></h4>
+<h5 id="usuarioespacio"><strong>UsuarioEspacio</strong><a class="headerlink" href="#usuarioespacio" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">usuario_espacio</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">user_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w">  </span><span class="c1">-- FK a auth_user</span>
+<span class="w">  </span><span class="n">espacio_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w">  </span><span class="c1">-- FK a espacios (existente)</span>
+<span class="w">  </span><span class="n">rol</span><span class="w"> </span><span class="n">ENUM</span><span class="p">(</span><span class="s1">&#39;referente&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;interno&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">activo</span><span class="w"> </span><span class="nb">BOOLEAN</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">TRUE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">created_at</span><span class="w"> </span><span class="n">DATETIME</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
+<span class="w">  </span><span class="n">updated_at</span><span class="w"> </span><span class="n">DATETIME</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">UPDATE</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
+<span class="w">  </span><span class="k">UNIQUE</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="w"> </span><span class="n">espacio_id</span><span class="p">),</span>
+<span class="w">  </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_user</span><span class="w"> </span><span class="p">(</span><span class="n">user_id</span><span class="p">),</span>
+<span class="w">  </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_espacio</span><span class="w"> </span><span class="p">(</span><span class="n">espacio_id</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+<h5 id="persona-nomina"><strong>Persona (Nómina)</strong><a class="headerlink" href="#persona-nomina" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">persona</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">espacio_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w">  </span><span class="c1">-- FK a espacios</span>
+<span class="w">  </span><span class="n">nombre</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">apellido</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">tipo_documento</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span><span class="w">  </span><span class="c1">-- &#39;DNI&#39;, &#39;OTRO&#39;</span>
+<span class="w">  </span><span class="n">numero_documento</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+<span class="w">  </span><span class="n">fecha_nacimiento</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">genero</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+<span class="w">  </span><span class="n">telefono</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+<span class="w">  </span><span class="n">domicilio</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">observaciones</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">participa_alimentacion</span><span class="w"> </span><span class="nb">BOOLEAN</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">FALSE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">participa_formacion</span><span class="w"> </span><span class="nb">BOOLEAN</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">FALSE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">activo</span><span class="w"> </span><span class="nb">BOOLEAN</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">TRUE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">created_at</span><span class="w"> </span><span class="n">DATETIME</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
+<span class="w">  </span><span class="n">created_by</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w">  </span><span class="c1">-- FK a auth_user</span>
+<span class="w">  </span><span class="n">updated_at</span><span class="w"> </span><span class="n">DATETIME</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">UPDATE</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
+<span class="w">  </span><span class="n">updated_by</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">  </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_espacio</span><span class="w"> </span><span class="p">(</span><span class="n">espacio_id</span><span class="p">),</span>
+<span class="w">  </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_nombre_apellido</span><span class="w"> </span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="n">apellido</span><span class="p">),</span>
+<span class="w">  </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_documento</span><span class="w"> </span><span class="p">(</span><span class="n">tipo_documento</span><span class="p">,</span><span class="w"> </span><span class="n">numero_documento</span><span class="p">),</span>
+<span class="w">  </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_activo</span><span class="w"> </span><span class="p">(</span><span class="n">activo</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+<h5 id="actividadformacion"><strong>ActividadFormacion</strong><a class="headerlink" href="#actividadformacion" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">actividad_formacion</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">espacio_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">titulo</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">descripcion</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">fecha</span><span class="w"> </span><span class="nb">DATE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">horario</span><span class="w"> </span><span class="k">TIME</span><span class="p">,</span>
+<span class="w">  </span><span class="n">lugar</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">200</span><span class="p">),</span>
+<span class="w">  </span><span class="n">responsable</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+<span class="w">  </span><span class="n">estado</span><span class="w"> </span><span class="n">ENUM</span><span class="p">(</span><span class="s1">&#39;planificada&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;finalizada&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;cancelada&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;planificada&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="n">created_at</span><span class="w"> </span><span class="n">DATETIME</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
+<span class="w">  </span><span class="n">created_by</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">updated_at</span><span class="w"> </span><span class="n">DATETIME</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">UPDATE</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
+<span class="w">  </span><span class="n">updated_by</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">  </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_espacio</span><span class="w"> </span><span class="p">(</span><span class="n">espacio_id</span><span class="p">),</span>
+<span class="w">  </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_fecha</span><span class="w"> </span><span class="p">(</span><span class="n">fecha</span><span class="p">),</span>
+<span class="w">  </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_estado</span><span class="w"> </span><span class="p">(</span><span class="n">estado</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+<h5 id="actividadparticipante-tabla-intermedia"><strong>ActividadParticipante (tabla intermedia)</strong><a class="headerlink" href="#actividadparticipante-tabla-intermedia" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">actividad_participante</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">actividad_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w">  </span><span class="c1">-- FK a actividad_formacion</span>
+<span class="w">  </span><span class="n">persona_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w">  </span><span class="c1">-- FK a persona</span>
+<span class="w">  </span><span class="n">created_at</span><span class="w"> </span><span class="n">DATETIME</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
+<span class="w">  </span><span class="k">UNIQUE</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">actividad_id</span><span class="p">,</span><span class="w"> </span><span class="n">persona_id</span><span class="p">),</span>
+<span class="w">  </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_actividad</span><span class="w"> </span><span class="p">(</span><span class="n">actividad_id</span><span class="p">),</span>
+<span class="w">  </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_persona</span><span class="w"> </span><span class="p">(</span><span class="n">persona_id</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+<h5 id="rendicion"><strong>Rendicion</strong><a class="headerlink" href="#rendicion" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">rendicion</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">espacio_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">periodo</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w">  </span><span class="c1">-- &#39;YYYY-MM&#39; o rango</span>
+<span class="w">  </span><span class="n">estado</span><span class="w"> </span><span class="n">ENUM</span><span class="p">(</span><span class="s1">&#39;borrador&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;presentada&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;observada&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;aprobada&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;rechazada&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;borrador&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="n">observaciones</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">fecha_presentacion</span><span class="w"> </span><span class="n">DATETIME</span><span class="p">,</span>
+<span class="w">  </span><span class="n">created_at</span><span class="w"> </span><span class="n">DATETIME</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
+<span class="w">  </span><span class="n">created_by</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">updated_at</span><span class="w"> </span><span class="n">DATETIME</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">UPDATE</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
+<span class="w">  </span><span class="n">updated_by</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">  </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_espacio</span><span class="w"> </span><span class="p">(</span><span class="n">espacio_id</span><span class="p">),</span>
+<span class="w">  </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_periodo</span><span class="w"> </span><span class="p">(</span><span class="n">periodo</span><span class="p">),</span>
+<span class="w">  </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_estado</span><span class="w"> </span><span class="p">(</span><span class="n">estado</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+<h5 id="comprobante"><strong>Comprobante</strong><a class="headerlink" href="#comprobante" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">comprobante</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">rendicion_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w">  </span><span class="c1">-- FK a rendicion</span>
+<span class="w">  </span><span class="n">archivo_ref</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w">  </span><span class="c1">-- path/url/key de storage</span>
+<span class="w">  </span><span class="n">archivo_nombre</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">200</span><span class="p">),</span>
+<span class="w">  </span><span class="n">archivo_tipo</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span><span class="w">  </span><span class="c1">-- &#39;application/pdf&#39;, &#39;image/jpeg&#39;, etc.</span>
+<span class="w">  </span><span class="n">archivo_tamano</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w">  </span><span class="c1">-- bytes</span>
+<span class="w">  </span><span class="n">estado</span><span class="w"> </span><span class="n">ENUM</span><span class="p">(</span><span class="s1">&#39;cargado&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;invalidado&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;validado&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;cargado&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="n">motivo_invalidacion</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">created_at</span><span class="w"> </span><span class="n">DATETIME</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
+<span class="w">  </span><span class="n">created_by</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">  </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_rendicion</span><span class="w"> </span><span class="p">(</span><span class="n">rendicion_id</span><span class="p">),</span>
+<span class="w">  </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_estado</span><span class="w"> </span><span class="p">(</span><span class="n">estado</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+<h5 id="auditevent-auditoria"><strong>AuditEvent (auditoría)</strong><a class="headerlink" href="#auditevent-auditoria" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">audit_event</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">evento</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w">  </span><span class="c1">-- &#39;persona_create&#39;, &#39;rendicion_submit&#39;, etc.</span>
+<span class="w">  </span><span class="n">usuario_id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w">  </span><span class="c1">-- FK a auth_user</span>
+<span class="w">  </span><span class="n">espacio_id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w">  </span><span class="c1">-- contexto</span>
+<span class="w">  </span><span class="n">entidad_tipo</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span><span class="w">  </span><span class="c1">-- &#39;persona&#39;, &#39;rendicion&#39;, etc.</span>
+<span class="w">  </span><span class="n">entidad_id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">metadata</span><span class="w"> </span><span class="n">JSON</span><span class="p">,</span><span class="w">  </span><span class="c1">-- datos adicionales del evento</span>
+<span class="w">  </span><span class="k">timestamp</span><span class="w"> </span><span class="n">DATETIME</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
+<span class="w">  </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_evento</span><span class="w"> </span><span class="p">(</span><span class="n">evento</span><span class="p">),</span>
+<span class="w">  </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_usuario</span><span class="w"> </span><span class="p">(</span><span class="n">usuario_id</span><span class="p">),</span>
+<span class="w">  </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_espacio</span><span class="w"> </span><span class="p">(</span><span class="n">espacio_id</span><span class="p">),</span>
+<span class="w">  </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_timestamp</span><span class="w"> </span><span class="p">(</span><span class="k">timestamp</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+<hr />
+<h3 id="indices-criticos-para-performance">🔍 Índices críticos (para performance)<a class="headerlink" href="#indices-criticos-para-performance" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tabla</th>
+<th>Índice</th>
+<th>Justificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>persona</td>
+<td><code>(espacio_id, activo)</code></td>
+<td>Listado de personas activas por espacio</td>
+</tr>
+<tr>
+<td>persona</td>
+<td><code>(nombre, apellido)</code></td>
+<td>Búsqueda por nombre</td>
+</tr>
+<tr>
+<td>persona</td>
+<td><code>(tipo_documento, numero_documento)</code></td>
+<td>Detección duplicados</td>
+</tr>
+<tr>
+<td>actividad_formacion</td>
+<td><code>(espacio_id, fecha)</code></td>
+<td>Listado cronológico</td>
+</tr>
+<tr>
+<td>rendicion</td>
+<td><code>(espacio_id, estado)</code></td>
+<td>Filtrado por estado</td>
+</tr>
+<tr>
+<td>comprobante</td>
+<td><code>(rendicion_id)</code></td>
+<td>Carga de adjuntos</td>
+</tr>
+<tr>
+<td>audit_event</td>
+<td><code>(timestamp, evento)</code></td>
+<td>Consultas de auditoría</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="hot-spots-y-metricas-para-perf_tune">🔥 Hot spots y métricas (para PERF_Tune)<a class="headerlink" href="#hot-spots-y-metricas-para-perf_tune" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Hot spot</th>
+<th>Cardinalidad estimada</th>
+<th>Mitigación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Listado de personas</td>
+<td>50-500 por espacio</td>
+<td>Paginación (page_size=20), índice en <code>activo</code></td>
+</tr>
+<tr>
+<td>Búsqueda por nombre</td>
+<td>N/A</td>
+<td>Índice compuesto <code>(nombre, apellido)</code>, LIKE optimizado</td>
+</tr>
+<tr>
+<td>Carga de comprobantes</td>
+<td>5-20 por rendición</td>
+<td>Eager loading, JOIN optimizado</td>
+</tr>
+<tr>
+<td>Auditoría</td>
+<td>Alta (crecimiento continuo)</td>
+<td>Particionamiento por mes (Release 2), retención 1 año</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="migraciones-estrategia">📦 Migraciones (estrategia)<a class="headerlink" href="#migraciones-estrategia" title="Permanent link">&para;</a></h3>
+<p><strong>Sprint 0:</strong>
+1. Confirmar schema existente SISOC
+2. Crear script de migración inicial (Django migrations)
+3. Seeds mínimos:
+   - Espacios de prueba (3-5)
+   - Usuarios de prueba (referente, interno, operador)
+   - Personas de prueba (10-20 por espacio)
+   - Mensajes operativos (3-5)</p>
+<p><strong>Forward:</strong>
+- Cada nueva tabla con <code>IF NOT EXISTS</code>
+- Columnas nuevas con <code>ALTER TABLE ADD COLUMN</code> (no destructivo)</p>
+<p><strong>Backward:</strong>
+- DROP TABLE solo en dev
+- En prod: marcar deprecated, eliminar en Release siguiente</p>
+<hr />
+<h2 id="4-dev_impl-implementador-guiado">4️⃣ DEV_Impl — Implementador Guiado<a class="headerlink" href="#4-dev_impl-implementador-guiado" title="Permanent link">&para;</a></h2>
+<h3 id="opinion-general_3">💻 Opinión general<a class="headerlink" href="#opinion-general_3" title="Permanent link">&para;</a></h3>
+<p>El proyecto tiene <strong>historias bien definidas</strong> con criterios BDD, lo cual facilita implementación incremental. La separación en sprints es pragmática.</p>
+<p><strong>Alertas de desarrollo:</strong>
+1. <strong>Falta setup de repo</strong>: estructura de carpetas, linting, tests
+2. <strong>Tech stack no definido</strong>: ¿React Native? ¿Flutter? ¿Expo?
+3. <strong>Backend existente</strong>: ¿cómo se extiende? ¿Django apps? ¿blueprints?
+4. <strong>Sin CI/CD</strong>: necesario para iteración rápida</p>
+<h3 id="propuesta-de-stack-tecnico">🛠️ Propuesta de stack técnico<a class="headerlink" href="#propuesta-de-stack-tecnico" title="Permanent link">&para;</a></h3>
+<h4 id="backend-django"><strong>Backend (Django)</strong><a class="headerlink" href="#backend-django" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Django 4.2+ (LTS)</li>
+<li>Django REST Framework (DRF) para API</li>
+<li>JWT: <code>djangorestframework-simplejwt</code></li>
+<li>MySQL: <code>mysqlclient</code> o <code>PyMySQL</code></li>
+<li>Storage: <code>django-storages</code> + boto3 (si S3)</li>
+<li>Auditoría: middleware custom + modelo <code>AuditEvent</code></li>
+<li>Tests: <code>pytest-django</code></li>
+<li>Linting: <code>black</code>, <code>flake8</code>, <code>mypy</code></li>
+</ul>
+<h4 id="mobile"><strong>Mobile</strong><a class="headerlink" href="#mobile" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Opción A (recomendada):</strong> React Native + Expo</li>
+<li>Pro: comunidad grande, hot reload, fácil deploy</li>
+<li>Contra: bundle size, performance en listas grandes</li>
+<li><strong>Opción B:</strong> Flutter</li>
+<li>Pro: performance nativa, UI consistente</li>
+<li>Contra: curva de aprendizaje, ecosistema más chico</li>
+</ul>
+<p><strong>Decisión:</strong> definir en Sprint 0 con equipo</p>
+<h4 id="cicd"><strong>CI/CD</strong><a class="headerlink" href="#cicd" title="Permanent link">&para;</a></h4>
+<ul>
+<li>GitHub Actions o GitLab CI</li>
+<li>Pipeline mínimo:</li>
+<li>Lint (backend + mobile)</li>
+<li>Tests unitarios</li>
+<li>Build (mobile)</li>
+<li>Deploy a staging (backend)</li>
+</ul>
+<hr />
+<h3 id="estructura-de-repo-sugerida">📂 Estructura de repo sugerida<a class="headerlink" href="#estructura-de-repo-sugerida" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>sisoc/
+├── backend/
+│   ├── sisoc/                 # Django project
+│   │   ├── settings/
+│   │   ├── urls.py
+│   │   └── wsgi.py
+│   ├── apps/
+│   │   ├── mobile_api/        # API endpoints MVP
+│   │   ├── spaces/            # Espacios (extensión)
+│   │   ├── persons/           # Nóminas
+│   │   ├── activities/        # Formación
+│   │   ├── claims/            # Rendiciones
+│   │   ├── audit/             # Auditoría
+│   │   └── rbac/              # RBAC middleware
+│   ├── tests/
+│   ├── requirements.txt
+│   └── manage.py
+├── mobile/
+│   ├── src/
+│   │   ├── screens/           # Pantallas por módulo
+│   │   ├── components/        # Componentes reutilizables
+│   │   ├── services/          # API client
+│   │   ├── navigation/        # React Navigation
+│   │   ├── store/             # State management (Redux/Zustand)
+│   │   └── utils/
+│   ├── App.js
+│   ├── package.json
+│   └── app.json
+├── docs/                      # MkDocs (actual)
+├── .github/
+│   └── workflows/
+│       ├── backend-ci.yml
+│       └── mobile-ci.yml
+└── README.md
+</code></pre></div>
+<hr />
+<h3 id="implementacion-por-sprint-detalle-tecnico">🔧 Implementación por sprint (detalle técnico)<a class="headerlink" href="#implementacion-por-sprint-detalle-tecnico" title="Permanent link">&para;</a></h3>
+<h4 id="sprint-0-setup"><strong>Sprint 0 — Setup</strong><a class="headerlink" href="#sprint-0-setup" title="Permanent link">&para;</a></h4>
+<p><strong>Backend:</strong>
+1. Setup Django project + apps
+2. Configurar DRF + JWT
+3. Middleware RBAC base
+4. Modelo <code>AuditEvent</code> + service
+5. Tests de integración mínimos</p>
+<p><strong>Mobile:</strong>
+1. Init proyecto (Expo/RN)
+2. Setup navegación (React Navigation)
+3. API client (Axios + interceptors)
+4. State management (Redux Toolkit o Zustand)
+5. Theme + design system (Tailwind RN / NativeBase)</p>
+<p><strong>Entregable:</strong> repo funcional, login básico (mock), navegación base</p>
+<hr />
+<h4 id="sprint-1-acceso-contexto"><strong>Sprint 1 — Acceso + Contexto</strong><a class="headerlink" href="#sprint-1-acceso-contexto" title="Permanent link">&para;</a></h4>
+<p><strong>Backend:</strong>
+- Endpoint <code>POST /auth/login</code> (JWT)
+- Endpoint <code>POST /auth/refresh</code>
+- Endpoint <code>GET /me</code> (contexto usuario)
+- Middleware RBAC (decorador <code>@permission_required</code>)
+- Tests: autenticación + contexto</p>
+<p><strong>Mobile:</strong>
+- Pantalla Login
+- Servicio de autenticación (store token)
+- Pantalla Home (navegación a módulos)
+- Selector de espacio (si multi-espacio)
+- Tests: flujo login → Home</p>
+<p><strong>Commit messages:</strong>
+- <code>feat(auth): add JWT login endpoint</code>
+- <code>feat(mobile): add Login screen with auth flow</code>
+- <code>test(auth): add integration tests for login</code></p>
+<hr />
+<h4 id="sprint-2-informacion-institucional-mensajes"><strong>Sprint 2 — Información institucional + Mensajes</strong><a class="headerlink" href="#sprint-2-informacion-institucional-mensajes" title="Permanent link">&para;</a></h4>
+<p><strong>Backend:</strong>
+- <code>GET /spaces/{space_id}/profile</code>
+- <code>GET /spaces/{space_id}/documents</code>
+- <code>GET /spaces/{space_id}/messages</code>
+- RBAC: verificar acceso al espacio
+- Auditoría: <code>info_view_profile</code>, <code>message_view_list</code></p>
+<p><strong>Mobile:</strong>
+- Pantalla Información institucional
+- Pantalla Documentos (lista + detalle)
+- Pantalla Mensajes (lista + detalle)
+- Manejo de estados: loading, empty, error</p>
+<p><strong>Tests:</strong>
+- Backend: permisos, datos correctos
+- Mobile: render, navegación</p>
+<hr />
+<h4 id="sprint-3-nominas"><strong>Sprint 3 — Nóminas</strong><a class="headerlink" href="#sprint-3-nominas" title="Permanent link">&para;</a></h4>
+<p><strong>Backend:</strong>
+- <code>GET /spaces/{space_id}/persons</code> (paginado, búsqueda, filtros)
+- <code>POST /spaces/{space_id}/persons</code>
+- <code>PUT /spaces/{space_id}/persons/{person_id}</code>
+- Validaciones: nombre+apellido obligatorios, duplicados
+- Auditoría: <code>persona_create</code>, <code>persona_update</code></p>
+<p><strong>Mobile:</strong>
+- Pantalla Lista de nómina (búsqueda + filtros)
+- Pantalla Alta/Edición persona
+- Pantalla Detalle persona
+- Validaciones frontend (mínimas)</p>
+<p><strong>Tests:</strong>
+- Backend: CRUD completo, duplicados, permisos
+- Mobile: formularios, búsqueda</p>
+<hr />
+<h4 id="sprint-4-prestacion-formacion"><strong>Sprint 4 — Prestación + Formación</strong><a class="headerlink" href="#sprint-4-prestacion-formacion" title="Permanent link">&para;</a></h4>
+<p><strong>Backend:</strong>
+- <code>GET /spaces/{space_id}/benefits</code> (prestación alimentaria)
+- <code>POST /spaces/{space_id}/activities</code> (formación)
+- <code>GET /spaces/{space_id}/activities</code>
+- <code>PUT /spaces/{space_id}/activities/{activity_id}</code>
+- <code>POST /spaces/{space_id}/activities/{activity_id}/participants</code></p>
+<p><strong>Mobile:</strong>
+- Pantalla Prestación alimentaria (solo lectura)
+- Pantalla Lista actividades
+- Pantalla Crear/Editar actividad
+- Pantalla Gestión participantes</p>
+<p><strong>Tests:</strong>
+- Backend: estados, participantes
+- Mobile: flujos completos</p>
+<hr />
+<h4 id="sprint-5-rendiciones"><strong>Sprint 5 — Rendiciones</strong><a class="headerlink" href="#sprint-5-rendiciones" title="Permanent link">&para;</a></h4>
+<p><strong>Backend:</strong>
+- <code>POST /spaces/{space_id}/claims</code>
+- <code>POST /spaces/{space_id}/claims/{claim_id}/attachments</code>
+- <code>PUT /spaces/{space_id}/claims/{claim_id}/submit</code>
+- Storage: upload de archivos (S3 o filesystem)
+- Validaciones: tipo/tamaño archivo, mínimo de adjuntos</p>
+<p><strong>Mobile:</strong>
+- Pantalla Lista rendiciones
+- Pantalla Detalle rendición
+- Pantalla Adjuntar comprobante (camera + gallery)
+- Presentar rendición (confirm dialog)</p>
+<p><strong>Tests:</strong>
+- Backend: upload, estados, permisos
+- Mobile: cámara, selección archivos</p>
+<hr />
+<h4 id="sprint-6-pulido-qa"><strong>Sprint 6 — Pulido + QA</strong><a class="headerlink" href="#sprint-6-pulido-qa" title="Permanent link">&para;</a></h4>
+<p><strong>Refinamiento:</strong>
+- UX: estados vacíos con ilustraciones/mensajes amigables
+- Performance: lazy loading, cache de listados
+- Seguridad: rate limiting, validaciones adicionales
+- Tests: smoke tests (plan QA)</p>
+<p><strong>Deploy:</strong>
+- Backend: staging + prod (gunicorn + nginx)
+- Mobile: build release (APK/IPA), TestFlight/Google Play beta</p>
+<hr />
+<h3 id="estandares-de-codigo">📏 Estándares de código<a class="headerlink" href="#estandares-de-codigo" title="Permanent link">&para;</a></h3>
+<h4 id="backend-pythondjango"><strong>Backend (Python/Django)</strong><a class="headerlink" href="#backend-pythondjango" title="Permanent link">&para;</a></h4>
+<ul>
+<li>PEP 8 (black formatter)</li>
+<li>Type hints (mypy)</li>
+<li>Docstrings en funciones públicas</li>
+<li>Commits semánticos: <code>feat</code>, <code>fix</code>, <code>refactor</code>, <code>test</code>, <code>docs</code></li>
+</ul>
+<h4 id="mobile-javascripttypescript"><strong>Mobile (JavaScript/TypeScript)</strong><a class="headerlink" href="#mobile-javascripttypescript" title="Permanent link">&para;</a></h4>
+<ul>
+<li>ESLint + Prettier</li>
+<li>TypeScript (si se adopta)</li>
+<li>Componentes funcionales + hooks</li>
+<li>PropTypes o TypeScript interfaces</li>
+</ul>
+<hr />
+<h2 id="5-qa_test-pruebas-y-calidad">5️⃣ QA_Test — Pruebas y Calidad<a class="headerlink" href="#5-qa_test-pruebas-y-calidad" title="Permanent link">&para;</a></h2>
+<h3 id="opinion-general_4">🧪 Opinión general<a class="headerlink" href="#opinion-general_4" title="Permanent link">&para;</a></h3>
+<p>El proyecto tiene <strong>criterios de aceptación BDD</strong> bien definidos, lo cual facilita la generación de tests. La cobertura debe ser pragmática (no 100% pero sí crítica).</p>
+<p><strong>Alertas de QA:</strong>
+1. <strong>Sin plan de tests automatizados</strong>: unitarios, integración, E2E
+2. <strong>Sin ambiente de staging</strong>: necesario para QA manual
+3. <strong>Sin datos de prueba realistas</strong>: seeds limitados
+4. <strong>Performance no medida</strong>: latencia, throughput</p>
+<h3 id="estrategia-de-testing-por-capa">🎯 Estrategia de testing (por capa)<a class="headerlink" href="#estrategia-de-testing-por-capa" title="Permanent link">&para;</a></h3>
+<h4 id="1-tests-unitarios-backend"><strong>1. Tests unitarios (backend)</strong><a class="headerlink" href="#1-tests-unitarios-backend" title="Permanent link">&para;</a></h4>
+<p><strong>Qué cubrir:</strong>
+- Modelos: validaciones, métodos custom
+- Services: lógica de negocio (duplicados, estados)
+- Serializers: validaciones, transformaciones</p>
+<p><strong>Herramientas:</strong>
+- <code>pytest-django</code>
+- Factories: <code>factory_boy</code>
+- Coverage: <code>pytest-cov</code> (objetivo: 70%+ en critical paths)</p>
+<p><strong>Ejemplo:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># tests/persons/test_person_creation.py</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_create_person_with_duplicate_document</span><span class="p">(</span><span class="n">api_client</span><span class="p">,</span> <span class="n">space</span><span class="p">,</span> <span class="n">referente_user</span><span class="p">):</span>
+    <span class="c1"># Dado que existe una persona con DNI 12345678</span>
+    <span class="n">Person</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">space</span><span class="o">=</span><span class="n">space</span><span class="p">,</span> <span class="n">nombre</span><span class="o">=</span><span class="s2">&quot;Juan&quot;</span><span class="p">,</span> <span class="n">apellido</span><span class="o">=</span><span class="s2">&quot;Pérez&quot;</span><span class="p">,</span> <span class="n">numero_documento</span><span class="o">=</span><span class="s2">&quot;12345678&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Cuando intento crear otra con mismo DNI</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;/api/mobile/v1/spaces/</span><span class="si">{</span><span class="n">space</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">/persons&quot;</span><span class="p">,</span> <span class="p">{</span>
+        <span class="s2">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;María&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;apellido&quot;</span><span class="p">:</span> <span class="s2">&quot;González&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;numero_documento&quot;</span><span class="p">:</span> <span class="s2">&quot;12345678&quot;</span>
+    <span class="p">})</span>
+
+    <span class="c1"># Entonces el sistema advierte duplicado</span>
+    <span class="k">assert</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">409</span>  <span class="c1"># Conflict</span>
+    <span class="k">assert</span> <span class="s2">&quot;duplicado&quot;</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">&quot;error&quot;</span><span class="p">][</span><span class="s2">&quot;message&quot;</span><span class="p">]</span>
+</code></pre></div></p>
+<hr />
+<h4 id="2-tests-de-integracion-backend"><strong>2. Tests de integración (backend)</strong><a class="headerlink" href="#2-tests-de-integracion-backend" title="Permanent link">&para;</a></h4>
+<p><strong>Qué cubrir:</strong>
+- Endpoints completos (request → response)
+- RBAC: permisos correctos por rol
+- Auditoría: eventos registrados
+- Estados: transiciones válidas</p>
+<p><strong>Herramientas:</strong>
+- DRF TestClient
+- Fixtures con datos realistas</p>
+<p><strong>Ejemplo:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test_referente_can_create_person_but_interno_cannot</span><span class="p">(</span><span class="n">api_client</span><span class="p">,</span> <span class="n">space</span><span class="p">):</span>
+    <span class="c1"># Caso 1: referente puede crear</span>
+    <span class="n">api_client</span><span class="o">.</span><span class="n">force_authenticate</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">referente_user</span><span class="p">)</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;/api/mobile/v1/spaces/</span><span class="si">{</span><span class="n">space</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">/persons&quot;</span><span class="p">,</span> <span class="p">{</span><span class="o">...</span><span class="p">})</span>
+    <span class="k">assert</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">201</span>
+
+    <span class="c1"># Caso 2: usuario interno sin permiso no puede</span>
+    <span class="n">api_client</span><span class="o">.</span><span class="n">force_authenticate</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">interno_user_without_permission</span><span class="p">)</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;/api/mobile/v1/spaces/</span><span class="si">{</span><span class="n">space</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">/persons&quot;</span><span class="p">,</span> <span class="p">{</span><span class="o">...</span><span class="p">})</span>
+    <span class="k">assert</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">403</span>
+</code></pre></div></p>
+<hr />
+<h4 id="3-tests-e2e-mobile"><strong>3. Tests E2E (mobile)</strong><a class="headerlink" href="#3-tests-e2e-mobile" title="Permanent link">&para;</a></h4>
+<p><strong>Qué cubrir:</strong>
+- Flujos críticos end-to-end:
+  - Login → Home → Ver nómina
+  - Login → Crear persona → Ver en lista
+  - Login → Crear rendición → Adjuntar → Presentar</p>
+<p><strong>Herramientas:</strong>
+- Detox (React Native)
+- Appium (alternativa cross-platform)</p>
+<p><strong>Ejemplo (pseudocódigo Detox):</strong>
+<div class="highlight"><pre><span></span><code><span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;Nómina - Alta persona&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">beforeAll</span><span class="p">(</span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">device</span><span class="p">.</span><span class="nx">launchApp</span><span class="p">();</span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">login</span><span class="p">(</span><span class="s1">&#39;referente@test.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;password&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">});</span>
+
+<span class="w">  </span><span class="nx">it</span><span class="p">(</span><span class="s1">&#39;debe permitir crear persona desde nómina&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">element</span><span class="p">(</span><span class="nx">by</span><span class="p">.</span><span class="nx">id</span><span class="p">(</span><span class="s1">&#39;home-nomina-button&#39;</span><span class="p">)).</span><span class="nx">tap</span><span class="p">();</span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">element</span><span class="p">(</span><span class="nx">by</span><span class="p">.</span><span class="nx">id</span><span class="p">(</span><span class="s1">&#39;add-person-button&#39;</span><span class="p">)).</span><span class="nx">tap</span><span class="p">();</span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">element</span><span class="p">(</span><span class="nx">by</span><span class="p">.</span><span class="nx">id</span><span class="p">(</span><span class="s1">&#39;nombre-input&#39;</span><span class="p">)).</span><span class="nx">typeText</span><span class="p">(</span><span class="s1">&#39;Juan&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">element</span><span class="p">(</span><span class="nx">by</span><span class="p">.</span><span class="nx">id</span><span class="p">(</span><span class="s1">&#39;apellido-input&#39;</span><span class="p">)).</span><span class="nx">typeText</span><span class="p">(</span><span class="s1">&#39;Pérez&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">element</span><span class="p">(</span><span class="nx">by</span><span class="p">.</span><span class="nx">id</span><span class="p">(</span><span class="s1">&#39;save-button&#39;</span><span class="p">)).</span><span class="nx">tap</span><span class="p">();</span>
+
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span><span class="nx">element</span><span class="p">(</span><span class="nx">by</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;Juan Pérez&#39;</span><span class="p">))).</span><span class="nx">toBeVisible</span><span class="p">();</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div></p>
+<hr />
+<h4 id="4-smoke-tests-manual-plan-qa"><strong>4. Smoke tests (manual) — Plan QA</strong><a class="headerlink" href="#4-smoke-tests-manual-plan-qa" title="Permanent link">&para;</a></h4>
+<p>Ver <code>06_calidad/plan-qa-smoke.md</code> — cubrir:
+- Acceso y contexto
+- Navegación completa
+- CRUD de cada módulo (happy path)
+- Estados vacíos
+- Errores (red, permisos)</p>
+<hr />
+<h3 id="cobertura-objetivo">📊 Cobertura objetivo<a class="headerlink" href="#cobertura-objetivo" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Cobertura objetivo</th>
+<th>Prioridad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Backend models</td>
+<td>80%+</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>Backend services</td>
+<td>75%+</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>Backend views (endpoints)</td>
+<td>70%+</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>Mobile screens críticas</td>
+<td>60%+</td>
+<td>Media</td>
+</tr>
+<tr>
+<td>Mobile components</td>
+<td>50%+</td>
+<td>Baja</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="estrategia-de-bugs">🐛 Estrategia de bugs<a class="headerlink" href="#estrategia-de-bugs" title="Permanent link">&para;</a></h3>
+<p><strong>Proceso:</strong>
+1. Bug reportado → ticket en backlog
+2. FIX_Bug analiza: reproduce, captura contexto, identifica causa raíz
+3. Parche mínimo + test de regresión
+4. Deploy a staging → QA valida → prod</p>
+<p><strong>Prioridad:</strong>
+- <strong>P0 (bloqueante):</strong> no se puede autenticar, no se puede presentar rendición → fix inmediato
+- <strong>P1 (crítico):</strong> error en CRUD, permisos incorrectos → fix en 24-48h
+- <strong>P2 (menor):</strong> UX mejorable, typos → fix en próximo sprint
+- <strong>P3 (nice-to-have):</strong> mejoras visuales → backlog</p>
+<hr />
+<h2 id="6-sec_shield-seguridad-aplicada">6️⃣ SEC_Shield — Seguridad Aplicada<a class="headerlink" href="#6-sec_shield-seguridad-aplicada" title="Permanent link">&para;</a></h2>
+<h3 id="opinion-general_5">🔒 Opinión general<a class="headerlink" href="#opinion-general_5" title="Permanent link">&para;</a></h3>
+<p>El proyecto contempla <strong>RBAC y auditoría desde el diseño</strong>, lo cual es excelente. Sin embargo, faltan controles específicos de seguridad.</p>
+<p><strong>Alertas de seguridad:</strong>
+1. <strong>Autenticación no confirmada</strong>: JWT sin refresh puede exponer tokens largos
+2. <strong>Sin rate limiting</strong>: endpoints expuestos a abuso
+3. <strong>Archivos sin validación robusta</strong>: tipos MIME, magic bytes, tamaño
+4. <strong>Secretos en repo</strong>: riesgo si no se usa <code>.env</code> correctamente
+5. <strong>Sin HTTPS forzado</strong>: comunicación en claro (dev)
+6. <strong>CORS no configurado</strong>: puede bloquear o exponer API</p>
+<h3 id="baseline-de-seguridad-mvp">🛡️ Baseline de seguridad (MVP)<a class="headerlink" href="#baseline-de-seguridad-mvp" title="Permanent link">&para;</a></h3>
+<h4 id="1-autenticacion-y-autorizacion"><strong>1. Autenticación y autorización</strong><a class="headerlink" href="#1-autenticacion-y-autorizacion" title="Permanent link">&para;</a></h4>
+<p>✅ <strong>Implementar:</strong>
+- JWT con refresh token (expiración corta: 15min access, 7d refresh)
+- Middleware RBAC: decorador <code>@permission_required('space.view_persons')</code>
+- Validar <code>space_id</code> en cada request (evitar IDOR: acceso a espacio ajeno)</p>
+<p>❌ <strong>Evitar:</strong>
+- Tokens en URL (query params)
+- Permisos solo en frontend (siempre validar server-side)</p>
+<p><strong>Test de seguridad:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test_user_cannot_access_other_space_persons</span><span class="p">(</span><span class="n">api_client</span><span class="p">,</span> <span class="n">user_space_a</span><span class="p">,</span> <span class="n">space_b</span><span class="p">):</span>
+    <span class="n">api_client</span><span class="o">.</span><span class="n">force_authenticate</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">user_space_a</span><span class="p">)</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;/api/mobile/v1/spaces/</span><span class="si">{</span><span class="n">space_b</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">/persons&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">403</span>  <span class="c1"># Forbidden</span>
+</code></pre></div></p>
+<hr />
+<h4 id="2-validacion-de-inputs"><strong>2. Validación de inputs</strong><a class="headerlink" href="#2-validacion-de-inputs" title="Permanent link">&para;</a></h4>
+<p>✅ <strong>Implementar:</strong>
+- Sanitización de strings (evitar inyección SQL: usar ORM siempre)
+- Validación de formatos: email, teléfono, documento (regex)
+- Límites de longitud: nombre (100), observaciones (500), etc.
+- Validación de archivos:
+  - Tipo: solo PDF, JPG, PNG (validar magic bytes, no solo extensión)
+  - Tamaño: máx 10MB
+  - Nombre: sanitizar (evitar path traversal)</p>
+<p><strong>Ejemplo:</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">magic</span><span class="w"> </span><span class="kn">import</span> <span class="n">from_buffer</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">validate_file_upload</span><span class="p">(</span><span class="n">file</span><span class="p">):</span>
+    <span class="c1"># Validar tamaño</span>
+    <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">size</span> <span class="o">&gt;</span> <span class="mi">10</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">:</span>  <span class="c1"># 10MB</span>
+        <span class="k">raise</span> <span class="n">ValidationError</span><span class="p">(</span><span class="s2">&quot;Archivo muy grande&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Validar tipo (magic bytes)</span>
+    <span class="n">mime</span> <span class="o">=</span> <span class="n">from_buffer</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1024</span><span class="p">),</span> <span class="n">mime</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">mime</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;application/pdf&#39;</span><span class="p">,</span> <span class="s1">&#39;image/jpeg&#39;</span><span class="p">,</span> <span class="s1">&#39;image/png&#39;</span><span class="p">]:</span>
+        <span class="k">raise</span> <span class="n">ValidationError</span><span class="p">(</span><span class="s2">&quot;Tipo de archivo no permitido&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Sanitizar nombre</span>
+    <span class="n">safe_name</span> <span class="o">=</span> <span class="n">secure_filename</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">safe_name</span>
+</code></pre></div></p>
+<hr />
+<h4 id="3-manejo-de-secretos"><strong>3. Manejo de secretos</strong><a class="headerlink" href="#3-manejo-de-secretos" title="Permanent link">&para;</a></h4>
+<p>✅ <strong>Implementar:</strong>
+- Variables de entorno (<code>.env</code> + <code>.env.example</code>)
+- NO commitear:
+  - <code>SECRET_KEY</code>
+  - <code>DATABASE_PASSWORD</code>
+  - <code>AWS_SECRET_ACCESS_KEY</code>
+  - <code>JWT_SECRET</code>
+- Usar <code>python-decouple</code> o <code>django-environ</code>
+- Rotar secretos cada 90 días (política)</p>
+<p><strong><code>.env.example</code>:</strong>
+<div class="highlight"><pre><span></span><code>SECRET_KEY=your-secret-key-here
+DATABASE_URL=mysql://user:password@localhost:3306/sisoc
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+JWT_SECRET_KEY=
+</code></pre></div></p>
+<hr />
+<h4 id="4-https-y-cors"><strong>4. HTTPS y CORS</strong><a class="headerlink" href="#4-https-y-cors" title="Permanent link">&para;</a></h4>
+<p>✅ <strong>Implementar:</strong>
+- HTTPS forzado en producción (Nginx + Let's Encrypt)
+- CORS configurado:
+  - Permitir solo dominios conocidos (app móvil: wildcard limitado)
+  - Métodos: <code>GET, POST, PUT, DELETE</code>
+  - Headers: <code>Authorization, Content-Type</code></p>
+<p><strong>Django settings:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">CORS_ALLOWED_ORIGINS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;https://app.sisoc.gob.ar&quot;</span><span class="p">,</span>  <span class="c1"># producción</span>
+    <span class="s2">&quot;http://localhost:19006&quot;</span><span class="p">,</span>  <span class="c1"># Expo dev</span>
+<span class="p">]</span>
+<span class="n">SECURE_SSL_REDIRECT</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># forzar HTTPS</span>
+<span class="n">SECURE_HSTS_SECONDS</span> <span class="o">=</span> <span class="mi">31536000</span>  <span class="c1"># HSTS</span>
+</code></pre></div></p>
+<hr />
+<h4 id="5-rate-limiting"><strong>5. Rate limiting</strong><a class="headerlink" href="#5-rate-limiting" title="Permanent link">&para;</a></h4>
+<p>✅ <strong>Implementar:</strong>
+- Límite por IP/usuario:
+  - Login: 5 intentos / 5 min
+  - API general: 100 req / min
+  - Upload: 10 archivos / hora</p>
+<p><strong>Herramientas:</strong>
+- <code>django-ratelimit</code>
+- Nginx rate limiting (complementario)</p>
+<p><strong>Ejemplo:</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">django_ratelimit.decorators</span><span class="w"> </span><span class="kn">import</span> <span class="n">ratelimit</span>
+
+<span class="nd">@ratelimit</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="s1">&#39;user&#39;</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="s1">&#39;100/m&#39;</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;ALL&#39;</span><span class="p">)</span>
+<span class="nd">@permission_required</span><span class="p">(</span><span class="s1">&#39;space.view_persons&#39;</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">list_persons</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">space_id</span><span class="p">):</span>
+    <span class="o">...</span>
+</code></pre></div></p>
+<hr />
+<h4 id="6-logs-y-monitoreo"><strong>6. Logs y monitoreo</strong><a class="headerlink" href="#6-logs-y-monitoreo" title="Permanent link">&para;</a></h4>
+<p>✅ <strong>Implementar:</strong>
+- Logging de eventos de seguridad:
+  - Login fallido (3 intentos → alerta)
+  - Acceso denegado (403)
+  - Upload de archivo rechazado
+- NO loguear:
+  - Passwords (nunca)
+  - Tokens completos (solo últimos 4 chars)
+  - Datos sensibles (DNI completo: enmascarar)</p>
+<p><strong>Ejemplo:</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;security&#39;</span><span class="p">)</span>
+
+<span class="c1"># Login fallido</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Login failed for user </span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s2"> from </span><span class="si">{</span><span class="n">ip</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Acceso denegado</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Access denied: user </span><span class="si">{</span><span class="n">user</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2"> tried to access space </span><span class="si">{</span><span class="n">space_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<hr />
+<h3 id="checklist-owasp-top-10-mvp">🔍 Checklist OWASP Top 10 (MVP)<a class="headerlink" href="#checklist-owasp-top-10-mvp" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Riesgo OWASP</th>
+<th>Mitigación MVP</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A01 — Broken Access Control</td>
+<td>RBAC + validación server-side</td>
+<td>✅ Diseñado</td>
+</tr>
+<tr>
+<td>A02 — Cryptographic Failures</td>
+<td>HTTPS + JWT + secrets en .env</td>
+<td>⚠️ Pendiente config</td>
+</tr>
+<tr>
+<td>A03 — Injection</td>
+<td>ORM (no SQL raw) + sanitización</td>
+<td>✅ Por defecto Django</td>
+</tr>
+<tr>
+<td>A04 — Insecure Design</td>
+<td>Arquitectura revisada (ARQ_Nav)</td>
+<td>✅ Diseñado</td>
+</tr>
+<tr>
+<td>A05 — Security Misconfiguration</td>
+<td>Settings prod separados, debug=False</td>
+<td>⚠️ Pendiente deploy</td>
+</tr>
+<tr>
+<td>A06 — Vulnerable Components</td>
+<td>Dependencias actualizadas, Dependabot</td>
+<td>⚠️ Pendiente setup</td>
+</tr>
+<tr>
+<td>A07 — Identification/Authentication Failures</td>
+<td>JWT + refresh + rate limit login</td>
+<td>⚠️ Pendiente implementar</td>
+</tr>
+<tr>
+<td>A08 — Software/Data Integrity Failures</td>
+<td>Validación de archivos (magic bytes)</td>
+<td>⚠️ Pendiente implementar</td>
+</tr>
+<tr>
+<td>A09 — Logging/Monitoring Failures</td>
+<td>Logs de seguridad + auditoría</td>
+<td>✅ Diseñado</td>
+</tr>
+<tr>
+<td>A10 — Server-Side Request Forgery</td>
+<td>No aplica en MVP (no hay SSRF)</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-ui_ux-frontend-y-accesibilidad">7️⃣ UI_UX — Frontend y Accesibilidad<a class="headerlink" href="#7-ui_ux-frontend-y-accesibilidad" title="Permanent link">&para;</a></h2>
+<h3 id="opinion-general_6">🎨 Opinión general<a class="headerlink" href="#opinion-general_6" title="Permanent link">&para;</a></h3>
+<p>El proyecto tiene <strong>wireflows y pantallas definidas</strong> (<code>08_wireflows/</code>), lo cual es una base sólida. La decisión de <strong>mobile-first</strong> es acertada dado el público objetivo (territorio, espacios comunitarios).</p>
+<p><strong>Alertas de UX:</strong>
+1. <strong>Sin prototipo navegable</strong>: recomendado para validación temprana con usuarios reales
+2. <strong>Estados vacíos no especificados visualmente</strong>: solo textos (faltan ilustraciones/íconos)
+3. <strong>Accesibilidad no evaluada</strong>: WCAG no mencionado
+4. <strong>Carga de archivos desde móvil</strong>: UX crítica (cámara vs galería vs documentos)</p>
+<h3 id="propuesta-de-design-system-mvp">📱 Propuesta de design system (MVP)<a class="headerlink" href="#propuesta-de-design-system-mvp" title="Permanent link">&para;</a></h3>
+<h4 id="1-libreria-de-componentes"><strong>1. Librería de componentes</strong><a class="headerlink" href="#1-libreria-de-componentes" title="Permanent link">&para;</a></h4>
+<p><strong>Recomendación:</strong> Tailwind CSS + componentes nativos (React Native)
+- <strong>Alternativa:</strong> NativeBase / React Native Paper</p>
+<p><strong>Componentes base:</strong>
+- Botones (primario, secundario, outline, disabled)
+- Inputs (text, number, date, search)
+- Cards (info, list item, empty state)
+- Modals / Bottom sheets
+- Loaders (spinner, skeleton)
+- Alerts (success, error, warning, info)
+- Badges (contadores, estados)</p>
+<hr />
+<h4 id="2-paleta-de-colores-sugerencia"><strong>2. Paleta de colores (sugerencia)</strong><a class="headerlink" href="#2-paleta-de-colores-sugerencia" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>Primario: #0066CC (azul institucional)
+Secundario: #00A86B (verde acción)
+Error: #DC3545
+Warning: #FFC107
+Success: #28A745
+Gris claro: #F8F9FA (backgrounds)
+Gris medio: #6C757D (textos secundarios)
+Negro: #212529 (textos principales)
+</code></pre></div>
+<hr />
+<h4 id="3-tipografia"><strong>3. Tipografía</strong><a class="headerlink" href="#3-tipografia" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Familia:</strong> Inter / Roboto (legible en móvil)</li>
+<li><strong>Tamaños:</strong></li>
+<li>Títulos: 24px (bold)</li>
+<li>Subtítulos: 18px (semibold)</li>
+<li>Body: 16px (regular)</li>
+<li>Caption: 14px (regular, gris medio)</li>
+</ul>
+<hr />
+<h4 id="4-estados-ui-criticos"><strong>4. Estados UI (críticos)</strong><a class="headerlink" href="#4-estados-ui-criticos" title="Permanent link">&para;</a></h4>
+<h5 id="loading"><strong>Loading</strong><a class="headerlink" href="#loading" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Spinner centrado con texto "Cargando..."</li>
+<li>Skeleton screens en listados (mejor UX que spinner)</li>
+</ul>
+<h5 id="empty-vacio"><strong>Empty (vacío)</strong><a class="headerlink" href="#empty-vacio" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Ilustración simple o ícono grande</li>
+<li>Mensaje claro: "Aún no hay [recurso]"</li>
+<li>CTA sugerida: "Agregar [recurso]" o "Contactar soporte"</li>
+</ul>
+<p><strong>Ejemplo (Nómina vacía):</strong>
+<div class="highlight"><pre><span></span><code>[Ícono de personas]
+&quot;Aún no hay personas en la nómina&quot;
+[Botón: Agregar persona]
+</code></pre></div></p>
+<h5 id="error"><strong>Error</strong><a class="headerlink" href="#error" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Ícono de alerta</li>
+<li>Mensaje amigable (NO técnico):</li>
+<li>❌ "Error 500: Internal server error"</li>
+<li>✅ "No pudimos conectarnos. Revisá tu conexión y volvé a intentar."</li>
+<li>Botón "Reintentar"</li>
+</ul>
+<h5 id="sin-permiso"><strong>Sin permiso</strong><a class="headerlink" href="#sin-permiso" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code>[Ícono de candado]
+&quot;No tenés permiso para ver esta sección&quot;
+[Botón: Volver]
+</code></pre></div>
+<hr />
+<h4 id="5-navegacion"><strong>5. Navegación</strong><a class="headerlink" href="#5-navegacion" title="Permanent link">&para;</a></h4>
+<h5 id="estructura"><strong>Estructura:</strong><a class="headerlink" href="#estructura" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code>Bottom Tab Navigator (Home nivel superior):
+- Home (hub de módulos)
+- Perfil/Configuración (secundario)
+
+Stack Navigators (por módulo):
+- Información institucional → Documentos → Detalle
+- Nómina → Lista → Detalle → Editar
+- Formación → Lista → Crear/Editar → Participantes
+- Rendiciones → Lista → Detalle → Adjuntar
+</code></pre></div>
+<h5 id="header"><strong>Header:</strong><a class="headerlink" href="#header" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Nombre del espacio (siempre visible)</li>
+<li>Botón "Volver" (&lt; izquierda)</li>
+<li>Acciones contextuales (derecha: ej. "Agregar")</li>
+</ul>
+<hr />
+<h4 id="6-formularios-mobile-first"><strong>6. Formularios (mobile-first)</strong><a class="headerlink" href="#6-formularios-mobile-first" title="Permanent link">&para;</a></h4>
+<p><strong>Principios:</strong>
+- Inputs grandes (min 48px altura)
+- Labels claros encima del input
+- Validación en tiempo real (sutil, sin bloquear)
+- Mensajes de error debajo del campo (rojo, 14px)
+- Teclado correcto según campo:
+  - Nombre: texto autocapitalizado
+  - Documento: numérico
+  - Email: email keyboard
+  - Teléfono: tel keyboard</p>
+<p><strong>Ejemplo (Alta persona):</strong>
+<div class="highlight"><pre><span></span><code>Agregar persona
+
+Nombre *
+[Input: Juan                    ]
+
+Apellido *
+[Input: Pérez                   ]
+
+Documento (opcional)
+Tipo: [Dropdown: DNI ▼]
+Número: [Input: 12345678        ]
+
+Participa en:
+☑ Prestación alimentaria
+☐ Formación
+
+[Botón primario: Guardar]
+[Botón secundario: Cancelar]
+</code></pre></div></p>
+<hr />
+<h4 id="7-carga-de-archivos-critico-para-rendiciones"><strong>7. Carga de archivos (crítico para Rendiciones)</strong><a class="headerlink" href="#7-carga-de-archivos-critico-para-rendiciones" title="Permanent link">&para;</a></h4>
+<p><strong>Flujo UX:</strong>
+1. Usuario toca "Adjuntar comprobante"
+2. Bottom sheet con opciones:
+   - 📷 Tomar foto
+   - 🖼️ Elegir de galería
+   - 📄 Seleccionar archivo
+3. Preview antes de confirmar
+4. Barra de progreso (upload asíncrono)
+5. Confirmación: "Archivo adjuntado ✓"</p>
+<p><strong>Validaciones visibles:</strong>
+- Tamaño: "Máx. 10MB"
+- Tipo: "Solo PDF, JPG o PNG"
+- Si falla: mensaje claro + opción de reintentar</p>
+<hr />
+<h4 id="8-accesibilidad-wcag-21-aa-basico-mvp"><strong>8. Accesibilidad (WCAG 2.1 AA — básico MVP)</strong><a class="headerlink" href="#8-accesibilidad-wcag-21-aa-basico-mvp" title="Permanent link">&para;</a></h4>
+<p>✅ <strong>Implementar:</strong>
+- Contraste mínimo 4.5:1 (textos sobre fondos)
+- Tamaño de toque: mín 44x44px (botones/links)
+- Labels descriptivos en inputs
+- Screen reader support (iOS VoiceOver, Android TalkBack):
+  - <code>accessibilityLabel</code> en botones
+  - <code>accessibilityHint</code> en acciones no obvias
+- Navegación por teclado (si se soporta teclado externo)</p>
+<p><strong>Ejemplo:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">TouchableOpacity</span>
+<span class="w">  </span><span class="na">accessibilityLabel</span><span class="o">=</span><span class="s">&quot;Agregar persona a la nómina&quot;</span>
+<span class="w">  </span><span class="na">accessibilityHint</span><span class="o">=</span><span class="s">&quot;Abre el formulario para crear una nueva persona&quot;</span>
+<span class="w">  </span><span class="na">onPress</span><span class="o">=</span><span class="p">{</span><span class="nx">handleAddPerson</span><span class="p">}</span>
+<span class="p">&gt;</span>
+<span class="w">  </span><span class="p">&lt;</span><span class="nt">Text</span><span class="p">&gt;</span><span class="nx">Agregar</span><span class="w"> </span><span class="nx">persona</span><span class="p">&lt;/</span><span class="nt">Text</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">TouchableOpacity</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<hr />
+<h4 id="9-microcopys-ux-writing"><strong>9. Microcopys (UX writing)</strong><a class="headerlink" href="#9-microcopys-ux-writing" title="Permanent link">&para;</a></h4>
+<p><strong>Principios:</strong>
+- Claro, conciso, amigable
+- Evitar jerga técnica
+- Tono institucional pero cercano (vos/usted según política)</p>
+<p><strong>Ejemplos:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Situación</th>
+<th>Microcopy propuesto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Login fallido</td>
+<td>"Usuario o contraseña incorrectos. Volvé a intentar."</td>
+</tr>
+<tr>
+<td>Sin conexión</td>
+<td>"No pudimos conectarnos. Revisá tu conexión y reintentá."</td>
+</tr>
+<tr>
+<td>Rendición presentada</td>
+<td>"Rendición presentada con éxito. Te avisaremos si hay observaciones."</td>
+</tr>
+<tr>
+<td>Documento no encontrado</td>
+<td>"Este documento no está disponible. Contactá a tu técnico territorial."</td>
+</tr>
+<tr>
+<td>Persona creada</td>
+<td>"Persona agregada a la nómina ✓"</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="8-fix_bug-cazador-de-errores">8️⃣ FIX_Bug — Cazador de Errores<a class="headerlink" href="#8-fix_bug-cazador-de-errores" title="Permanent link">&para;</a></h2>
+<h3 id="opinion-general_7">🐛 Opinión general<a class="headerlink" href="#opinion-general_7" title="Permanent link">&para;</a></h3>
+<p>Aún no hay bugs (proyecto nuevo), pero es crítico establecer <strong>proceso de debugging</strong> desde Sprint 0.</p>
+<h3 id="propuesta-de-workflow-de-bugs">🔧 Propuesta de workflow de bugs<a class="headerlink" href="#propuesta-de-workflow-de-bugs" title="Permanent link">&para;</a></h3>
+<h4 id="1-reproduccion"><strong>1. Reproducción</strong><a class="headerlink" href="#1-reproduccion" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Usuario/QA reporta bug con:</li>
+<li>Pasos para reproducir</li>
+<li>Resultado esperado vs actual</li>
+<li>Screenshots/video</li>
+<li>Contexto: versión app, OS, usuario/rol</li>
+<li>FIX_Bug intenta reproducir en dev</li>
+</ul>
+<h4 id="2-captura-de-contexto"><strong>2. Captura de contexto</strong><a class="headerlink" href="#2-captura-de-contexto" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Stack trace (logs backend)</li>
+<li>Estado de la app (Redux/Zustand state)</li>
+<li>Request/response API (network inspector)</li>
+<li>Datos involucrados (IDs, payload)</li>
+</ul>
+<h4 id="3-causa-raiz"><strong>3. Causa raíz</strong><a class="headerlink" href="#3-causa-raiz" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Análisis: ¿frontend? ¿backend? ¿datos?</li>
+<li>Identificar origen: validación, lógica, permisos, etc.</li>
+</ul>
+<h4 id="4-parche-minimo"><strong>4. Parche mínimo</strong><a class="headerlink" href="#4-parche-minimo" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Fix con cambio mínimo seguro</li>
+<li>Test de regresión (evitar re-ocurrencia)</li>
+<li>Commit: <code>fix(nomina): validate documento format before save</code></li>
+</ul>
+<h4 id="5-verificacion"><strong>5. Verificación</strong><a class="headerlink" href="#5-verificacion" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Deploy a staging</li>
+<li>QA valida fix</li>
+<li>Deploy a prod</li>
+</ul>
+<hr />
+<h3 id="bugs-comunes-anticipados-mvp">🔥 Bugs comunes anticipados (MVP)<a class="headerlink" href="#bugs-comunes-anticipados-mvp" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Bug probable</th>
+<th>Causa</th>
+<th>Mitigación preventiva</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Login infinito</td>
+<td>Token no se guarda</td>
+<td>Test: verificar storage</td>
+</tr>
+<tr>
+<td>Listado vacío (falso)</td>
+<td>Paginación incorrecta</td>
+<td>Test: mock con datos</td>
+</tr>
+<tr>
+<td>Upload falla silencioso</td>
+<td>Error no capturado</td>
+<td>Logs + try/catch en upload</td>
+</tr>
+<tr>
+<td>Permisos inconsistentes</td>
+<td>RBAC no valida en endpoint</td>
+<td>Test de permisos por endpoint</td>
+</tr>
+<tr>
+<td>Crash en foto (iOS)</td>
+<td>Permiso de cámara no solicitado</td>
+<td>Verificar permisos en mount</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="9-perf_tune-desempeno">9️⃣ PERF_Tune — Desempeño<a class="headerlink" href="#9-perf_tune-desempeno" title="Permanent link">&para;</a></h2>
+<h3 id="opinion-general_8">⚡ Opinión general<a class="headerlink" href="#opinion-general_8" title="Permanent link">&para;</a></h3>
+<p>El proyecto aún no tiene código, pero se pueden anticipar <strong>cuellos de botella</strong> y optimizar desde el diseño.</p>
+<h3 id="hot-spots-anticipados">🎯 Hot spots anticipados<a class="headerlink" href="#hot-spots-anticipados" title="Permanent link">&para;</a></h3>
+<h4 id="1-backend"><strong>1. Backend</strong><a class="headerlink" href="#1-backend" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Hot spot</th>
+<th>Problema</th>
+<th>Solución</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Listado de personas (500+)</td>
+<td>Query lenta sin índices</td>
+<td>Índice en <code>(espacio_id, activo)</code>, paginación</td>
+</tr>
+<tr>
+<td>Búsqueda por nombre</td>
+<td>LIKE sin índice</td>
+<td>Índice en <code>(nombre, apellido)</code></td>
+</tr>
+<tr>
+<td>Carga de comprobantes (N+1)</td>
+<td>Query por cada comprobante</td>
+<td><code>select_related</code> / <code>prefetch_related</code></td>
+</tr>
+<tr>
+<td>Auditoría masiva</td>
+<td>Inserts lentos</td>
+<td>Bulk insert, async celery (Release 2)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="2-mobile"><strong>2. Mobile</strong><a class="headerlink" href="#2-mobile" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Hot spot</th>
+<th>Problema</th>
+<th>Solución</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lista de 500 personas</td>
+<td>Render lento</td>
+<td>FlatList + <code>getItemLayout</code> + memo</td>
+</tr>
+<tr>
+<td>Imágenes grandes</td>
+<td>App pesada</td>
+<td>Compresión antes de upload</td>
+</tr>
+<tr>
+<td>Re-renders innecesarios</td>
+<td>Estado global cambia</td>
+<td>React.memo + selectores</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="metricas-objetivo-mvp">📊 Métricas objetivo (MVP)<a class="headerlink" href="#metricas-objetivo-mvp" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Objetivo</th>
+<th>Herramienta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>API response time (p95)</td>
+<td>&lt; 500ms</td>
+<td>New Relic / Datadog</td>
+</tr>
+<tr>
+<td>Listado nómina (100 items)</td>
+<td>&lt; 300ms</td>
+<td>Chrome DevTools</td>
+</tr>
+<tr>
+<td>Upload archivo (5MB)</td>
+<td>&lt; 10s</td>
+<td>Monitor manual</td>
+</tr>
+<tr>
+<td>App bundle size (Android)</td>
+<td>&lt; 30MB</td>
+<td>Expo build</td>
+</tr>
+<tr>
+<td>Tiempo de login</td>
+<td>&lt; 2s</td>
+<td>Manual</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="optimizaciones-sprint-6">🔧 Optimizaciones Sprint 6<a class="headerlink" href="#optimizaciones-sprint-6" title="Permanent link">&para;</a></h3>
+<p><strong>Backend:</strong>
+- Query profiling (Django Debug Toolbar)
+- Índices verificados (EXPLAIN ANALYZE)
+- Cache de listados frecuentes (Redis, opcional MVP)</p>
+<p><strong>Mobile:</strong>
+- Lazy loading de imágenes (react-native-fast-image)
+- Memoización de componentes pesados
+- Bundle size optimization (tree shaking)</p>
+<hr />
+<h2 id="docs_scribe-documentacion-viva">🔟 DOCS_Scribe — Documentación Viva<a class="headerlink" href="#docs_scribe-documentacion-viva" title="Permanent link">&para;</a></h2>
+<h3 id="opinion-general_9">📝 Opinión general<a class="headerlink" href="#opinion-general_9" title="Permanent link">&para;</a></h3>
+<p>La documentación actual es <strong>excelente</strong>:
+- MkDocs bien estructurado
+- ADRs para decisiones importantes
+- Historias con criterios BDD
+- Wireflows y contratos API</p>
+<p><strong>Áreas de mejora:</strong>
+1. <strong>README del repo</strong>: aún no existe (necesario para onboarding)
+2. <strong>Getting started</strong>: instrucciones de setup local
+3. <strong>Changelog</strong>: no existe (necesario para releases)
+4. <strong>API docs</strong>: contrato v0 bueno, pero falta Swagger/OpenAPI
+5. <strong>Runbooks</strong>: cómo debuggear problemas comunes</p>
+<hr />
+<h3 id="documentacion-a-crear-sprint-0">📚 Documentación a crear (Sprint 0)<a class="headerlink" href="#documentacion-a-crear-sprint-0" title="Permanent link">&para;</a></h3>
+<h4 id="1-readmemd-root"><strong>1. README.md (root)</strong><a class="headerlink" href="#1-readmemd-root" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="gh"># SISOC — Legajo de Espacio (MVP)</span>
+
+Sistema móvil para espacios comunitarios del programa SISOC.
+
+<span class="gu">## Tech stack</span>
+<span class="k">-</span><span class="w"> </span>Backend: Django 4.2 + DRF + MySQL
+<span class="k">-</span><span class="w"> </span>Mobile: React Native + Expo
+<span class="k">-</span><span class="w"> </span>Docs: MkDocs
+
+<span class="gu">## Quick start</span>
+
+<span class="gu">### Backend</span>
+```bash
+cd backend
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+cp .env.example .env  # configurar variables
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py runserver
+</code></pre></div>
+<h3 id="mobile_1">Mobile<a class="headerlink" href="#mobile_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>mobile
+npm<span class="w"> </span>install
+npm<span class="w"> </span>start<span class="w">  </span><span class="c1"># Expo dev server</span>
+</code></pre></div>
+<h3 id="docs">Docs<a class="headerlink" href="#docs" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>docs
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+mkdocs<span class="w"> </span>serve
+</code></pre></div>
+<h2 id="contribuir">Contribuir<a class="headerlink" href="#contribuir" title="Permanent link">&para;</a></h2>
+<p>Ver <a href="CONTRIBUTING.md">CONTRIBUTING.md</a></p>
+<h2 id="license">License<a class="headerlink" href="#license" title="Permanent link">&para;</a></h2>
+<p>[Definir]
+<div class="highlight"><pre><span></span><code>---
+
+#### **2. CONTRIBUTING.md**
+```markdown
+# Guía de contribución
+
+## Workflow
+1. Branch desde `develop`: `git checkout -b feat/nombre-feature`
+2. Commits semánticos: `feat`, `fix`, `refactor`, `test`, `docs`
+3. Tests pasan: `pytest` (backend) + `npm test` (mobile)
+4. PR a `develop` con descripción clara
+5. Review por al menos 1 persona del equipo
+6. Merge por maintainer
+
+## Estándares
+- Backend: black + flake8 + mypy
+- Mobile: ESLint + Prettier
+- Commits: conventional commits
+
+## Tests
+- Unitarios: obligatorios en backend (services, models)
+- Integración: obligatorios en endpoints críticos
+- E2E: recomendados en flujos principales
+
+## Documentación
+- ADRs para decisiones arquitectónicas
+- Actualizar docs/ al cambiar contratos
+- README de cada módulo/app
+</code></pre></div></p>
+<hr />
+<h4 id="3-changelogmd"><strong>3. CHANGELOG.md</strong><a class="headerlink" href="#3-changelogmd" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="gh"># Changelog</span>
+
+<span class="gu">## [Unreleased]</span>
+
+<span class="gu">## [0.1.0] — 2026-03-XX (Sprint 6)</span>
+<span class="gu">### Added</span>
+<span class="k">-</span><span class="w"> </span>Acceso y contexto de usuario
+<span class="k">-</span><span class="w"> </span>Información institucional y documentos
+<span class="k">-</span><span class="w"> </span>Mensajes operativos
+<span class="k">-</span><span class="w"> </span>Nóminas (CRUD + búsqueda)
+<span class="k">-</span><span class="w"> </span>Prestación alimentaria (visualización)
+<span class="k">-</span><span class="w"> </span>Formación (actividades + participantes)
+<span class="k">-</span><span class="w"> </span>Rendiciones (crear + adjuntar + presentar)
+
+<span class="gu">### Security</span>
+<span class="k">-</span><span class="w"> </span>RBAC implementado
+<span class="k">-</span><span class="w"> </span>JWT autenticación
+<span class="k">-</span><span class="w"> </span>Validación de archivos
+
+<span class="gu">### Known issues</span>
+<span class="k">-</span><span class="w"> </span>[Link a GitHub Issues]
+</code></pre></div>
+<hr />
+<h4 id="4-api-documentation-swaggeropenapi"><strong>4. API Documentation (Swagger/OpenAPI)</strong><a class="headerlink" href="#4-api-documentation-swaggeropenapi" title="Permanent link">&para;</a></h4>
+<p><strong>Herramienta:</strong> <code>drf-spectacular</code></p>
+<p><strong>Setup:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># settings.py</span>
+<span class="n">INSTALLED_APPS</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;drf_spectacular&#39;</span><span class="p">]</span>
+
+<span class="n">REST_FRAMEWORK</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;DEFAULT_SCHEMA_CLASS&#39;</span><span class="p">:</span> <span class="s1">&#39;drf_spectacular.openapi.AutoSchema&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="c1"># urls.py</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">drf_spectacular.views</span><span class="w"> </span><span class="kn">import</span> <span class="n">SpectacularAPIView</span><span class="p">,</span> <span class="n">SpectacularSwaggerView</span>
+
+<span class="n">urlpatterns</span> <span class="o">+=</span> <span class="p">[</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;api/schema/&#39;</span><span class="p">,</span> <span class="n">SpectacularAPIView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;schema&#39;</span><span class="p">),</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;api/docs/&#39;</span><span class="p">,</span> <span class="n">SpectacularSwaggerView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span><span class="n">url_name</span><span class="o">=</span><span class="s1">&#39;schema&#39;</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;swagger-ui&#39;</span><span class="p">),</span>
+<span class="p">]</span>
+</code></pre></div></p>
+<p><strong>Resultado:</strong> Docs interactivas en <code>/api/docs/</code></p>
+<hr />
+<h4 id="5-runbooks-troubleshooting"><strong>5. Runbooks (troubleshooting)</strong><a class="headerlink" href="#5-runbooks-troubleshooting" title="Permanent link">&para;</a></h4>
+<p><strong>docs/runbooks/troubleshooting.md:</strong>
+<div class="highlight"><pre><span></span><code><span class="gh"># Troubleshooting</span>
+
+<span class="gu">## Backend</span>
+
+<span class="gu">### Error: &quot;No module named &#39;mysqlclient&#39;&quot;</span>
+<span class="gs">**Causa:**</span> Dependencia de MySQL no instalada
+<span class="gs">**Solución:**</span>
+```bash
+<span class="gh"># macOS</span>
+brew install mysql
+pip install mysqlclient
+
+<span class="gh"># Ubuntu</span>
+sudo apt-get install libmysqlclient-dev
+pip install mysqlclient
+</code></pre></div></p>
+<h3 id="error-access-denied-for-user">Error: "Access denied for user"<a class="headerlink" href="#error-access-denied-for-user" title="Permanent link">&para;</a></h3>
+<p><strong>Causa:</strong> Credenciales incorrectas en .env
+<strong>Solución:</strong> Verificar DATABASE_URL en .env</p>
+<h2 id="mobile_2">Mobile<a class="headerlink" href="#mobile_2" title="Permanent link">&para;</a></h2>
+<h3 id="error-unable-to-resolve-module">Error: "Unable to resolve module"<a class="headerlink" href="#error-unable-to-resolve-module" title="Permanent link">&para;</a></h3>
+<p><strong>Causa:</strong> Cache corrupto
+<strong>Solución:</strong>
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>start<span class="w"> </span>--<span class="w"> </span>--reset-cache
+</code></pre></div></p>
+<h3 id="app-no-se-conecta-a-api-local">App no se conecta a API local<a class="headerlink" href="#app-no-se-conecta-a-api-local" title="Permanent link">&para;</a></h3>
+<p><strong>Causa:</strong> Expo usa red diferente
+<strong>Solución:</strong> Usar IP local en API_BASE_URL (no localhost)
+```</p>
+<hr />
+<h2 id="plan-de-accion-consolidado">📋 Plan de Acción Consolidado<a class="headerlink" href="#plan-de-accion-consolidado" title="Permanent link">&para;</a></h2>
+<h3 id="hitos-criticos-roadmap-ejecutivo">🎯 Hitos críticos (roadmap ejecutivo)<a class="headerlink" href="#hitos-criticos-roadmap-ejecutivo" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Hito</th>
+<th>Fecha objetivo</th>
+<th>Entregables clave</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sprint 0</strong></td>
+<td>Semana 1-2</td>
+<td>Decisiones técnicas + setup repo + arquitectura C4</td>
+</tr>
+<tr>
+<td><strong>Sprint 1</strong></td>
+<td>Semana 3-4</td>
+<td>Login + Home + contexto de usuario</td>
+</tr>
+<tr>
+<td><strong>Sprint 2</strong></td>
+<td>Semana 5-6</td>
+<td>Info institucional + Mensajes</td>
+</tr>
+<tr>
+<td><strong>Sprint 3</strong></td>
+<td>Semana 7-8</td>
+<td>Nóminas (CRUD)</td>
+</tr>
+<tr>
+<td><strong>Sprint 4</strong></td>
+<td>Semana 9-10</td>
+<td>Prestación + Formación</td>
+</tr>
+<tr>
+<td><strong>Sprint 5</strong></td>
+<td>Semana 11-12</td>
+<td>Rendiciones completas</td>
+</tr>
+<tr>
+<td><strong>Sprint 6</strong></td>
+<td>Semana 13-14</td>
+<td>QA + pulido + deploy piloto</td>
+</tr>
+<tr>
+<td><strong>Piloto</strong></td>
+<td>Semana 15+</td>
+<td>Espacios seleccionados en producción</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="dependencias-criticas-sprint-0-bloqueantes">⚠️ Dependencias críticas (Sprint 0 — bloqueantes)<a class="headerlink" href="#dependencias-criticas-sprint-0-bloqueantes" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Reunión técnica con SISOC</strong></li>
+<li>Confirmar schema real (tablas, campos, PKs/FKs)</li>
+<li>Confirmar estrategia de autenticación</li>
+<li>Confirmar endpoints existentes (si hay)</li>
+<li>
+<p>Definir storage de archivos</p>
+</li>
+<li>
+<p><strong>Decisiones de tech stack</strong></p>
+</li>
+<li>Backend: confirmar Django + versión + extensiones</li>
+<li>Mobile: decidir React Native vs Flutter</li>
+<li>
+<p>Storage: decidir S3 vs filesystem</p>
+</li>
+<li>
+<p><strong>Setup de infraestructura</strong></p>
+</li>
+<li>Repo GitHub/GitLab + permisos</li>
+<li>CI/CD mínimo</li>
+<li>Ambientes: dev, staging, prod</li>
+<li>Base de datos: dev local + staging</li>
+</ol>
+<hr />
+<h3 id="proximos-pasos-inmediatos-semana-1">🚀 Próximos pasos inmediatos (semana 1)<a class="headerlink" href="#proximos-pasos-inmediatos-semana-1" title="Permanent link">&para;</a></h3>
+<p><strong>Día 1-2:</strong>
+- [ ] Agendar reunión técnica con equipo SISOC (ARQ_Nav + DB_Model + DEV_Impl)
+- [ ] Crear repo y estructura de carpetas (DEV_Impl)
+- [ ] Setup MkDocs en CI (DOCS_Scribe)</p>
+<p><strong>Día 3-4:</strong>
+- [ ] Reunión técnica: confirmar dependencias críticas
+- [ ] Actualizar ADRs con decisiones reales (DOCS_Scribe)
+- [ ] Spike: prueba de concepto Django + React Native + JWT (DEV_Impl)</p>
+<p><strong>Día 5:</strong>
+- [ ] Diagrama C4 (ARQ_Nav)
+- [ ] Modelo de datos inicial (DB_Model)
+- [ ] Plan de seguridad baseline (SEC_Shield)</p>
+<p><strong>Semana 2:</strong>
+- [ ] Setup completo: backend + mobile + CI/CD (DEV_Impl)
+- [ ] Migraciones iniciales (DB_Model)
+- [ ] README + CONTRIBUTING (DOCS_Scribe)
+- [ ] Kickoff Sprint 1</p>
+<hr />
+<h2 id="conclusion-del-equipo">💬 Conclusión del equipo<a class="headerlink" href="#conclusion-del-equipo" title="Permanent link">&para;</a></h2>
+<h3 id="fortalezas-del-proyecto">✅ Fortalezas del proyecto<a class="headerlink" href="#fortalezas-del-proyecto" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Documentación sólida</strong>: MkDocs + ADRs + historias BDD</li>
+<li><strong>Alcance claro</strong>: MVP bien definido, fuera de scope explícito</li>
+<li><strong>Enfoque en valor</strong>: mobile-first para territorio</li>
+<li><strong>Equipo completo</strong>: roles especializados cubriendo todas las áreas</li>
+</ol>
+<h3 id="riesgos-principales">⚠️ Riesgos principales<a class="headerlink" href="#riesgos-principales" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Dependencias externas</strong>: integración con SISOC existente (schema, API, auth)</li>
+<li><strong>Ambigüedades técnicas</strong>: storage, tech stack móvil, autenticación</li>
+<li><strong>Complejidad operativa</strong>: RBAC + auditoría + multi-espacio</li>
+<li><strong>UX en territorio</strong>: conectividad limitada, usuarios con baja alfabetización digital</li>
+</ol>
+<h3 id="recomendaciones-finales">🎯 Recomendaciones finales<a class="headerlink" href="#recomendaciones-finales" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Priorizar Sprint 0</strong>: resolver dependencias críticas antes de codificar</li>
+<li><strong>Iteración corta</strong>: sprints de 2 semanas con demos constantes</li>
+<li><strong>Validación temprana</strong>: prototipo navegable + testing con usuarios reales</li>
+<li><strong>Documentación viva</strong>: mantener docs actualizados sprint a sprint</li>
+<li><strong>Seguridad desde el diseño</strong>: no postergar controles críticos</li>
+</ol>
+<hr />
+<p><strong>Equipo SISOC — Listos para comenzar 🚀</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.af256bd8.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>
