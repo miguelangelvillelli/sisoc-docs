@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="800" viewBox="0 0 360 800">
+  <rect width="360" height="800" fill="#f6f7f9"></rect>
+  <rect width="360" height="24" fill="#e9ecf1"></rect>
+  <rect y="24" width="360" height="56" fill="#ffffff" stroke="#d7dbe3"></rect>
+  <text x="16" y="58" font-family="Arial" font-size="14" fill="#111827">← Nómina</text>
+
+  <rect x="16" y="96" width="328" height="44" rx="10" fill="#ffffff" stroke="#d7dbe3"></rect>
+  <text x="28" y="124" font-family="Arial" font-size="12" fill="#6b7280">Buscar por nombre o DNI...</text>
+
+  <rect x="16" y="152" width="96" height="28" rx="14" fill="#eef2ff" stroke="#c7d2fe"></rect>
+  <text x="36" y="171" font-family="Arial" font-size="11" fill="#3730a3">Activos</text>
+  <rect x="120" y="152" width="96" height="28" rx="14" fill="#ffffff" stroke="#d7dbe3"></rect>
+  <text x="142" y="171" font-family="Arial" font-size="11" fill="#6b7280">Inactivos</text>
+  <rect x="224" y="152" width="56" height="28" rx="14" fill="#ffffff" stroke="#d7dbe3"></rect>
+  <text x="238" y="171" font-family="Arial" font-size="11" fill="#6b7280">Todos</text>
+
+  <g>
+    <rect x="16" y="196" width="328" height="60" rx="10" fill="#ffffff" stroke="#d7dbe3"></rect>
+    <text x="28" y="228" font-family="Arial" font-size="14" fill="#111827">Pérez, Ana</text>
+    <text x="28" y="246" font-family="Arial" font-size="11" fill="#6b7280">DNI 12.345.678</text>
+    <text x="324" y="232" font-family="Arial" font-size="18" fill="#9ca3af">›</text>
+  </g>
+
+  <g>
+    <rect x="16" y="266" width="328" height="60" rx="10" fill="#ffffff" stroke="#d7dbe3"></rect>
+    <text x="28" y="298" font-family="Arial" font-size="14" fill="#111827">Gómez, Juan</text>
+    <text x="28" y="316" font-family="Arial" font-size="11" fill="#6b7280">Sin documento</text>
+    <text x="324" y="302" font-family="Arial" font-size="18" fill="#9ca3af">›</text>
+  </g>
+
+  <rect x="16" y="688" width="328" height="52" rx="10" fill="#111827"></rect>
+  <text x="144" y="722" font-family="Arial" font-size="14" fill="#ffffff">+ Alta rápida</text>
+</svg>

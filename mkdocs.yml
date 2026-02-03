@@ -1,0 +1,96 @@
+site_name: SISOC · Legajo de Espacio (MVP)
+site_description: Documentación funcional y operativa del MVP para espacios comunitarios.
+site_author: Equipo SISOC
+repo_name: sisoc/docs
+
+theme:
+  name: material
+  language: es
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Cambiar a modo oscuro
+    - scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Cambiar a modo claro
+
+plugins:
+  - search
+  - awesome-pages
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true
+  - tables
+  - attr_list
+
+extra_javascript:
+  - https://unpkg.com/mermaid@10.4.0/dist/mermaid.min.js
+  - javascripts/mermaid-init.js
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Inicio: index.md
+  - 00 · Introducción:
+      - Propósito y alcance: 00_intro/proposito-alcance.md
+      - Contexto técnico e integración: 00_intro/contexto-tecnico-integracion.md
+      - Preguntas para reunión SISOC: 00_intro/preguntas-reunion-sisoc.md
+      - Minuta reunión SISOC: 00_intro/minuta-reunion-sisoc.md
+      - Principios del MVP: 00_intro/principios-mvp.md
+      - Glosario: 00_intro/glosario.md
+  - 01 · MVP:
+      - Alcance MVP: 01_mvp/alcance-mvp.md
+      - Fuera de alcance: 01_mvp/fuera-de-alcance.md
+      - Roadmap: 01_mvp/roadmap.md
+      - User stories MVP: 01_mvp/user-stories-mvp.md
+      - Plan de sprints: 01_mvp/plan-sprints.md
+  - 02 · Roles y accesos:
+      - RBAC: 02_roles_y_accesos/rbac.md
+      - Auditoría y trazabilidad: 02_roles_y_accesos/auditoria-trazabilidad.md
+  - 03 · Módulos:
+      - Información institucional: 03_modulos/informacion-institucional.md
+      - Nóminas: 03_modulos/nominas.md
+      - Prestación alimentaria: 03_modulos/prestacion-alimentaria.md
+      - Formación: 03_modulos/formacion.md
+      - Rendiciones: 03_modulos/rendiciones.md
+  - 04 · Datos:
+      - Modelo conceptual: 04_datos/modelo-conceptual.md
+      - Estados y reglas: 04_datos/estados-y-reglas.md
+      - Importación CSV: 04_datos/importacion-csv.md
+  - 05 · API:
+      - Contratos v0: 05_api/contratos-v0.md
+  - 06 · Calidad:
+      - Criterios de aceptación: 06_calidad/criterios-aceptacion.md
+      - Plan QA smoke: 06_calidad/plan-qa-smoke.md
+  - 07 · Seguridad:
+      - Baseline: 07_seguridad/baseline.md
+  - 08 · Wireflows:
+      - Mapa: 08_wireflows/index.md
+      - Wireflow MVP: 08_wireflows/wireflow-mvp.md
+      - Pantallas MVP: 08_wireflows/pantallas-mvp.md
+      - Estados UI: 08_wireflows/estados-ui.md
+  - ADR:
+      - ADR-0001 · Alcance MVP: adr/ADR-0001-alcance-mvp.md
+      - ADR-0002 · Usuario organización: adr/ADR-0002-usuario-organizacion.md
+      - ADR-0003 · Integración SISOC existente: adr/ADR-0003-integracion-sisoc-existente.md

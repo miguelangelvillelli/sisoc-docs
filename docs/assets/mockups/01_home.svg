@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="800" viewBox="0 0 360 800">
+  <rect x="0" y="0" width="360" height="800" fill="#f6f7f9"></rect>
+  <!-- Status bar -->
+  <rect x="0" y="0" width="360" height="24" fill="#e9ecf1"></rect>
+  <!-- Header -->
+  <rect x="0" y="24" width="360" height="56" fill="#ffffff" stroke="#d7dbe3"></rect>
+  <text x="16" y="58" font-family="Arial" font-size="14" fill="#111827">SISOC · Centro X</text>
+  <circle cx="332" cy="52" r="14" fill="#eef2f7" stroke="#d7dbe3"></circle>
+  <text x="327" y="56" font-family="Arial" font-size="10" fill="#6b7280">⚙</text>
+
+  <!-- Content -->
+  <text x="16" y="112" font-family="Arial" font-size="12" fill="#6b7280">Home (Hub)</text>
+
+  <!-- Cards -->
+  <g>
+    <rect x="16" y="128" width="328" height="60" rx="10" fill="#ffffff" stroke="#d7dbe3"></rect>
+    <text x="28" y="160" font-family="Arial" font-size="14" fill="#111827">Información institucional</text>
+    <text x="28" y="178" font-family="Arial" font-size="11" fill="#6b7280">Perfil, documentos y convenios</text>
+    <text x="324" y="164" font-family="Arial" font-size="18" fill="#9ca3af">›</text>
+  </g>
+
+  <g>
+    <rect x="16" y="200" width="328" height="60" rx="10" fill="#ffffff" stroke="#d7dbe3"></rect>
+    <text x="28" y="232" font-family="Arial" font-size="14" fill="#111827">Nómina</text>
+    <text x="28" y="250" font-family="Arial" font-size="11" fill="#6b7280">Personas asistidas / participantes</text>
+    <text x="324" y="236" font-family="Arial" font-size="18" fill="#9ca3af">›</text>
+  </g>
+
+  <g>
+    <rect x="16" y="272" width="328" height="60" rx="10" fill="#ffffff" stroke="#d7dbe3"></rect>
+    <text x="28" y="304" font-family="Arial" font-size="14" fill="#111827">Prestación alimentaria</text>
+    <text x="28" y="322" font-family="Arial" font-size="11" fill="#6b7280">Estado del período y observaciones</text>
+    <text x="324" y="308" font-family="Arial" font-size="18" fill="#9ca3af">›</text>
+  </g>
+
+  <g>
+    <rect x="16" y="344" width="328" height="60" rx="10" fill="#ffffff" stroke="#d7dbe3"></rect>
+    <text x="28" y="376" font-family="Arial" font-size="14" fill="#111827">Formación</text>
+    <text x="28" y="394" font-family="Arial" font-size="11" fill="#6b7280">Actividades y participantes</text>
+    <text x="324" y="380" font-family="Arial" font-size="18" fill="#9ca3af">›</text>
+  </g>
+
+  <g>
+    <rect x="16" y="416" width="328" height="60" rx="10" fill="#ffffff" stroke="#d7dbe3"></rect>
+    <text x="28" y="448" font-family="Arial" font-size="14" fill="#111827">Rendiciones</text>
+    <text x="28" y="466" font-family="Arial" font-size="11" fill="#6b7280">Adjuntar comprobantes y presentar</text>
+    <text x="324" y="452" font-family="Arial" font-size="18" fill="#9ca3af">›</text>
+  </g>
+
+  <g>
+    <rect x="16" y="488" width="328" height="60" rx="10" fill="#ffffff" stroke="#d7dbe3"></rect>
+    <text x="28" y="520" font-family="Arial" font-size="14" fill="#111827">Mensajes</text>
+    <text x="28" y="538" font-family="Arial" font-size="11" fill="#6b7280">Comunicaciones operativas</text>
+    <circle cx="310" cy="510" r="10" fill="#eef2ff" stroke="#c7d2fe"></circle>
+    <text x="306" y="514" font-family="Arial" font-size="10" fill="#3730a3">3</text>
+    <text x="324" y="524" font-family="Arial" font-size="18" fill="#9ca3af">›</text>
+  </g>
+</svg>

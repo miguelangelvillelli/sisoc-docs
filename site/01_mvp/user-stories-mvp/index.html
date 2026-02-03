@@ -1,0 +1,2070 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentación funcional y operativa del MVP para espacios comunitarios.">
+      
+      
+        <meta name="author" content="Equipo SISOC">
+      
+      
+      
+        <link rel="prev" href="../roadmap/">
+      
+      
+        <link rel="next" href="../plan-sprints/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.33">
+    
+    
+      
+        <title>User stories MVP - SISOC · Legajo de Espacio (MVP)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#user-stories-mvp-app-movil-legajo-de-espacio" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="SISOC · Legajo de Espacio (MVP)" class="md-header__button md-logo" aria-label="SISOC · Legajo de Espacio (MVP)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SISOC · Legajo de Espacio (MVP)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              User stories MVP
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../00_intro/proposito-alcance/" class="md-tabs__link">
+          
+  
+  00 · Introducción
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../alcance-mvp/" class="md-tabs__link">
+          
+  
+  01 · MVP
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../02_roles_y_accesos/rbac/" class="md-tabs__link">
+          
+  
+  02 · Roles y accesos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../03_modulos/informacion-institucional/" class="md-tabs__link">
+          
+  
+  03 · Módulos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../04_datos/modelo-conceptual/" class="md-tabs__link">
+          
+  
+  04 · Datos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../05_api/contratos-v0/" class="md-tabs__link">
+          
+  
+  05 · API
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../06_calidad/criterios-aceptacion/" class="md-tabs__link">
+          
+  
+  06 · Calidad
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../07_seguridad/baseline/" class="md-tabs__link">
+          
+  
+  07 · Seguridad
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../08_wireflows/" class="md-tabs__link">
+          
+  
+  08 · Wireflows
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../adr/ADR-0001-alcance-mvp/" class="md-tabs__link">
+          
+  
+  ADR
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SISOC · Legajo de Espacio (MVP)" class="md-nav__button md-logo" aria-label="SISOC · Legajo de Espacio (MVP)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    SISOC · Legajo de Espacio (MVP)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    00 · Introducción
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            00 · Introducción
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00_intro/proposito-alcance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Propósito y alcance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00_intro/contexto-tecnico-integracion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contexto técnico e integración
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00_intro/preguntas-reunion-sisoc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preguntas para reunión SISOC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00_intro/minuta-reunion-sisoc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Minuta reunión SISOC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00_intro/principios-mvp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Principios del MVP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00_intro/glosario/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glosario
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    01 · MVP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            01 · MVP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alcance-mvp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alcance MVP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fuera-de-alcance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fuera de alcance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../roadmap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Roadmap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    User stories MVP
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    User stories MVP
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referencias
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plan-sprints/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plan de sprints
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    02 · Roles y accesos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            02 · Roles y accesos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_roles_y_accesos/rbac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RBAC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_roles_y_accesos/auditoria-trazabilidad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Auditoría y trazabilidad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    03 · Módulos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            03 · Módulos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_modulos/informacion-institucional/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Información institucional
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_modulos/nominas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nóminas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_modulos/prestacion-alimentaria/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prestación alimentaria
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_modulos/formacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Formación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_modulos/rendiciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rendiciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    04 · Datos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            04 · Datos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_datos/modelo-conceptual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo conceptual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_datos/estados-y-reglas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estados y reglas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_datos/importacion-csv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Importación CSV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    05 · API
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            05 · API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05_api/contratos-v0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contratos v0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    06 · Calidad
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            06 · Calidad
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_calidad/criterios-aceptacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Criterios de aceptación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_calidad/plan-qa-smoke/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plan QA smoke
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    07 · Seguridad
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            07 · Seguridad
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07_seguridad/baseline/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Baseline
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    08 · Wireflows
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            08 · Wireflows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08_wireflows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mapa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08_wireflows/wireflow-mvp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wireflow MVP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08_wireflows/pantallas-mvp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pantallas MVP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08_wireflows/estados-ui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estados UI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ADR
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            ADR
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adr/ADR-0001-alcance-mvp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ADR-0001 · Alcance MVP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adr/ADR-0002-usuario-organizacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ADR-0002 · Usuario organización
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adr/ADR-0003-integracion-sisoc-existente/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ADR-0003 · Integración SISOC existente
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referencias
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="user-stories-mvp-app-movil-legajo-de-espacio">User Stories MVP — App móvil (Legajo de Espacio)<a class="headerlink" href="#user-stories-mvp-app-movil-legajo-de-espacio" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Estado</p>
+<p><strong>Versión:</strong> v0.1<br />
+<strong>Última actualización:</strong> 2026-02-03<br />
+<strong>Responsable:</strong> PLAN_Vibe / QA_Test / UI_UX<br />
+<strong>Nivel:</strong> Interno</p>
+</div>
+<h2 id="objetivo">Objetivo<a class="headerlink" href="#objetivo" title="Permanent link">&para;</a></h2>
+<p>Definir el backlog mínimo del MVP de la app móvil para espacios comunitarios, consumiendo SISOC (Django + MySQL) vía API.
+Incluye <strong>user stories</strong> con <strong>criterios de aceptación</strong> alineados a pantallas y estados UI.</p>
+<h2 id="referencias">Referencias<a class="headerlink" href="#referencias" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Pantallas / mockups: <code>08_wireflows/pantallas-mvp.md</code></li>
+<li>Estados UI: <code>08_wireflows/estados-ui.md</code></li>
+<li>RBAC: <code>02_roles_y_accesos/rbac.md</code></li>
+<li>Contratos API v0: <code>05_api/contratos-v0.md</code></li>
+</ul>
+<hr />
+<h1 id="epic-0-acceso-y-contexto">EPIC 0 — Acceso y contexto<a class="headerlink" href="#epic-0-acceso-y-contexto" title="Permanent link">&para;</a></h1>
+<h2 id="us-0001-ver-mi-contexto-de-usuario-perfil-alcance">US-0001 — Ver mi contexto de usuario (perfil + alcance)<a class="headerlink" href="#us-0001-ver-mi-contexto-de-usuario-perfil-alcance" title="Permanent link">&para;</a></h2>
+<p><strong>Como</strong> usuario autenticado<br />
+<strong>Quiero</strong> ver (o usar internamente) mi contexto: rol y espacio(s) asignados<br />
+<strong>Para</strong> operar con permisos y datos correctos.</p>
+<p><strong>Criterios de aceptación</strong>
+- Al iniciar la app, se consulta el endpoint de contexto (ej: <code>GET /me</code>) y se obtiene:
+  - rol del usuario
+  - lista o identificador de espacio(s)
+  - jurisdicción (si corresponde)
+- Si la respuesta indica <strong>múltiples espacios</strong>, se navega a “Selector de espacio”.
+- Si indica <strong>un solo espacio</strong>, se navega directo a Home.
+- Si no hay espacios asignados: mostrar estado “Sin espacios asignados” (ver <code>estados-ui.md</code>).</p>
+<hr />
+<h2 id="us-0002-seleccionar-espacio-solo-si-multi-espacio">US-0002 — Seleccionar espacio (solo si multi-espacio)<a class="headerlink" href="#us-0002-seleccionar-espacio-solo-si-multi-espacio" title="Permanent link">&para;</a></h2>
+<p><strong>Como</strong> usuario con más de un espacio asignado<br />
+<strong>Quiero</strong> seleccionar el espacio a operar<br />
+<strong>Para</strong> ver información y operar acciones sobre el espacio correcto.</p>
+<p><strong>Criterios de aceptación</strong>
+- Se muestra lista de espacios (nombre + dato mínimo adicional si aplica).
+- Al seleccionar un espacio se guarda como “espacio actual” y se navega a Home.
+- Si falla la carga por red, mostrar “No pudimos conectarnos. Reintentá.” y permitir reintentar.</p>
+<hr />
+<h1 id="epic-1-home-y-navegacion">EPIC 1 — Home y navegación<a class="headerlink" href="#epic-1-home-y-navegacion" title="Permanent link">&para;</a></h1>
+<h2 id="us-0101-ver-home-hub-de-modulos">US-0101 — Ver Home (hub de módulos)<a class="headerlink" href="#us-0101-ver-home-hub-de-modulos" title="Permanent link">&para;</a></h2>
+<p><strong>Como</strong> usuario del espacio<br />
+<strong>Quiero</strong> ver un Home con accesos a módulos del MVP<br />
+<strong>Para</strong> navegar rápido a la funcionalidad.</p>
+<p><strong>Criterios de aceptación</strong>
+- Home muestra accesos (cards/atajos) a:
+  - Información institucional
+  - Nómina
+  - Prestación alimentaria
+  - Formación (si entra en MVP)
+  - Rendiciones
+  - Mensajes
+- El header muestra el nombre del espacio actual.
+- Si existen contadores (mensajes sin leer / rendiciones observadas), se muestran como badge (opcional MVP).</p>
+<hr />
+<h1 id="epic-2-informacion-institucional-y-documentos">EPIC 2 — Información institucional y documentos<a class="headerlink" href="#epic-2-informacion-institucional-y-documentos" title="Permanent link">&para;</a></h1>
+<h2 id="us-0201-ver-perfil-del-espacio">US-0201 — Ver perfil del espacio<a class="headerlink" href="#us-0201-ver-perfil-del-espacio" title="Permanent link">&para;</a></h2>
+<p><strong>Como</strong> referente/usuario interno del espacio<br />
+<strong>Quiero</strong> ver la ficha del espacio<br />
+<strong>Para</strong> conocer datos institucionales y contactos.</p>
+<p><strong>Criterios de aceptación</strong>
+- Se visualizan campos mínimos:
+  - nombre del espacio
+  - dirección/localidad (si existe)
+  - provincia/municipio (si existe)
+  - estado (activo/suspendido/sin_datos)
+  - contactos disponibles (si existen)
+- Si no hay datos, se muestra “sin datos” sin romper la pantalla.
+- Si el espacio no existe (404), mostrar mensaje amigable y opción “Volver”.</p>
+<hr />
+<h2 id="us-0202-ver-lista-de-documentosconvenios">US-0202 — Ver lista de documentos/convenios<a class="headerlink" href="#us-0202-ver-lista-de-documentosconvenios" title="Permanent link">&para;</a></h2>
+<p><strong>Como</strong> usuario del espacio<br />
+<strong>Quiero</strong> ver documentos disponibles<br />
+<strong>Para</strong> acceder a convenios y archivos asociados.</p>
+<p><strong>Criterios de aceptación</strong>
+- Lista con título + fecha actualización + acción para abrir/descargar.
+- Estado vacío: “No hay documentos disponibles”.
+- La lista es paginable si excede cierto volumen (page/page_size).</p>
+<hr />
+<h2 id="us-0203-abrir-descargar-documento">US-0203 — Abrir / descargar documento<a class="headerlink" href="#us-0203-abrir-descargar-documento" title="Permanent link">&para;</a></h2>
+<p><strong>Como</strong> usuario del espacio<br />
+<strong>Quiero</strong> abrir o descargar un documento<br />
+<strong>Para</strong> consultarlo cuando lo necesite.</p>
+<p><strong>Criterios de aceptación</strong>
+- Al seleccionar un documento se accede a detalle (o descarga).
+- Si el documento no está disponible (404) se muestra error amigable.
+- Si falla la descarga por red, permite reintentar.</p>
+<hr />
+<h1 id="epic-3-mensajes-operativos">EPIC 3 — Mensajes operativos<a class="headerlink" href="#epic-3-mensajes-operativos" title="Permanent link">&para;</a></h1>
+<h2 id="us-0301-ver-lista-de-mensajes">US-0301 — Ver lista de mensajes<a class="headerlink" href="#us-0301-ver-lista-de-mensajes" title="Permanent link">&para;</a></h2>
+<p><strong>Como</strong> usuario del espacio<br />
+<strong>Quiero</strong> ver mensajes operativos del programa<br />
+<strong>Para</strong> estar al tanto de novedades y requerimientos.</p>
+<p><strong>Criterios de aceptación</strong>
+- Lista muestra: título + fecha + resumen.
+- Estado vacío: “No hay mensajes por ahora”.
+- Paginación en lista (page/page_size).</p>
+<hr />
+<h2 id="us-0302-ver-detalle-de-mensaje">US-0302 — Ver detalle de mensaje<a class="headerlink" href="#us-0302-ver-detalle-de-mensaje" title="Permanent link">&para;</a></h2>
+<p><strong>Como</strong> usuario del espacio<br />
+<strong>Quiero</strong> ver el contenido completo de un mensaje<br />
+<strong>Para</strong> entender qué acción se espera.</p>
+<p><strong>Criterios de aceptación</strong>
+- Detalle muestra: título + fecha + cuerpo completo.
+- Navegación: “Volver” retorna a lista.
+- Si el mensaje no existe (404) mostrar mensaje amigable.</p>
+<hr />
+<h1 id="epic-4-nomina-personas">EPIC 4 — Nómina (personas)<a class="headerlink" href="#epic-4-nomina-personas" title="Permanent link">&para;</a></h1>
+<h2 id="us-0401-ver-lista-de-nomina-con-busqueda-y-filtros">US-0401 — Ver lista de nómina con búsqueda y filtros<a class="headerlink" href="#us-0401-ver-lista-de-nomina-con-busqueda-y-filtros" title="Permanent link">&para;</a></h2>
+<p><strong>Como</strong> usuario del espacio<br />
+<strong>Quiero</strong> listar personas de la nómina con búsqueda y filtros<br />
+<strong>Para</strong> encontrar y gestionar participantes rápidamente.</p>
+<p><strong>Criterios de aceptación</strong>
+- Lista muestra: nombre y apellido + estado (activa/inactiva) + flags si aplican.
+- Búsqueda por texto libre (nombre/apellido/documento).
+- Filtros mínimos:
+  - activas/inactivas
+  - participa alimentación / formación (si aplican en modelo)
+- Estado vacío: “Todavía no cargaste personas”.
+- Paginación en lista (page/page_size).</p>
+<hr />
+<h2 id="us-0402-ver-detalle-de-persona">US-0402 — Ver detalle de persona<a class="headerlink" href="#us-0402-ver-detalle-de-persona" title="Permanent link">&para;</a></h2>
+<p><strong>Como</strong> usuario del espacio<br />
+<strong>Quiero</strong> ver el detalle de una persona<br />
+<strong>Para</strong> revisar su información y estado.</p>
+<p><strong>Criterios de aceptación</strong>
+- Detalle muestra:
+  - nombre y apellido
+  - documento (si existe)
+  - teléfono (si existe)
+  - flags (si existen)
+  - estado activa/inactiva
+- Si la persona no existe (404), mostrar mensaje amigable.</p>
+<hr />
+<h2 id="us-0403-crear-persona-alta-rapida">US-0403 — Crear persona (alta rápida)<a class="headerlink" href="#us-0403-crear-persona-alta-rapida" title="Permanent link">&para;</a></h2>
+<p><strong>Como</strong> referente/usuario interno (según permiso)<br />
+<strong>Quiero</strong> dar de alta una persona con datos mínimos<br />
+<strong>Para</strong> cargar nómina sin fricción.</p>
+<p><strong>Criterios de aceptación</strong>
+- Campos obligatorios: nombre y apellido.
+- Campos opcionales: documento, teléfono, flags.
+- Al guardar, vuelve a lista y la persona aparece.
+- Si falta nombre/apellido: error 400 con mensaje claro.
+- Si el backend detecta duplicado probable (409 o warning), la app muestra advertencia amigable sin perder datos cargados.</p>
+<hr />
+<h2 id="us-0404-editar-persona">US-0404 — Editar persona<a class="headerlink" href="#us-0404-editar-persona" title="Permanent link">&para;</a></h2>
+<p><strong>Como</strong> referente/usuario interno (según permiso)<br />
+<strong>Quiero</strong> editar datos de una persona<br />
+<strong>Para</strong> mantener la nómina actualizada.</p>
+<p><strong>Criterios de aceptación</strong>
+- Permite editar campos definidos por el MVP (ej. teléfono, flags, estado).
+- Al guardar, confirma “Cambios guardados” (o vuelve al detalle).
+- Si no tiene permiso (403), mostrar “No tenés permiso para realizar esta acción”.</p>
+<hr />
+<h2 id="us-0405-activar-desactivar-persona">US-0405 — Activar / desactivar persona<a class="headerlink" href="#us-0405-activar-desactivar-persona" title="Permanent link">&para;</a></h2>
+<p><strong>Como</strong> referente (según permiso)<br />
+<strong>Quiero</strong> activar o desactivar una persona<br />
+<strong>Para</strong> reflejar la situación real de asistencia/participación.</p>
+<p><strong>Criterios de aceptación</strong>
+- Desde detalle, se ofrece acción activar/desactivar.
+- Requiere confirmación (“¿Querés dar de baja a esta persona?”).
+- Si la acción está prohibida por rol (403), mostrar estado “Sin permiso”.</p>
+<hr />
+<h2 id="us-0406-importar-nomina-por-csv-si-aplica-en-mvp">US-0406 — Importar nómina por CSV (si aplica en MVP)<a class="headerlink" href="#us-0406-importar-nomina-por-csv-si-aplica-en-mvp" title="Permanent link">&para;</a></h2>
+<p><strong>Como</strong> referente (si se habilita)<br />
+<strong>Quiero</strong> importar un CSV de personas<br />
+<strong>Para</strong> cargar muchas personas de una vez.</p>
+<p><strong>Criterios de aceptación</strong>
+- La pantalla permite subir un archivo.
+- Muestra resultado: creados/actualizados + errores por fila + warnings.
+- Si MVP define que no aplica en móvil: se muestra mensaje “Esta acción se realiza desde la web (SISOC).”</p>
+<hr />
+<h1 id="epic-5-prestacion-alimentaria-solo-lectura">EPIC 5 — Prestación alimentaria (solo lectura)<a class="headerlink" href="#epic-5-prestacion-alimentaria-solo-lectura" title="Permanent link">&para;</a></h1>
+<h2 id="us-0501-ver-estado-de-prestacion-del-periodo-actual">US-0501 — Ver estado de prestación del período actual<a class="headerlink" href="#us-0501-ver-estado-de-prestacion-del-periodo-actual" title="Permanent link">&para;</a></h2>
+<p><strong>Como</strong> usuario del espacio<br />
+<strong>Quiero</strong> ver el estado de la prestación del período<br />
+<strong>Para</strong> entender si está vigente/observada/suspendida y qué hacer.</p>
+<p><strong>Criterios de aceptación</strong>
+- Se muestra:
+  - período (YYYY-MM)
+  - estado (vigente/en_revision/observada/suspendida/sin_datos)
+  - resumen operativo
+  - observaciones (si aplica)
+- Si no hay datos: “No hay información disponible para este período”.
+- No hay edición (solo lectura).</p>
+<hr />
+<h2 id="us-0502-ver-historial-por-periodo">US-0502 — Ver historial por período<a class="headerlink" href="#us-0502-ver-historial-por-periodo" title="Permanent link">&para;</a></h2>
+<p><strong>Como</strong> usuario del espacio<br />
+<strong>Quiero</strong> ver períodos anteriores<br />
+<strong>Para</strong> tener trazabilidad simple de estados.</p>
+<p><strong>Criterios de aceptación</strong>
+- Lista de períodos + estado.
+- Al seleccionar, se abre detalle por período (si existe).
+- Si no hay historial, mostrar estado vacío.</p>
+<hr />
+<h1 id="epic-6-rendiciones-y-comprobantes">EPIC 6 — Rendiciones y comprobantes<a class="headerlink" href="#epic-6-rendiciones-y-comprobantes" title="Permanent link">&para;</a></h1>
+<h2 id="us-0601-ver-lista-de-rendiciones">US-0601 — Ver lista de rendiciones<a class="headerlink" href="#us-0601-ver-lista-de-rendiciones" title="Permanent link">&para;</a></h2>
+<p><strong>Como</strong> usuario del espacio<br />
+<strong>Quiero</strong> ver la lista de rendiciones por período<br />
+<strong>Para</strong> conocer su estado y trabajar sobre la que corresponda.</p>
+<p><strong>Criterios de aceptación</strong>
+- Lista muestra: período + estado + última actualización + observaciones si estado observada.
+- Paginación si aplica.
+- Estado vacío: “No hay rendiciones cargadas”.</p>
+<hr />
+<h2 id="us-0602-ver-detalle-de-rendicion">US-0602 — Ver detalle de rendición<a class="headerlink" href="#us-0602-ver-detalle-de-rendicion" title="Permanent link">&para;</a></h2>
+<p><strong>Como</strong> usuario del espacio<br />
+<strong>Quiero</strong> ver detalle de una rendición y sus adjuntos<br />
+<strong>Para</strong> saber qué falta y qué se observó.</p>
+<p><strong>Criterios de aceptación</strong>
+- Detalle muestra:
+  - período
+  - estado
+  - observaciones (si aplica)
+  - lista de adjuntos con estado (cargado/validado/invalidado) y motivo si invalidado
+- Si no existe (404), mostrar mensaje amigable.</p>
+<hr />
+<h2 id="us-0603-adjuntar-comprobante">US-0603 — Adjuntar comprobante<a class="headerlink" href="#us-0603-adjuntar-comprobante" title="Permanent link">&para;</a></h2>
+<p><strong>Como</strong> referente/usuario interno (según permiso)<br />
+<strong>Quiero</strong> subir un comprobante a una rendición<br />
+<strong>Para</strong> cumplir con la rendición del período.</p>
+<p><strong>Criterios de aceptación</strong>
+- Permite seleccionar archivo (pdf/jpg/png) hasta límite definido (ej 10MB).
+- Al subir, el adjunto aparece en la lista con estado “cargado”.
+- Si supera tamaño o tipo no permitido: mensaje claro.
+- Si no tiene permiso: “No tenés permiso para realizar esta acción”.</p>
+<hr />
+<h2 id="us-0604-presentar-rendicion">US-0604 — Presentar rendición<a class="headerlink" href="#us-0604-presentar-rendicion" title="Permanent link">&para;</a></h2>
+<p><strong>Como</strong> referente (según permiso)<br />
+<strong>Quiero</strong> presentar la rendición<br />
+<strong>Para</strong> formalizar el envío al programa.</p>
+<p><strong>Criterios de aceptación</strong>
+- Solo visible/habilitado para rol que puede presentar.
+- Requiere confirmación: “Al presentar se bloquean cambios.”
+- Si no hay adjuntos: mostrar “Para presentar la rendición debés adjuntar al menos 1 comprobante.”
+- Al presentar, estado pasa a “presentada” y se refleja en lista y detalle.</p>
+<hr />
+<h1 id="epic-7-formacion-si-entra-en-mvp">EPIC 7 — Formación (si entra en MVP)<a class="headerlink" href="#epic-7-formacion-si-entra-en-mvp" title="Permanent link">&para;</a></h1>
+<h2 id="us-0701-ver-lista-de-actividades">US-0701 — Ver lista de actividades<a class="headerlink" href="#us-0701-ver-lista-de-actividades" title="Permanent link">&para;</a></h2>
+<p><strong>Como</strong> usuario del espacio<br />
+<strong>Quiero</strong> ver actividades de formación<br />
+<strong>Para</strong> gestionar y reportar acciones formativas.</p>
+<p><strong>Criterios de aceptación</strong>
+- Lista con: título + fecha + estado + cantidad de participantes.
+- Estado vacío: “No hay actividades cargadas”.</p>
+<hr />
+<h2 id="us-0702-creareditar-actividad-si-se-habilita-en-mvp">US-0702 — Crear/editar actividad (si se habilita en MVP)<a class="headerlink" href="#us-0702-creareditar-actividad-si-se-habilita-en-mvp" title="Permanent link">&para;</a></h2>
+<p><strong>Como</strong> referente/usuario interno (según permiso)<br />
+<strong>Quiero</strong> crear o editar una actividad<br />
+<strong>Para</strong> registrar actividades del espacio.</p>
+<p><strong>Criterios de aceptación</strong>
+- Campos mínimos: título (obligatorio), fecha (obligatorio), descripción (opcional), estado.
+- Regla MVP: solo se edita si estado = planificada.
+- Si no tiene permiso: mostrar “Sin permiso”.</p>
+<hr />
+<h2 id="us-0703-gestionar-participantes-desde-nomina-si-se-habilita-en-mvp">US-0703 — Gestionar participantes desde nómina (si se habilita en MVP)<a class="headerlink" href="#us-0703-gestionar-participantes-desde-nomina-si-se-habilita-en-mvp" title="Permanent link">&para;</a></h2>
+<p><strong>Como</strong> usuario con permiso<br />
+<strong>Quiero</strong> agregar/quitar participantes de una actividad<br />
+<strong>Para</strong> registrar asistencia.</p>
+<p><strong>Criterios de aceptación</strong>
+- Permite agregar participantes seleccionando personas de la nómina.
+- Muestra cantidad de participantes.
+- Permite quitar participante.
+- Si falla por red, permite reintentar sin perder selección (ideal).</p>
+<hr />
+<h1 id="cierre-mvp-definicion-de-done-dod-minimo">Cierre MVP — Definición de Done (DoD) mínimo<a class="headerlink" href="#cierre-mvp-definicion-de-done-dod-minimo" title="Permanent link">&para;</a></h1>
+<h2 id="dod-mvp-aplicable-a-todas-las-stories">DoD MVP (aplicable a todas las stories)<a class="headerlink" href="#dod-mvp-aplicable-a-todas-las-stories" title="Permanent link">&para;</a></h2>
+<ul>
+<li>La pantalla funciona con RBAC server-side (403 controlado).</li>
+<li>Maneja estados UI: vacío / sin datos / sin permiso / error de red.</li>
+<li>Paginación para listados si aplica.</li>
+<li>Mensajes al usuario claros y sin tecnicismos.</li>
+<li>QA smoke pasa (ver <code>06_calidad/plan-qa-smoke.md</code>).</li>
+</ul>
+<hr />
+<h1 id="pendientes-a-confirmar-en-reunion-con-sisoc">Pendientes a confirmar en reunión con SISOC<a class="headerlink" href="#pendientes-a-confirmar-en-reunion-con-sisoc" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Mecanismo de autenticación (JWT vs sesión).</li>
+<li>Identificadores reales (space_id / person_id / claim_id).</li>
+<li>Existencia real de módulos (nómina/rendiciones/mensajes/documentos) y qué se reutiliza vs qué se crea.</li>
+<li>Storage de archivos (rutas, URLs firmadas, expiración).</li>
+<li>Catálogo real de estados y mapeo (benefit / rendiciones).</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.af256bd8.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

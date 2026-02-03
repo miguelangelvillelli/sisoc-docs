@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SiSOC — La plataforma social de Argentina</title>
+  <meta name="description" content="SiSOC: interoperabilidad, automatización e IA para ejecutar, medir y mejorar la política social a escala. Solicitar demo." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            brand: {
+              50: '#eef6ff', 100: '#d9eaff', 200: '#bcd9ff', 300: '#8fc1ff',
+              400: '#5ea5ff', 500: '#2b84ff', 600: '#1d6ae6', 700: '#1553b4',
+              800: '#123f86', 900: '#0f336b'
+            },
+            accent: { 500: '#00C389', 600: '#00a676' },
+            ink: { 900:'#0f172a', 700:'#334155', 500:'#64748b', 300:'#cbd5e1' }
+          },
+          boxShadow: { soft: '0 10px 30px -10px rgba(2,6,23,0.2)' }
+        }
+      }
+    }
+  </script>
+  <style> .container{max-width:1200px} </style>
+</head>
+<body class="bg-white text-ink-900 antialiased">
+  <!-- Topbar -->
+  <header class="sticky top-0 z-40 backdrop-blur bg-white/80 border-b border-slate-200">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2">
+        <div class="h-9 w-9 rounded-xl bg-brand-600 grid place-items-center shadow-soft">
+          <span class="text-white font-extrabold">S</span>
+        </div>
+        <span class="font-bold text-lg tracking-tight">SiSOC</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#modulos" class="hover:text-brand-700">Módulos</a>
+        <a href="#como-funciona" class="hover:text-brand-700">Cómo funciona</a>
+        <a href="#interoperabilidad" class="hover:text-brand-700">Interoperabilidad</a>
+        <a href="#metricas" class="hover:text-brand-700">Impacto</a>
+        <a href="#faq" class="hover:text-brand-700">Preguntas</a>
+      </nav>
+      <div class="hidden md:flex items-center gap-3">
+        <a href="#dossier" class="px-4 py-2 rounded-xl border border-slate-300 hover:bg-slate-50">Descargar dossier</a>
+        <a href="#contacto" class="px-4 py-2 rounded-xl bg-brand-600 text-white hover:bg-brand-700 shadow-soft">Solicitar demo</a>
+      </div>
+      <button id="menuBtn" class="md:hidden p-2 rounded-lg border border-slate-300">☰</button>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 bg-white">
+      <div class="px-4 py-3 grid gap-2 text-sm">
+        <a href="#modulos" class="py-2">Módulos</a>
+        <a href="#como-funciona" class="py-2">Cómo funciona</a>
+        <a href="#interoperabilidad" class="py-2">Interoperabilidad</a>
+        <a href="#metricas" class="py-2">Impacto</a>
+        <a href="#faq" class="py-2">Preguntas</a>
+        <div class="h-px bg-slate-200 my-1"></div>
+        <a href="#dossier" class="py-2">Descargar dossier</a>
+        <a href="#contacto" class="py-2">Solicitar demo</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-br from-brand-50 via-white to-accent-500/5"></div>
+    <div class="container mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-3xl md:text-5xl font-black leading-tight">
+          La plataforma social de Argentina
+        </h1>
+        <p class="mt-4 text-lg md:text-xl text-ink-700 max-w-xl">
+          Interoperabilidad, automatización e IA para ejecutar, medir y mejorar la política social a escala. 
+          Decisiones por evidencia, menos fraude, más cobertura y mejor uso del presupuesto.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#contacto" class="px-5 py-3 rounded-xl bg-brand-600 text-white font-semibold hover:bg-brand-700 shadow-soft">Solicitar demo</a>
+          <a href="#modulos" class="px-5 py-3 rounded-xl border border-slate-300 hover:bg-slate-50">Ver módulos</a>
+        </div>
+        <div class="mt-8 grid grid-cols-3 gap-4">
+          <div class="rounded-2xl border border-slate-200 p-4 bg-white/60">
+            <div class="text-3xl font-extrabold" data-counter target="4500">0</div>
+            <div class="text-sm text-ink-500">$ millones ahorro estimado</div>
+          </div>
+          <div class="rounded-2xl border border-slate-200 p-4 bg-white/60">
+            <div class="text-3xl font-extrabold" data-counter target="24">0</div>
+            <div class="text-sm text-ink-500">Jurisdicciones integrables</div>
+          </div>
+          <div class="rounded-2xl border border-slate-200 p-4 bg-white/60">
+            <div class="text-3xl font-extrabold" data-counter target="100">0</div>
+            <div class="text-sm text-ink-500">% trazabilidad de procesos</div>
+          </div>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="rounded-3xl border border-slate-200 bg-white p-4 shadow-soft">
+          <div class="aspect-video rounded-2xl bg-gradient-to-br from-brand-100 to-brand-300 grid place-items-center">
+            <div class="text-brand-900 font-bold">Demo / Video placeholder</div>
+          </div>
+          <ul class="mt-4 grid gap-2 text-sm text-ink-700">
+            <li>• Legajo de Beneficiarios y de Espacios</li>
+            <li>• Gestión de Programas y App de Campo (offline)</li>
+            <li>• Dashboards + IA (fraude, riesgo, predicción)</li>
+            <li>• Voucher y Rezago (inventario)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problema / Solución -->
+  <section class="container mx-auto px-4 py-14">
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="rounded-3xl p-6 border border-slate-200 bg-white">
+        <h2 class="text-2xl font-bold mb-3">Antes: trabas que frenan la política social</h2>
+        <ul class="list-disc pl-5 space-y-2 text-ink-700">
+          <li>Islas de información, sin datos comparables entre organismos.</li>
+          <li>Procesos manuales, papeles, demoras y errores.</li>
+          <li>Sin trazabilidad ni auditoría en tiempo real.</li>
+          <li>Imposible medir impacto o detectar fraude a tiempo.</li>
+        </ul>
+      </div>
+      <div class="rounded-3xl p-6 border border-slate-200 bg-white">
+        <h2 class="text-2xl font-bold mb-3">Después con SiSOC: gestión integrada</h2>
+        <ul class="list-disc pl-5 space-y-2 text-ink-700">
+          <li>Datos nominales e institucionales unificados (Nación–Provincia–Municipio).</li>
+          <li>Workflows automatizados: admisión, visitas, rendiciones y cierres.</li>
+          <li>Alertas + IA para fraude, riesgo y priorización de casos.</li>
+          <li>Dashboards en tiempo real e informes exportables.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Módulos -->
+  <section id="modulos" class="py-14 bg-slate-50 border-y border-slate-200">
+    <div class="container mx-auto px-4">
+      <div class="flex items-end justify-between gap-4 mb-8">
+        <h2 class="text-3xl font-extrabold">Módulos SiSOC</h2>
+        <a href="#contacto" class="hidden md:inline-block px-4 py-2 rounded-xl bg-accent-500 text-white hover:bg-accent-600">Solicitar demo</a>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Card: Legajo Beneficiarios -->
+        <article class="rounded-2xl bg-white border border-slate-200 p-6 hover:shadow-soft transition">
+          <h3 class="font-bold text-lg">Legajo de Beneficiarios</h3>
+          <p class="mt-2 text-sm text-ink-700">Datos personales y de hogar, historial de programas e intervenciones, alertas de riesgo e interoperabilidad.</p>
+          <ul class="mt-3 text-sm text-ink-700 space-y-1">
+            <li>• Visión 360° por persona</li>
+            <li>• Reglas e IA para detección de inconsistencias</li>
+            <li>• Trazabilidad completa</li>
+          </ul>
+        </article>
+        <!-- Card: Legajo Espacios -->
+        <article class="rounded-2xl bg-white border border-slate-200 p-6 hover:shadow-soft transition">
+          <h3 class="font-bold text-lg">Legajo de Espacios</h3>
+          <p class="mt-2 text-sm text-ink-700">Comedores y centros: asistencia, presupuesto, rendiciones, auditoría y georreferenciación.</p>
+          <ul class="mt-3 text-sm text-ink-700 space-y-1">
+            <li>• Control operativo y financiero</li>
+            <li>• Mapas y tipificación</li>
+            <li>• Asistente virtual (evolutivo)</li>
+          </ul>
+        </article>
+        <!-- Card: Gestión Programas -->
+        <article class="rounded-2xl bg-white border border-slate-200 p-6 hover:shadow-soft transition">
+          <h3 class="font-bold text-lg">Gestión de Programas</h3>
+          <p class="mt-2 text-sm text-ink-700">Admisión automatizada, visitas de campo, rendiciones y aprobaciones con auditoría.</p>
+          <ul class="mt-3 text-sm text-ink-700 space-y-1">
+            <li>• Workflows estándar</li>
+            <li>• Evidencia y firmas</li>
+            <li>• Reportes y KPIs</li>
+          </ul>
+        </article>
+        <!-- Card: App Campo -->
+        <article class="rounded-2xl bg-white border border-slate-200 p-6 hover:shadow-soft transition">
+          <h3 class="font-bold text-lg">App de Campo (offline)</h3>
+          <p class="mt-2 text-sm text-ink-700">Relevamientos asincrónicos con geolocalización, monitoreo y evidencia.</p>
+          <ul class="mt-3 text-sm text-ink-700 space-y-1">
+            <li>• Funciona sin conexión</li>
+            <li>• Control de calidad</li>
+            <li>• Seguimiento de operativos</li>
+          </ul>
+        </article>
+        <!-- Card: Dashboards IA -->
+        <article class="rounded-2xl bg-white border border-slate-200 p-6 hover:shadow-soft transition">
+          <h3 class="font-bold text-lg">Dashboards + IA</h3>
+          <p class="mt-2 text-sm text-ink-700">Tableros, alertas, detección de fraude, riesgo y predicción de impacto.</p>
+          <ul class="mt-3 text-sm text-ink-700 space-y-1">
+            <li>• Indicadores en tiempo real</li>
+            <li>• Reglas explicables</li>
+            <li>• Exportables y API</li>
+          </ul>
+        </article>
+        <!-- Card: Voucher / Rezago / Educativa -->
+        <article class="rounded-2xl bg-white border border-slate-200 p-6 hover:shadow-soft transition">
+          <h3 class="font-bold text-lg">Voucher · Rezago · Educativa</h3>
+          <p class="mt-2 text-sm text-ink-700">Centros adheridos con cobro, inventario de rezago y portal formativo por ciclo de vida.</p>
+          <ul class="mt-3 text-sm text-ink-700 space-y-1">
+            <li>• Cobro con trazabilidad</li>
+            <li>• Stock y logística</li>
+            <li>• Certificaciones</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cómo funciona -->
+  <section id="como-funciona" class="container mx-auto px-4 py-14">
+    <h2 class="text-3xl font-extrabold mb-6">Cómo funciona</h2>
+    <div class="grid md:grid-cols-5 gap-4">
+      <div class="rounded-2xl border border-slate-200 p-4 bg-white">
+        <div class="text-2xl font-extrabold">1</div>
+        <p class="mt-1 text-sm text-ink-700">Captura (sistemas, app de campo, integraciones).</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 p-4 bg-white">
+        <div class="text-2xl font-extrabold">2</div>
+        <p class="mt-1 text-sm text-ink-700">Normaliza & enlaza (calidad + interoperabilidad).</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 p-4 bg-white">
+        <div class="text-2xl font-extrabold">3</div>
+        <p class="mt-1 text-sm text-ink-700">Orquesta procesos (admisión, visitas, rendiciones).</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 p-4 bg-white">
+        <div class="text-2xl font-extrabold">4</div>
+        <p class="mt-1 text-sm text-ink-700">Analiza & alerta (dashboards, IA, fraude, riesgo).</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 p-4 bg-white">
+        <div class="text-2xl font-extrabold">5</div>
+        <p class="mt-1 text-sm text-ink-700">Actúa (notificaciones, pagos, derivaciones).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interoperabilidad -->
+  <section id="interoperabilidad" class="py-14 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h2 class="text-3xl font-extrabold">Interoperabilidad Nación–Provincia–Municipio</h2>
+          <p class="mt-3 text-ink-700">SiSOC alimenta y consume datos mediante APIs y estándares, federando padrones, legajos y transacciones con gobernanza y seguridad. Integra programas nacionales, provinciales y locales para terminar con la fragmentación.</p>
+          <ul class="mt-4 space-y-2 text-ink-700 text-sm">
+            <li>• Calidad y deduplicación de datos</li>
+            <li>• Reglas y permisos por rol/jurisdicción</li>
+            <li>• Auditoría completa (quién, qué, cuándo, dónde)</li>
+          </ul>
+        </div>
+        <div class="rounded-3xl border border-slate-200 p-4 bg-slate-50">
+          <div class="aspect-video rounded-2xl bg-gradient-to-tr from-brand-100 to-accent-500/30 grid place-items-center">
+            <span class="font-semibold text-brand-900">Diagrama / Mapa de integraciones (placeholder)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impacto / Métricas -->
+  <section id="metricas" class="py-14 bg-slate-50 border-y border-slate-200">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-extrabold mb-8">Impacto medible</h2>
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 text-center">
+          <div class="text-4xl font-black" data-counter target="95">0</div>
+          <p class="mt-2 text-sm text-ink-700">Reducción de tiempos administrativos</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 text-center">
+          <div class="text-4xl font-black" data-counter target="40">0</div>
+          <p class="mt-2 text-sm text-ink-700">Menos costos operativos</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 text-center">
+          <div class="text-4xl font-black" data-counter target="3">0</div>
+          <p class="mt-2 text-sm text-ink-700">Semanas de go-live por módulo</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 text-center">
+          <div class="text-4xl font-black" data-counter target="100">0</div>
+          <p class="mt-2 text-sm text-ink-700">% trazabilidad y auditoría</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ / Preguntas -->
+  <section id="faq" class="container mx-auto px-4 py-14">
+    <h2 class="text-3xl font-extrabold mb-6">Preguntas frecuentes</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <details class="rounded-xl border border-slate-200 p-4 bg-white open:shadow-soft">
+        <summary class="font-semibold cursor-pointer">¿Cómo se licencian los módulos?</summary>
+        <p class="mt-2 text-sm text-ink-700">Modelo por módulos y usuarios/jurisdicciones, con servicios evolutivos anuales y soporte de nivel gubernamental.</p>
+      </details>
+      <details class="rounded-xl border border-slate-200 p-4 bg-white">
+        <summary class="font-semibold cursor-pointer">¿Qué requiere para integrarse?</summary>
+        <p class="mt-2 text-sm text-ink-700">APIs REST/GraphQL, estándares abiertos y un plan de interoperabilidad con responsables técnicos por organismo.</p>
+      </details>
+      <details class="rounded-xl border border-slate-200 p-4 bg-white">
+        <summary class="font-semibold cursor-pointer">¿Funciona offline en territorio?</summary>
+        <p class="mt-2 text-sm text-ink-700">Sí, la App de Campo captura evidencia y sincroniza cuando recupera conectividad.</p>
+      </details>
+      <details class="rounded-xl border border-slate-200 p-4 bg-white">
+        <summary class="font-semibold cursor-pointer">¿Cómo gestionan seguridad y auditoría?</summary>
+        <p class="mt-2 text-sm text-ink-700">Perfiles y permisos granulares, firmas electrónicas, registros de auditoría y trazabilidad completa.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Dossier + Contacto -->
+  <section id="dossier" class="py-14 bg-white">
+    <div class="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-3xl font-extrabold">Descargá el dossier</h2>
+        <p class="mt-3 text-ink-700">Ficha ejecutiva con módulos, roadmap, equipo, interoperabilidad y estimaciones de ahorro. Ideal para comités y áreas técnicas.</p>
+        <a href="#" class="mt-5 inline-block px-5 py-3 rounded-xl bg-ink-900 text-white hover:bg-ink-700">Descargar PDF</a>
+      </div>
+      <div class="rounded-3xl border border-slate-200 p-4 bg-slate-50">
+        <div class="aspect-[4/3] rounded-2xl bg-gradient-to-br from-slate-100 to-slate-200 grid place-items-center">
+          <span class="font-semibold text-ink-700">Portada del dossier (placeholder)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="py-14 bg-slate-50 border-t border-slate-200">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-extrabold mb-6">Solicitar demo</h2>
+      <form class="grid md:grid-cols-2 gap-4 max-w-3xl">
+        <div>
+          <label class="text-sm font-medium">Nombre y apellido</label>
+          <input type="text" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2" placeholder="Juan Pérez" required>
+        </div>
+        <div>
+          <label class="text-sm font-medium">Email institucional</label>
+          <input type="email" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2" placeholder="nombre@organismo.gob.ar" required>
+        </div>
+        <div>
+          <label class="text-sm font-medium">Organismo / Jurisdicción</label>
+          <input type="text" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2" placeholder="Ministerio / Provincia / Municipio" required>
+        </div>
+        <div>
+          <label class="text-sm font-medium">Programa prioritario</label>
+          <select class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2">
+            <option>Comedores / Espacios</option>
+            <option>Niñez, Adolescencia y Familia</option>
+            <option>Celiaquía</option>
+            <option>Alimentar</option>
+            <option>Situación de calle</option>
+            <option>Rezago de Aduana</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="md:col-span-2">
+          <label class="text-sm font-medium">Mensaje</label>
+          <textarea class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2" rows="4" placeholder="Contanos necesidades y tiempos…"></textarea>
+        </div>
+        <div class="md:col-span-2 flex gap-3 items-center">
+          <button class="px-5 py-3 rounded-xl bg-brand-600 text-white hover:bg-brand-700 shadow-soft">Enviar</button>
+          <span class="text-sm text-ink-500">Respuesta en 24–48 h hábiles</span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="py-10 bg-ink-900 text-white">
+    <div class="container mx-auto px-4 grid md:grid-cols-3 gap-6 items-center">
+      <div class="flex items-center gap-3">
+        <div class="h-9 w-9 rounded-xl bg-white/10 grid place-items-center">S</div>
+        <div>
+          <div class="font-bold">SiSOC</div>
+          <div class="text-sm text-white/70">Plataforma social — interoperabilidad, automatización e IA</div>
+        </div>
+      </div>
+      <nav class="text-sm grid gap-1">
+        <a href="#modulos" class="hover:underline">Módulos</a>
+        <a href="#interoperabilidad" class="hover:underline">Interoperabilidad</a>
+        <a href="#metricas" class="hover:underline">Impacto</a>
+        <a href="#faq" class="hover:underline">Preguntas</a>
+      </nav>
+      <div class="text-sm text-white/70">© <span id="y"></span> SiSOC. Todos los derechos reservados.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (menuBtn) menuBtn.addEventListener('click', ()=> mobileMenu.classList.toggle('hidden'));
+
+    // Year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Counters
+    const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
+    const animateCounter = (el, target, duration=1600) => {
+      let start = null;
+      const step = ts => {
+        if (!start) start = ts;
+        const p = Math.min((ts - start) / duration, 1);
+        el.textContent = Math.round(target * easeOutCubic(p)).toLocaleString('es-AR');
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          const t = parseInt(e.target.getAttribute('target'), 10) || 0;
+          animateCounter(e.target, t);
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.4 });
+    document.querySelectorAll('[data-counter]').forEach(el=> io.observe(el));
+  </script>
+</body>
+</html>

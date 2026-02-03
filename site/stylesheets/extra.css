@@ -1,0 +1,13 @@
+/* Mermaid: permitir scroll horizontal si el diagrama es ancho */
+.mermaid {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+  padding: 0.5rem 0;
+}
+
+/* El SVG no debe achicarse demasiado */
+.mermaid svg {
+  min-width: 900px; /* ajustá si querés más grande */
+  height: auto;
+}
