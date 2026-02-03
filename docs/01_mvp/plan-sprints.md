@@ -1,211 +1,244 @@
-# Plan de Sprints — MVP App móvil (Legajo de Espacio)
+# Plan de Sprints — MVP App móvil (SISOC · Legajo de Espacio)
 
 !!! info "Estado"
     **Versión:** v0.1  
     **Última actualización:** 2026-02-03  
-    **Responsable:** PLAN_Vibe / ARQ_Nav / QA_Test  
+    **Responsable:** PLAN_Vibe / DEV_Impl / QA_Test  
     **Nivel:** Interno
 
 ## Objetivo
-Ejecutar el MVP por iteraciones cortas, priorizando:
-- flujo end-to-end funcional,
-- integración segura con SISOC (Django + MySQL) vía API,
-- RBAC server-side,
-- QA smoke desde el Sprint 1.
+Planificar la entrega del MVP en sprints cortos, priorizando:
+- integración no destructiva con SISOC existente (MySQL + Django),
+- contratos claros (API v0),
+- prototipos UX como guía,
+- QA smoke por incremento.
 
-## Supuestos de trabajo
-- SISOC existente: backoffice Django + base MySQL (fuente de verdad).
-- La app móvil consume **solo API**, nunca MySQL directo.
-- La autenticación queda “placeholder” hasta reunión, pero se implementa el esqueleto.
-- Cada sprint deja algo usable (aunque sea con datos mínimos o mock).
-
-## Definición de Done (DoD) para todos los sprints
-- RBAC aplicado server-side y probado con al menos 2 roles.
-- Estados UI cubiertos: vacío / sin datos / sin permiso / error red.
-- Errores con mensajes claros (no técnicos).
-- Logs/auditoría mínima en backend para acciones relevantes (cuando aplique).
-- QA Smoke actualizado y pasado (ver `06_calidad/plan-qa-smoke.md`).
-- Documentación actualizada (pantallas + contratos API si cambian).
+> Nota: la duración sugerida es **1 semana por sprint**. Si el equipo decide 2 semanas, los contenidos se mantienen y se ajusta la granularidad.
 
 ---
 
-# Sprint 0 — Setup + acuerdos de integración (rápido pero crítico)
-
-## Objetivo
-Dejar el proyecto listo para desarrollar sin fricción y llegar a reunión SISOC con preguntas cerradas.
-
-## Entregables
-- Repo/estructura docs + MkDocs funcionando (listo).
-- Contratos API v0 en borrador y lista de endpoints del MVP.
-- Preguntas de reunión SISOC completas y priorizadas.
-- Decisión preliminar: **Auth Opción A (JWT)** como default (confirmable).
-
-## Tareas
-- Confirmar con SISOC:
-  - Auth (JWT/session), login/refresh
-  - IDs reales (space_id/person_id/claim_id)
-  - existencia de módulos (nómina/rendiciones/documentos/mensajes)
-  - storage de archivos (descarga/URL firmada)
-- Alinear catálogos de estados reales (prestación/rendiciones).
-- Definir entorno dev: URL base API + CORS + versionado `/api/mobile/v1/`.
-
-## Criterio de salida
-- Quedan “cerradas” las incógnitas principales o documentadas como pendientes con owner y fecha.
+## Supuestos (a confirmar)
+- La app móvil **no accede directo a MySQL**: todo via API Django.
+- Se implementa RBAC server-side según `02_roles_y_accesos/rbac.md`.
+- Los estados de dominio se alinean a `04_datos/catalogos.md`.
+- Prototipos UX en Figma: `08_wireflows/pantallas-mvp.md` y `ui-data-contracts.md`.
+- La autenticación queda definida en reunión con equipo SISOC.
 
 ---
 
-# Sprint 1 — “App usable” (Acceso + Home + Info institucional + Mensajes)
+## Definición de “Done” por sprint (regla)
+Un ítem se considera Done cuando:
+- está implementado (backend + mobile cuando aplica),
+- tiene validación de permisos,
+- está testeado con smoke (ver `06_calidad/plan-qa-smoke.md`),
+- queda documentado (pantalla / endpoint / reglas si cambió algo).
 
-## Objetivo
-Que el espacio pueda entrar, elegir espacio si aplica, navegar, ver perfil institucional y leer mensajes.
+---
 
-## Historias (referencia)
-- US-0001 / US-0002 (contexto y selector)
-- US-0101 (Home)
-- US-0201 / US-0202 / US-0203 (perfil + docs)
-- US-0301 / US-0302 (mensajes)
+# Sprint 0 — Alineación, base técnica y decisiones (Setup)
+**Objetivo:** dejar el equipo listo para construir sin bloqueos.
 
-## Backend/API
-- `GET /me` (contexto)
+### Entregables
+- Repo + MkDocs publicado y actualizado.
+- Prototipo low-fi navegable (mínimo) para el MVP.
+- Decisiones cerradas: `space_id`, auth, existencia de módulos (nómina/rendiciones/documentos/mensajes).
+- Contratos API v0 ajustados con nombres reales SISOC.
+
+### User stories / tareas
+- Como equipo, queremos confirmar **la entidad Espacio** (tabla/modelo + `space_id`) para asegurar integración estable.
+- Como equipo, queremos definir **auth** (JWT vs Session) para habilitar login y sesión móvil.
+- Como backend, quiero definir estructura `api/mobile/v1/` para estandarizar endpoints.
+- Como QA, quiero acordar dataset y usuarios de prueba para repetir smoke.
+
+### Criterios de aceptación
+- Existe documento de decisiones (ADR-0003 actualizado si aplica).
+- El contrato `05_api/contratos-v0.md` refleja nombres reales confirmados.
+- Existe ambiente o estrategia de testing (staging o datos controlados).
+
+---
+
+# Sprint 1 — Acceso + Contexto + Home (Hub)
+**Objetivo:** habilitar uso real de la app: entrar, resolver alcance y navegar.
+
+### Alcance funcional (pantallas)
+- Login / Acceso (placeholder si auth aún en definición final)
+- Selector de espacio (si multi-espacio)
+- Home (Hub)
+
+### User stories
+- Como usuario, quiero **iniciar sesión** para acceder a la app.
+- Como usuario con más de un espacio, quiero **seleccionar el espacio** a operar.
+- Como usuario, quiero ver un **Home** con accesos a los módulos habilitados por mi rol.
+
+### Contratos API (referencia)
+- `GET /me`
+- (si aplica) `POST /auth/login`, `POST /auth/refresh` (placeholder a confirmar)
+
+### Criterios de aceptación
+- RBAC aplicado: un usuario sin espacio ve mensaje “no asignado”.
+- Si multi-espacio, selector aparece y guarda última elección.
+- Home muestra módulos según permisos (ocultar o deshabilitar definido por UX).
+
+### QA smoke (mínimo)
+- Login OK / login inválido
+- Usuario sin espacios
+- Usuario con 1 espacio / con varios
+
+---
+
+# Sprint 2 — Información institucional + Documentos + Mensajes
+**Objetivo:** entregar “valor inmediato” (consulta) con datos de SISOC.
+
+### Alcance funcional (pantallas)
+- Perfil del espacio
+- Documentos (lista) + Documento (detalle/descarga)
+- Mensajes (lista) + Mensaje (detalle)
+
+### User stories
+- Como usuario, quiero ver el **perfil del espacio** para conocer mi información institucional.
+- Como usuario, quiero consultar **documentos y convenios** asociados al espacio.
+- Como usuario, quiero leer **mensajes operativos** del programa para estar al día.
+
+### Contratos API (referencia)
 - `GET /spaces/{space_id}/profile`
 - `GET /spaces/{space_id}/documents`
-- `GET /spaces/{space_id}/messages`
+- `GET /spaces/{space_id}/messages?page&page_size`
 
-## Front móvil (pantallas)
-- Login/Acceso (si aplica) + manejo de sesión
-- Selector de espacio (si aplica)
-- Home (hub)
-- Perfil del espacio
-- Documentos (lista + abrir/descargar)
-- Mensajes (lista + detalle)
+### Criterios de aceptación
+- Soporta “sin datos” y “vacío” con mensajes claros.
+- Descarga/visualización de documentos funciona (definición según storage).
+- Paginación en mensajes.
 
-## QA Smoke (Sprint 1)
-- Acceso OK / sin espacios / multi-espacio
-- Perfil carga OK / sin datos
-- Documentos: lista / vacío / descarga error
-- Mensajes: lista / vacío / detalle
-
-## Criterio de salida
-- Usuario real (o de prueba) entra y navega end-to-end.
-- Documentos y mensajes visibles con estados UI correctos.
-- RBAC aplicado al menos en lectura (403 controlado).
+### QA smoke (mínimo)
+- Perfil OK / sin datos / 404
+- Documentos vacío
+- Mensajes paginados
 
 ---
 
-# Sprint 2 — Nómina (listado + alta rápida + edición básica)
+# Sprint 3 — Nómina (CRUD mínimo + validaciones + opcional CSV)
+**Objetivo:** habilitar gestión mínima de personas.
 
-## Objetivo
-Que el espacio gestione su nómina mínima desde el celular.
+### Alcance funcional (pantallas)
+- Nómina: lista + búsqueda + filtros
+- Persona: detalle
+- Persona: alta rápida
+- Persona: edición
+- Importación CSV (solo si se habilita en MVP móvil)
 
-## Historias
-- US-0401 (lista + búsqueda + filtros)
-- US-0402 (detalle)
-- US-0403 (alta rápida)
-- US-0404 (editar)
-- US-0405 (activar/desactivar)
-- US-0406 (CSV) **solo si aplica** (si no, mensaje “solo web”).
+### User stories
+- Como usuario, quiero ver la **lista de personas** de mi espacio con búsqueda/filtros.
+- Como usuario, quiero dar de alta una persona con **nombre y apellido** como mínimo.
+- Como usuario, quiero editar datos y activar/desactivar una persona según permisos.
+- Como referente (opcional), quiero importar un CSV para carga masiva.
 
-## Backend/API
-- `GET /spaces/{space_id}/people`
+### Contratos API (referencia)
+- `GET /spaces/{space_id}/people?q&active&page&page_size`
 - `POST /spaces/{space_id}/people`
 - `PATCH /spaces/{space_id}/people/{person_id}`
-- `POST /spaces/{space_id}/people/import` (si aplica)
+- `POST /spaces/{space_id}/people/import` (opcional)
 
-## QA Smoke (Sprint 2)
-- Lista con paginación + búsqueda
-- Alta rápida valida campos obligatorios
-- Duplicado probable (warning/409) manejado
-- Editar y activar/desactivar con permisos
+### Criterios de aceptación
+- Validaciones 400 con mensajes por campo.
+- Manejo de duplicado probable (409 o warning).
+- Auditoría mínima para create/update/status-change.
 
-## Criterio de salida
-- Se puede crear y editar personas sin fricción.
-- Los roles restringen acciones (403).
-- Estados UI y errores están cubiertos.
+### QA smoke (mínimo)
+- Alta rápida OK / validación
+- Búsqueda + filtros
+- Editar OK
 
 ---
 
-# Sprint 3 — Rendiciones (listar + adjuntar + presentar)
+# Sprint 4 — Rendiciones (lista/detalle/adjuntar/presentar) + archivos
+**Objetivo:** permitir ciclo mínimo de rendición desde el espacio.
 
-## Objetivo
-Que el espacio pueda ver rendiciones, adjuntar comprobantes y presentar.
+### Alcance funcional (pantallas)
+- Rendiciones: lista
+- Rendición: detalle
+- Adjuntar comprobante
+- Presentar rendición (confirmación)
 
-## Historias
-- US-0601 (lista)
-- US-0602 (detalle)
-- US-0603 (adjuntar comprobante)
-- US-0604 (presentar)
+### User stories
+- Como usuario, quiero ver mis rendiciones por período y su estado.
+- Como usuario, quiero adjuntar comprobantes (pdf/jpg/png) con reglas de tamaño.
+- Como referente, quiero presentar una rendición cuando tenga al menos 1 comprobante.
 
-## Backend/API
+### Contratos API (referencia)
 - `GET /spaces/{space_id}/accounting/claims`
 - `GET /spaces/{space_id}/accounting/claims/{claim_id}`
 - `POST /spaces/{space_id}/accounting/claims/{claim_id}/attachments`
 - `POST /spaces/{space_id}/accounting/claims/{claim_id}/submit`
 
-## Reglas clave
-- Tamaño y tipo de archivo (pdf/jpg/png, límite definido).
-- Presentar solo si:
-  - rol habilitado (referente)
-  - al menos 1 comprobante
-- Estado de rendición se refleja en lista y detalle.
+### Criterios de aceptación
+- RBAC: solo referente puede “presentar”.
+- Validaciones: tamaño/tipo archivo, mínimo 1 adjunto.
+- Estado y observaciones se muestran correctamente.
+- URLs de descarga/preview (si aplica) definidas.
 
-## QA Smoke (Sprint 3)
-- Adjuntar archivo válido / inválido / demasiado grande
-- Presentar con adjuntos OK
-- Presentar sin adjuntos → error claro
-- Sin permiso → 403 controlado
-
-## Criterio de salida
-- Un referente puede completar el circuito de rendición desde la app.
-- El sistema es estable y auditable (mínimo).
+### QA smoke (mínimo)
+- Adjuntar archivo válido / inválido
+- Presentar sin adjuntos (400)
+- Presentar con rol no referente (403)
 
 ---
 
-# Sprint 4 — Prestación alimentaria (solo lectura) + hardening
+# Sprint 5 — Formación (actividades + participantes) + Prestación (lectura)
+**Objetivo:** cerrar módulos restantes del MVP.
 
-## Objetivo
-Cerrar el MVP con prestación (solo lectura) y mejoras de calidad/performance.
+### Alcance funcional (pantallas)
+- Formación: lista + crear/editar + participantes
+- Prestación alimentaria: estado actual + historial + detalle período
 
-## Historias
-- US-0501 (estado actual)
-- US-0502 (historial)
+### User stories
+- Como usuario, quiero registrar actividades de formación del espacio.
+- Como usuario, quiero gestionar participantes de una actividad a partir de la nómina.
+- Como usuario, quiero ver el estado de la prestación alimentaria y observaciones (solo lectura).
 
-## Backend/API
+### Contratos API (referencia)
+- `GET /spaces/{space_id}/training`
+- `POST /spaces/{space_id}/training`
+- `PATCH /spaces/{space_id}/training/{activity_id}`
+- `POST /spaces/{space_id}/training/{activity_id}/participants`
+- `DELETE /spaces/{space_id}/training/{activity_id}/participants/{person_id}`
 - `GET /spaces/{space_id}/benefit`
 - `GET /spaces/{space_id}/benefit/{period}`
 
-## Hardening
-- Paginación y performance (índices/queries)
-- Caching simple si aplica (server-side)
-- Telemetría mínima (logs + métricas básicas)
-- Ajustes UX (mensajes, vacíos, reintentos)
+### Criterios de aceptación
+- Solo se edita actividad si `status=planificada`.
+- Participantes se agregan desde nómina con manejo de duplicados.
+- Prestación: mostrar `sin_datos` sin romper UX.
 
-## QA Smoke (Sprint 4)
-- Beneficio con datos / sin datos / error backend
-- Historial OK / vacío
-- Reintentos por red
-
-## Criterio de salida
-- MVP completo con módulos principales funcionando y documentados.
+### QA smoke (mínimo)
+- Crear actividad / editar / cambiar estado
+- Agregar/quitar participante
+- Prestación sin datos / con datos
 
 ---
 
-# Sprint 5 (Opcional) — Formación (si entra en alcance)
-Si se decide incluir Formación en MVP:
-- US-0701 (lista)
-- US-0702 (crear/editar)
-- US-0703 (participantes)
+# Sprint 6 — Hardening (performance, auditoría, seguridad, UX polish)
+**Objetivo:** estabilizar para piloto.
 
-Caso contrario: queda en roadmap post-MVP.
+### Alcances
+- Paginación consistente + límites
+- Caché donde aplique (si existe Redis)
+- Auditoría completa mínima (eventos clave)
+- Manejo de errores unificado
+- Ajustes UX (estados, textos, accesibilidad)
+- Revisión seguridad (RBAC, validación server-side, archivos)
+
+### Criterios de aceptación
+- Smoke completo pasa end-to-end en ambiente de prueba.
+- Checklist de seguridad y performance mínimo aprobado.
+- Documentación final actualizada (contratos + catálogos + decisiones).
 
 ---
 
-## Pendientes para reunión SISOC (bloqueantes de planificación fina)
-- Auth definitivo (JWT/session) y endpoint de login/refresh.
-- Modelos reales de:
-  - documentos (storage)
-  - mensajes
-  - nómina
-  - rendiciones
-  - prestación alimentaria
-- Catálogo real de estados y mapeos.
-- Volúmenes esperados (performance + paginación).
+## Dependencias externas (para gestionar)
+- Confirmación SISOC: auth, modelos existentes, storage, estados reales.
+- UX: prototipos navegables y componentes base.
+- Datos de prueba y usuarios por rol.
+
+## Próximos pasos inmediatos
+- Mañana: reunión UX → entregar prototipo navegable + estados UI.
+- Viernes: reunión técnica → cerrar decisiones + ajustar contratos API v0 → arrancar Sprint 1.
