@@ -19,9 +19,9 @@ Este documento está orientado a destrabar decisiones por sprint (qué nos bloqu
 - ¿Existe estado institucional del espacio (activo/suspendido/etc.)?
 
 **Salida esperada**
-- Confirmar **space_id real** (tipo y nombre de campo) + tabla/modelo.
-- Lista de campos que vamos a exponer en “Perfil del espacio”.
-- Catálogo real de “estado institucional del espacio”.
+  - Confirmar **space_id real** (tipo y nombre de campo) + tabla/modelo.
+  - Lista de campos que vamos a exponer en “Perfil del espacio”.
+  - Catálogo real de “estado institucional del espacio”.
 
 ---
 
@@ -35,17 +35,17 @@ Este documento está orientado a destrabar decisiones por sprint (qué nos bloqu
 **Salida esperada**
 - Decisión: **JWT vs Session** (y por qué).
 - Endpoints necesarios:
-  - `POST /auth/login` (si aplica)
-  - `POST /auth/refresh` (si aplica)
-  - `GET /me`
+    - `POST /auth/login` (si aplica)
+    - `POST /auth/refresh` (si aplica)
+    - `GET /me`
 - Definición de **roles reales** y cómo se vinculan a permisos (RBAC).
 
 ---
 
 ## C) Nóminas / Personas — *Bloquea Sprint 2*
 - ¿Existe hoy una tabla/modelo de “personas asistidas” vinculadas a un espacio?
-- Si existe: ¿qué campos ya tienen? ¿DNI es obligatorio?
-- Si NO existe: ¿prefieren que nómina sea tabla nueva o ya hay un módulo similar?
+    - Si existe: ¿qué campos ya tienen? ¿DNI es obligatorio?
+    - Si NO existe: ¿prefieren que nómina sea tabla nueva o ya hay un módulo similar?
 - ¿Hay reglas actuales de deduplicación o validación?
 
 **Salida esperada**
