@@ -12,9 +12,13 @@
         <meta name="author" content="Equipo SISOC">
       
       
-        <link rel="canonical" href="https://miguelangelvillelli.github.io/sisoc-docs/adr/ADR-0004-autenticacion/">
+        <link rel="canonical" href="https://miguelangelvillelli.github.io/sisoc-docs/adr/ADR-0005-storage-archivos/">
       
       
+        <link rel="prev" href="../ADR-0004-auth-movil/">
+      
+      
+        <link rel="next" href="../ADR-0006-estrategia-integracion-modulos/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +26,7 @@
     
     
       
-        <title>ADR-0004 · Autenticación para App Móvil (MVP) - SISOC · Legajo de Espacio (MVP)</title>
+        <title>ADR-0005 · Storage archivos - SISOC · Legajo de Espacio (MVP)</title>
       
     
     
@@ -76,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#adr-0004-autenticacion-para-app-movil-mvp" class="md-skip">
+        <a href="#adr-0005-storage-y-entrega-de-archivos-documentos-y-comprobantes" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -110,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ADR-0004 · Autenticación para App Móvil (MVP)
+              ADR-0005 · Storage archivos
             
           </span>
         </div>
@@ -394,10 +398,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../ADR-0001-alcance-mvp/" class="md-tabs__link">
           
   
@@ -1612,25 +1618,30 @@
       
   
   
+    
   
   
+  
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
         
           
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1641,7 +1652,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             ADR
@@ -1718,7 +1729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ADR-0004-auth-movil.md" class="md-nav__link">
+      <a href="../ADR-0004-auth-movil/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1736,10 +1747,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../ADR-0005-storage-archivos.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ADR-0005 · Storage archivos
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1748,6 +1779,155 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contexto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decisión
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alternativas-consideradas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternativas consideradas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Alternativas consideradas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opcion-a-endpoint-de-descarga-autenticado-recomendada-para-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opción A — Endpoint de descarga autenticado (recomendada para MVP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opcion-b-url-firmada-s3-o-cdn" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opción B — URL firmada (S3 o CDN)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opcion-c-url-publica-descartada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opción C — URL pública (descartada)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consecuencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consecuencias
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Consecuencias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#positivas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Positivas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#negativas-costos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Negativas / costos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#impactos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Impactos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criterios-de-exito-validacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterios de éxito / validación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pendientes-reunion-viernes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pendientes (reunión viernes)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referencias
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1760,7 +1940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ADR-0006-estrategia-integracion-modulos.md" class="md-nav__link">
+      <a href="../ADR-0006-estrategia-integracion-modulos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1925,27 +2105,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#opcion-a-jwt-bearer-recomendada" class="md-nav__link">
+  <a href="#opcion-a-endpoint-de-descarga-autenticado-recomendada-para-mvp" class="md-nav__link">
     <span class="md-ellipsis">
-      Opción A — JWT Bearer (recomendada)
+      Opción A — Endpoint de descarga autenticado (recomendada para MVP)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#opcion-b-session-cookies-reutilizar-login-web" class="md-nav__link">
+  <a href="#opcion-b-url-firmada-s3-o-cdn" class="md-nav__link">
     <span class="md-ellipsis">
-      Opción B — Session + Cookies (reutilizar login web)
+      Opción B — URL firmada (S3 o CDN)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#opcion-c-oauth-sso-corporativo" class="md-nav__link">
+  <a href="#opcion-c-url-publica-descartada" class="md-nav__link">
     <span class="md-ellipsis">
-      Opción C — OAuth / SSO corporativo
+      Opción C — URL pública (descartada)
     </span>
   </a>
   
@@ -2008,9 +2188,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pendientes-preguntas-abiertas-reunion-viernes" class="md-nav__link">
+  <a href="#pendientes-reunion-viernes" class="md-nav__link">
     <span class="md-ellipsis">
-      Pendientes / preguntas abiertas (reunión viernes)
+      Pendientes (reunión viernes)
     </span>
   </a>
   
@@ -2043,95 +2223,93 @@
   
 
 
-<h1 id="adr-0004-autenticacion-para-app-movil-mvp">ADR-0004 · Autenticación para App Móvil (MVP)<a class="headerlink" href="#adr-0004-autenticacion-para-app-movil-mvp" title="Permanent link">&para;</a></h1>
+<h1 id="adr-0005-storage-y-entrega-de-archivos-documentos-y-comprobantes">ADR-0005 · Storage y entrega de archivos (documentos y comprobantes)<a class="headerlink" href="#adr-0005-storage-y-entrega-de-archivos-documentos-y-comprobantes" title="Permanent link">&para;</a></h1>
 <div class="admonition info">
 <p class="admonition-title">Estado</p>
-<p><strong>ID:</strong> ADR-0004<br />
-<strong>Título:</strong> Autenticación para App Móvil (MVP)<br />
+<p><strong>ID:</strong> ADR-0005<br />
+<strong>Título:</strong> Storage y entrega de archivos (documentos y comprobantes)<br />
 <strong>Estado:</strong> Propuesto<br />
 <strong>Fecha:</strong> 2026-02-03<br />
 <strong>Responsable:</strong> ARQ_Nav / DEV_Impl / SEC_Shield<br />
 <strong>Nivel:</strong> Interno</p>
 </div>
 <h2 id="contexto">Contexto<a class="headerlink" href="#contexto" title="Permanent link">&para;</a></h2>
-<p>El MVP requiere que referentes/usuarios internos de los espacios accedan a una app móvil para consultar y operar funciones (nómina, rendiciones, etc.).<br />
-SISOC ya existe como webapp para técnicos, con backoffice Django y BD MySQL. La autenticación actual podría estar orientada a usuarios internos/técnicos.<br />
-Necesitamos una estrategia de auth consistente para móvil, que no rompa el esquema existente y habilite RBAC server-side con trazabilidad.</p>
-<p><strong>Drivers (qué importa más)</strong>
-- Seguridad (control de acceso)
-- Rapidez para MVP (time-to-market)
-- Reutilización de infraestructura existente (Django)
-- Mantenibilidad (evitar doble auth)
-- Experiencia de usuario simple (móvil)</p>
+<p>El MVP incluye:
+- Documentos/convenios del espacio (solo lectura).
+- Rendiciones con adjuntos (comprobantes) subidos desde móvil.</p>
+<p>Debemos definir dónde se almacenan los archivos y cómo se entregan a la app:
+- filesystem del servidor, storage tipo S3, o mecanismo ya existente en SISOC.
+Además, hay requisitos de seguridad: acceso por rol, expiración de links, no exponer rutas internas.</p>
+<p><strong>Drivers</strong>
+- Seguridad (links protegidos)
+- Simplicidad (MVP)
+- Reutilización SISOC
+- Escalabilidad (volumen de adjuntos)</p>
 <hr />
 <h2 id="decision">Decisión<a class="headerlink" href="#decision" title="Permanent link">&para;</a></h2>
-<p><strong>Se decide (propuesto):</strong> implementar autenticación para la app móvil mediante <strong>JWT Bearer</strong>, emitido por el backoffice Django, con refresh token si aplica.</p>
-<ul>
-<li>La app enviará <code>Authorization: Bearer &lt;token&gt;</code> a <code>/api/mobile/v1/*</code>.</li>
-<li>Los permisos se aplican server-side (RBAC).</li>
-<li>La API expone <code>GET /me</code> para contexto de usuario y scope (space_id, rol, jurisdicción).</li>
-</ul>
-<p><strong>Alcance de la decisión</strong>
-- Aplica a: API móvil (<code>/api/mobile/v1/</code>) y pantallas de acceso (login/selector/hub).
-- No aplica a: autenticación web interna existente (técnicos) salvo decisión explícita de unificar.</p>
+<p><strong>Se decide (propuesto):</strong> en MVP, mantener el storage <strong>en el mecanismo existente de SISOC</strong> si existe; de lo contrario:
+- usar filesystem controlado por Django (MEDIA) con <strong>URLs firmadas/temporales</strong> o endpoint de descarga autenticado.</p>
+<p><strong>Entrega de archivos a la app</strong>
+- La API devuelve <code>download_url</code> o un endpoint tipo:
+  - <code>GET /spaces/{space_id}/documents/{document_id}/download</code>
+  - <code>GET /spaces/{space_id}/accounting/attachments/{attachment_id}/download</code>
+- La autorización se valida server-side (RBAC + pertenencia al space_id).
+- Links (si se usan) expiran en X minutos.</p>
 <hr />
 <h2 id="alternativas-consideradas">Alternativas consideradas<a class="headerlink" href="#alternativas-consideradas" title="Permanent link">&para;</a></h2>
-<h3 id="opcion-a-jwt-bearer-recomendada">Opción A — JWT Bearer (recomendada)<a class="headerlink" href="#opcion-a-jwt-bearer-recomendada" title="Permanent link">&para;</a></h3>
+<h3 id="opcion-a-endpoint-de-descarga-autenticado-recomendada-para-mvp">Opción A — Endpoint de descarga autenticado (recomendada para MVP)<a class="headerlink" href="#opcion-a-endpoint-de-descarga-autenticado-recomendada-para-mvp" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Pros:</strong> estándar para móvil; no depende de cookies/CSRF; desacopla UI; simple de testear.</li>
-<li><strong>Contras:</strong> requiere endpoints de emisión/refresh; gestión de expiración y revocación.</li>
+<li><strong>Pros:</strong> control RBAC central; sin links públicos; simple.</li>
+<li><strong>Contras:</strong> carga al servidor en descargas; requiere streaming.</li>
 </ul>
-<h3 id="opcion-b-session-cookies-reutilizar-login-web">Opción B — Session + Cookies (reutilizar login web)<a class="headerlink" href="#opcion-b-session-cookies-reutilizar-login-web" title="Permanent link">&para;</a></h3>
+<h3 id="opcion-b-url-firmada-s3-o-cdn">Opción B — URL firmada (S3 o CDN)<a class="headerlink" href="#opcion-b-url-firmada-s3-o-cdn" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Pros:</strong> reutiliza Django session.</li>
-<li><strong>Contras:</strong> menos ideal en móvil; CSRF; manejo de cookies; más fricción.</li>
+<li><strong>Pros:</strong> performance; descarga directa.</li>
+<li><strong>Contras:</strong> requiere storage compatible y firma; más setup.</li>
 </ul>
-<h3 id="opcion-c-oauth-sso-corporativo">Opción C — OAuth / SSO corporativo<a class="headerlink" href="#opcion-c-oauth-sso-corporativo" title="Permanent link">&para;</a></h3>
+<h3 id="opcion-c-url-publica-descartada">Opción C — URL pública (descartada)<a class="headerlink" href="#opcion-c-url-publica-descartada" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Pros:</strong> robusto a largo plazo.</li>
-<li><strong>Contras:</strong> demasiado pesado para MVP; requiere infraestructura extra.</li>
+<li><strong>Motivo:</strong> riesgo de exposición de datos.</li>
 </ul>
 <hr />
 <h2 id="consecuencias">Consecuencias<a class="headerlink" href="#consecuencias" title="Permanent link">&para;</a></h2>
 <h3 id="positivas">Positivas<a class="headerlink" href="#positivas" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Flujo móvil claro y compatible con RBAC server-side.</li>
-<li>Facilita instrumentación y auditoría por request (user_id/space_id).</li>
+<li>Control fino de permisos por archivo.</li>
+<li>Evita filtrar estructura de storage.</li>
 </ul>
 <h3 id="negativas-costos">Negativas / costos<a class="headerlink" href="#negativas-costos" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Implementar refresh/expiración y política de sesión.</li>
-<li>Definir provisioning de usuarios “espacio” (alta, vinculación a space_id).</li>
+<li>Definir límites (tamaño/tipos/cantidad).</li>
+<li>Definir retención y limpieza de adjuntos.</li>
 </ul>
 <h3 id="impactos">Impactos<a class="headerlink" href="#impactos" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>UX:</strong> pantalla de login y estados de sesión.</li>
-<li><strong>Backend:</strong> endpoints auth, middleware de permisos, <code>GET /me</code>.</li>
-<li><strong>QA:</strong> smoke de login, expiración, roles.</li>
-<li><strong>Seguridad:</strong> política de expiración, rotación refresh, rate limit (si aplica).</li>
+<li><strong>UX:</strong> “ver/descargar” + manejo de error 403/404.</li>
+<li><strong>Backend:</strong> upload con validaciones; descarga con streaming; metadata.</li>
+<li><strong>Seguridad:</strong> antivirus/escaneo (si aplica), content-type, rate limit.</li>
 </ul>
 <hr />
 <h2 id="criterios-de-exito-validacion">Criterios de éxito / validación<a class="headerlink" href="#criterios-de-exito-validacion" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Un usuario con rol de espacio puede loguear y consumir <code>GET /me</code>.</li>
-<li>Un usuario sin permisos recibe 403 consistentemente.</li>
-<li>Tokens expiran y el refresh funciona (si se implementa).</li>
+<li>Un usuario de un espacio no puede descargar archivos de otro espacio.</li>
+<li>Upload rechaza archivos fuera de tipo/tamaño.</li>
+<li>Descarga funciona en móvil sin exponer rutas internas.</li>
 </ul>
 <hr />
-<h2 id="pendientes-preguntas-abiertas-reunion-viernes">Pendientes / preguntas abiertas (reunión viernes)<a class="headerlink" href="#pendientes-preguntas-abiertas-reunion-viernes" title="Permanent link">&para;</a></h2>
+<h2 id="pendientes-reunion-viernes">Pendientes (reunión viernes)<a class="headerlink" href="#pendientes-reunion-viernes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>¿SISOC ya usa JWT en algún módulo o solo sessions?</li>
-<li>¿Cómo se crean/provisionan usuarios de espacios?</li>
-<li>¿Se exige 2FA/OTP? (probablemente no en MVP)</li>
-<li>¿Cómo se revoca acceso ante baja/cambio?</li>
+<li>¿SISOC ya guarda archivos? ¿Dónde?</li>
+<li>¿Hay S3/MinIO/Blob storage disponible?</li>
+<li>Límite real de tamaño y tipos aceptados.</li>
+<li>¿Se requiere preview en app o solo descarga?</li>
 </ul>
 <hr />
 <h2 id="referencias">Referencias<a class="headerlink" href="#referencias" title="Permanent link">&para;</a></h2>
 <ul>
-<li>RBAC: <code>docs/02_roles_y_accesos/rbac.md</code></li>
+<li>Rendiciones: <code>docs/03_modulos/rendiciones.md</code></li>
 <li>Contratos API: <code>docs/05_api/contratos-v0.md</code></li>
-<li>Plan QA: <code>docs/06_calidad/plan-qa-smoke.md</code></li>
-<li>Integración SISOC: <code>docs/adr/ADR-0003-integracion-sisoc-existente.md</code></li>
+<li>Seguridad baseline: <code>docs/07_seguridad/baseline.md</code></li>
 </ul>
 
 

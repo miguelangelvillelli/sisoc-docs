@@ -69,6 +69,7 @@ nav:
       - User stories MVP: 01_mvp/user-stories-mvp.md
       - Plan de sprints: 01_mvp/plan-sprints.md
       - MVP One Pager: 01_mvp/mvp-one-pager.md
+      - Stack tecnológico: 01_mvp/stack-tecnologico-mvp.md
   - 02 · Roles y accesos:
       - RBAC: 02_roles_y_accesos/rbac.md
       - Auditoría y trazabilidad: 02_roles_y_accesos/auditoria-trazabilidad.md

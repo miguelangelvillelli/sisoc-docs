@@ -12,9 +12,13 @@
         <meta name="author" content="Equipo SISOC">
       
       
-        <link rel="canonical" href="https://miguelangelvillelli.github.io/sisoc-docs/adr/ADR-0005-storage/">
+        <link rel="canonical" href="https://miguelangelvillelli.github.io/sisoc-docs/adr/ADR-0006-estrategia-integracion-modulos/">
       
       
+        <link rel="prev" href="../ADR-0005-storage-archivos/">
+      
+      
+        <link rel="next" href="../../reuniones/reunion-2026-02-04-ux/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +26,7 @@
     
     
       
-        <title>ADR-0005 · Storage y entrega de archivos (documentos y comprobantes) - SISOC · Legajo de Espacio (MVP)</title>
+        <title>ADR-0006 · Estrategia integración módulos - SISOC · Legajo de Espacio (MVP)</title>
       
     
     
@@ -76,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#adr-0005-storage-y-entrega-de-archivos-documentos-y-comprobantes" class="md-skip">
+        <a href="#adr-0006-estrategia-de-integracion-reutilizar-modulos-sisoc-vs-crear-nuevos-mvp" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -110,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ADR-0005 · Storage y entrega de archivos (documentos y comprobantes)
+              ADR-0006 · Estrategia integración módulos
             
           </span>
         </div>
@@ -394,10 +398,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../ADR-0001-alcance-mvp/" class="md-tabs__link">
           
   
@@ -1612,25 +1618,30 @@
       
   
   
+    
   
   
+  
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
         
           
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1641,7 +1652,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             ADR
@@ -1718,7 +1729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ADR-0004-auth-movil.md" class="md-nav__link">
+      <a href="../ADR-0004-auth-movil/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1739,7 +1750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ADR-0005-storage-archivos.md" class="md-nav__link">
+      <a href="../ADR-0005-storage-archivos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1757,10 +1768,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../ADR-0006-estrategia-integracion-modulos.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ADR-0006 · Estrategia integración módulos
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1769,6 +1800,155 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contexto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decisión
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alternativas-consideradas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternativas consideradas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Alternativas consideradas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opcion-a-todo-nuevo-descartada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opción A — Todo nuevo (descartada)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opcion-b-todo-reutilizado-ideal-si-existe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opción B — Todo reutilizado (ideal si existe)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opcion-c-hibrido-recomendada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opción C — Híbrido (recomendada)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consecuencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consecuencias
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Consecuencias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#positivas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Positivas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#negativas-costos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Negativas / costos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#impactos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Impactos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criterios-de-exito-validacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterios de éxito / validación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pendientes-reunion-viernes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pendientes (reunión viernes)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referencias
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1925,27 +2105,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#opcion-a-endpoint-de-descarga-autenticado-recomendada-para-mvp" class="md-nav__link">
+  <a href="#opcion-a-todo-nuevo-descartada" class="md-nav__link">
     <span class="md-ellipsis">
-      Opción A — Endpoint de descarga autenticado (recomendada para MVP)
+      Opción A — Todo nuevo (descartada)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#opcion-b-url-firmada-s3-o-cdn" class="md-nav__link">
+  <a href="#opcion-b-todo-reutilizado-ideal-si-existe" class="md-nav__link">
     <span class="md-ellipsis">
-      Opción B — URL firmada (S3 o CDN)
+      Opción B — Todo reutilizado (ideal si existe)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#opcion-c-url-publica-descartada" class="md-nav__link">
+  <a href="#opcion-c-hibrido-recomendada" class="md-nav__link">
     <span class="md-ellipsis">
-      Opción C — URL pública (descartada)
+      Opción C — Híbrido (recomendada)
     </span>
   </a>
   
@@ -2043,93 +2223,101 @@
   
 
 
-<h1 id="adr-0005-storage-y-entrega-de-archivos-documentos-y-comprobantes">ADR-0005 · Storage y entrega de archivos (documentos y comprobantes)<a class="headerlink" href="#adr-0005-storage-y-entrega-de-archivos-documentos-y-comprobantes" title="Permanent link">&para;</a></h1>
+<h1 id="adr-0006-estrategia-de-integracion-reutilizar-modulos-sisoc-vs-crear-nuevos-mvp">ADR-0006 · Estrategia de integración: reutilizar módulos SISOC vs crear nuevos (MVP)<a class="headerlink" href="#adr-0006-estrategia-de-integracion-reutilizar-modulos-sisoc-vs-crear-nuevos-mvp" title="Permanent link">&para;</a></h1>
 <div class="admonition info">
 <p class="admonition-title">Estado</p>
-<p><strong>ID:</strong> ADR-0005<br />
-<strong>Título:</strong> Storage y entrega de archivos (documentos y comprobantes)<br />
+<p><strong>ID:</strong> ADR-0006<br />
+<strong>Título:</strong> Reutilizar módulos existentes vs crear nuevos (MVP)<br />
 <strong>Estado:</strong> Propuesto<br />
 <strong>Fecha:</strong> 2026-02-03<br />
-<strong>Responsable:</strong> ARQ_Nav / DEV_Impl / SEC_Shield<br />
+<strong>Responsable:</strong> ARQ_Nav / DEV_Impl<br />
 <strong>Nivel:</strong> Interno</p>
 </div>
 <h2 id="contexto">Contexto<a class="headerlink" href="#contexto" title="Permanent link">&para;</a></h2>
-<p>El MVP incluye:
-- Documentos/convenios del espacio (solo lectura).
-- Rendiciones con adjuntos (comprobantes) subidos desde móvil.</p>
-<p>Debemos definir dónde se almacenan los archivos y cómo se entregan a la app:
-- filesystem del servidor, storage tipo S3, o mecanismo ya existente en SISOC.
-Además, hay requisitos de seguridad: acceso por rol, expiración de links, no exponer rutas internas.</p>
+<p>SISOC ya opera para técnicos (web) con BD MySQL y backoffice Django.
+El MVP móvil introduce vistas/operaciones para “usuarios de espacios”:
+- info institucional
+- documentos/mensajes
+- nómina
+- rendiciones
+- formación
+- prestación (lectura)</p>
+<p>No sabemos aún qué módulos existen en SISOC y cuáles faltan.<br />
+Debemos evitar cambios destructivos y minimizar riesgo en producción.</p>
 <p><strong>Drivers</strong>
-- Seguridad (links protegidos)
-- Simplicidad (MVP)
-- Reutilización SISOC
-- Escalabilidad (volumen de adjuntos)</p>
+- Bajo riesgo (no romper SISOC)
+- Velocidad MVP
+- Coherencia de datos (fuente de verdad)
+- Control de permisos (RBAC)</p>
 <hr />
 <h2 id="decision">Decisión<a class="headerlink" href="#decision" title="Permanent link">&para;</a></h2>
-<p><strong>Se decide (propuesto):</strong> en MVP, mantener el storage <strong>en el mecanismo existente de SISOC</strong> si existe; de lo contrario:
-- usar filesystem controlado por Django (MEDIA) con <strong>URLs firmadas/temporales</strong> o endpoint de descarga autenticado.</p>
-<p><strong>Entrega de archivos a la app</strong>
-- La API devuelve <code>download_url</code> o un endpoint tipo:
-  - <code>GET /spaces/{space_id}/documents/{document_id}/download</code>
-  - <code>GET /spaces/{space_id}/accounting/attachments/{attachment_id}/download</code>
-- La autorización se valida server-side (RBAC + pertenencia al space_id).
-- Links (si se usan) expiran en X minutos.</p>
+<p><strong>Se decide (propuesto):</strong>
+1) <strong>Reutilizar</strong> entidades/módulos existentes de SISOC siempre que:
+   - estén activos,
+   - tengan modelo de datos suficiente,
+   - permitan exponer la info al espacio sin violar políticas.
+2) Si un módulo <strong>no existe</strong> o no sirve para el MVP, se permite crear tablas/modelos <strong>nuevos</strong> en Django, con:
+   - migraciones controladas,
+   - claves foráneas hacia <code>Espacio</code>,
+   - auditoría mínima,
+   - endpoints en <code>/api/mobile/v1/</code>.</p>
+<p><strong>Regla del MVP:</strong> la app móvil consume exclusivamente la API; no se crean accesos directos a MySQL desde móvil.</p>
 <hr />
 <h2 id="alternativas-consideradas">Alternativas consideradas<a class="headerlink" href="#alternativas-consideradas" title="Permanent link">&para;</a></h2>
-<h3 id="opcion-a-endpoint-de-descarga-autenticado-recomendada-para-mvp">Opción A — Endpoint de descarga autenticado (recomendada para MVP)<a class="headerlink" href="#opcion-a-endpoint-de-descarga-autenticado-recomendada-para-mvp" title="Permanent link">&para;</a></h3>
+<h3 id="opcion-a-todo-nuevo-descartada">Opción A — Todo nuevo (descartada)<a class="headerlink" href="#opcion-a-todo-nuevo-descartada" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Pros:</strong> control RBAC central; sin links públicos; simple.</li>
-<li><strong>Contras:</strong> carga al servidor en descargas; requiere streaming.</li>
+<li><strong>Pros:</strong> control total del diseño.</li>
+<li><strong>Contras:</strong> duplicación de datos; mayor tiempo; mayor riesgo funcional.</li>
 </ul>
-<h3 id="opcion-b-url-firmada-s3-o-cdn">Opción B — URL firmada (S3 o CDN)<a class="headerlink" href="#opcion-b-url-firmada-s3-o-cdn" title="Permanent link">&para;</a></h3>
+<h3 id="opcion-b-todo-reutilizado-ideal-si-existe">Opción B — Todo reutilizado (ideal si existe)<a class="headerlink" href="#opcion-b-todo-reutilizado-ideal-si-existe" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Pros:</strong> performance; descarga directa.</li>
-<li><strong>Contras:</strong> requiere storage compatible y firma; más setup.</li>
+<li><strong>Pros:</strong> menos dev.</li>
+<li><strong>Contras:</strong> si SISOC no tiene el módulo, bloquea el MVP.</li>
 </ul>
-<h3 id="opcion-c-url-publica-descartada">Opción C — URL pública (descartada)<a class="headerlink" href="#opcion-c-url-publica-descartada" title="Permanent link">&para;</a></h3>
+<h3 id="opcion-c-hibrido-recomendada">Opción C — Híbrido (recomendada)<a class="headerlink" href="#opcion-c-hibrido-recomendada" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Motivo:</strong> riesgo de exposición de datos.</li>
+<li>Reutilizar lo existente + crear solo lo faltante.</li>
 </ul>
 <hr />
 <h2 id="consecuencias">Consecuencias<a class="headerlink" href="#consecuencias" title="Permanent link">&para;</a></h2>
 <h3 id="positivas">Positivas<a class="headerlink" href="#positivas" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Control fino de permisos por archivo.</li>
-<li>Evita filtrar estructura de storage.</li>
+<li>Evita rehacer lo que ya está.</li>
+<li>Permite avanzar aunque falten módulos.</li>
+<li>Mantiene una “fuente de verdad” clara por entidad.</li>
 </ul>
 <h3 id="negativas-costos">Negativas / costos<a class="headerlink" href="#negativas-costos" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Definir límites (tamaño/tipos/cantidad).</li>
-<li>Definir retención y limpieza de adjuntos.</li>
+<li>Hay que mapear modelos reales y nombres de tablas.</li>
+<li>Puede requerir refactors o vistas específicas para móvil.</li>
 </ul>
 <h3 id="impactos">Impactos<a class="headerlink" href="#impactos" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>UX:</strong> “ver/descargar” + manejo de error 403/404.</li>
-<li><strong>Backend:</strong> upload con validaciones; descarga con streaming; metadata.</li>
-<li><strong>Seguridad:</strong> antivirus/escaneo (si aplica), content-type, rate limit.</li>
+<li><strong>Backend:</strong> capa de servicios/adaptadores (SISOC → API móvil).</li>
+<li><strong>Datos:</strong> mapeo de IDs reales y relaciones.</li>
+<li><strong>QA:</strong> pruebas de regresión para no romper flujos existentes.</li>
 </ul>
 <hr />
 <h2 id="criterios-de-exito-validacion">Criterios de éxito / validación<a class="headerlink" href="#criterios-de-exito-validacion" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Un usuario de un espacio no puede descargar archivos de otro espacio.</li>
-<li>Upload rechaza archivos fuera de tipo/tamaño.</li>
-<li>Descarga funciona en móvil sin exponer rutas internas.</li>
+<li>No se rompe funcionalidad web existente (técnicos).</li>
+<li>La app puede operar el MVP con datos reales o staging.</li>
+<li>Las entidades clave (Espacio, Usuario, etc.) tienen IDs estables.</li>
 </ul>
 <hr />
 <h2 id="pendientes-reunion-viernes">Pendientes (reunión viernes)<a class="headerlink" href="#pendientes-reunion-viernes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>¿SISOC ya guarda archivos? ¿Dónde?</li>
-<li>¿Hay S3/MinIO/Blob storage disponible?</li>
-<li>Límite real de tamaño y tipos aceptados.</li>
-<li>¿Se requiere preview en app o solo descarga?</li>
+<li>Qué módulos existen: nómina, rendiciones, documentos, mensajes, formación, prestación.</li>
+<li>Identificador único del espacio y relaciones.</li>
+<li>Política de cambios en BD / aprobación de migraciones.</li>
 </ul>
 <hr />
 <h2 id="referencias">Referencias<a class="headerlink" href="#referencias" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Rendiciones: <code>docs/03_modulos/rendiciones.md</code></li>
+<li>Preguntas reunión SISOC: <code>docs/00_intro/preguntas-reunion-sisoc.md</code></li>
 <li>Contratos API: <code>docs/05_api/contratos-v0.md</code></li>
-<li>Seguridad baseline: <code>docs/07_seguridad/baseline.md</code></li>
+<li>RBAC: <code>docs/02_roles_y_accesos/rbac.md</code></li>
+<li>Integración existente: <code>docs/adr/ADR-0003-integracion-sisoc-existente.md</code></li>
 </ul>
 
 
