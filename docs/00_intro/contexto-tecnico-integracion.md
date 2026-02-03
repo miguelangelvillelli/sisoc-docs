@@ -31,9 +31,8 @@ Todo consumo y escritura se realiza mediante el **backoffice Django (API)** para
   - escritura controlada (nóminas, rendiciones) según permisos
 - Reutilizar tablas existentes donde aplique.
 - Crear tablas nuevas solo si:
-  
-  - el dato no existe en el esquema actual, o
-  - el esquema actual no soporta trazabilidad/adjuntos/estados del MVP
+    - el dato no existe en el esquema actual, o
+    - el esquema actual no soporta trazabilidad/adjuntos/estados del MVP
 
 ## Compatibilidad y migraciones
 - Evitar cambios destructivos en tablas existentes.
