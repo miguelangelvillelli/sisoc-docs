@@ -1,0 +1,2294 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentación funcional y operativa del MVP para espacios comunitarios.">
+      
+      
+        <meta name="author" content="Equipo SISOC">
+      
+      
+      
+        <link rel="prev" href="../../04_datos/importacion-csv/">
+      
+      
+        <link rel="next" href="../../06_calidad/criterios-aceptacion/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.33">
+    
+    
+      
+        <title>Contratos v0 - SISOC · Legajo de Espacio (MVP)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#contratos-api-v0-mvp-app-movil-sobre-sisoc-django" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="SISOC · Legajo de Espacio (MVP)" class="md-header__button md-logo" aria-label="SISOC · Legajo de Espacio (MVP)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SISOC · Legajo de Espacio (MVP)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Contratos v0
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../00_intro/proposito-alcance/" class="md-tabs__link">
+          
+  
+  00 · Introducción
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../01_mvp/alcance-mvp/" class="md-tabs__link">
+          
+  
+  01 · MVP
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../02_roles_y_accesos/rbac/" class="md-tabs__link">
+          
+  
+  02 · Roles y accesos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../03_modulos/informacion-institucional/" class="md-tabs__link">
+          
+  
+  03 · Módulos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../04_datos/modelo-conceptual/" class="md-tabs__link">
+          
+  
+  04 · Datos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  05 · API
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../06_calidad/criterios-aceptacion/" class="md-tabs__link">
+          
+  
+  06 · Calidad
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../07_seguridad/baseline/" class="md-tabs__link">
+          
+  
+  07 · Seguridad
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../08_wireflows/" class="md-tabs__link">
+          
+  
+  08 · Wireflows
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../adr/ADR-0001-alcance-mvp/" class="md-tabs__link">
+          
+  
+  ADR
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SISOC · Legajo de Espacio (MVP)" class="md-nav__button md-logo" aria-label="SISOC · Legajo de Espacio (MVP)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    SISOC · Legajo de Espacio (MVP)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    00 · Introducción
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            00 · Introducción
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00_intro/proposito-alcance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Propósito y alcance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00_intro/contexto-tecnico-integracion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contexto técnico e integración
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00_intro/preguntas-reunion-sisoc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preguntas para reunión SISOC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00_intro/minuta-reunion-sisoc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Minuta reunión SISOC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00_intro/principios-mvp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Principios del MVP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00_intro/glosario/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glosario
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    01 · MVP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            01 · MVP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_mvp/alcance-mvp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alcance MVP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_mvp/fuera-de-alcance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fuera de alcance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_mvp/roadmap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Roadmap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_mvp/user-stories-mvp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User stories MVP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_mvp/plan-sprints/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plan de sprints
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    02 · Roles y accesos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            02 · Roles y accesos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_roles_y_accesos/rbac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RBAC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_roles_y_accesos/auditoria-trazabilidad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Auditoría y trazabilidad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    03 · Módulos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            03 · Módulos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_modulos/informacion-institucional/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Información institucional
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_modulos/nominas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nóminas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_modulos/prestacion-alimentaria/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prestación alimentaria
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_modulos/formacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Formación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_modulos/rendiciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rendiciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    04 · Datos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            04 · Datos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_datos/modelo-conceptual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo conceptual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_datos/estados-y-reglas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estados y reglas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_datos/importacion-csv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Importación CSV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    05 · API
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            05 · API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Contratos v0
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Contratos v0
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    06 · Calidad
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            06 · Calidad
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_calidad/criterios-aceptacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Criterios de aceptación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_calidad/plan-qa-smoke/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plan QA smoke
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    07 · Seguridad
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            07 · Seguridad
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07_seguridad/baseline/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Baseline
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    08 · Wireflows
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            08 · Wireflows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08_wireflows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mapa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08_wireflows/wireflow-mvp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wireflow MVP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08_wireflows/pantallas-mvp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pantallas MVP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08_wireflows/estados-ui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estados UI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ADR
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            ADR
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adr/ADR-0001-alcance-mvp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ADR-0001 · Alcance MVP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adr/ADR-0002-usuario-organizacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ADR-0002 · Usuario organización
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adr/ADR-0003-integracion-sisoc-existente/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ADR-0003 · Integración SISOC existente
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="contratos-api-v0-mvp-app-movil-sobre-sisoc-django">Contratos API v0 (MVP) — App móvil sobre SISOC (Django)<a class="headerlink" href="#contratos-api-v0-mvp-app-movil-sobre-sisoc-django" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Estado</p>
+<p><strong>Versión:</strong> v0.2<br />
+<strong>Última actualización:</strong> 2026-02-03<br />
+<strong>Responsable:</strong> DEV_Impl / ARQ_Nav<br />
+<strong>Nivel:</strong> Interno</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Pendiente de confirmación con SISOC</p>
+<ul>
+<li>Autenticación (JWT vs Session) y endpoints reales de login/refresh.  </li>
+<li>IDs reales y nombres de modelos/tablas.  </li>
+<li>Existencia real de módulos (nóminas/rendiciones/documentos/mensajes).<br />
+Este documento define un <strong>contrato propuesto</strong> para no frenar el MVP.</li>
+</ul>
+</div>
+<h2 id="objetivo">Objetivo<a class="headerlink" href="#objetivo" title="Permanent link">&para;</a></h2>
+<p>Definir contratos mínimos de API para el MVP móvil, consumiendo SISOC existente a través del backoffice Django.
+La API es el punto único para:
+- RBAC (server-side)
+- auditoría
+- validaciones
+- performance (paginación/caché)</p>
+<div class="admonition warning">
+<p class="admonition-title">Regla</p>
+<p>La app móvil <strong>no accede directamente a MySQL</strong>.</p>
+</div>
+<hr />
+<h1 id="1-convenciones-v0">1) Convenciones (v0)<a class="headerlink" href="#1-convenciones-v0" title="Permanent link">&para;</a></h1>
+<h2 id="11-base-path-y-versionado">1.1 Base path y versionado<a class="headerlink" href="#11-base-path-y-versionado" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Base path sugerido: <code>/api/mobile/v1/</code> <em>(placeholder)</em></li>
+<li>Formato: <code>application/json</code></li>
+<li>Fechas: ISO 8601 (<code>YYYY-MM-DD</code> o <code>YYYY-MM-DDTHH:MM:SSZ</code>)</li>
+</ul>
+<h2 id="12-paginacion">1.2 Paginación<a class="headerlink" href="#12-paginacion" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Query params estándar: <code>page</code>, <code>page_size</code></li>
+<li>Respuesta incluye: <code>items</code>, <code>page</code>, <code>page_size</code>, <code>total</code></li>
+</ul>
+<h2 id="13-respuestas-estandar">1.3 Respuestas estándar<a class="headerlink" href="#13-respuestas-estandar" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>200 OK</code>: lectura / operación idempotente</li>
+<li><code>201 Created</code>: alta</li>
+<li><code>400 Bad Request</code>: validación</li>
+<li><code>401 Unauthorized</code>: sin sesión/token</li>
+<li><code>403 Forbidden</code>: sin permiso</li>
+<li><code>404 Not Found</code>: recurso inexistente</li>
+<li><code>409 Conflict</code>: posible duplicado (o warning en 200)</li>
+<li><code>422 Unprocessable Entity</code>: opcional (si se estandariza)</li>
+</ul>
+<h2 id="14-modelo-estandar-de-error">1.4 Modelo estándar de error<a class="headerlink" href="#14-modelo-estandar-de-error" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;validation_error&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Mensaje claro&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;details&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;field&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;motivo&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="15-headers-sugeridos">1.5 Headers sugeridos<a class="headerlink" href="#15-headers-sugeridos" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="err">Au</span><span class="kc">t</span><span class="err">horiza</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="p">:</span><span class="w"> </span><span class="err">Bearer</span><span class="w"> </span><span class="err">&lt;</span><span class="kc">t</span><span class="err">oke</span><span class="kc">n</span><span class="err">&gt;</span><span class="w"> </span><span class="err">(si</span><span class="w"> </span><span class="err">JWT)</span>
+
+<span class="err">Co</span><span class="kc">ntent</span><span class="mi">-</span><span class="err">Type</span><span class="p">:</span><span class="w"> </span><span class="err">applica</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">/jso</span><span class="kc">n</span>
+
+<span class="err">Accep</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="err">applica</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">/jso</span><span class="kc">n</span>
+</code></pre></div>
+<h1 id="2-autenticacion-placeholder-a-confirmar">2) Autenticación (placeholder a confirmar)<a class="headerlink" href="#2-autenticacion-placeholder-a-confirmar" title="Permanent link">&para;</a></h1>
+<div class="highlight"><pre><span></span><code><span class="err">Opció</span><span class="kc">n</span><span class="w"> </span><span class="err">A</span><span class="w"> </span><span class="err">(recome</span><span class="kc">n</span><span class="err">dada)</span><span class="p">:</span><span class="w"> </span><span class="err">JWT</span><span class="w"> </span><span class="err">Bearer</span>
+
+<span class="err">Header</span><span class="p">:</span><span class="w"> </span><span class="err">Au</span><span class="kc">t</span><span class="err">horiza</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="p">:</span><span class="w"> </span><span class="err">Bearer</span><span class="w"> </span><span class="err">&lt;</span><span class="kc">t</span><span class="err">oke</span><span class="kc">n</span><span class="err">&gt;</span>
+
+<span class="err">Re</span><span class="kc">fres</span><span class="err">h</span><span class="w"> </span><span class="kc">t</span><span class="err">oke</span><span class="kc">n</span><span class="w"> </span><span class="err">si</span><span class="w"> </span><span class="err">aplica.</span>
+
+<span class="err">Opció</span><span class="kc">n</span><span class="w"> </span><span class="err">B</span><span class="p">:</span><span class="w"> </span><span class="err">Sessio</span><span class="kc">n</span><span class="w"> </span><span class="err">Dja</span><span class="kc">n</span><span class="err">go</span>
+
+<span class="err">Cookies</span><span class="w"> </span><span class="err">+</span><span class="w"> </span><span class="err">CSRF</span><span class="w"> </span><span class="err">(me</span><span class="kc">n</span><span class="err">os</span><span class="w"> </span><span class="err">ideal</span><span class="w"> </span><span class="err">para</span><span class="w"> </span><span class="err">app</span><span class="w"> </span><span class="err">móvil).</span>
+
+<span class="err">!!!</span><span class="w"> </span><span class="err">i</span><span class="kc">nf</span><span class="err">o</span><span class="w"> </span><span class="s2">&quot;Decisión pendiente&quot;</span>
+<span class="err">Se</span><span class="w"> </span><span class="err">de</span><span class="kc">f</span><span class="err">i</span><span class="kc">ne</span><span class="w"> </span><span class="err">co</span><span class="kc">n</span><span class="w"> </span><span class="err">equipo</span><span class="w"> </span><span class="err">SISOC</span><span class="w"> </span><span class="err">e</span><span class="kc">n</span><span class="w"> </span><span class="err">reu</span><span class="kc">n</span><span class="err">ió</span><span class="kc">n</span><span class="err">.</span>
+<span class="err">Has</span><span class="kc">ta</span><span class="w"> </span><span class="err">e</span><span class="kc">nt</span><span class="err">o</span><span class="kc">n</span><span class="err">ces</span><span class="p">,</span><span class="w"> </span><span class="err">la</span><span class="w"> </span><span class="err">app</span><span class="w"> </span><span class="err">asume</span><span class="w"> </span><span class="err">JWT</span><span class="w"> </span><span class="err">como</span><span class="w"> </span><span class="err">de</span><span class="kc">fault</span><span class="w"> </span><span class="err">co</span><span class="kc">n</span><span class="err">cep</span><span class="kc">tual</span><span class="err">.</span>
+
+<span class="mi">1</span><span class="err">)</span><span class="w"> </span><span class="err">E</span><span class="kc">nt</span><span class="err">idades</span><span class="w"> </span><span class="err">(resume</span><span class="kc">n</span><span class="w"> </span><span class="err">co</span><span class="kc">n</span><span class="err">cep</span><span class="kc">tual</span><span class="err">)</span>
+
+<span class="err">Space</span><span class="w"> </span><span class="err">(Espacio)</span><span class="p">:</span><span class="w"> </span><span class="err">u</span><span class="kc">n</span><span class="err">idad</span><span class="w"> </span><span class="err">opera</span><span class="kc">t</span><span class="err">iva</span><span class="w"> </span><span class="err">(exis</span><span class="kc">tente</span><span class="w"> </span><span class="err">e</span><span class="kc">n</span><span class="w"> </span><span class="err">SISOC).</span>
+
+<span class="err">Docume</span><span class="kc">nt</span><span class="w"> </span><span class="err">(Docume</span><span class="kc">nt</span><span class="err">o)</span><span class="p">:</span><span class="w"> </span><span class="err">archivos/co</span><span class="kc">n</span><span class="err">ve</span><span class="kc">n</span><span class="err">ios</span><span class="w"> </span><span class="err">visibles</span><span class="w"> </span><span class="err">para</span><span class="w"> </span><span class="err">el</span><span class="w"> </span><span class="err">espacio.</span>
+
+<span class="err">Message</span><span class="w"> </span><span class="err">(Me</span><span class="kc">nsa</span><span class="err">je</span><span class="w"> </span><span class="err">opera</span><span class="kc">t</span><span class="err">ivo)</span><span class="p">:</span><span class="w"> </span><span class="err">comu</span><span class="kc">n</span><span class="err">icacio</span><span class="kc">nes</span><span class="w"> </span><span class="err">segme</span><span class="kc">nta</span><span class="err">das</span><span class="w"> </span><span class="err">al</span><span class="w"> </span><span class="err">espacio/jurisdicció</span><span class="kc">n</span><span class="err">.</span>
+
+<span class="err">Perso</span><span class="kc">n</span><span class="w"> </span><span class="err">(Perso</span><span class="kc">na</span><span class="err">/Nómi</span><span class="kc">na</span><span class="err">)</span><span class="p">:</span><span class="w"> </span><span class="err">perso</span><span class="kc">nas</span><span class="w"> </span><span class="err">asis</span><span class="kc">t</span><span class="err">idas</span><span class="w"> </span><span class="err">vi</span><span class="kc">n</span><span class="err">culadas</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">u</span><span class="kc">n</span><span class="w"> </span><span class="err">espacio</span><span class="w"> </span><span class="err">(exis</span><span class="kc">tente</span><span class="w"> </span><span class="err">o</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">crear).</span>
+
+<span class="err">Be</span><span class="kc">nef</span><span class="err">i</span><span class="kc">t</span><span class="w"> </span><span class="err">(Pres</span><span class="kc">ta</span><span class="err">ció</span><span class="kc">n</span><span class="w"> </span><span class="err">alime</span><span class="kc">ntar</span><span class="err">ia)</span><span class="p">:</span><span class="w"> </span><span class="err">es</span><span class="kc">ta</span><span class="err">do</span><span class="w"> </span><span class="err">por</span><span class="w"> </span><span class="err">período</span><span class="w"> </span><span class="err">(MVP</span><span class="w"> </span><span class="err">lec</span><span class="kc">tura</span><span class="err">).</span>
+
+<span class="err">Claim</span><span class="w"> </span><span class="err">(Re</span><span class="kc">n</span><span class="err">dició</span><span class="kc">n</span><span class="err">)</span><span class="p">:</span><span class="w"> </span><span class="err">re</span><span class="kc">n</span><span class="err">dició</span><span class="kc">n</span><span class="w"> </span><span class="err">por</span><span class="w"> </span><span class="err">período</span><span class="w"> </span><span class="err">y</span><span class="w"> </span><span class="err">sus</span><span class="w"> </span><span class="err">adju</span><span class="kc">nt</span><span class="err">os.</span>
+
+<span class="err">A</span><span class="kc">tta</span><span class="err">chme</span><span class="kc">nt</span><span class="w"> </span><span class="err">(Comproba</span><span class="kc">nte</span><span class="err">)</span><span class="p">:</span><span class="w"> </span><span class="err">archivo</span><span class="w"> </span><span class="err">asociado</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">u</span><span class="kc">na</span><span class="w"> </span><span class="err">re</span><span class="kc">n</span><span class="err">dició</span><span class="kc">n</span><span class="err">.</span>
+
+<span class="mi">4</span><span class="err">)</span><span class="w"> </span><span class="err">Per</span><span class="kc">f</span><span class="err">il</span><span class="w"> </span><span class="err">/</span><span class="w"> </span><span class="err">co</span><span class="kc">nte</span><span class="err">x</span><span class="kc">t</span><span class="err">o</span><span class="w"> </span><span class="err">del</span><span class="w"> </span><span class="err">usuario</span>
+<span class="mf">4.1</span><span class="w"> </span><span class="err">Ob</span><span class="kc">tener</span><span class="w"> </span><span class="err">co</span><span class="kc">nte</span><span class="err">x</span><span class="kc">t</span><span class="err">o</span><span class="w"> </span><span class="err">del</span><span class="w"> </span><span class="err">usuario</span><span class="w"> </span><span class="err">au</span><span class="kc">tent</span><span class="err">icado</span>
+
+<span class="err">GET</span><span class="w"> </span><span class="err">/me</span>
+
+<span class="err">Devuelve</span><span class="w"> </span><span class="err">el</span><span class="w"> </span><span class="err">co</span><span class="kc">nte</span><span class="err">x</span><span class="kc">t</span><span class="err">o</span><span class="w"> </span><span class="err">del</span><span class="w"> </span><span class="err">usuario</span><span class="w"> </span><span class="err">au</span><span class="kc">tent</span><span class="err">icado</span><span class="w"> </span><span class="err">y</span><span class="w"> </span><span class="err">su</span><span class="w"> </span><span class="err">alca</span><span class="kc">n</span><span class="err">ce.</span>
+
+<span class="mi">200</span><span class="w"> </span><span class="err">OK</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;u_123&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Nombre Apellido&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;role&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;referente|interno|operador|admin|org_user&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;spaces&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;space_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;esp_001&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;space_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Centro X&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;organization_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;jurisdiction&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;province&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Buenos Aires&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;municipality&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Almirante Brown&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="mi">401</span><span class="w"> </span><span class="err">U</span><span class="kc">naut</span><span class="err">horized</span>
+
+<span class="err">Ver</span><span class="w"> </span><span class="err">modelo</span><span class="w"> </span><span class="err">es</span><span class="kc">t</span><span class="err">á</span><span class="kc">n</span><span class="err">dar</span><span class="w"> </span><span class="err">de</span><span class="w"> </span><span class="err">error.</span>
+
+<span class="mi">5</span><span class="err">)</span><span class="w"> </span><span class="err">I</span><span class="kc">nf</span><span class="err">ormació</span><span class="kc">n</span><span class="w"> </span><span class="err">i</span><span class="kc">nst</span><span class="err">i</span><span class="kc">tu</span><span class="err">cio</span><span class="kc">nal</span><span class="w"> </span><span class="err">y</span><span class="w"> </span><span class="err">co</span><span class="kc">n</span><span class="err">ve</span><span class="kc">n</span><span class="err">ios</span>
+<span class="mf">5.1</span><span class="w"> </span><span class="err">Ficha</span><span class="w"> </span><span class="err">del</span><span class="w"> </span><span class="err">espacio</span><span class="w"> </span><span class="err">(solo</span><span class="w"> </span><span class="err">lec</span><span class="kc">tura</span><span class="err">)</span>
+
+<span class="err">GET</span><span class="w"> </span><span class="err">/spaces/</span><span class="p">{</span><span class="err">space_id</span><span class="p">}</span><span class="err">/pro</span><span class="kc">f</span><span class="err">ile</span>
+
+<span class="mi">200</span><span class="w"> </span><span class="err">OK</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;space_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;esp_001&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Centro X&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;address&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Calle 123&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;locality&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Localidad&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;jurisdiction&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;province&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;XX&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;municipality&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;YY&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;activo|suspendido|sin_datos&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;contacts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;whatsapp&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;+54....&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;hours&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9-18&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;email&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;correo@dominio&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;hours&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="mi">404</span><span class="w"> </span><span class="err">No</span><span class="kc">t</span><span class="w"> </span><span class="err">Fou</span><span class="kc">n</span><span class="err">d</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;space_not_found&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;No encontramos el espacio solicitado.&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="mf">5.2</span><span class="w"> </span><span class="err">Docume</span><span class="kc">nt</span><span class="err">os</span><span class="w"> </span><span class="err">del</span><span class="w"> </span><span class="err">espacio</span><span class="w"> </span><span class="err">(lis</span><span class="kc">ta</span><span class="err">)</span>
+
+<span class="err">GET</span><span class="w"> </span><span class="err">/spaces/</span><span class="p">{</span><span class="err">space_id</span><span class="p">}</span><span class="err">/docume</span><span class="kc">nts</span>
+
+<span class="err">Query</span><span class="w"> </span><span class="err">params</span><span class="p">:</span><span class="w"> </span><span class="err">page</span><span class="p">,</span><span class="w"> </span><span class="err">page_size</span>
+
+<span class="mi">200</span><span class="w"> </span><span class="err">OK</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;document_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;doc_001&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Convenio vigente&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-02-01T10:00:00Z&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;download_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://... (url firmada o endpoint)&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;page&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;page_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;total&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="p">}</span>
+
+<span class="mi">200</span><span class="w"> </span><span class="err">OK</span><span class="w"> </span><span class="err">(vacío)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">  </span><span class="nt">&quot;page&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;page_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;total&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="p">}</span>
+
+<span class="mf">5.3</span><span class="w"> </span><span class="err">Descargar</span><span class="w"> </span><span class="err">docume</span><span class="kc">nt</span><span class="err">o</span><span class="w"> </span><span class="err">(opcio</span><span class="kc">nes</span><span class="err">)</span>
+
+<span class="err">Depe</span><span class="kc">n</span><span class="err">die</span><span class="kc">n</span><span class="err">do</span><span class="w"> </span><span class="err">de</span><span class="w"> </span><span class="err">SISOC</span><span class="p">,</span><span class="w"> </span><span class="err">se</span><span class="w"> </span><span class="err">de</span><span class="kc">f</span><span class="err">i</span><span class="kc">ne</span><span class="w"> </span><span class="err">u</span><span class="kc">n</span><span class="err">o</span><span class="w"> </span><span class="err">de</span><span class="w"> </span><span class="err">es</span><span class="kc">t</span><span class="err">os</span><span class="w"> </span><span class="err">meca</span><span class="kc">n</span><span class="err">ismos</span><span class="p">:</span>
+
+<span class="err">Opció</span><span class="kc">n</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="err">—</span><span class="w"> </span><span class="err">URL</span><span class="w"> </span><span class="kc">f</span><span class="err">irmada</span><span class="w"> </span><span class="err">(recome</span><span class="kc">n</span><span class="err">dada)</span>
+
+<span class="err">dow</span><span class="kc">nl</span><span class="err">oad_url</span><span class="w"> </span><span class="err">ya</span><span class="w"> </span><span class="err">vie</span><span class="kc">ne</span><span class="w"> </span><span class="err">lis</span><span class="kc">t</span><span class="err">o</span><span class="w"> </span><span class="err">e</span><span class="kc">n</span><span class="w"> </span><span class="err">la</span><span class="w"> </span><span class="err">lis</span><span class="kc">ta</span><span class="err">/de</span><span class="kc">talle</span><span class="w"> </span><span class="err">y</span><span class="w"> </span><span class="err">expira.</span>
+
+<span class="err">Opció</span><span class="kc">n</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="err">—</span><span class="w"> </span><span class="err">E</span><span class="kc">n</span><span class="err">dpoi</span><span class="kc">nt</span><span class="w"> </span><span class="err">de</span><span class="w"> </span><span class="err">descarga</span>
+
+<span class="err">GET</span><span class="w"> </span><span class="err">/docume</span><span class="kc">nts</span><span class="err">/</span><span class="p">{</span><span class="err">docume</span><span class="kc">nt</span><span class="err">_id</span><span class="p">}</span><span class="err">/dow</span><span class="kc">nl</span><span class="err">oad</span>
+
+<span class="err">Devuelve</span><span class="w"> </span><span class="err">u</span><span class="kc">n</span><span class="w"> </span><span class="err">redirec</span><span class="kc">t</span><span class="w"> </span><span class="err">o</span><span class="w"> </span><span class="err">s</span><span class="kc">trea</span><span class="err">m</span><span class="w"> </span><span class="err">del</span><span class="w"> </span><span class="err">archivo.</span>
+
+<span class="mi">6</span><span class="err">)</span><span class="w"> </span><span class="err">Me</span><span class="kc">nsa</span><span class="err">jes</span><span class="w"> </span><span class="err">opera</span><span class="kc">t</span><span class="err">ivos</span>
+<span class="mf">6.1</span><span class="w"> </span><span class="err">Me</span><span class="kc">nsa</span><span class="err">jes</span><span class="w"> </span><span class="err">del</span><span class="w"> </span><span class="err">espacio</span><span class="w"> </span><span class="err">(lis</span><span class="kc">ta</span><span class="err">)</span>
+
+<span class="err">GET</span><span class="w"> </span><span class="err">/spaces/</span><span class="p">{</span><span class="err">space_id</span><span class="p">}</span><span class="err">/messages</span>
+
+<span class="err">Query</span><span class="w"> </span><span class="err">params</span><span class="p">:</span><span class="w"> </span><span class="err">page</span><span class="p">,</span><span class="w"> </span><span class="err">page_size</span>
+
+<span class="mi">200</span><span class="w"> </span><span class="err">OK</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;message_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;msg_001&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Recordatorio rendición&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-02-02&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;excerpt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Texto breve...&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;read&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;page&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;page_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;total&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="p">}</span>
+
+<span class="mf">6.2</span><span class="w"> </span><span class="err">Me</span><span class="kc">nsa</span><span class="err">je</span><span class="w"> </span><span class="err">(de</span><span class="kc">talle</span><span class="err">)</span>
+
+<span class="err">GET</span><span class="w"> </span><span class="err">/messages/</span><span class="p">{</span><span class="err">message_id</span><span class="p">}</span>
+
+<span class="mi">200</span><span class="w"> </span><span class="err">OK</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;msg_001&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Recordatorio rendición&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-02-02&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Texto completo del mensaje...&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;read&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="p">}</span>
+
+<span class="mf">6.3</span><span class="w"> </span><span class="err">Marcar</span><span class="w"> </span><span class="err">me</span><span class="kc">nsa</span><span class="err">je</span><span class="w"> </span><span class="err">como</span><span class="w"> </span><span class="err">leído</span><span class="w"> </span><span class="err">(opcio</span><span class="kc">nal</span><span class="w"> </span><span class="err">MVP)</span>
+
+<span class="err">POST</span><span class="w"> </span><span class="err">/messages/</span><span class="p">{</span><span class="err">message_id</span><span class="p">}</span><span class="err">/read</span>
+
+<span class="mi">200</span><span class="w"> </span><span class="err">OK</span>
+<span class="p">{</span><span class="w"> </span><span class="nt">&quot;ok&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span>
+
+<span class="mi">7</span><span class="err">)</span><span class="w"> </span><span class="err">Nómi</span><span class="kc">nas</span><span class="w"> </span><span class="err">(perso</span><span class="kc">nas</span><span class="err">)</span>
+<span class="mf">7.1</span><span class="w"> </span><span class="err">Lis</span><span class="kc">tar</span><span class="err">/buscar</span><span class="w"> </span><span class="err">perso</span><span class="kc">nas</span>
+
+<span class="err">GET</span><span class="w"> </span><span class="err">/spaces/</span><span class="p">{</span><span class="err">space_id</span><span class="p">}</span><span class="err">/people</span>
+
+<span class="err">Query</span><span class="w"> </span><span class="err">params</span><span class="p">:</span>
+
+<span class="err">q</span><span class="w"> </span><span class="err">(</span><span class="kc">te</span><span class="err">x</span><span class="kc">t</span><span class="err">o</span><span class="w"> </span><span class="err">libre)</span>
+
+<span class="err">ac</span><span class="kc">t</span><span class="err">ive</span><span class="w"> </span><span class="err">(</span><span class="kc">true</span><span class="err">/</span><span class="kc">false</span><span class="err">)</span>
+
+<span class="err">par</span><span class="kc">t</span><span class="err">icipa_alime</span><span class="kc">nta</span><span class="err">cio</span><span class="kc">n</span><span class="w"> </span><span class="err">(</span><span class="kc">true</span><span class="err">/</span><span class="kc">false</span><span class="err">)</span><span class="w"> </span><span class="err">(si</span><span class="w"> </span><span class="err">aplica)</span>
+
+<span class="err">par</span><span class="kc">t</span><span class="err">icipa_</span><span class="kc">f</span><span class="err">ormacio</span><span class="kc">n</span><span class="w"> </span><span class="err">(</span><span class="kc">true</span><span class="err">/</span><span class="kc">false</span><span class="err">)</span><span class="w"> </span><span class="err">(si</span><span class="w"> </span><span class="err">aplica)</span>
+
+<span class="err">page</span><span class="p">,</span><span class="w"> </span><span class="err">page_size</span>
+
+<span class="mi">200</span><span class="w"> </span><span class="err">OK</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;person_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;per_001&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;first_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ana&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;last_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Pérez&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;doc_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DNI&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;doc_number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;12345678&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;birth_date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1990-01-01&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;phone&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;+54...&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;active&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;participa_alimentacion&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;participa_formacion&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;page&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;page_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;total&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">120</span>
+<span class="p">}</span>
+
+<span class="mf">7.2</span><span class="w"> </span><span class="err">Al</span><span class="kc">ta</span><span class="w"> </span><span class="err">i</span><span class="kc">n</span><span class="err">dividual</span><span class="w"> </span><span class="err">(mí</span><span class="kc">n</span><span class="err">imo)</span>
+
+<span class="err">POST</span><span class="w"> </span><span class="err">/spaces/</span><span class="p">{</span><span class="err">space_id</span><span class="p">}</span><span class="err">/people</span>
+
+<span class="err">Body</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;first_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ana&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;last_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Pérez&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;doc_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DNI&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;doc_number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;12345678&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;birth_date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1990-01-01&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;phone&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;+54...&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;participa_alimentacion&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;participa_formacion&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;active&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;notes&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span>
+<span class="p">}</span>
+
+<span class="mi">201</span><span class="w"> </span><span class="err">Crea</span><span class="kc">te</span><span class="err">d</span>
+<span class="p">{</span><span class="w"> </span><span class="nt">&quot;person_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;per_999&quot;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="mi">409</span><span class="w"> </span><span class="err">Co</span><span class="kc">nfl</span><span class="err">ic</span><span class="kc">t</span><span class="w"> </span><span class="err">(duplicado</span><span class="w"> </span><span class="err">probable)</span><span class="w"> </span><span class="err">(o</span><span class="w"> </span><span class="err">war</span><span class="kc">n</span><span class="err">i</span><span class="kc">n</span><span class="err">g</span><span class="w"> </span><span class="mi">200</span><span class="err">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;warning&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;possible_duplicate&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Existe una persona con el mismo documento en el espacio.&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;person_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;per_999&quot;</span>
+<span class="p">}</span>
+
+<span class="mf">7.3</span><span class="w"> </span><span class="err">Edició</span><span class="kc">n</span><span class="w"> </span><span class="err">parcial</span>
+
+<span class="err">PATCH</span><span class="w"> </span><span class="err">/spaces/</span><span class="p">{</span><span class="err">space_id</span><span class="p">}</span><span class="err">/people/</span><span class="p">{</span><span class="err">perso</span><span class="kc">n</span><span class="err">_id</span><span class="p">}</span>
+
+<span class="err">Body</span><span class="w"> </span><span class="err">(ejemplo)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;phone&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;+54...&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;participa_formacion&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="p">}</span>
+
+<span class="mi">200</span><span class="w"> </span><span class="err">OK</span>
+<span class="p">{</span><span class="w"> </span><span class="nt">&quot;ok&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span>
+
+<span class="mf">7.4</span><span class="w"> </span><span class="err">Impor</span><span class="kc">ta</span><span class="err">ció</span><span class="kc">n</span><span class="w"> </span><span class="err">CSV</span><span class="w"> </span><span class="err">(si</span><span class="w"> </span><span class="err">aplica)</span>
+
+<span class="err">POST</span><span class="w"> </span><span class="err">/spaces/</span><span class="p">{</span><span class="err">space_id</span><span class="p">}</span><span class="err">/people/impor</span><span class="kc">t</span>
+
+<span class="err">Reques</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="err">mul</span><span class="kc">t</span><span class="err">ipar</span><span class="kc">t</span><span class="err">/</span><span class="kc">f</span><span class="err">orm</span><span class="mi">-</span><span class="err">da</span><span class="kc">ta</span><span class="w"> </span><span class="err">co</span><span class="kc">n</span><span class="w"> </span><span class="kc">f</span><span class="err">ile</span>
+
+<span class="mi">200</span><span class="w"> </span><span class="err">OK</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;result&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ok|partial|error&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;created&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;updated&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;row&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;apellido requerido&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;warnings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;row&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;duplicado probable&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+
+
+<span class="err">!!!</span><span class="w"> </span><span class="err">i</span><span class="kc">nf</span><span class="err">o</span><span class="w"> </span><span class="s2">&quot;Alternativa si no aplica en móvil&quot;</span>
+<span class="err">Si</span><span class="w"> </span><span class="err">el</span><span class="w"> </span><span class="err">MVP</span><span class="w"> </span><span class="err">de</span><span class="kc">f</span><span class="err">i</span><span class="kc">ne</span><span class="w"> </span><span class="err">que</span><span class="w"> </span><span class="err">la</span><span class="w"> </span><span class="err">impor</span><span class="kc">ta</span><span class="err">ció</span><span class="kc">n</span><span class="w"> </span><span class="err">CSV</span><span class="w"> </span><span class="err">es</span><span class="w"> </span><span class="err">solo</span><span class="w"> </span><span class="err">web</span><span class="p">,</span><span class="w"> </span><span class="err">es</span><span class="kc">te</span><span class="w"> </span><span class="err">e</span><span class="kc">n</span><span class="err">dpoi</span><span class="kc">nt</span><span class="w"> </span><span class="err">puede</span><span class="w"> </span><span class="err">omi</span><span class="kc">t</span><span class="err">irse</span><span class="w"> </span><span class="err">y</span><span class="w"> </span><span class="err">la</span><span class="w"> </span><span class="err">UI</span><span class="w"> </span><span class="err">mues</span><span class="kc">tra</span><span class="w"> </span><span class="err">“solo</span><span class="w"> </span><span class="err">web”.</span>
+
+<span class="mi">8</span><span class="err">)</span><span class="w"> </span><span class="err">Pres</span><span class="kc">ta</span><span class="err">ció</span><span class="kc">n</span><span class="w"> </span><span class="err">alime</span><span class="kc">ntar</span><span class="err">ia</span><span class="w"> </span><span class="err">(MVP</span><span class="w"> </span><span class="err">solo</span><span class="w"> </span><span class="err">lec</span><span class="kc">tura</span><span class="err">)</span>
+<span class="mf">8.1</span><span class="w"> </span><span class="err">Resume</span><span class="kc">n</span><span class="w"> </span><span class="err">del</span><span class="w"> </span><span class="err">período</span><span class="w"> </span><span class="err">ac</span><span class="kc">tual</span><span class="w"> </span><span class="err">(o</span><span class="w"> </span><span class="err">úl</span><span class="kc">t</span><span class="err">imo</span><span class="w"> </span><span class="err">dispo</span><span class="kc">n</span><span class="err">ible)</span>
+
+<span class="err">GET</span><span class="w"> </span><span class="err">/spaces/</span><span class="p">{</span><span class="err">space_id</span><span class="p">}</span><span class="err">/be</span><span class="kc">nef</span><span class="err">i</span><span class="kc">t</span>
+
+<span class="mi">200</span><span class="w"> </span><span class="err">OK</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vigente|en_revision|observada|suspendida|sin_datos&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;period&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-02&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;summary&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Texto breve para el espacio&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;observations&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Si aplica, mensaje claro&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;history&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;period&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vigente&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="mf">8.2</span><span class="w"> </span><span class="err">De</span><span class="kc">talle</span><span class="w"> </span><span class="err">por</span><span class="w"> </span><span class="err">período</span>
+
+<span class="err">GET</span><span class="w"> </span><span class="err">/spaces/</span><span class="p">{</span><span class="err">space_id</span><span class="p">}</span><span class="err">/be</span><span class="kc">nef</span><span class="err">i</span><span class="kc">t</span><span class="err">/</span><span class="p">{</span><span class="err">period</span><span class="p">}</span>
+
+<span class="mi">200</span><span class="w"> </span><span class="err">OK</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;period&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-02&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vigente&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;summary&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;....&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;observations&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
+<span class="p">}</span>
+
+<span class="mi">9</span><span class="err">)</span><span class="w"> </span><span class="err">Formació</span><span class="kc">n</span><span class="w"> </span><span class="err">(si</span><span class="w"> </span><span class="err">e</span><span class="kc">ntra</span><span class="w"> </span><span class="err">e</span><span class="kc">n</span><span class="w"> </span><span class="err">MVP)</span>
+<span class="mf">9.1</span><span class="w"> </span><span class="err">Lis</span><span class="kc">tar</span><span class="w"> </span><span class="err">ac</span><span class="kc">t</span><span class="err">ividades</span>
+
+<span class="err">GET</span><span class="w"> </span><span class="err">/spaces/</span><span class="p">{</span><span class="err">space_id</span><span class="p">}</span><span class="err">/</span><span class="kc">tra</span><span class="err">i</span><span class="kc">n</span><span class="err">i</span><span class="kc">n</span><span class="err">g</span>
+
+<span class="err">Query</span><span class="w"> </span><span class="err">params</span><span class="p">:</span><span class="w"> </span><span class="err">s</span><span class="kc">tatus</span><span class="p">,</span><span class="w"> </span><span class="err">page</span><span class="p">,</span><span class="w"> </span><span class="err">page_size</span>
+
+<span class="mi">200</span><span class="w"> </span><span class="err">OK</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;activity_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;act_001&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Taller de cocina&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-02-10&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;planificada|finalizada|cancelada&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;participants_count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;page&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;page_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;total&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span>
+<span class="p">}</span>
+
+<span class="mf">9.2</span><span class="w"> </span><span class="err">Crear</span><span class="w"> </span><span class="err">ac</span><span class="kc">t</span><span class="err">ividad</span>
+
+<span class="err">POST</span><span class="w"> </span><span class="err">/spaces/</span><span class="p">{</span><span class="err">space_id</span><span class="p">}</span><span class="err">/</span><span class="kc">tra</span><span class="err">i</span><span class="kc">n</span><span class="err">i</span><span class="kc">n</span><span class="err">g</span>
+
+<span class="err">Body</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Taller de cocina&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Opcional&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-02-10&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;planificada&quot;</span>
+<span class="p">}</span>
+
+<span class="mi">201</span><span class="w"> </span><span class="err">Crea</span><span class="kc">te</span><span class="err">d</span>
+<span class="p">{</span><span class="w"> </span><span class="nt">&quot;activity_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;act_999&quot;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="mf">9.3</span><span class="w"> </span><span class="err">Edi</span><span class="kc">tar</span><span class="w"> </span><span class="err">ac</span><span class="kc">t</span><span class="err">ividad</span>
+
+<span class="err">PATCH</span><span class="w"> </span><span class="err">/spaces/</span><span class="p">{</span><span class="err">space_id</span><span class="p">}</span><span class="err">/</span><span class="kc">tra</span><span class="err">i</span><span class="kc">n</span><span class="err">i</span><span class="kc">n</span><span class="err">g/</span><span class="p">{</span><span class="err">ac</span><span class="kc">t</span><span class="err">ivi</span><span class="kc">t</span><span class="err">y_id</span><span class="p">}</span>
+
+<span class="err">Body</span>
+<span class="p">{</span><span class="w"> </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Nuevo texto&quot;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="mi">200</span><span class="w"> </span><span class="err">OK</span>
+<span class="p">{</span><span class="w"> </span><span class="nt">&quot;ok&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span>
+
+<span class="mf">9.4</span><span class="w"> </span><span class="err">Ges</span><span class="kc">t</span><span class="err">io</span><span class="kc">nar</span><span class="w"> </span><span class="err">par</span><span class="kc">t</span><span class="err">icipa</span><span class="kc">ntes</span>
+
+<span class="err">POST</span><span class="w"> </span><span class="err">/spaces/</span><span class="p">{</span><span class="err">space_id</span><span class="p">}</span><span class="err">/</span><span class="kc">tra</span><span class="err">i</span><span class="kc">n</span><span class="err">i</span><span class="kc">n</span><span class="err">g/</span><span class="p">{</span><span class="err">ac</span><span class="kc">t</span><span class="err">ivi</span><span class="kc">t</span><span class="err">y_id</span><span class="p">}</span><span class="err">/par</span><span class="kc">t</span><span class="err">icipa</span><span class="kc">nts</span>
+
+<span class="err">Body</span>
+<span class="p">{</span><span class="w"> </span><span class="nt">&quot;person_ids&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;per_001&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;per_002&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">}</span>
+
+<span class="mi">200</span><span class="w"> </span><span class="err">OK</span>
+<span class="p">{</span><span class="w"> </span><span class="nt">&quot;added&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">}</span>
+
+
+<span class="err">DELETE</span><span class="w"> </span><span class="err">/spaces/</span><span class="p">{</span><span class="err">space_id</span><span class="p">}</span><span class="err">/</span><span class="kc">tra</span><span class="err">i</span><span class="kc">n</span><span class="err">i</span><span class="kc">n</span><span class="err">g/</span><span class="p">{</span><span class="err">ac</span><span class="kc">t</span><span class="err">ivi</span><span class="kc">t</span><span class="err">y_id</span><span class="p">}</span><span class="err">/par</span><span class="kc">t</span><span class="err">icipa</span><span class="kc">nts</span><span class="err">/</span><span class="p">{</span><span class="err">perso</span><span class="kc">n</span><span class="err">_id</span><span class="p">}</span>
+
+<span class="mi">200</span><span class="w"> </span><span class="err">OK</span>
+<span class="p">{</span><span class="w"> </span><span class="nt">&quot;ok&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span>
+
+<span class="mi">10</span><span class="err">)</span><span class="w"> </span><span class="err">Re</span><span class="kc">n</span><span class="err">dicio</span><span class="kc">nes</span><span class="w"> </span><span class="err">y</span><span class="w"> </span><span class="err">comproba</span><span class="kc">ntes</span>
+<span class="mf">10.1</span><span class="w"> </span><span class="err">Lis</span><span class="kc">tar</span><span class="w"> </span><span class="err">re</span><span class="kc">n</span><span class="err">dicio</span><span class="kc">nes</span>
+
+<span class="err">GET</span><span class="w"> </span><span class="err">/spaces/</span><span class="p">{</span><span class="err">space_id</span><span class="p">}</span><span class="err">/accou</span><span class="kc">nt</span><span class="err">i</span><span class="kc">n</span><span class="err">g/claims</span>
+
+<span class="err">Query</span><span class="w"> </span><span class="err">params</span><span class="p">:</span><span class="w"> </span><span class="err">s</span><span class="kc">tatus</span><span class="p">,</span><span class="w"> </span><span class="err">page</span><span class="p">,</span><span class="w"> </span><span class="err">page_size</span>
+
+<span class="mi">200</span><span class="w"> </span><span class="err">OK</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;claim_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ren_001&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;period&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;borrador|presentada|observada|aprobada|rechazada&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-02-01T10:00:00Z&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;observations&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Si aplica&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;page&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;page_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;total&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span>
+<span class="p">}</span>
+
+<span class="mf">10.2</span><span class="w"> </span><span class="err">De</span><span class="kc">talle</span><span class="w"> </span><span class="err">de</span><span class="w"> </span><span class="err">re</span><span class="kc">n</span><span class="err">dició</span><span class="kc">n</span><span class="w"> </span><span class="err">+</span><span class="w"> </span><span class="err">adju</span><span class="kc">nt</span><span class="err">os</span>
+
+<span class="err">GET</span><span class="w"> </span><span class="err">/spaces/</span><span class="p">{</span><span class="err">space_id</span><span class="p">}</span><span class="err">/accou</span><span class="kc">nt</span><span class="err">i</span><span class="kc">n</span><span class="err">g/claims/</span><span class="p">{</span><span class="err">claim_id</span><span class="p">}</span>
+
+<span class="mi">200</span><span class="w"> </span><span class="err">OK</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;claim_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ren_999&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;period&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;borrador&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;observations&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;attachments&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;attachment_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;att_001&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;filename&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;comprobante.pdf&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cargado|invalidado|validado&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;reason&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="mf">10.3</span><span class="w"> </span><span class="err">Subir</span><span class="w"> </span><span class="err">comproba</span><span class="kc">nte</span>
+
+<span class="err">POST</span><span class="w"> </span><span class="err">/spaces/</span><span class="p">{</span><span class="err">space_id</span><span class="p">}</span><span class="err">/accou</span><span class="kc">nt</span><span class="err">i</span><span class="kc">n</span><span class="err">g/claims/</span><span class="p">{</span><span class="err">claim_id</span><span class="p">}</span><span class="err">/a</span><span class="kc">tta</span><span class="err">chme</span><span class="kc">nts</span>
+
+<span class="err">Reques</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="err">mul</span><span class="kc">t</span><span class="err">ipar</span><span class="kc">t</span><span class="err">/</span><span class="kc">f</span><span class="err">orm</span><span class="mi">-</span><span class="err">da</span><span class="kc">ta</span><span class="w"> </span><span class="err">co</span><span class="kc">n</span><span class="w"> </span><span class="kc">f</span><span class="err">ile</span>
+
+<span class="err">Reglas</span><span class="w"> </span><span class="err">(placeholder)</span><span class="p">:</span>
+
+<span class="err">Máximo</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="err">MB</span>
+
+<span class="err">Tipos</span><span class="p">:</span><span class="w"> </span><span class="err">pd</span><span class="kc">f</span><span class="err">/jpg/p</span><span class="kc">n</span><span class="err">g</span>
+
+<span class="err">Máximo</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="err">por</span><span class="w"> </span><span class="err">re</span><span class="kc">n</span><span class="err">dició</span><span class="kc">n</span>
+
+<span class="mi">201</span><span class="w"> </span><span class="err">Crea</span><span class="kc">te</span><span class="err">d</span>
+<span class="p">{</span><span class="w"> </span><span class="nt">&quot;attachment_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;att_999&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cargado&quot;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="mi">400</span><span class="w"> </span><span class="err">Bad</span><span class="w"> </span><span class="err">Reques</span><span class="kc">t</span><span class="w"> </span><span class="err">(ejemplo</span><span class="w"> </span><span class="kc">ta</span><span class="err">maño)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;file_too_large&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;El archivo supera el tamaño máximo permitido (10MB).&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="mf">10.4</span><span class="w"> </span><span class="err">Prese</span><span class="kc">ntar</span><span class="w"> </span><span class="err">re</span><span class="kc">n</span><span class="err">dició</span><span class="kc">n</span>
+
+<span class="err">POST</span><span class="w"> </span><span class="err">/spaces/</span><span class="p">{</span><span class="err">space_id</span><span class="p">}</span><span class="err">/accou</span><span class="kc">nt</span><span class="err">i</span><span class="kc">n</span><span class="err">g/claims/</span><span class="p">{</span><span class="err">claim_id</span><span class="p">}</span><span class="err">/submi</span><span class="kc">t</span>
+
+<span class="err">Regla</span><span class="w"> </span><span class="err">MVP</span><span class="p">:</span><span class="w"> </span><span class="err">solo</span><span class="w"> </span><span class="err">re</span><span class="kc">ferente</span><span class="w"> </span><span class="err">+</span><span class="w"> </span><span class="err">requiere</span><span class="w"> </span><span class="err">≥</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="err">comproba</span><span class="kc">nte</span><span class="err">.</span>
+
+<span class="mi">200</span><span class="w"> </span><span class="err">OK</span>
+<span class="p">{</span><span class="w"> </span><span class="nt">&quot;claim_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ren_999&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;presentada&quot;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="mi">400</span><span class="w"> </span><span class="err">Bad</span><span class="w"> </span><span class="err">Reques</span><span class="kc">t</span><span class="w"> </span><span class="err">(si</span><span class="kc">n</span><span class="w"> </span><span class="err">comproba</span><span class="kc">ntes</span><span class="err">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;missing_attachments&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Para presentar la rendición debés adjuntar al menos 1 comprobante.&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="mi">403</span><span class="w"> </span><span class="err">Forbidde</span><span class="kc">n</span><span class="w"> </span><span class="err">(si</span><span class="kc">n</span><span class="w"> </span><span class="err">permiso)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;forbidden&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;No tenés permiso para presentar rendiciones.&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="mi">11</span><span class="err">)</span><span class="w"> </span><span class="err">Audi</span><span class="kc">t</span><span class="err">oría</span><span class="w"> </span><span class="err">(mí</span><span class="kc">n</span><span class="err">imo</span><span class="w"> </span><span class="err">i</span><span class="kc">ntern</span><span class="err">o)</span>
+
+<span class="err">!!!</span><span class="w"> </span><span class="err">i</span><span class="kc">nf</span><span class="err">o</span><span class="w"> </span><span class="s2">&quot;Nota&quot;</span>
+<span class="err">La</span><span class="w"> </span><span class="err">app</span><span class="w"> </span><span class="kc">n</span><span class="err">o</span><span class="w"> </span><span class="kc">ne</span><span class="err">cesi</span><span class="kc">ta</span><span class="w"> </span><span class="err">leer</span><span class="w"> </span><span class="err">audi</span><span class="kc">t</span><span class="err">oría.</span>
+<span class="err">La</span><span class="w"> </span><span class="err">API</span><span class="w"> </span><span class="err">debe</span><span class="w"> </span><span class="err">regis</span><span class="kc">trar</span><span class="w"> </span><span class="err">eve</span><span class="kc">nt</span><span class="err">os</span><span class="w"> </span><span class="err">mí</span><span class="kc">n</span><span class="err">imos</span><span class="w"> </span><span class="err">de</span><span class="kc">f</span><span class="err">i</span><span class="kc">n</span><span class="err">idos</span><span class="w"> </span><span class="err">e</span><span class="kc">n</span><span class="w"> </span><span class="mi">02</span><span class="err">_roles_y_accesos/audi</span><span class="kc">t</span><span class="err">oria</span><span class="mi">-</span><span class="kc">tra</span><span class="err">zabilidad.md.</span>
+
+<span class="err">Eve</span><span class="kc">nt</span><span class="err">os</span><span class="w"> </span><span class="err">sugeridos</span><span class="w"> </span><span class="err">(placeholder)</span><span class="p">:</span>
+
+<span class="err">logi</span><span class="kc">n</span><span class="err">_success</span><span class="p">,</span><span class="w"> </span><span class="err">logi</span><span class="kc">n</span><span class="err">_</span><span class="kc">fa</span><span class="err">iled</span>
+
+<span class="err">view_pro</span><span class="kc">f</span><span class="err">ile</span><span class="p">,</span><span class="w"> </span><span class="err">view_docume</span><span class="kc">nts</span><span class="p">,</span><span class="w"> </span><span class="err">dow</span><span class="kc">nl</span><span class="err">oad_docume</span><span class="kc">nt</span>
+
+<span class="err">view_messages</span><span class="p">,</span><span class="w"> </span><span class="err">read_message</span>
+
+<span class="err">perso</span><span class="kc">n</span><span class="err">_crea</span><span class="kc">te</span><span class="p">,</span><span class="w"> </span><span class="err">perso</span><span class="kc">n</span><span class="err">_upda</span><span class="kc">te</span><span class="p">,</span><span class="w"> </span><span class="err">perso</span><span class="kc">n</span><span class="err">_deac</span><span class="kc">t</span><span class="err">iva</span><span class="kc">te</span>
+
+<span class="err">claim_a</span><span class="kc">tta</span><span class="err">chme</span><span class="kc">nt</span><span class="err">_upload</span><span class="p">,</span><span class="w"> </span><span class="err">claim_submi</span><span class="kc">t</span>
+
+<span class="mi">12</span><span class="err">)</span><span class="w"> </span><span class="err">Pe</span><span class="kc">n</span><span class="err">die</span><span class="kc">ntes</span><span class="w"> </span><span class="err">para</span><span class="w"> </span><span class="err">cerrar</span><span class="w"> </span><span class="kc">tras</span><span class="w"> </span><span class="err">reu</span><span class="kc">n</span><span class="err">ió</span><span class="kc">n</span><span class="w"> </span><span class="err">SISOC</span>
+
+<span class="err">Meca</span><span class="kc">n</span><span class="err">ismo</span><span class="w"> </span><span class="err">de</span><span class="w"> </span><span class="err">au</span><span class="kc">t</span><span class="err">h</span><span class="w"> </span><span class="err">(JWT/sessio</span><span class="kc">n</span><span class="err">)</span><span class="w"> </span><span class="err">y</span><span class="w"> </span><span class="err">e</span><span class="kc">n</span><span class="err">dpoi</span><span class="kc">nt</span><span class="w"> </span><span class="err">de</span><span class="w"> </span><span class="err">logi</span><span class="kc">n</span><span class="err">/re</span><span class="kc">fres</span><span class="err">h</span><span class="w"> </span><span class="err">si</span><span class="w"> </span><span class="err">aplica.</span>
+
+<span class="err">Nombres</span><span class="w"> </span><span class="err">reales</span><span class="w"> </span><span class="err">de</span><span class="w"> </span><span class="err">e</span><span class="kc">nt</span><span class="err">idades</span><span class="w"> </span><span class="err">y</span><span class="w"> </span><span class="err">claves</span><span class="w"> </span><span class="err">(space_id/perso</span><span class="kc">n</span><span class="err">_id</span><span class="p">,</span><span class="w"> </span><span class="err">e</span><span class="kc">t</span><span class="err">c.).</span>
+
+<span class="err">Co</span><span class="kc">nf</span><span class="err">irmació</span><span class="kc">n</span><span class="w"> </span><span class="err">si</span><span class="w"> </span><span class="kc">n</span><span class="err">ómi</span><span class="kc">na</span><span class="err">/re</span><span class="kc">n</span><span class="err">dicio</span><span class="kc">nes</span><span class="err">/me</span><span class="kc">nsa</span><span class="err">jes/docume</span><span class="kc">nt</span><span class="err">os</span><span class="w"> </span><span class="err">ya</span><span class="w"> </span><span class="err">exis</span><span class="kc">ten</span><span class="w"> </span><span class="err">o</span><span class="w"> </span><span class="err">se</span><span class="w"> </span><span class="err">crea</span><span class="kc">n</span><span class="err">.</span>
+
+<span class="err">S</span><span class="kc">t</span><span class="err">orage</span><span class="w"> </span><span class="err">de</span><span class="w"> </span><span class="err">archivos</span><span class="w"> </span><span class="err">(ru</span><span class="kc">ta</span><span class="p">,</span><span class="w"> </span><span class="err">URL</span><span class="w"> </span><span class="kc">f</span><span class="err">irmada</span><span class="p">,</span><span class="w"> </span><span class="err">expiració</span><span class="kc">n</span><span class="err">).</span>
+
+<span class="err">Mapeo</span><span class="w"> </span><span class="err">de</span><span class="w"> </span><span class="err">es</span><span class="kc">ta</span><span class="err">dos</span><span class="w"> </span><span class="err">reales</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">ca</span><span class="kc">t</span><span class="err">álogos</span><span class="w"> </span><span class="err">de</span><span class="kc">f</span><span class="err">i</span><span class="kc">n</span><span class="err">idos</span><span class="w"> </span><span class="err">e</span><span class="kc">n</span><span class="w"> </span><span class="mi">04</span><span class="err">_da</span><span class="kc">t</span><span class="err">os/es</span><span class="kc">ta</span><span class="err">dos</span><span class="mi">-</span><span class="err">y</span><span class="mi">-</span><span class="err">reglas.md.</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.af256bd8.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>
