@@ -11,6 +11,7 @@ Definir requerimientos funcionales del MVP del **Legajo de Espacio** en SISOC.
 
 ## Alcance del módulo
 El centro/espacio accede a SISOC para:
+
 - Consultar información institucional y convenios
 - Gestionar nóminas de personas asistidas
 - Acceder a información de prestaciones alimentarias
