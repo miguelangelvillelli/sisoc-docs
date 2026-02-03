@@ -2264,9 +2264,9 @@ Este documento está orientado a destrabar decisiones por sprint (qué nos bloqu
 <li>¿Existe estado institucional del espacio (activo/suspendido/etc.)?</li>
 </ul>
 <p><strong>Salida esperada</strong>
-- Confirmar <strong>space_id real</strong> (tipo y nombre de campo) + tabla/modelo.
-- Lista de campos que vamos a exponer en “Perfil del espacio”.
-- Catálogo real de “estado institucional del espacio”.</p>
+  - Confirmar <strong>space_id real</strong> (tipo y nombre de campo) + tabla/modelo.
+  - Lista de campos que vamos a exponer en “Perfil del espacio”.
+  - Catálogo real de “estado institucional del espacio”.</p>
 <hr />
 <h2 id="b-usuarios-y-autenticacion-para-app-movil-bloquea-sprint-1">B) Usuarios y autenticación (para app móvil) — <em>Bloquea Sprint 1</em><a class="headerlink" href="#b-usuarios-y-autenticacion-para-app-movil-bloquea-sprint-1" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2279,16 +2279,18 @@ Este documento está orientado a destrabar decisiones por sprint (qué nos bloqu
 <p><strong>Salida esperada</strong>
 - Decisión: <strong>JWT vs Session</strong> (y por qué).
 - Endpoints necesarios:
-  - <code>POST /auth/login</code> (si aplica)
-  - <code>POST /auth/refresh</code> (si aplica)
-  - <code>GET /me</code>
+    - <code>POST /auth/login</code> (si aplica)
+    - <code>POST /auth/refresh</code> (si aplica)
+    - <code>GET /me</code>
 - Definición de <strong>roles reales</strong> y cómo se vinculan a permisos (RBAC).</p>
 <hr />
 <h2 id="c-nominas-personas-bloquea-sprint-2">C) Nóminas / Personas — <em>Bloquea Sprint 2</em><a class="headerlink" href="#c-nominas-personas-bloquea-sprint-2" title="Permanent link">&para;</a></h2>
 <ul>
-<li>¿Existe hoy una tabla/modelo de “personas asistidas” vinculadas a un espacio?</li>
+<li>¿Existe hoy una tabla/modelo de “personas asistidas” vinculadas a un espacio?<ul>
 <li>Si existe: ¿qué campos ya tienen? ¿DNI es obligatorio?</li>
 <li>Si NO existe: ¿prefieren que nómina sea tabla nueva o ya hay un módulo similar?</li>
+</ul>
+</li>
 <li>¿Hay reglas actuales de deduplicación o validación?</li>
 </ul>
 <p><strong>Salida esperada</strong>
