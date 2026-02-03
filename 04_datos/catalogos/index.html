@@ -12,28 +12,28 @@
         <meta name="author" content="Equipo SISOC">
       
       
-        <link rel="canonical" href="https://miguelangelvillelli.github.io/sisoc-docs/08_wireflows/">
+        <link rel="canonical" href="https://miguelangelvillelli.github.io/sisoc-docs/04_datos/catalogos/">
       
       
-        <link rel="prev" href="../07_seguridad/baseline/">
+        <link rel="prev" href="../importacion-csv/">
       
       
-        <link rel="next" href="wireflow-mvp/">
+        <link rel="next" href="../../05_api/contratos-v0/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.33">
     
     
       
-        <title>Mapa - SISOC · Legajo de Espacio (MVP)</title>
+        <title>Catálogos y estados - SISOC · Legajo de Espacio (MVP)</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,9 +52,9 @@
       
     
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#wireflows-mvp-mapa-visual-de-pantallas-y-flujos" class="md-skip">
+        <a href="#catalogos-y-estados-mvp" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -94,7 +94,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href=".." title="SISOC · Legajo de Espacio (MVP)" class="md-header__button md-logo" aria-label="SISOC · Legajo de Espacio (MVP)" data-md-component="logo">
+    <a href="../.." title="SISOC · Legajo de Espacio (MVP)" class="md-header__button md-logo" aria-label="SISOC · Legajo de Espacio (MVP)" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Mapa
+              Catálogos y estados
             
           </span>
         </div>
@@ -221,7 +221,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
     
@@ -240,7 +240,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../00_intro/proposito-alcance/" class="md-tabs__link">
+        <a href="../../00_intro/proposito-alcance/" class="md-tabs__link">
           
   
   00 · Introducción
@@ -258,7 +258,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../01_mvp/alcance-mvp/" class="md-tabs__link">
+        <a href="../../01_mvp/alcance-mvp/" class="md-tabs__link">
           
   
   01 · MVP
@@ -276,7 +276,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../02_roles_y_accesos/rbac/" class="md-tabs__link">
+        <a href="../../02_roles_y_accesos/rbac/" class="md-tabs__link">
           
   
   02 · Roles y accesos
@@ -294,7 +294,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../03_modulos/informacion-institucional/" class="md-tabs__link">
+        <a href="../../03_modulos/informacion-institucional/" class="md-tabs__link">
           
   
   03 · Módulos
@@ -308,11 +308,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../04_datos/modelo-conceptual/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../modelo-conceptual/" class="md-tabs__link">
           
   
   04 · Datos
@@ -330,7 +332,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../05_api/contratos-v0/" class="md-tabs__link">
+        <a href="../../05_api/contratos-v0/" class="md-tabs__link">
           
   
   05 · API
@@ -348,7 +350,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../06_calidad/criterios-aceptacion/" class="md-tabs__link">
+        <a href="../../06_calidad/criterios-aceptacion/" class="md-tabs__link">
           
   
   06 · Calidad
@@ -366,7 +368,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../07_seguridad/baseline/" class="md-tabs__link">
+        <a href="../../07_seguridad/baseline/" class="md-tabs__link">
           
   
   07 · Seguridad
@@ -380,13 +382,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../08_wireflows/" class="md-tabs__link">
           
   
   08 · Wireflows
@@ -404,7 +404,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../adr/ADR-0001-alcance-mvp/" class="md-tabs__link">
+        <a href="../../adr/ADR-0001-alcance-mvp/" class="md-tabs__link">
           
   
   ADR
@@ -437,7 +437,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="SISOC · Legajo de Espacio (MVP)" class="md-nav__button md-logo" aria-label="SISOC · Legajo de Espacio (MVP)" data-md-component="logo">
+    <a href="../.." title="SISOC · Legajo de Espacio (MVP)" class="md-nav__button md-logo" aria-label="SISOC · Legajo de Espacio (MVP)" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -467,7 +467,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -527,7 +527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../00_intro/proposito-alcance/" class="md-nav__link">
+      <a href="../../00_intro/proposito-alcance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -548,7 +548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../00_intro/contexto-tecnico-integracion/" class="md-nav__link">
+      <a href="../../00_intro/contexto-tecnico-integracion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -569,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../00_intro/preguntas-reunion-sisoc/" class="md-nav__link">
+      <a href="../../00_intro/preguntas-reunion-sisoc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -590,7 +590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../00_intro/minuta-reunion-sisoc/" class="md-nav__link">
+      <a href="../../00_intro/minuta-reunion-sisoc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -611,7 +611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../00_intro/principios-mvp/" class="md-nav__link">
+      <a href="../../00_intro/principios-mvp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -632,7 +632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../00_intro/glosario/" class="md-nav__link">
+      <a href="../../00_intro/glosario/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -700,7 +700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01_mvp/alcance-mvp/" class="md-nav__link">
+      <a href="../../01_mvp/alcance-mvp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -721,7 +721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01_mvp/fuera-de-alcance/" class="md-nav__link">
+      <a href="../../01_mvp/fuera-de-alcance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -742,7 +742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01_mvp/roadmap/" class="md-nav__link">
+      <a href="../../01_mvp/roadmap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -763,7 +763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01_mvp/user-stories-mvp/" class="md-nav__link">
+      <a href="../../01_mvp/user-stories-mvp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -784,7 +784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01_mvp/plan-sprints/" class="md-nav__link">
+      <a href="../../01_mvp/plan-sprints/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -805,7 +805,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01_mvp/mvp-one-pager/" class="md-nav__link">
+      <a href="../../01_mvp/mvp-one-pager/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -873,7 +873,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02_roles_y_accesos/rbac/" class="md-nav__link">
+      <a href="../../02_roles_y_accesos/rbac/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -894,7 +894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02_roles_y_accesos/auditoria-trazabilidad/" class="md-nav__link">
+      <a href="../../02_roles_y_accesos/auditoria-trazabilidad/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -962,7 +962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03_modulos/informacion-institucional/" class="md-nav__link">
+      <a href="../../03_modulos/informacion-institucional/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -983,7 +983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03_modulos/nominas/" class="md-nav__link">
+      <a href="../../03_modulos/nominas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1004,7 +1004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03_modulos/prestacion-alimentaria/" class="md-nav__link">
+      <a href="../../03_modulos/prestacion-alimentaria/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1025,7 +1025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03_modulos/formacion/" class="md-nav__link">
+      <a href="../../03_modulos/formacion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1046,7 +1046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03_modulos/rendiciones/" class="md-nav__link">
+      <a href="../../03_modulos/rendiciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1071,25 +1071,30 @@
       
   
   
+    
   
   
+  
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1100,7 +1105,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             04 · Datos
@@ -1114,7 +1119,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04_datos/modelo-conceptual/" class="md-nav__link">
+      <a href="../modelo-conceptual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1135,7 +1140,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04_datos/estados-y-reglas/" class="md-nav__link">
+      <a href="../estados-y-reglas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1156,7 +1161,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04_datos/importacion-csv/" class="md-nav__link">
+      <a href="../importacion-csv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1174,10 +1179,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../04_datos/catalogos/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Catálogos y estados
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1186,6 +1211,98 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-estado-del-espacio-spacestatus" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) Estado del espacio (SpaceStatus)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-prestacion-alimentaria-benefitstatus" class="md-nav__link">
+    <span class="md-ellipsis">
+      2) Prestación alimentaria (BenefitStatus)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-rendicion-claimstatus" class="md-nav__link">
+    <span class="md-ellipsis">
+      3) Rendición (ClaimStatus)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-comprobante-attachmentstatus" class="md-nav__link">
+    <span class="md-ellipsis">
+      4) Comprobante (AttachmentStatus)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-actividad-de-formacion-activitystatus" class="md-nav__link">
+    <span class="md-ellipsis">
+      5) Actividad de formación (ActivityStatus)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-persona-en-nomina-personstatus" class="md-nav__link">
+    <span class="md-ellipsis">
+      6) Persona en nómina (PersonStatus)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pendientes-para-reunion-mapeo-real-sisoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pendientes para reunión (mapeo real SISOC)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1245,7 +1362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05_api/contratos-v0/" class="md-nav__link">
+      <a href="../../05_api/contratos-v0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1313,7 +1430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../06_calidad/criterios-aceptacion/" class="md-nav__link">
+      <a href="../../06_calidad/criterios-aceptacion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1334,7 +1451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../06_calidad/plan-qa-smoke/" class="md-nav__link">
+      <a href="../../06_calidad/plan-qa-smoke/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1402,7 +1519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../07_seguridad/baseline/" class="md-nav__link">
+      <a href="../../07_seguridad/baseline/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1427,30 +1544,25 @@
       
   
   
-    
   
   
-  
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1461,7 +1573,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             08 · Wireflows
@@ -1472,30 +1584,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Mapa
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../08_wireflows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1504,71 +1596,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#objetivo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Objetivo
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#alcance-del-mvp-pantallas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Alcance del MVP (pantallas)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#documentos-de-esta-seccion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Documentos de esta sección
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#criterios-ux-para-el-mvp" class="md-nav__link">
-    <span class="md-ellipsis">
-      Criterios (UX) para el MVP
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pendientes-para-reunion-sisoc" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pendientes para reunión SISOC
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1581,7 +1608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="wireflow-mvp/" class="md-nav__link">
+      <a href="../../08_wireflows/wireflow-mvp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1602,7 +1629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pantallas-mvp/" class="md-nav__link">
+      <a href="../../08_wireflows/pantallas-mvp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1623,7 +1650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="estados-ui/" class="md-nav__link">
+      <a href="../../08_wireflows/estados-ui/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1644,7 +1671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="navigation-map/" class="md-nav__link">
+      <a href="../../08_wireflows/navigation-map/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1665,7 +1692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ui-data-contracts/" class="md-nav__link">
+      <a href="../../08_wireflows/ui-data-contracts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1733,7 +1760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adr/ADR-0001-alcance-mvp/" class="md-nav__link">
+      <a href="../../adr/ADR-0001-alcance-mvp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1754,7 +1781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adr/ADR-0002-usuario-organizacion/" class="md-nav__link">
+      <a href="../../adr/ADR-0002-usuario-organizacion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1775,7 +1802,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adr/ADR-0003-integracion-sisoc-existente/" class="md-nav__link">
+      <a href="../../adr/ADR-0003-integracion-sisoc-existente/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1832,36 +1859,63 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#alcance-del-mvp-pantallas" class="md-nav__link">
+  <a href="#1-estado-del-espacio-spacestatus" class="md-nav__link">
     <span class="md-ellipsis">
-      Alcance del MVP (pantallas)
+      1) Estado del espacio (SpaceStatus)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#documentos-de-esta-seccion" class="md-nav__link">
+  <a href="#2-prestacion-alimentaria-benefitstatus" class="md-nav__link">
     <span class="md-ellipsis">
-      Documentos de esta sección
+      2) Prestación alimentaria (BenefitStatus)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#criterios-ux-para-el-mvp" class="md-nav__link">
+  <a href="#3-rendicion-claimstatus" class="md-nav__link">
     <span class="md-ellipsis">
-      Criterios (UX) para el MVP
+      3) Rendición (ClaimStatus)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pendientes-para-reunion-sisoc" class="md-nav__link">
+  <a href="#4-comprobante-attachmentstatus" class="md-nav__link">
     <span class="md-ellipsis">
-      Pendientes para reunión SISOC
+      4) Comprobante (AttachmentStatus)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-actividad-de-formacion-activitystatus" class="md-nav__link">
+    <span class="md-ellipsis">
+      5) Actividad de formación (ActivityStatus)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-persona-en-nomina-personstatus" class="md-nav__link">
+    <span class="md-ellipsis">
+      6) Persona en nómina (PersonStatus)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pendientes-para-reunion-mapeo-real-sisoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pendientes para reunión (mapeo real SISOC)
     </span>
   </a>
   
@@ -1885,56 +1939,87 @@
   
 
 
-<h1 id="wireflows-mvp-mapa-visual-de-pantallas-y-flujos">Wireflows (MVP) — Mapa visual de pantallas y flujos<a class="headerlink" href="#wireflows-mvp-mapa-visual-de-pantallas-y-flujos" title="Permanent link">&para;</a></h1>
+<h1 id="catalogos-y-estados-mvp">Catálogos y estados (MVP)<a class="headerlink" href="#catalogos-y-estados-mvp" title="Permanent link">&para;</a></h1>
 <div class="admonition info">
 <p class="admonition-title">Estado</p>
 <p><strong>Versión:</strong> v0.1<br />
 <strong>Última actualización:</strong> 2026-02-03<br />
-<strong>Responsable:</strong> UI_UX / ARQ_Nav<br />
+<strong>Responsable:</strong> DB_Model / ARQ_Nav<br />
 <strong>Nivel:</strong> Interno</p>
 </div>
 <h2 id="objetivo">Objetivo<a class="headerlink" href="#objetivo" title="Permanent link">&para;</a></h2>
-<p>Tener una referencia visual rápida para:
-- alinear expectativas del MVP (qué se construye / qué no),
-- validar con SISOC existente (qué se reutiliza),
-- orientar desarrollo (pantallas + endpoints + estados).</p>
+<p>Definir un set único de <strong>estados/catálogos</strong> para alinear UX, API, QA y backoffice.
+Los estados reales de SISOC se mapearán a estos catálogos.</p>
 <hr />
-<h2 id="alcance-del-mvp-pantallas">Alcance del MVP (pantallas)<a class="headerlink" href="#alcance-del-mvp-pantallas" title="Permanent link">&para;</a></h2>
+<h2 id="1-estado-del-espacio-spacestatus">1) Estado del espacio (SpaceStatus)<a class="headerlink" href="#1-estado-del-espacio-spacestatus" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Home (hub)</li>
-<li>Información institucional (perfil + documentos)</li>
-<li>Mensajes operativos (lista + detalle)</li>
-<li>Nómina (lista + alta + edición + import CSV si aplica)</li>
-<li>Prestación alimentaria (solo lectura)</li>
-<li>Formación (lista + alta/edición + participantes)</li>
-<li>Rendiciones (lista + detalle + adjuntos + presentar)</li>
+<li><code>activo</code></li>
+<li><code>suspendido</code></li>
+<li><code>en_revision</code></li>
+<li><code>sin_datos</code></li>
 </ul>
+<p><strong>Reglas UI:</strong>
+- <code>sin_datos</code>: mostrar mensaje “faltan datos del espacio” sin bloquear navegación.
+- <code>suspendido</code>: mostrar badge y mensaje contextual; qué módulos quedan disponibles se define por política.</p>
 <hr />
-<h2 id="documentos-de-esta-seccion">Documentos de esta sección<a class="headerlink" href="#documentos-de-esta-seccion" title="Permanent link">&para;</a></h2>
+<h2 id="2-prestacion-alimentaria-benefitstatus">2) Prestación alimentaria (BenefitStatus)<a class="headerlink" href="#2-prestacion-alimentaria-benefitstatus" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Wireflow MVP (end-to-end):</strong> flujo completo de navegación y puntos de decisión</li>
-<li><strong>Pantallas MVP:</strong> descripción de cada pantalla (datos, acciones, vacíos, errores, permisos)</li>
+<li><code>vigente</code></li>
+<li><code>en_revision</code></li>
+<li><code>observada</code></li>
+<li><code>suspendida</code></li>
+<li><code>sin_datos</code></li>
 </ul>
+<p><strong>Reglas UI:</strong>
+- Siempre mostrar <strong>período</strong> y <strong>mensaje/observación</strong> si existe.
+- No mostrar montos/detalles sensibles hasta confirmación de alcance.</p>
 <hr />
-<h2 id="criterios-ux-para-el-mvp">Criterios (UX) para el MVP<a class="headerlink" href="#criterios-ux-para-el-mvp" title="Permanent link">&para;</a></h2>
+<h2 id="3-rendicion-claimstatus">3) Rendición (ClaimStatus)<a class="headerlink" href="#3-rendicion-claimstatus" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Siempre mostrar el <strong>contexto del espacio</strong> (nombre) en header o menú</li>
-<li>Acciones críticas con confirmación:</li>
-<li>“Presentar rendición”</li>
-<li>“Dar de baja/activar persona”</li>
-<li>Estados “sin datos” deben mostrarse como mensaje claro, no error técnico</li>
-<li>Listados grandes siempre con:</li>
-<li>búsqueda simple</li>
-<li>paginación</li>
-<li>“estado vacío” (no hay resultados)</li>
+<li><code>borrador</code></li>
+<li><code>presentada</code></li>
+<li><code>observada</code></li>
+<li><code>aprobada</code></li>
+<li><code>rechazada</code></li>
 </ul>
+<p><strong>Reglas UI:</strong>
+- <code>borrador</code>: permite adjuntar y editar.
+- <code>presentada</code>: bloquea cambios (solo lectura).
+- <code>observada</code>: habilita adjuntar nuevamente (según política) y muestra observaciones.
+- <code>aprobada/rechazada</code>: solo lectura.</p>
 <hr />
-<h2 id="pendientes-para-reunion-sisoc">Pendientes para reunión SISOC<a class="headerlink" href="#pendientes-para-reunion-sisoc" title="Permanent link">&para;</a></h2>
+<h2 id="4-comprobante-attachmentstatus">4) Comprobante (AttachmentStatus)<a class="headerlink" href="#4-comprobante-attachmentstatus" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Autenticación real (JWT / session / SSO) y flujo de login</li>
-<li>Si un usuario puede tener <strong>más de un espacio</strong> (selección de espacio)</li>
-<li>Confirmar si “Importación CSV” de nómina se hace desde móvil o solo web</li>
-<li>Confirmar dónde viven documentos / adjuntos hoy (storage)</li>
+<li><code>cargado</code></li>
+<li><code>validado</code></li>
+<li><code>invalidado</code></li>
+</ul>
+<p><strong>Reglas UI:</strong>
+- <code>invalidado</code> debe mostrar motivo en el detalle de rendición.</p>
+<hr />
+<h2 id="5-actividad-de-formacion-activitystatus">5) Actividad de formación (ActivityStatus)<a class="headerlink" href="#5-actividad-de-formacion-activitystatus" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>planificada</code></li>
+<li><code>finalizada</code></li>
+<li><code>cancelada</code></li>
+</ul>
+<p><strong>Reglas UI:</strong>
+- Solo editar contenido cuando <code>planificada</code> (MVP).
+- <code>finalizada/cancelada</code>: solo lectura.</p>
+<hr />
+<h2 id="6-persona-en-nomina-personstatus">6) Persona en nómina (PersonStatus)<a class="headerlink" href="#6-persona-en-nomina-personstatus" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>activa</code></li>
+<li><code>inactiva</code></li>
+</ul>
+<p><strong>Reglas UI:</strong>
+- Cambio de estado requiere confirmación (“¿dar de baja?” / “¿reactivar?”).</p>
+<hr />
+<h2 id="pendientes-para-reunion-mapeo-real-sisoc">Pendientes para reunión (mapeo real SISOC)<a class="headerlink" href="#pendientes-para-reunion-mapeo-real-sisoc" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Tabla/modelo fuente para cada estado.</li>
+<li>Estados existentes y su correspondencia con catálogos MVP.</li>
+<li>Reglas de transición (qué estados pueden pasar a cuáles y quién lo hace).</li>
 </ul>
 
 
@@ -1988,14 +2073,14 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.af256bd8.min.js"></script>
+      <script src="../../assets/javascripts/bundle.af256bd8.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.4.0/dist/mermaid.min.js"></script>
       
-        <script src="../javascripts/mermaid-init.js"></script>
+        <script src="../../javascripts/mermaid-init.js"></script>
       
     
   </body>
