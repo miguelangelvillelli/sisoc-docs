@@ -2176,22 +2176,22 @@ Todo consumo y escritura se realiza mediante el <strong>backoffice Django (API)<
 <h2 id="compatibilidad-y-migraciones">Compatibilidad y migraciones<a class="headerlink" href="#compatibilidad-y-migraciones" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Evitar cambios destructivos en tablas existentes.</li>
-<li>
-<p>Si se requieren agregados, preferir:</p>
-</li>
-<li>
-<p>tablas nuevas relacionadas</p>
-</li>
+<li>Si se requieren agregados, preferir:<ul>
+<li>tablas nuevas relacionadas</li>
 <li>vistas SQL (MySQL VIEW) para lecturas optimizadas</li>
 <li>índices para búsquedas críticas</li>
+</ul>
+</li>
 </ul>
 <h2 id="implicancias-para-el-mvp">Implicancias para el MVP<a class="headerlink" href="#implicancias-para-el-mvp" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Información institucional: principalmente <strong>lectura</strong> desde datos ya existentes.</li>
 <li>Prestación alimentaria (MVP): <strong>lectura</strong> (solo visualización).</li>
-<li>Nóminas: puede ser:</li>
+<li>Nóminas: puede ser:<ul>
 <li>lectura/escritura si ya existe módulo en backoffice, o</li>
 <li>nuevo submódulo que persiste y se asocia a “espacio”.</li>
+</ul>
+</li>
 <li>Rendiciones: casi seguro requiere componentes específicos (archivos, estados, trazabilidad).</li>
 </ul>
 
