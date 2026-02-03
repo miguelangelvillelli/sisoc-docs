@@ -106,7 +106,7 @@ nav:
       - ADR-0004 · Auth móvil: adr/ADR-0004-auth-movil.md
       - ADR-0005 · Storage archivos: adr/ADR-0005-storage-archivos.md
       - ADR-0006 · Estrategia integración módulos: adr/ADR-0006-estrategia-integracion-modulos.md
-
+      - ADR-0007 · Tailwind: adr/ADR-0007-tailwind-ui.md
   - REUNIONES:
       - Reunión · 2026-02-04: reuniones/reunion-2026-02-04-ux.md
       - Reunion · 2026-02-05: reuniones/analisis-equipo-roles-proyecto.md      
