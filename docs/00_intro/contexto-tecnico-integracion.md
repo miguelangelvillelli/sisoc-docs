@@ -37,15 +37,14 @@ Todo consumo y escritura se realiza mediante el **backoffice Django (API)** para
 ## Compatibilidad y migraciones
 - Evitar cambios destructivos en tablas existentes.
 - Si se requieren agregados, preferir:
-  
-  - tablas nuevas relacionadas
-  - vistas SQL (MySQL VIEW) para lecturas optimizadas
-  - índices para búsquedas críticas
+    - tablas nuevas relacionadas
+    - vistas SQL (MySQL VIEW) para lecturas optimizadas
+    - índices para búsquedas críticas
 
 ## Implicancias para el MVP
 - Información institucional: principalmente **lectura** desde datos ya existentes.
 - Prestación alimentaria (MVP): **lectura** (solo visualización).
 - Nóminas: puede ser:
-  - lectura/escritura si ya existe módulo en backoffice, o
-  - nuevo submódulo que persiste y se asocia a “espacio”.
+    - lectura/escritura si ya existe módulo en backoffice, o
+    - nuevo submódulo que persiste y se asocia a “espacio”.
 - Rendiciones: casi seguro requiere componentes específicos (archivos, estados, trazabilidad).
