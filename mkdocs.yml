@@ -2,6 +2,9 @@ site_name: SISOC · Legajo de Espacio (MVP)
 site_description: Documentación funcional y operativa del MVP para espacios comunitarios.
 site_author: Equipo SISOC
 repo_name: sisoc/docs
+repo_url: https://github.com/miguelangelvillelli/sisoc-docs
+site_url: https://miguelangelvillelli.github.io/sisoc-docs/
+
 
 theme:
   name: material
@@ -65,6 +68,7 @@ nav:
       - Roadmap: 01_mvp/roadmap.md
       - User stories MVP: 01_mvp/user-stories-mvp.md
       - Plan de sprints: 01_mvp/plan-sprints.md
+      - MVP One Pager: 01_mvp/mvp-one-pager.md
   - 02 · Roles y accesos:
       - RBAC: 02_roles_y_accesos/rbac.md
       - Auditoría y trazabilidad: 02_roles_y_accesos/auditoria-trazabilidad.md
@@ -78,6 +82,7 @@ nav:
       - Modelo conceptual: 04_datos/modelo-conceptual.md
       - Estados y reglas: 04_datos/estados-y-reglas.md
       - Importación CSV: 04_datos/importacion-csv.md
+      - Catálogos y estados: 04_datos/catalogos.md
   - 05 · API:
       - Contratos v0: 05_api/contratos-v0.md
   - 06 · Calidad:
@@ -90,6 +95,9 @@ nav:
       - Wireflow MVP: 08_wireflows/wireflow-mvp.md
       - Pantallas MVP: 08_wireflows/pantallas-mvp.md
       - Estados UI: 08_wireflows/estados-ui.md
+      - Mapa navegación: 08_wireflows/navigation-map.md
+      - UI Data Contracts: 08_wireflows/ui-data-contracts.md
+
   - ADR:
       - ADR-0001 · Alcance MVP: adr/ADR-0001-alcance-mvp.md
       - ADR-0002 · Usuario organización: adr/ADR-0002-usuario-organizacion.md
