@@ -2293,22 +2293,26 @@
 </ul>
 <hr />
 <h2 id="alcance-ux-a-definir-mvp">Alcance UX a definir (MVP)<a class="headerlink" href="#alcance-ux-a-definir-mvp" title="Permanent link">&para;</a></h2>
-<p>La app móvil incluye estas secciones:
-- Acceso: Login (si aplica) + Selector de espacio (si multi-espacio)
-- Home (Hub)
-- Información institucional (perfil + documentos)
-- Mensajes operativos (lista + detalle)
-- Nómina (lista + detalle + alta rápida + editar)
-- Rendiciones (lista + detalle + adjuntar comprobante + presentar)
-- Formación (lista + crear/editar + participantes)
-- Prestación alimentaria (lectura: estado + historial)</p>
+<p>La app móvil incluye estas secciones:</p>
+<ul>
+<li>Acceso: Login (si aplica) + Selector de espacio (si multi-espacio)</li>
+<li>Home (Hub)</li>
+<li>Información institucional (perfil + documentos)</li>
+<li>Mensajes operativos (lista + detalle)</li>
+<li>Nómina (lista + detalle + alta rápida + editar)</li>
+<li>Rendiciones (lista + detalle + adjuntar comprobante + presentar)</li>
+<li>Formación (lista + crear/editar + participantes)</li>
+<li>Prestación alimentaria (lectura: estado + historial)</li>
+</ul>
 <hr />
 <h2 id="entregables-que-necesitamos-de-ux-salida-de-la-reunion">Entregables que necesitamos de UX (salida de la reunión)<a class="headerlink" href="#entregables-que-necesitamos-de-ux-salida-de-la-reunion" title="Permanent link">&para;</a></h2>
 <h3 id="1-prototipo-navegable-figma">1) Prototipo navegable (Figma)<a class="headerlink" href="#1-prototipo-navegable-figma" title="Permanent link">&para;</a></h3>
-<p>Debe estar “clickeable” para:
-- entrar (login/selector si aplica),
-- navegar desde Home a cada módulo,
-- volver, cancelar, confirmar, etc.</p>
+<p>Debe estar “clickeable” para:</p>
+<ul>
+<li>entrar (login/selector si aplica),</li>
+<li>navegar desde Home a cada módulo,</li>
+<li>volver, cancelar, confirmar, etc.</li>
+</ul>
 <h3 id="2-kit-de-componentes-minimo">2) Kit de componentes (mínimo)<a class="headerlink" href="#2-kit-de-componentes-minimo" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Header con nombre del espacio + menú/back</li>
@@ -2320,45 +2324,61 @@
 <li>Upload/Adjuntar (rendiciones)</li>
 </ul>
 <h3 id="3-estados-de-ui-obligatorio">3) Estados de UI (obligatorio)<a class="headerlink" href="#3-estados-de-ui-obligatorio" title="Permanent link">&para;</a></h3>
-<p>Definir visual y copy para:
-- Loading (skeleton o spinner)
-- Empty (no hay datos)
-- Error de red
-- Error 401/403/404
-- Validación de formulario (400 con campos)
-- Estado “sin espacios asignados”
-- Estado “acción solo web” (si import CSV u otra cosa queda fuera)</p>
+<p>Definir visual y copy para:</p>
+<ul>
+<li>Loading (skeleton o spinner)</li>
+<li>Empty (no hay datos)</li>
+<li>Error de red</li>
+<li>Error 401/403/404</li>
+<li>Validación de formulario (400 con campos)</li>
+<li>Estado “sin espacios asignados”</li>
+<li>Estado “acción solo web” (si import CSV u otra cosa queda fuera)</li>
+</ul>
 <h3 id="4-copy-microcopy-base">4) Copy / Microcopy base<a class="headerlink" href="#4-copy-microcopy-base" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Mensajes claros para usuario no técnico (referentes).</li>
-<li>Textos estándar:</li>
+<li>Textos estándar:<ul>
 <li>“No pudimos conectarnos. Reintentá.”</li>
 <li>“No tenés permisos para esta acción.”</li>
 <li>“No hay información disponible.”</li>
 <li>“¿Confirmás presentar la rendición? Luego no vas a poder editar.”</li>
 </ul>
+</li>
+</ul>
 <h3 id="5-navegacion-decisiones-rapidas">5) Navegación: decisiones rápidas<a class="headerlink" href="#5-navegacion-decisiones-rapidas" title="Permanent link">&para;</a></h3>
 <ul>
-<li>¿Bottom navigation (tabs) o Home tipo Hub?</li>
+<li>¿Bottom navigation (tabs) o Home tipo Hub?<ul>
 <li>Recomendación MVP: <strong>Home (Hub)</strong> + navegación simple.</li>
-<li>¿Ocultar módulos sin permiso o mostrar deshabilitado?</li>
+</ul>
+</li>
+<li>¿Ocultar módulos sin permiso o mostrar deshabilitado?<ul>
 <li>Recomendación: <strong>ocultar</strong> si no aplica; mostrar “solo lectura” cuando corresponda.</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h2 id="preguntas-clave-para-ux-para-cerrar-hoy">Preguntas clave para UX (para cerrar hoy)<a class="headerlink" href="#preguntas-clave-para-ux-para-cerrar-hoy" title="Permanent link">&para;</a></h2>
 <ul>
 <li>¿Qué priorizamos visualmente en el Home? (ej: Rendiciones + Mensajes arriba)</li>
 <li>¿Cómo se resuelven “estados” en tarjetas? (badges: “observada”, “nuevo”)</li>
-<li>Nómina:</li>
+<li>Nómina:<ul>
 <li>¿Alta rápida es modal o pantalla?</li>
 <li>¿Edición desde detalle o directo en formulario?</li>
-<li>Rendiciones:</li>
+</ul>
+</li>
+<li>Rendiciones:<ul>
 <li>¿Adjuntar archivo desde detalle o pantalla dedicada?</li>
 <li>¿Cómo se muestra “observaciones” del técnico?</li>
-<li>Documentos:</li>
+</ul>
+</li>
+<li>Documentos:<ul>
 <li>¿Abrir dentro de app o descargar?</li>
-<li>Accesibilidad:</li>
+</ul>
+</li>
+<li>Accesibilidad:<ul>
 <li>tamaño de letra mínimo, contraste, botones grandes</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h2 id="material-que-ux-debe-tomar-como-base">Material que UX debe tomar como base<a class="headerlink" href="#material-que-ux-debe-tomar-como-base" title="Permanent link">&para;</a></h2>
