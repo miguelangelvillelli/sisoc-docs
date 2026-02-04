@@ -2350,20 +2350,20 @@
 </div>
 <h2 id="objetivo-del-modulo">Objetivo del módulo<a class="headerlink" href="#objetivo-del-modulo" title="Permanent link">&para;</a></h2>
 <p>Brindar al espacio comunitario acceso simple, desde el teléfono, a la información institucional clave de su relación con el Programa:
-- datos del espacio (identificación básica),
-- convenios y documentos asociados,
-- mensajes operativos oficiales,
-- información de contacto/canales habilitados.</p>
+  - datos del espacio (identificación básica),
+  - convenios y documentos asociados,
+  - mensajes operativos oficiales,
+  - información de contacto/canales habilitados.</p>
 <h2 id="alcance-mvp">Alcance MVP<a class="headerlink" href="#alcance-mvp" title="Permanent link">&para;</a></h2>
 <p>Entra en MVP:
-- Visualizar “Ficha del espacio”
-- Visualizar convenios/documentos vigentes (PDF o link)
-- Visualizar mensajes operativos (novedades comunicadas por el Programa)
-- Acceso a canales de contacto definidos (si aplica)</p>
+  - Visualizar “Ficha del espacio”
+  - Visualizar convenios/documentos vigentes (PDF o link)
+  - Visualizar mensajes operativos (novedades comunicadas por el Programa)
+  - Acceso a canales de contacto definidos (si aplica)</p>
 <p>Fuera de alcance (Release 2):
-- Firma digital dentro de la app
-- Flujos de renovación complejos (alta/baja de convenio desde app)
-- Gestión documental avanzada (versionado legal, circuitos múltiples)</p>
+  - Firma digital dentro de la app
+  - Flujos de renovación complejos (alta/baja de convenio desde app)
+  - Gestión documental avanzada (versionado legal, circuitos múltiples)</p>
 <h2 id="roles-y-permisos-rbac">Roles y permisos (RBAC)<a class="headerlink" href="#roles-y-permisos-rbac" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Referente del espacio</strong>: Ver</li>
@@ -2375,60 +2375,72 @@
 <h2 id="contenido-del-modulo-mvp">Contenido del módulo (MVP)<a class="headerlink" href="#contenido-del-modulo-mvp" title="Permanent link">&para;</a></h2>
 <h3 id="1-ficha-del-espacio">1) Ficha del espacio<a class="headerlink" href="#1-ficha-del-espacio" title="Permanent link">&para;</a></h3>
 <p>Información sugerida:
-- Nombre del espacio
-- Identificador interno (código)
-- Domicilio / localidad
-- Responsable/referente (nombre y contacto si corresponde mostrar)
-- Jurisdicción (provincia/municipio)
-- Estado operativo general (si existe un estado “institucional”)</p>
+  - Nombre del espacio
+  - Identificador interno (código)
+  - Domicilio / localidad
+  - Responsable/referente (nombre y contacto si corresponde mostrar)
+  - Jurisdicción (provincia/municipio)
+  - Estado operativo general (si existe un estado “institucional”)</p>
 <div class="admonition warning">
 <p class="admonition-title">Protección de datos</p>
 <p>Mostrar solo datos necesarios. Evitar publicar información sensible innecesaria.</p>
 </div>
 <h3 id="2-convenios-y-documentacion">2) Convenios y documentación<a class="headerlink" href="#2-convenios-y-documentacion" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Listado de documentos asociados al espacio:</li>
+<li>Listado de documentos asociados al espacio:<ul>
 <li>convenio vigente (si existe)</li>
 <li>anexos</li>
 <li>constancias relevantes (si aplica)</li>
-<li>Cada documento:</li>
+</ul>
+</li>
+<li>Cada documento:<ul>
 <li>título</li>
 <li>fecha de publicación/actualización</li>
 <li>acción “Ver/Descargar”</li>
 </ul>
+</li>
+</ul>
 <p>Reglas mínimas:
-- El espacio solo <strong>visualiza/descarga</strong>.
-- El documento visible debe ser la versión vigente definida por administración.
-- Si no hay documentos disponibles: mostrar estado “sin documentos” con explicación.</p>
+  - El espacio solo <strong>visualiza/descarga</strong>.
+  - El documento visible debe ser la versión vigente definida por administración.
+  - Si no hay documentos disponibles: mostrar estado “sin documentos” con explicación.</p>
 <h3 id="3-mensajes-operativos">3) Mensajes operativos<a class="headerlink" href="#3-mensajes-operativos" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Novedades oficiales del Programa que afecten operación del espacio:</li>
+<li>Novedades oficiales del Programa que afecten operación del espacio:<ul>
 <li>recordatorios de rendición</li>
 <li>cambios operativos</li>
 <li>avisos de contacto</li>
-<li>Cada mensaje:</li>
+</ul>
+</li>
+<li>Cada mensaje:<ul>
 <li>título</li>
 <li>fecha</li>
 <li>contenido corto (expandible)</li>
 </ul>
+</li>
+</ul>
 <p>Reglas mínimas:
-- Mensajes deben ser redactados “en claro” y pensados para móvil.
-- Se sugiere separar “Mensajes generales” de “Mensajes del espacio” (si aplica).</p>
+  - Mensajes deben ser redactados “en claro” y pensados para móvil.
+  - Se sugiere separar “Mensajes generales” de “Mensajes del espacio” (si aplica).</p>
 <h3 id="4-canales-de-contacto-si-aplica">4) Canales de contacto (si aplica)<a class="headerlink" href="#4-canales-de-contacto-si-aplica" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Botón simple: “Contactar soporte”</li>
-<li>Mostrar:</li>
+<li>Mostrar:<ul>
 <li>canal (WhatsApp/mail/teléfono)</li>
 <li>horarios (si corresponde)</li>
+</ul>
+</li>
 </ul>
 <h2 id="flujos-y-pantallas-wireflow">Flujos y pantallas (wireflow)<a class="headerlink" href="#flujos-y-pantallas-wireflow" title="Permanent link">&para;</a></h2>
 <h3 id="pantalla-a-home-del-modulo">Pantalla A: Home del módulo<a class="headerlink" href="#pantalla-a-home-del-modulo" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Ficha del espacio (resumen)</li>
-<li>Acceso rápido:</li>
+<li>Acceso rápido:<ul>
 <li>“Convenios y documentos”</li>
 <li>“Mensajes operativos”</li>
 <li>“Contactos”</li>
+</ul>
+</li>
 </ul>
 <h3 id="pantalla-b-documentos">Pantalla B: Documentos<a class="headerlink" href="#pantalla-b-documentos" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2451,21 +2463,21 @@
 </ul>
 <h2 id="criterios-de-aceptacion-bdd">Criterios de aceptación (BDD)<a class="headerlink" href="#criterios-de-aceptacion-bdd" title="Permanent link">&para;</a></h2>
 <p><strong>Escenario: visualizar ficha del espacio</strong>
-- Dado un usuario con permiso de ver
-- Cuando ingresa al módulo Información institucional
-- Entonces visualiza los datos básicos del espacio</p>
+  - Dado un usuario con permiso de ver
+  - Cuando ingresa al módulo Información institucional
+  - Entonces visualiza los datos básicos del espacio</p>
 <p><strong>Escenario: ver documentos</strong>
-- Dado que existen documentos asociados
-- Cuando ingresa a “Convenios y documentos”
-- Entonces visualiza listado y puede abrir/descargar</p>
+  - Dado que existen documentos asociados
+  - Cuando ingresa a “Convenios y documentos”
+  - Entonces visualiza listado y puede abrir/descargar</p>
 <p><strong>Escenario: sin documentos</strong>
-- Dado que no existen documentos asociados
-- Cuando ingresa a “Convenios y documentos”
-- Entonces visualiza mensaje “sin documentos” y orientación</p>
+  - Dado que no existen documentos asociados
+  - Cuando ingresa a “Convenios y documentos”
+  - Entonces visualiza mensaje “sin documentos” y orientación</p>
 <p><strong>Escenario: ver mensajes</strong>
-- Dado que existen mensajes operativos
-- Cuando ingresa a “Mensajes operativos”
-- Entonces visualiza mensajes ordenados por fecha (desc)</p>
+  - Dado que existen mensajes operativos
+  - Cuando ingresa a “Mensajes operativos”
+  - Entonces visualiza mensajes ordenados por fecha (desc)</p>
 <h2 id="notificaciones-opcional-mvp">Notificaciones (opcional MVP)<a class="headerlink" href="#notificaciones-opcional-mvp" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Nueva publicación de mensaje operativo</li>
