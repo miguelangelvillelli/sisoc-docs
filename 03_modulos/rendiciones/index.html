@@ -2439,24 +2439,30 @@
 <strong>Nivel:</strong> Interno</p>
 </div>
 <h2 id="objetivo-del-modulo">Objetivo del módulo<a class="headerlink" href="#objetivo-del-modulo" title="Permanent link">&para;</a></h2>
-<p>Permitir que el espacio comunitario gestione la <strong>rendición</strong> de fondos/documentación asociada de forma simple desde el teléfono:
-- crear rendiciones,
-- adjuntar comprobantes,
-- presentar rendición,
-- recibir observaciones y corregir,
-manteniendo trazabilidad y reglas mínimas de validación.</p>
+<p>Permitir que el espacio comunitario gestione la <strong>rendición</strong> de fondos/documentación asociada de forma simple desde el teléfono:</p>
+<ul>
+<li>crear rendiciones,</li>
+<li>adjuntar comprobantes,</li>
+<li>presentar rendición,</li>
+<li>recibir observaciones y corregir,
+manteniendo trazabilidad y reglas mínimas de validación.</li>
+</ul>
 <h2 id="alcance-mvp">Alcance MVP<a class="headerlink" href="#alcance-mvp" title="Permanent link">&para;</a></h2>
-<p>Entra en MVP:
-- Crear rendición (borrador)
-- Adjuntar comprobantes (uno o muchos)
-- Presentar rendición
-- Ver estado y observaciones
-- Responder observaciones (corregir adjuntos / agregar documentación)
-- Historial de rendiciones por período</p>
-<p>Fuera de alcance (Release 2):
-- Automatizaciones contables avanzadas (conciliación, categorización inteligente)
-- Integraciones con sistemas externos
-- Flujos multi-etapa complejos (aprobaciones múltiples por niveles)</p>
+<p>Entra en MVP:</p>
+<ul>
+<li>Crear rendición (borrador)</li>
+<li>Adjuntar comprobantes (uno o muchos)</li>
+<li>Presentar rendición</li>
+<li>Ver estado y observaciones</li>
+<li>Responder observaciones (corregir adjuntos / agregar documentación)</li>
+<li>Historial de rendiciones por período</li>
+</ul>
+<p>Fuera de alcance (Release 2):</p>
+<ul>
+<li>Automatizaciones contables avanzadas (conciliación, categorización inteligente)</li>
+<li>Integraciones con sistemas externos</li>
+<li>Flujos multi-etapa complejos (aprobaciones múltiples por niveles)</li>
+</ul>
 <h2 id="roles-y-permisos-rbac">Roles y permisos (RBAC)<a class="headerlink" href="#roles-y-permisos-rbac" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Referente del espacio</strong>: Crear / Adjuntar / Presentar / Ver</li>
@@ -2579,26 +2585,36 @@ La validación de “contenido correcto” (factura/recibo) es institucional (op
 <li><code>rendicion_rejected</code> (actor institucional, motivo) <em>(interno)</em></li>
 </ul>
 <h2 id="criterios-de-aceptacion-bdd">Criterios de aceptación (BDD)<a class="headerlink" href="#criterios-de-aceptacion-bdd" title="Permanent link">&para;</a></h2>
-<p><strong>Escenario: crear borrador</strong>
-- Dado un referente o usuario interno con permisos
-- Cuando crea una rendición para un período y guarda
-- Entonces la rendición queda en estado <code>borrador</code> y se registra <code>rendicion_create</code></p>
-<p><strong>Escenario: adjuntar comprobante válido</strong>
-- Dado una rendición en <code>borrador</code>
-- Cuando subo un PDF/JPG/PNG dentro del tamaño permitido
-- Entonces el comprobante se registra como <code>cargado</code> y se registra <code>comprobante_upload</code></p>
-<p><strong>Escenario: adjuntar comprobante inválido por tamaño</strong>
-- Dado una rendición en <code>borrador</code>
-- Cuando subo un archivo que supera el tamaño permitido
-- Entonces el sistema rechaza la carga y muestra un mensaje claro</p>
-<p><strong>Escenario: presentar rendición</strong>
-- Dado un referente y una rendición en <code>borrador</code> con adjuntos mínimos
-- Cuando presiona “Presentar”
-- Entonces el estado pasa a <code>presentada</code> y se registra <code>rendicion_submit</code></p>
-<p><strong>Escenario: rendición observada y corrección</strong>
-- Dado una rendición en <code>observada</code> con observaciones
-- Cuando el espacio reemplaza/adjunta comprobantes y el referente re-presenta
-- Entonces el estado vuelve a <code>presentada</code> y queda auditado</p>
+<p><strong>Escenario: crear borrador</strong></p>
+<ul>
+<li>Dado un referente o usuario interno con permisos</li>
+<li>Cuando crea una rendición para un período y guarda</li>
+<li>Entonces la rendición queda en estado <code>borrador</code> y se registra <code>rendicion_create</code></li>
+</ul>
+<p><strong>Escenario: adjuntar comprobante válido</strong></p>
+<ul>
+<li>Dado una rendición en <code>borrador</code></li>
+<li>Cuando subo un PDF/JPG/PNG dentro del tamaño permitido</li>
+<li>Entonces el comprobante se registra como <code>cargado</code> y se registra <code>comprobante_upload</code></li>
+</ul>
+<p><strong>Escenario: adjuntar comprobante inválido por tamaño</strong></p>
+<ul>
+<li>Dado una rendición en <code>borrador</code></li>
+<li>Cuando subo un archivo que supera el tamaño permitido</li>
+<li>Entonces el sistema rechaza la carga y muestra un mensaje claro</li>
+</ul>
+<p><strong>Escenario: presentar rendición</strong></p>
+<ul>
+<li>Dado un referente y una rendición en <code>borrador</code> con adjuntos mínimos</li>
+<li>Cuando presiona “Presentar”</li>
+<li>Entonces el estado pasa a <code>presentada</code> y se registra <code>rendicion_submit</code></li>
+</ul>
+<p><strong>Escenario: rendición observada y corrección</strong></p>
+<ul>
+<li>Dado una rendición en <code>observada</code> con observaciones</li>
+<li>Cuando el espacio reemplaza/adjunta comprobantes y el referente re-presenta</li>
+<li>Entonces el estado vuelve a <code>presentada</code> y queda auditado</li>
+</ul>
 <h2 id="notificaciones-opcional-mvp">Notificaciones (opcional MVP)<a class="headerlink" href="#notificaciones-opcional-mvp" title="Permanent link">&para;</a></h2>
 <ul>
 <li>“Tenés una rendición observada”</li>
