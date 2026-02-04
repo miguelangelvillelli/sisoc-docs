@@ -19,6 +19,7 @@ Este documento está orientado a destrabar decisiones por sprint (qué nos bloqu
 - ¿Existe estado institucional del espacio (activo/suspendido/etc.)?
 
 **Salida esperada**
+
   - Confirmar **space_id real** (tipo y nombre de campo) + tabla/modelo.
   - Lista de campos que vamos a exponer en “Perfil del espacio”.
   - Catálogo real de “estado institucional del espacio”.
@@ -33,6 +34,7 @@ Este documento está orientado a destrabar decisiones por sprint (qué nos bloqu
 - ¿Se requiere 2FA o verificación por SMS/Email?
 
 **Salida esperada**
+
 - Decisión: **JWT vs Session** (y por qué).
   - Endpoints necesarios:
       - `POST /auth/login` (si aplica)
@@ -49,6 +51,7 @@ Este documento está orientado a destrabar decisiones por sprint (qué nos bloqu
 - ¿Hay reglas actuales de deduplicación o validación?
 
 **Salida esperada**
+
 - Confirmar si **nómina existe** (reutilizar) o si se **crea**.
 - Campos mínimos MVP: nombre, apellido, (doc opcional), teléfono opcional, activa/inactiva.
 - Regla de duplicados: por documento, por nombre+apellido, etc.
@@ -63,6 +66,7 @@ Este documento está orientado a destrabar decisiones por sprint (qué nos bloqu
 - ¿Qué información NO debe mostrarse al espacio (sensibilidad)?
 
 **Salida esperada**
+
 - Definir exactamente qué campos se exponen en móvil (solo lectura).
 - Catálogo real de estados + mapeo a estados MVP.
 - Confirmar fuente de datos (tabla/modelo) y endpoint(s) propuestos.
@@ -73,12 +77,13 @@ Este documento está orientado a destrabar decisiones por sprint (qué nos bloqu
 - ¿Existe hoy un módulo de rendiciones en SISOC? ¿Cómo guarda comprobantes?
 - Si existe: ¿dónde se almacenan archivos (filesystem, S3, etc.)?
 - Si NO existe: ¿aprueban crear tablas nuevas para:
-  - rendición (estado, período)
-  - comprobantes (archivo, estado, motivo)
+    - rendición (estado, período)
+    - comprobantes (archivo, estado, motivo)
 - ¿Hay estados actuales para rendición (borrador/presentada/observada/aprobada/rechazada) o se definen nuevos?
 - ¿Quién revisa y aprueba (roles internos)?
 
 **Salida esperada**
+
 - Confirmar si “rendiciones” existe o se crea.
 - Estados reales de rendición y reglas de transición (presentar, observar, aprobar).
 - Storage de comprobantes + mecanismo de descarga (URL firmada / endpoint).
@@ -93,6 +98,7 @@ Este documento está orientado a destrabar decisiones por sprint (qué nos bloqu
 - ¿Se necesita segmentar mensajes por espacio/jurisdicción?
 
 **Salida esperada**
+
 - Confirmar si existe “Documentos” y “Mensajes”.
 - Si no existe mensajes: decisión MVP (tabla simple nueva / banner / módulo existente).
 - Definición de segmentación (por espacio, municipio, provincia).
@@ -105,6 +111,7 @@ Este documento está orientado a destrabar decisiones por sprint (qué nos bloqu
 - ¿Requisitos de retención de logs?
 
 **Salida esperada**
+
 - Confirmar si se reutiliza auditoría existente o se implementa módulo mínimo.
 - Lista mínima de eventos a registrar en MVP.
 
@@ -116,6 +123,7 @@ Este documento está orientado a destrabar decisiones por sprint (qué nos bloqu
 - ¿Hay caché (Redis) o paginación en endpoints existentes?
 
 **Salida esperada**
+
 - Reglas de paginación (`page`, `page_size`, máximo `page_size`).
 - Recomendaciones/limitaciones sobre queries (búsqueda, filtros).
 - Si se permite caching server-side en endpoints críticos.
@@ -128,6 +136,7 @@ Este documento está orientado a destrabar decisiones por sprint (qué nos bloqu
 - ¿Quién aprueba cambios en modelos/tablas?
 
 **Salida esperada**
+
 - URL de entorno de prueba + credenciales de prueba (si aplica).
 - Proceso de aprobación para cambios (modelo, migrations, endpoints).
 - Ventana/ritual de despliegue.
