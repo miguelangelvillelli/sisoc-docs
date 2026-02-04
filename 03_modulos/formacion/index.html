@@ -2319,24 +2319,30 @@
 <strong>Nivel:</strong> Interno</p>
 </div>
 <h2 id="objetivo-del-modulo">Objetivo del módulo<a class="headerlink" href="#objetivo-del-modulo" title="Permanent link">&para;</a></h2>
-<p>Permitir que el espacio comunitario gestione <strong>actividades de formación</strong> de manera simple desde el teléfono:
-- crear y administrar actividades,
-- registrar participantes desde la Nómina,
-- visualizar historial y estado,
-manteniendo trazabilidad y consistencia con el resto del MVP.</p>
+<p>Permitir que el espacio comunitario gestione <strong>actividades de formación</strong> de manera simple desde el teléfono:</p>
+<ul>
+<li>crear y administrar actividades,</li>
+<li>registrar participantes desde la Nómina,</li>
+<li>visualizar historial y estado,
+manteniendo trazabilidad y consistencia con el resto del MVP.</li>
+</ul>
 <h2 id="alcance-mvp">Alcance MVP<a class="headerlink" href="#alcance-mvp" title="Permanent link">&para;</a></h2>
-<p>Entra en MVP:
-- Crear actividad (planificada)
-- Editar datos básicos antes de finalizar
-- Marcar estado: planificada / finalizada / cancelada
-- Asociar participantes desde Nómina
-- Ver listado y detalle
-- Ver historial por período</p>
-<p>Fuera de alcance (Release 2):
-- Gestión avanzada de cupos, asistencia por sesión y evaluaciones
-- Certificados automáticos
-- Calendario avanzado con sincronización externa
-- Reportes analíticos complejos</p>
+<p>Entra en MVP:</p>
+<ul>
+<li>Crear actividad (planificada)</li>
+<li>Editar datos básicos antes de finalizar</li>
+<li>Marcar estado: planificada / finalizada / cancelada</li>
+<li>Asociar participantes desde Nómina</li>
+<li>Ver listado y detalle</li>
+<li>Ver historial por período</li>
+</ul>
+<p>Fuera de alcance (Release 2):</p>
+<ul>
+<li>Gestión avanzada de cupos, asistencia por sesión y evaluaciones</li>
+<li>Certificados automáticos</li>
+<li>Calendario avanzado con sincronización externa</li>
+<li>Reportes analíticos complejos</li>
+</ul>
 <h2 id="roles-y-permisos-rbac">Roles y permisos (RBAC)<a class="headerlink" href="#roles-y-permisos-rbac" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Referente del espacio</strong>: Ver / Crear / Editar</li>
@@ -2372,14 +2378,20 @@ manteniendo trazabilidad y consistencia con el resto del MVP.</p>
 <h2 id="reglas-de-negocio-mvp">Reglas de negocio (MVP)<a class="headerlink" href="#reglas-de-negocio-mvp" title="Permanent link">&para;</a></h2>
 <ul>
 <li>No se permite crear actividad sin <strong>título</strong> y <strong>fecha</strong>.</li>
-<li>Una actividad <code>finalizada</code>:</li>
+<li>Una actividad <code>finalizada</code>:<ul>
 <li>se puede visualizar siempre,</li>
 <li>no se edita salvo campos administrativos (si se decide; por defecto no editar).</li>
-<li>Una actividad <code>cancelada</code>:</li>
+</ul>
+</li>
+<li>Una actividad <code>cancelada</code>:<ul>
 <li>se conserva por trazabilidad (no se elimina).</li>
-<li>Participantes:</li>
+</ul>
+</li>
+<li>Participantes:<ul>
 <li>solo pueden ser personas existentes en <strong>Nómina del espacio</strong></li>
 <li>una persona <code>inactiva</code> no debería poder agregarse como participante (o se advierte).</li>
+</ul>
+</li>
 </ul>
 <h2 id="flujos-y-pantallas-wireflow">Flujos y pantallas (wireflow)<a class="headerlink" href="#flujos-y-pantallas-wireflow" title="Permanent link">&para;</a></h2>
 <h3 id="1-listado-de-actividades">1) Listado de actividades<a class="headerlink" href="#1-listado-de-actividades" title="Permanent link">&para;</a></h3>
@@ -2421,30 +2433,42 @@ manteniendo trazabilidad y consistencia con el resto del MVP.</p>
 <li><code>actividad_remove_participant</code></li>
 </ul>
 <h2 id="criterios-de-aceptacion-bdd">Criterios de aceptación (BDD)<a class="headerlink" href="#criterios-de-aceptacion-bdd" title="Permanent link">&para;</a></h2>
-<p><strong>Escenario: crear actividad mínima</strong>
-- Dado un usuario con permiso de crear
-- Cuando ingresa título y fecha y guarda
-- Entonces se crea una actividad en estado <code>planificada</code> y se registra <code>actividad_create</code></p>
-<p><strong>Escenario: editar actividad planificada</strong>
-- Dado una actividad en estado <code>planificada</code>
-- Cuando el usuario edita descripción y guarda
-- Entonces se actualiza y se registra <code>actividad_update</code></p>
-<p><strong>Escenario: finalizar actividad</strong>
-- Dado una actividad <code>planificada</code>
-- Cuando el usuario marca “Finalizar”
-- Entonces el estado pasa a <code>finalizada</code> y se registra <code>actividad_status_change</code></p>
-<p><strong>Escenario: cancelar actividad</strong>
-- Dado una actividad <code>planificada</code>
-- Cuando el usuario marca “Cancelar”
-- Entonces el estado pasa a <code>cancelada</code> y se registra <code>actividad_status_change</code></p>
-<p><strong>Escenario: agregar participante desde nómina</strong>
-- Dado una actividad existente
-- Cuando el usuario agrega una persona activa desde Nómina
-- Entonces queda asociada a la actividad y se registra <code>actividad_add_participant</code></p>
-<p><strong>Escenario: no permitir participante inexistente</strong>
-- Dado el módulo de participantes
-- Cuando intento agregar una persona que no pertenece al espacio
-- Entonces el sistema bloquea la acción (control servidor) y muestra mensaje claro</p>
+<p><strong>Escenario: crear actividad mínima</strong></p>
+<ul>
+<li>Dado un usuario con permiso de crear</li>
+<li>Cuando ingresa título y fecha y guarda</li>
+<li>Entonces se crea una actividad en estado <code>planificada</code> y se registra <code>actividad_create</code></li>
+</ul>
+<p><strong>Escenario: editar actividad planificada</strong></p>
+<ul>
+<li>Dado una actividad en estado <code>planificada</code></li>
+<li>Cuando el usuario edita descripción y guarda</li>
+<li>Entonces se actualiza y se registra <code>actividad_update</code></li>
+</ul>
+<p><strong>Escenario: finalizar actividad</strong></p>
+<ul>
+<li>Dado una actividad <code>planificada</code></li>
+<li>Cuando el usuario marca “Finalizar”</li>
+<li>Entonces el estado pasa a <code>finalizada</code> y se registra <code>actividad_status_change</code></li>
+</ul>
+<p><strong>Escenario: cancelar actividad</strong></p>
+<ul>
+<li>Dado una actividad <code>planificada</code></li>
+<li>Cuando el usuario marca “Cancelar”</li>
+<li>Entonces el estado pasa a <code>cancelada</code> y se registra <code>actividad_status_change</code></li>
+</ul>
+<p><strong>Escenario: agregar participante desde nómina</strong></p>
+<ul>
+<li>Dado una actividad existente</li>
+<li>Cuando el usuario agrega una persona activa desde Nómina</li>
+<li>Entonces queda asociada a la actividad y se registra <code>actividad_add_participant</code></li>
+</ul>
+<p><strong>Escenario: no permitir participante inexistente</strong></p>
+<ul>
+<li>Dado el módulo de participantes</li>
+<li>Cuando intento agregar una persona que no pertenece al espacio</li>
+<li>Entonces el sistema bloquea la acción (control servidor) y muestra mensaje claro</li>
+</ul>
 <h2 id="notificaciones-opcional-mvp">Notificaciones (opcional MVP)<a class="headerlink" href="#notificaciones-opcional-mvp" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Recordatorio de actividad planificada (día anterior o misma mañana)</li>
