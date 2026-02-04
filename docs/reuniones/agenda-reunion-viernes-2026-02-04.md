@@ -61,34 +61,41 @@ Cerrar definiciones técnicas y de modelo de datos para implementar el **MVP PWA
 ### 4) Módulos del MVP: existe vs se crea (25 min)
 
 **Información institucional**
+
 - ¿Qué campos exactos de “Ficha del espacio” mostramos?
 - Documentos/convenios: ¿ya existe repositorio? ¿download/view?
 
 **Mensajes operativos**
+
 - ¿Existe módulo? Si no: definir tabla mínima + segmentación (general / por espacio / por jurisdicción)
 - Autor (admin central) + estados (borrador/publicado) si aplica
 - “no leídos” (tracking mínimo) ¿sí/no?
 
 **Nóminas**
+
 - ¿Existe tabla de personas por espacio?
 - Campos base y reglas (DNI obligatorio o no)
 - Importación CSV: ¿se mantiene web-only o se habilita en móvil?
 
 **Prestación alimentaria (solo lectura)**
+
 - ¿Qué datos existen para status/period/observaciones/historial?
 - Qué NO mostrar (sensibilidad)
 
 **Rendiciones y comprobantes**
+
 - ¿Existe módulo? ¿Dónde guarda archivos?
 - Si no existe: tablas mínimas + estados + reglas de presentación
 
 ### 5) Storage / Archivos / Seguridad (10 min)
+
 - Archivos: filesystem/S3/otro
 - URLs firmadas + expiración (si aplica)
 - Límite de tamaño y tipos permitidos
 - Auditoría mínima de eventos
 
 ### 6) Contratos API v0 (10 min)
+
 - Validar endpoints propuestos
 - Ajustes de naming y IDs reales
 - Paginación, filtros, respuestas estándar
