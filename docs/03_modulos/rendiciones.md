@@ -8,6 +8,7 @@
 
 ## Objetivo del módulo
 Permitir que el espacio comunitario gestione la **rendición** de fondos/documentación asociada de forma simple desde el teléfono:
+
 - crear rendiciones,
 - adjuntar comprobantes,
 - presentar rendición,
@@ -16,6 +17,7 @@ manteniendo trazabilidad y reglas mínimas de validación.
 
 ## Alcance MVP
 Entra en MVP:
+
 - Crear rendición (borrador)
 - Adjuntar comprobantes (uno o muchos)
 - Presentar rendición
@@ -24,6 +26,7 @@ Entra en MVP:
 - Historial de rendiciones por período
 
 Fuera de alcance (Release 2):
+
 - Automatizaciones contables avanzadas (conciliación, categorización inteligente)
 - Integraciones con sistemas externos
 - Flujos multi-etapa complejos (aprobaciones múltiples por niveles)
@@ -139,35 +142,42 @@ Fuera de alcance (Release 2):
 ## Criterios de aceptación (BDD)
 
 **Escenario: crear borrador**
+
 - Dado un referente o usuario interno con permisos
 - Cuando crea una rendición para un período y guarda
 - Entonces la rendición queda en estado `borrador` y se registra `rendicion_create`
 
 **Escenario: adjuntar comprobante válido**
+
 - Dado una rendición en `borrador`
 - Cuando subo un PDF/JPG/PNG dentro del tamaño permitido
 - Entonces el comprobante se registra como `cargado` y se registra `comprobante_upload`
 
 **Escenario: adjuntar comprobante inválido por tamaño**
+
 - Dado una rendición en `borrador`
 - Cuando subo un archivo que supera el tamaño permitido
 - Entonces el sistema rechaza la carga y muestra un mensaje claro
 
 **Escenario: presentar rendición**
+
 - Dado un referente y una rendición en `borrador` con adjuntos mínimos
 - Cuando presiona “Presentar”
 - Entonces el estado pasa a `presentada` y se registra `rendicion_submit`
 
 **Escenario: rendición observada y corrección**
+
 - Dado una rendición en `observada` con observaciones
 - Cuando el espacio reemplaza/adjunta comprobantes y el referente re-presenta
 - Entonces el estado vuelve a `presentada` y queda auditado
 
 ## Notificaciones (opcional MVP)
+
 - “Tenés una rendición observada”
 - “Tu rendición fue aprobada”
 - “Falta presentar rendición del período X” (recordatorio configurable)
 
 ## Pendientes (para cerrar en v0.2)
+
 - Definir si hay categorías/tipos de comprobantes (opcional).
 - Definir si el usuario interno puede crear rendición o solo adjuntar (decisión operativa).
