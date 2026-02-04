@@ -11,6 +11,7 @@ Permitir que el espacio comunitario **visualice** información relevante de su r
 
 ## Alcance MVP (Opción A — Solo visualización)
 En el MVP el espacio:
+
 - **No carga** ni “declara” prestaciones.
 - **Visualiza** información validada/provista por los equipos del Programa (operadores/administración).
 - **Recibe alertas** y recordatorios (si se implementa canal notificaciones en MVP).
@@ -54,6 +55,7 @@ En el MVP el espacio:
 
 ## Auditoría y trazabilidad (eventos mínimos)
 Registrar como mínimo:
+
 - `prestacion_view_list` (usuario, espacio, timestamp)
 - `prestacion_view_detail` (usuario, espacio, período, timestamp)
 - `prestacion_support_contact` (si existe botón de contacto)
@@ -66,24 +68,29 @@ Registrar como mínimo:
 
 ## Criterios de aceptación (BDD)
 **Escenario: ver resumen**
+
 - Dado un usuario del espacio con permisos
 - Cuando ingresa al módulo “Prestación alimentaria”
 - Entonces ve el estado y el período actual (o “sin datos” si no hay)
 
 **Escenario: ver detalle**
+
 - Dado que existe información del período
 - Cuando el usuario abre el detalle
 - Entonces visualiza estado, período, resumen y observaciones
 
 **Escenario: sin datos**
+
 - Dado que no existe información del período
 - Cuando el usuario abre el módulo
 - Entonces visualiza un mensaje “sin datos” y una acción de orientación (contacto o requisitos)
 
 ## Evolución (Release 2) — ALERTA
+
 !!! danger "Evolución posible: carga mínima por el espacio"
     Si se decide que el espacio registre información (ej. confirmaciones, cantidades o evidencias),
     se debe abrir un ADR específico y revisar:
+    
     - RBAC (quién puede cargar y aprobar)
     - Auditoría (eventos de creación/edición)
     - Validaciones y estados

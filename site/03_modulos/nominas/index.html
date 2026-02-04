@@ -2415,24 +2415,30 @@
 <strong>Nivel:</strong> Interno</p>
 </div>
 <h2 id="objetivo-del-modulo">Objetivo del módulo<a class="headerlink" href="#objetivo-del-modulo" title="Permanent link">&para;</a></h2>
-<p>Permitir que el espacio comunitario gestione la <strong>nómina de personas asistidas</strong> de forma simple desde el teléfono:
-- alta y edición básica,
-- visualización y búsqueda,
-- carga masiva (CSV) como alternativa operativa,
-manteniendo trazabilidad y reglas mínimas de calidad de datos.</p>
+<p>Permitir que el espacio comunitario gestione la <strong>nómina de personas asistidas</strong> de forma simple desde el teléfono:</p>
+<ul>
+<li>alta y edición básica,</li>
+<li>visualización y búsqueda,</li>
+<li>carga masiva (CSV) como alternativa operativa,
+manteniendo trazabilidad y reglas mínimas de calidad de datos.</li>
+</ul>
 <h2 id="alcance-mvp">Alcance MVP<a class="headerlink" href="#alcance-mvp" title="Permanent link">&para;</a></h2>
-<p>Entra en MVP:
-- Alta individual de persona asistida (registro mínimo)
-- Edición de datos básicos
-- Búsqueda / listado
-- Marcado de “participa en” (prestación alimentaria / formación) como atributos operativos
-- Importación CSV (carga masiva) con validaciones y reporte de errores
-- Historial de cambios (auditoría)</p>
-<p>Fuera de alcance (Release 2):
-- Validaciones avanzadas contra padrones externos
-- Detección sofisticada de duplicados entre espacios/organizaciones
-- Flujos complejos de verificación documental (más allá de campos básicos)
-- Segmentaciones y analítica avanzada</p>
+<p>Entra en MVP:</p>
+<ul>
+<li>Alta individual de persona asistida (registro mínimo)</li>
+<li>Edición de datos básicos</li>
+<li>Búsqueda / listado</li>
+<li>Marcado de “participa en” (prestación alimentaria / formación) como atributos operativos</li>
+<li>Importación CSV (carga masiva) con validaciones y reporte de errores</li>
+<li>Historial de cambios (auditoría)</li>
+</ul>
+<p>Fuera de alcance (Release 2):</p>
+<ul>
+<li>Validaciones avanzadas contra padrones externos</li>
+<li>Detección sofisticada de duplicados entre espacios/organizaciones</li>
+<li>Flujos complejos de verificación documental (más allá de campos básicos)</li>
+<li>Segmentaciones y analítica avanzada</li>
+</ul>
 <h2 id="definiciones">Definiciones<a class="headerlink" href="#definiciones" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Persona</strong>: individuo registrado por el espacio.</li>
@@ -2448,19 +2454,27 @@ manteniendo trazabilidad y reglas mínimas de calidad de datos.</p>
 <li><strong>Usuario de organización (propuesto)</strong>: Ver</li>
 </ul>
 <h2 id="datos-minimos-mvp">Datos mínimos (MVP)<a class="headerlink" href="#datos-minimos-mvp" title="Permanent link">&para;</a></h2>
-<p>Campos recomendados (mínimos operativos):
-- <strong>Nombre</strong>
-- <strong>Apellido</strong>
-- <strong>Documento</strong> (tipo + número) <em>(opcional si la operación decide no forzarlo en MVP)</em>
-- <strong>Fecha de nacimiento</strong> <em>(opcional)</em>
-- <strong>Género</strong> <em>(opcional)</em>
-- <strong>Teléfono</strong> <em>(opcional)</em>
-- <strong>Domicilio / barrio</strong> <em>(opcional, formato libre en MVP)</em>
-- <strong>Observaciones</strong> <em>(opcional)</em>
-- Flags:
-  - <strong>Asistencia alimentaria</strong> (sí/no)
-  - <strong>Participa en formación</strong> (sí/no)
-  - <strong>Activo</strong> (sí/no)</p>
+<p>Campos recomendados (mínimos operativos):</p>
+<ul>
+<li><strong>Nombre</strong></li>
+<li><strong>Apellido</strong></li>
+<li><strong>Documento</strong> (tipo + número) <em>(opcional si la operación decide no forzarlo en MVP)</em></li>
+<li><strong>Fecha de nacimiento</strong> <em>(opcional)</em></li>
+<li><strong>Género</strong> <em>(opcional)</em></li>
+<li><strong>Teléfono</strong> <em>(opcional)</em></li>
+<li><strong>Domicilio / barrio</strong> <em>(opcional, formato libre en MVP)</em></li>
+<li>
+<p><strong>Observaciones</strong> <em>(opcional)</em></p>
+</li>
+<li>
+<p>Flags:</p>
+<ul>
+<li><strong>Asistencia alimentaria</strong> (sí/no)</li>
+<li><strong>Participa en formación</strong> (sí/no)</li>
+<li><strong>Activo</strong> (sí/no)</li>
+</ul>
+</li>
+</ul>
 <div class="admonition warning">
 <p class="admonition-title">Decisión operativa</p>
 <p>En MVP se recomienda <strong>no bloquear el alta</strong> por falta de DNI para evitar fricción en territorio.
@@ -2474,10 +2488,12 @@ Si se requiere DNI obligatorio, dejarlo explícito en “Estados y reglas”.</p
 <li><strong>Activo = No</strong> oculta a la persona de listados principales (pero permanece en historial/registro).</li>
 </ul>
 <h3 id="duplicados-regla-minima-mvp">Duplicados (regla mínima MVP)<a class="headerlink" href="#duplicados-regla-minima-mvp" title="Permanent link">&para;</a></h3>
-<p>Se implementa detección “sana” sin complicar:
-- Si hay <strong>documento</strong>: advertir si existe otra persona con mismo documento <strong>en el mismo espacio</strong>.
-- Si no hay documento: advertir duplicado probable si coincide <strong>nombre + apellido + fecha nacimiento</strong> (si existe).
-- El sistema muestra advertencia y permite continuar (salvo regla institucional distinta).</p>
+<p>Se implementa detección “sana” sin complicar:</p>
+<ul>
+<li>Si hay <strong>documento</strong>: advertir si existe otra persona con mismo documento <strong>en el mismo espacio</strong>.</li>
+<li>Si no hay documento: advertir duplicado probable si coincide <strong>nombre + apellido + fecha nacimiento</strong> (si existe).</li>
+<li>El sistema muestra advertencia y permite continuar (salvo regla institucional distinta).</li>
+</ul>
 <blockquote>
 <p>Nota: deduplicación entre espacios/organización queda para Release 2.</p>
 </blockquote>
@@ -2505,24 +2521,28 @@ Si se requiere DNI obligatorio, dejarlo explícito en “Estados y reglas”.</p
 <ul>
 <li>Descargar plantilla CSV</li>
 <li>Subir archivo</li>
-<li>Vista de resultados:</li>
+<li>Vista de resultados:<ul>
 <li>filas importadas OK</li>
 <li>filas con error (con motivo)</li>
 <li>filas con duplicado probable (con advertencia)</li>
 </ul>
+</li>
+</ul>
 <h2 id="importacion-csv-mvp">Importación CSV (MVP)<a class="headerlink" href="#importacion-csv-mvp" title="Permanent link">&para;</a></h2>
 <h3 id="plantilla">Plantilla<a class="headerlink" href="#plantilla" title="Permanent link">&para;</a></h3>
-<p>Columnas sugeridas:
-- nombre
-- apellido
-- tipo_documento (DNI/OTRO)
-- numero_documento
-- fecha_nacimiento (YYYY-MM-DD)
-- telefono
-- participa_alimentacion (SI/NO)
-- participa_formacion (SI/NO)
-- activo (SI/NO)
-- observaciones</p>
+<p>Columnas sugeridas:</p>
+<ul>
+<li>nombre</li>
+<li>apellido</li>
+<li>tipo_documento (DNI/OTRO)</li>
+<li>numero_documento</li>
+<li>fecha_nacimiento (YYYY-MM-DD)</li>
+<li>telefono</li>
+<li>participa_alimentacion (SI/NO)</li>
+<li>participa_formacion (SI/NO)</li>
+<li>activo (SI/NO)</li>
+<li>observaciones</li>
+</ul>
 <h3 id="reglas-de-validacion-csv">Reglas de validación CSV<a class="headerlink" href="#reglas-de-validacion-csv" title="Permanent link">&para;</a></h3>
 <ul>
 <li>nombre y apellido obligatorios</li>
@@ -2547,30 +2567,42 @@ el referente puede cargar desde una PC o desde el backoffice, manteniendo el mis
 <li><code>nomina_export_template_download</code> (si existe descarga)</li>
 </ul>
 <h2 id="criterios-de-aceptacion-bdd">Criterios de aceptación (BDD)<a class="headerlink" href="#criterios-de-aceptacion-bdd" title="Permanent link">&para;</a></h2>
-<p><strong>Escenario: listar y buscar</strong>
-- Dado un usuario con permiso de ver nómina
-- Cuando ingresa al módulo Nóminas
-- Entonces ve el listado de personas activas y un buscador</p>
-<p><strong>Escenario: alta mínima</strong>
-- Dado un referente o usuario interno con permiso
-- Cuando carga nombre y apellido y guarda
-- Entonces se crea la persona y se registra auditoría <code>persona_create</code></p>
-<p><strong>Escenario: editar datos</strong>
-- Dado que existe una persona
-- Cuando el usuario edita un campo permitido y guarda
-- Entonces se actualiza la persona y se registra <code>persona_update</code></p>
-<p><strong>Escenario: advertencia por duplicado (con documento)</strong>
-- Dado que existe una persona con el mismo documento en el espacio
-- Cuando intento crear otra con ese documento
-- Entonces el sistema muestra advertencia de duplicado probable</p>
-<p><strong>Escenario: importar CSV con errores</strong>
-- Dado un referente con permiso de importar
-- Cuando sube un CSV con filas inválidas
-- Entonces el sistema muestra un reporte de filas rechazadas con motivos</p>
-<p><strong>Escenario: importar CSV exitoso</strong>
-- Dado un referente con permiso de importar
-- Cuando sube un CSV válido
-- Entonces se crean/actualizan las personas y se registra <code>nomina_import_result</code> con resultado OK</p>
+<p><strong>Escenario: listar y buscar</strong></p>
+<ul>
+<li>Dado un usuario con permiso de ver nómina</li>
+<li>Cuando ingresa al módulo Nóminas</li>
+<li>Entonces ve el listado de personas activas y un buscador</li>
+</ul>
+<p><strong>Escenario: alta mínima</strong></p>
+<ul>
+<li>Dado un referente o usuario interno con permiso</li>
+<li>Cuando carga nombre y apellido y guarda</li>
+<li>Entonces se crea la persona y se registra auditoría <code>persona_create</code></li>
+</ul>
+<p><strong>Escenario: editar datos</strong></p>
+<ul>
+<li>Dado que existe una persona</li>
+<li>Cuando el usuario edita un campo permitido y guarda</li>
+<li>Entonces se actualiza la persona y se registra <code>persona_update</code></li>
+</ul>
+<p><strong>Escenario: advertencia por duplicado (con documento)</strong></p>
+<ul>
+<li>Dado que existe una persona con el mismo documento en el espacio</li>
+<li>Cuando intento crear otra con ese documento</li>
+<li>Entonces el sistema muestra advertencia de duplicado probable</li>
+</ul>
+<p><strong>Escenario: importar CSV con errores</strong></p>
+<ul>
+<li>Dado un referente con permiso de importar</li>
+<li>Cuando sube un CSV con filas inválidas</li>
+<li>Entonces el sistema muestra un reporte de filas rechazadas con motivos</li>
+</ul>
+<p><strong>Escenario: importar CSV exitoso</strong></p>
+<ul>
+<li>Dado un referente con permiso de importar</li>
+<li>Cuando sube un CSV válido</li>
+<li>Entonces se crean/actualizan las personas y se registra <code>nomina_import_result</code> con resultado OK</li>
+</ul>
 <h2 id="alertas-y-notificaciones-opcional-mvp">Alertas y notificaciones (opcional MVP)<a class="headerlink" href="#alertas-y-notificaciones-opcional-mvp" title="Permanent link">&para;</a></h2>
 <ul>
 <li>“Recordatorio: actualizá tu nómina” (frecuencia configurable)</li>
