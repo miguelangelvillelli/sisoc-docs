@@ -1,122 +1,143 @@
-# Minuta — Reunión UX (prototipos Figma) · App móvil Legajo de Espacio (MVP)
+# Minuta de reunión — SISOC · Plataforma móvil para Centros (MVP)
 
 !!! info "Estado"
-    **Versión:** v0.1  
-    **Última actualización:** 2026-02-03  
-    **Responsable:** UI_UX / PLAN_Vibe  
+    **Versión:** v0.2  
+    **Última actualización:** 2026-02-04  
+    **Responsable:** Equipo SISOC  
     **Nivel:** Interno
 
-## Objetivo de la reunión
-Salir con un **prototipo navegable en Figma** (MVP) y un set mínimo de definiciones para que el equipo técnico pueda estimar e implementar sin inventar.
+## Datos de la reunión
+- **Fecha:** 2026-02-04
+- **Tema:** Alineación UX + enfoque MVP + stack propuesto + plan de trabajo
+- **Formato:** Reunión remota (video)
+- **Referencia:** Video “2026 02 04 Reunion UX”
+
+## Asistentes
+- **Subsecretario:** Martín Lepera
+- **Equipo de UX:** Florencia Sanpaulo
+- **Director Nacional:** Miguel Angel Villelli
 
 ---
 
-## Participantes
-- UX: (Nombre)
-- Producto/Operación: (Nombre)
-- Equipo técnico: (si aplica)
+## Objetivo
+Alinear el MVP de una **plataforma móvil** para que cada **espacio/centro** (y potencialmente organizaciones) pueda acceder desde el teléfono a información útil vinculada al Programa, utilizando como fuente SISOC (sin backoffice nuevo) y definiendo un enfoque de UX simple, usable y escalable.
 
 ---
 
-## Alcance UX a definir (MVP)
-La app móvil incluye estas secciones:
+## Resumen ejecutivo
+Se acordó que el producto será **mobile-first** y **consumidor** de SISOC: la app no tendrá backoffice propio y se alimentará de la base y backoffice existentes. El MVP se compone de módulos: información institucional, documentos/convenios, canales de contacto, mensajes operativos, nóminas, prestación alimentaria (principalmente lectura), formación y rendiciones.
 
-- Acceso: Login (si aplica) + Selector de espacio (si multi-espacio)
-- Home (Hub)
-- Información institucional (perfil + documentos)
-- Mensajes operativos (lista + detalle)
-- Nómina (lista + detalle + alta rápida + editar)
-- Rendiciones (lista + detalle + adjuntar comprobante + presentar)
-- Formación (lista + crear/editar + participantes)
-- Prestación alimentaria (lectura: estado + historial)
+Se prioriza **usabilidad y simplicidad** por sobre estética sofisticada. UX desarrollará prototipos interactivos en Figma para validar navegación y pantallas.
+
+A nivel tecnología se impulsa **PWA** para evitar el proceso burocrático de tiendas (Play Store / iOS), con instalación opcional desde el navegador vía manifest. Se propuso stack de frontend React + TypeScript + Vite + Tailwind + shadcn/ui (customizable a Poncho / identidad institucional).
 
 ---
 
-## Entregables que necesitamos de UX (salida de la reunión)
+## Puntos tratados
 
-### 1) Prototipo navegable (Figma)
-Debe estar “clickeable” para:
+### 1) Naming / Identidad del producto
 
-- entrar (login/selector si aplica),
-- navegar desde Home a cada módulo,
-- volver, cancelar, confirmar, etc.
+- Se remarcó la necesidad de **ponerle un nombre** al producto para identificarlo como “producto”.
+- Se planteó evitar el concepto “legajo” como nombre visible (para no confundir).
+- Se definió criterio comunicacional: hacia autoridades se hablará de **“Centro de Familia”** (evitar discusiones internas de nomenclatura).
+- Se busca que “SISOC” figure como marca/familia, pero el producto puede tener identidad propia dentro de la misma familia.
 
-### 2) Kit de componentes (mínimo)
+### 2) Concepto clave: “Consumer” de SISOC
 
-- Header con nombre del espacio + menú/back
-- Cards/botones del Home
-- List item (para personas/documentos/mensajes/rendiciones)
-- Filtros + buscador (nómina)
-- Empty state / error state / sin permiso
-- Modal de confirmación (presentar rendición / baja persona)
-- Upload/Adjuntar (rendiciones)
+- La solución será un **consumer**: **sin backoffice nuevo**, consumiendo endpoints/datos expuestos por SISOC.
+- Se sostuvo que gran parte del MVP es **organizar y mostrar información existente** (alto porcentaje lectura).
 
-### 3) Estados de UI (obligatorio)
-Definir visual y copy para:
+### 3) Alcance MVP (módulos)
 
-- Loading (skeleton o spinner)
-- Empty (no hay datos)
-- Error de red
-- Error 401/403/404
-- Validación de formulario (400 con campos)
-- Estado “sin espacios asignados”
-- Estado “acción solo web” (si import CSV u otra cosa queda fuera)
+Se reafirmó como núcleo del MVP:
+- Información institucional (ficha del espacio)
+- Documentos / convenios vigentes (PDF/link)
+- Canales de contacto (botón WhatsApp por dupla técnica según espacio)
+- Mensajes operativos (comunicación oficial dentro de la app)
+- Nóminas
+- Prestación alimentaria (en principio lectura)
+- Formación
+- Rendiciones y comprobantes
 
-### 4) Copy / Microcopy base
+### 4) RBAC (Roles y accesos)
 
-- Mensajes claros para usuario no técnico (referentes).
-- Textos estándar:
-    - “No pudimos conectarnos. Reintentá.”
-    - “No tenés permisos para esta acción.”
-    - “No hay información disponible.”
-    - “¿Confirmás presentar la rendición? Luego no vas a poder editar.”
+- Se destacó RBAC como clave del acceso:
+    - roles y permisos por módulo (ver/editar/listar/importar/exportar)
+- Se reafirmó que Django/SISOC ya tiene base para RBAC (grupos/permisos) y que hay que “enganchar” el consumo desde el frontend.
 
-### 5) Navegación: decisiones rápidas
+### 5) Organizaciones vs Espacios (multi-espacio)
 
-- ¿Bottom navigation (tabs) o Home tipo Hub?
-    - Recomendación MVP: **Home (Hub)** + navegación simple.
-- ¿Ocultar módulos sin permiso o mostrar deshabilitado?
-    - Recomendación: **ocultar** si no aplica; mostrar “solo lectura” cuando corresponda.
+- Se planteó que puede haber usuarios “organización” que operen múltiples espacios.
+- Se acordó como patrón:
+    - si el usuario tiene **más de un espacio**, debe haber **selector desplegable** para elegir el espacio con el que se trabaja.
+- Se discutió que, a futuro, organizaciones pueden requerir vistas agregadas/dashboards, pero para MVP se propone iniciar simple e iterar.
 
----
+### 6) Nóminas: complejidad y propuesta
 
-## Preguntas clave para UX (para cerrar hoy)
+- Se expuso complejidad: nómina por comedor/espacio y nómina por actividades, y diferencias por organización.
+- Propuesta acordada como línea: **una nómina única** con campos/flags (por ejemplo, “asiste a alimentación” / “participa en actividades”), con filtros/exportación según necesidad.
 
-- ¿Qué priorizamos visualmente en el Home? (ej: Rendiciones + Mensajes arriba)
-- ¿Cómo se resuelven “estados” en tarjetas? (badges: “observada”, “nuevo”)
-- Nómina:
-    - ¿Alta rápida es modal o pantalla?
-    - ¿Edición desde detalle o directo en formulario?
-- Rendiciones:
-    - ¿Adjuntar archivo desde detalle o pantalla dedicada?
-    - ¿Cómo se muestra “observaciones” del técnico?
-- Documentos:
-    - ¿Abrir dentro de app o descargar?
-- Accesibilidad:
-    - tamaño de letra mínimo, contraste, botones grandes
+### 7) Decisión tecnológica: PWA vs nativo
 
----
+- Se acordó preferencia por **PWA**:
+    - evita publicación en stores y trámites con Innovación
+    - permite “instalar” desde navegador (manifest) y ejecución fullscreen tipo app
+- Se acordó discutirlo igual con equipo técnico para confirmación final.
 
-## Material que UX debe tomar como base
+### 8) Framework de UI / diseño
 
-- Wireframes textuales: `docs/08_wireflows/pantallas-mvp.md`
-- Plan de sprints: `docs/01_mvp/plan-sprints.md`
-- RBAC: `docs/02_roles_y_accesos/rbac.md`
+- Se propone usar **Tailwind** por velocidad MVP y compatibilidad con React.
+- Se propuso librería **shadcn/ui** (customizable) sobre Tailwind.
+- Se remarcó que comunicación puede exigir identidad (Poncho/colores/tipografías), y que esto se puede parametrizar.
 
----
+### 9) Plan de trabajo / organización
 
-## Resultados / decisiones (para completar en reunión)
+- Se planteó paralelizar:
+    - UX avanza prototipos Figma
+    - Equipo técnico expone endpoints y define mapping de datos
+- Se conversó de armado de equipo:
+    - Front (PWA/React): posibilidad de que lo haga Miguel o Pablo con apoyo
+    - Back (endpoints/DRF): Mati como back + soporte analista (Camilo) para detalle
+- Se propuso foco: cerrar documentación funcional en la semana siguiente y comenzar desarrollo luego.
 
-- Navegación definida: (Hub / Tabs)
-- Pantallas confirmadas: (lista)
-- Estados UI confirmados: (lista)
-- Definición de componentes: (lista)
-- Pendientes para técnico: (lista)
+### 10) Innovación / infraestructura
+
+- Se mencionó reunión con Nacho + Edu Vivas (arquitecto) para encuadre de necesidades hacia Innovación.
+- Regla de oro reafirmada: **la PWA no accede directo a MySQL**, todo vía API.
 
 ---
 
-## Pendientes / acciones
+## Decisiones y acuerdos (para dejar fijados)
 
-- UX entrega link Figma + export de assets si aplica
-- Equipo técnico valida consistencia con RBAC y contratos
-- Próxima reunión (técnica): viernes — cerrar auth + modelos reales SISOC + storage archivos
+- **D1:** La solución es un **consumer de SISOC** (sin backoffice nuevo).
+- **D2:** Enfoque **mobile-first** (100% pensado para móvil y responsive).
+- **D3:** Preferencia por **PWA** (evitar stores por tiempos administrativos).
+- **D4:** UI basada en **Tailwind + shadcn/ui** (customizable a identidad institucional).
+- **D5:** Multi-espacio: si aplica, **selector de espacio** para organizaciones.
+- **D6:** Nómina: línea preferida **una sola nómina** con flags/filtros.
+
+---
+
+## Pendientes / preguntas para reunión técnica (viernes)
+
+- Confirmar **modelo/ID real de Espacio** en SISOC.
+- Confirmar usuarios para espacios: ¿existen? ¿se crean? ¿flujo de alta?
+- Definir auth final: ¿JWT? ¿sesión? ¿refresh?
+- Confirmar existencia real de módulos (nómina/rendiciones/mensajes/docs) y sus tablas.
+- Confirmar **storage de PDFs/comprobantes** (filesystem/S3/AS) y reglas de descarga.
+- Definir segmentación de mensajes: generales vs por espacio/jurisdicción.
+- Definir catálogo real de estados (prestación/rendición/espacio) y mapeo a UI.
+- Definir límites de archivos (tamaño/tipo/cantidad) y validación.
+- Confirmar entorno dev/staging y política de migraciones.
+
+---
+
+## Próximos pasos
+
+- UX: prototipo Figma navegable con pantallas MVP y estados principales.
+- Equipo técnico: validar stack PWA + contratos API v0 + data mapping real.
+- Dirección: definir naming/producto para presentación (evitar “legajo” como etiqueta pública si aplica).
+- Preparar minuta/requerimiento preliminar a Innovación con necesidades mínimas.
+
+## Cierre
+Se acuerda continuar con validación técnica el viernes, y con avance de prototipos UX en paralelo.
