@@ -12,13 +12,13 @@
         <meta name="author" content="Equipo SISOC">
       
       
-        <link rel="canonical" href="https://miguelangelvillelli.github.io/sisoc-docs/adr/ADR-0007-tailwind-ui/">
+        <link rel="canonical" href="https://miguelangelvillelli.github.io/sisoc-docs/adr/ADR-0008-stack-tecnologico-mvp/">
       
       
-        <link rel="prev" href="../ADR-0006-estrategia-integracion-modulos/">
+        <link rel="prev" href="../ADR-0007-tailwind-ui/">
       
       
-        <link rel="next" href="../ADR-0008-stack-tecnologico-mvp/">
+        <link rel="next" href="../../reuniones/reunion-2026-02-04-ux/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>ADR-0007 · Tailwind - SISOC · Legajo de Espacio (MVP)</title>
+        <title>ADR-0008 · Stack tecnológico MVP - SISOC · Legajo de Espacio (MVP)</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#adr-0007-ui-tailwind-como-base-de-estilos-mvp" class="md-skip">
+        <a href="#adr-0004-stack-tecnologico-mvp-pwa-api-sisoc" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ADR-0007 · Tailwind
+              ADR-0008 · Stack tecnológico MVP
             
           </span>
         </div>
@@ -1810,6 +1810,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../ADR-0007-tailwind-ui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ADR-0007 · Tailwind
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1826,7 +1847,7 @@
           
   
   <span class="md-ellipsis">
-    ADR-0007 · Tailwind
+    ADR-0008 · Stack tecnológico MVP
   </span>
   
 
@@ -1837,7 +1858,7 @@
         
   
   <span class="md-ellipsis">
-    ADR-0007 · Tailwind
+    ADR-0008 · Stack tecnológico MVP
   </span>
   
 
@@ -1877,9 +1898,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#alternativas" class="md-nav__link">
+  <a href="#justificacion" class="md-nav__link">
     <span class="md-ellipsis">
-      Alternativas
+      Justificación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reglas-guardrails" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reglas / Guardrails
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-la-pwa-no-accede-directo-a-mysql-todo-acceso-pasa-por-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      - La PWA no accede directo a MySQL. Todo acceso pasa por API.
     </span>
   </a>
   
@@ -1894,31 +1933,37 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#riesgos-y-mitigacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Riesgos y mitigación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alternativas-consideradas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternativas consideradas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pendientes-de-cierre-viernes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pendientes de cierre (viernes)
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ADR-0008-stack-tecnologico-mvp/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    ADR-0008 · Stack tecnológico MVP
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -2065,9 +2110,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#alternativas" class="md-nav__link">
+  <a href="#justificacion" class="md-nav__link">
     <span class="md-ellipsis">
-      Alternativas
+      Justificación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reglas-guardrails" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reglas / Guardrails
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-la-pwa-no-accede-directo-a-mysql-todo-acceso-pasa-por-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      - La PWA no accede directo a MySQL. Todo acceso pasa por API.
     </span>
   </a>
   
@@ -2077,6 +2140,33 @@
   <a href="#consecuencias" class="md-nav__link">
     <span class="md-ellipsis">
       Consecuencias
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riesgos-y-mitigacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Riesgos y mitigación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alternativas-consideradas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternativas consideradas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pendientes-de-cierre-viernes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pendientes de cierre (viernes)
     </span>
   </a>
   
@@ -2100,34 +2190,81 @@
   
 
 
-<h1 id="adr-0007-ui-tailwind-como-base-de-estilos-mvp">ADR-0007 · UI: Tailwind como base de estilos (MVP)<a class="headerlink" href="#adr-0007-ui-tailwind-como-base-de-estilos-mvp" title="Permanent link">&para;</a></h1>
+<h1 id="adr-0004-stack-tecnologico-mvp-pwa-api-sisoc">ADR-0004 · Stack tecnológico MVP (PWA + API SISOC)<a class="headerlink" href="#adr-0004-stack-tecnologico-mvp-pwa-api-sisoc" title="Permanent link">&para;</a></h1>
 <div class="admonition info">
 <p class="admonition-title">Estado</p>
-<p><strong>ID:</strong> ADR-0007<br />
-<strong>Título:</strong> Tailwind como base de estilos (MVP)<br />
-<strong>Estado:</strong> Propuesto<br />
-<strong>Fecha:</strong> 2026-02-03<br />
-<strong>Responsable:</strong> UI_UX / DEV_Impl<br />
-<strong>Nivel:</strong> Interno</p>
+<p><strong>Versión:</strong> v0.1<br />
+<strong>Fecha:</strong> 2026-02-04<br />
+<strong>Responsable:</strong> Miguel Ángel Villelli<br />
+<strong>Alcance:</strong> MVP Legajo de Espacio<br />
+<strong>Decisión:</strong> Aprobación en reunión técnica (viernes)</p>
 </div>
 <h2 id="contexto">Contexto<a class="headerlink" href="#contexto" title="Permanent link">&para;</a></h2>
-<p>El MVP requiere construir múltiples pantallas con estados (loading/empty/error), responsive y consistencia visual.<br />
-Crear un sistema de estilos/components desde cero implica tiempos altos, riesgo de inconsistencia y deuda visual.</p>
+<p>Se requiere entregar un MVP <strong>mobile-first</strong> para espacios comunitarios que funcione como <strong>consumer</strong> de SISOC (Django + MySQL), minimizando cambios disruptivos y acelerando la salida a producción.</p>
+<p>Hay restricción operativa/administrativa para publicar apps en stores (Android/iOS) en plazos cortos.</p>
 <h2 id="decision">Decisión<a class="headerlink" href="#decision" title="Permanent link">&para;</a></h2>
-<p>Se adopta Tailwind como base de estilos para el MVP:
-- estilos utilitarios con tokens definidos (colores, spacing, tipografía),
-- componentes funcionales mínimos (botones, cards, listas, formularios) construidos sobre esos tokens,
-- soporte de dark mode bajo configuración estándar.</p>
-<h2 id="alternativas">Alternativas<a class="headerlink" href="#alternativas" title="Permanent link">&para;</a></h2>
+<p>Se adopta el siguiente stack para el MVP:</p>
 <ul>
-<li>CSS manual + componentes desde cero: mayor costo inicial y riesgo de divergencia.</li>
-<li>Librería UI completa: puede acelerar, pero condiciona look&amp;feel y requiere evaluación (no MVP).</li>
+<li><strong>Frontend:</strong> PWA (React + TypeScript + Vite)</li>
+<li><strong>UI/Estilos:</strong> TailwindCSS + shadcn/ui (tokens adaptados a identidad institucional)</li>
+<li><strong>Backend:</strong> Django REST Framework (DRF) sobre SISOC</li>
+<li><strong>DB:</strong> MySQL existente de SISOC</li>
+<li><strong>Integración y seguridad:</strong> <strong>API como única vía</strong> (sin acceso directo a DB desde la app)</li>
+<li><strong>Autenticación (pendiente de confirmación):</strong> JWT Bearer (preferido) o sesión Django (alternativa)</li>
+</ul>
+<h2 id="justificacion">Justificación<a class="headerlink" href="#justificacion" title="Permanent link">&para;</a></h2>
+<p>La PWA evita la burocracia y tiempos de publicación en stores, permitiendo distribución por link e instalación mediante manifest.</p>
+<p>React + TS + Vite aceleran el ciclo de desarrollo (DX) y reducen errores en UI mediante tipado, habilitando paralelización por pantallas/componentes.</p>
+<p>TailwindCSS + shadcn/ui permiten:</p>
+<ul>
+<li>velocidad de implementación (MVP),</li>
+<li>consistencia entre pantallas,</li>
+<li>reducción de deuda de CSS,</li>
+<li>componentes accesibles y editables (no “caja negra”),</li>
+<li>alineación con Figma mediante tokens/paleta/typography.</li>
+</ul>
+<p>DRF y MySQL SISOC aprovechan lo existente, reduciendo duplicación de datos y asegurando trazabilidad/roles (RBAC) en el backend.</p>
+<h2 id="reglas-guardrails">Reglas / Guardrails<a class="headerlink" href="#reglas-guardrails" title="Permanent link">&para;</a></h2>
+<h2 id="-la-pwa-no-accede-directo-a-mysql-todo-acceso-pasa-por-api">- La PWA <strong>no</strong> accede directo a MySQL. Todo acceso pasa por <strong>API</strong>.<a class="headerlink" href="#-la-pwa-no-accede-directo-a-mysql-todo-acceso-pasa-por-api" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Se reutilizan tablas/modelos existentes cuando aplique.</li>
+<li>Se crean tablas nuevas solo si:<ul>
+<li>el dato no existe en el esquema actual, o</li>
+<li>el esquema actual no soporta trazabilidad / adjuntos / estados requeridos por el MVP.</li>
+</ul>
+</li>
+<li>Las validaciones de permisos son server-side (RBAC).</li>
 </ul>
 <h2 id="consecuencias">Consecuencias<a class="headerlink" href="#consecuencias" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Mayor velocidad y consistencia en MVP.</li>
-<li>Menor CSS disperso y menor deuda visual inicial.</li>
-<li>UX define patrones/tokens; dev implementa rápido con utilidades.</li>
+<li>Se acelera el time-to-MVP y se reduce el riesgo administrativo de despliegue.</li>
+<li>Se requiere una curva de aprendizaje (React/PWA) en parte del equipo.</li>
+<li>El éxito del MVP depende de exponer/ajustar endpoints en SISOC con contratos claros.</li>
+</ul>
+<h2 id="riesgos-y-mitigacion">Riesgos y mitigación<a class="headerlink" href="#riesgos-y-mitigacion" title="Permanent link">&para;</a></h2>
+<p><strong>R1: Curva de aprendizaje React</strong></p>
+<ul>
+<li>Mitigación: arquitectura simple por pantallas, componentes shadcn/ui, tareas chicas, revisión y checklist de calidad.</li>
+</ul>
+<p><strong>R2: Desalineación Figma ↔ implementación</strong></p>
+<ul>
+<li>Mitigación: design system MVP basado en shadcn/ui + tokens; evitar layouts/animaciones complejas en MVP.</li>
+</ul>
+<p><strong>R3: Endpoints/datos faltantes</strong></p>
+<ul>
+<li>Mitigación: Sprint 0 de inventario + mapeo; priorizar read-only primero; ADR para cualquier agregado de modelo/tabla.</li>
+</ul>
+<h2 id="alternativas-consideradas">Alternativas consideradas<a class="headerlink" href="#alternativas-consideradas" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>App nativa (Android/iOS):</strong> descartada para MVP por tiempos y burocracia de publicación + doble stack.</li>
+<li><strong>CSS “a medida” sin framework:</strong> descartado por tiempo y riesgo de inconsistencias/deuda.</li>
+<li><strong>Material UI / otras librerías cerradas:</strong> posibles, pero se prioriza shadcn/ui por control y facilidad de adaptación.</li>
+</ul>
+<h2 id="pendientes-de-cierre-viernes">Pendientes de cierre (viernes)<a class="headerlink" href="#pendientes-de-cierre-viernes" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Confirmar método de autenticación (JWT vs sesión).</li>
+<li>Confirmar storage de adjuntos/comprobantes (filesystem vs bucket).</li>
+<li>Definir segmentación de “Mensajes operativos” (general vs por espacio/jurisdicción).</li>
 </ul>
 
 
