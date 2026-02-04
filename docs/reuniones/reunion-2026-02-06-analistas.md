@@ -1,33 +1,93 @@
-Reunión del viernes con analistas + devs — qué tenés que salir con eso
+# Sprint 0 — Tareas y responsables (Trello)
 
-Objetivo real: cerrar decisiones técnicas y poder empezar sprint 1 sin esperar otra semana.
+!!! info "Estado"
+    **Versión:** v0.1  
+    **Última actualización:** 2026-02-04  
+    **Responsable:** Dirección / Equipo SISOC  
+    **Nivel:** Interno
 
-Checklist de decisiones para destrabar desarrollo
+## Objetivo
+Dejar listo el proyecto para arrancar Sprint 1 sin bloqueos:
+documentación viva + decisiones técnicas mínimas + prototipo UX + setup de repo/infra.
 
-Auth: JWT vs Session (y si se usa Django auth existente)
+---
 
-Identificador único de Espacio (space_id)
+## Roles y responsables (para Trello)
+- **PO / Coordinación general:** Miguel Angel Villelli  
+- **UX / Prototipos Figma:** Florencia Sanpaulo  
+- **Validación política / alcance / plazos:** Martín Lepera  
+- **Analista funcional (SISOC / datos / procesos):** Camilo (a confirmar)  
+- **Backend / API (Django DRF / RBAC / endpoints):** Equipo dev (Mati / Román / a definir)  
+- **Frontend PWA (React):** Pablo (con apoyo inicial de Miguel)  
+- **Infra / DevOps / ambientes / acceso restringido:** Nacho + Edu Vivas (AS)  
+- **Revisión documentación (PR/merge):** Miguel (revisor principal) + suplente (a definir)
 
-Qué existe en SISOC vs qué se crea:
+> Sugerencia Trello: crear una tarjeta fija `[S0-00] Roles y responsables del proyecto` y pegar esto ahí.
 
-Nóminas (¿tabla ya existe?)
+---
 
-Rendiciones/comprobantes (¿ya existe?)
+## Backlog Sprint 0 (copiar/pegar a Trello)
 
-Mensajes/documentos (¿ya existe?)
+### Infra / DevOps
+- [ ] **[S0-01] Repositorio GitHub + ramas + permisos** (Owner: Miguel)  
+  - Definir estrategia de ramas (`main` + `gh-pages`)  
+  - Definir revisores obligatorios (PR)  
+- [ ] **[S0-02] Acceso restringido al sitio** (Owner: Nacho / Edu)  
+  - Definir alternativa: GitHub Pages (limitado) vs. hosting privado (AS / VPN / Basic Auth)  
+  - Propuesta y decisión documentada
+- [ ] **[S0-03] Ambientes dev/staging para API mobile** (Owner: Nacho / equipo backend)  
+  - URL / DNS / certificados  
+  - Variables de entorno / secretos
+- [ ] **[S0-04] CI mínimo** (Owner: Nacho / equipo)  
+  - Build/validación docs (mkdocs build)  
+  - (Opcional) lint markdown
 
-Storage de archivos (filesystem actual vs S3/minio) y cómo generar download_url
+### Documentación (MkDocs)
+- [ ] **[S0-05] Ajustes de MkDocs Material** (Owner: Miguel)  
+  - Dark/light mode  
+  - Flecha “back to top” (navigation.top)  
+  - Mermaid (si se usa) o alternativa (imágenes)
+- [ ] **[S0-06] Minuta reunión UX (04/02)** (Owner: Miguel)  
+  - Decisiones y pendientes
+- [ ] **[S0-07] Preparar paquete “Reunión Técnica”** (Owner: Miguel)  
+  - Agenda + lista de preguntas (integración SISOC)
+- [ ] **[S0-08] Glosario v0.2** (Owner: Miguel + UX)  
+  - Términos: PWA, RBAC, CTA, Hub, mensajes operativos, etc.
 
-RBAC real (mapping a grupos/roles existentes)
+### UX (Figma)
+- [ ] **[S0-09] Wireflow / navegación final MVP** (Owner: Florencia)  
+  - Home (hub) + módulos  
+  - Selector de espacio si multi-espacio  
+- [ ] **[S0-10] Mockups low-fi + prototipo clickeable** (Owner: Florencia)  
+  - Pantallas clave por módulo  
+  - Estados vacíos / error / loading
+- [ ] **[S0-11] Sistema UI inicial** (Owner: Florencia)  
+  - Tipografía, paleta, componentes base (alineado a stack: Tailwind + shadcn)
 
-Paginación y performance (page_size default, filtros)
+### Análisis / Funcional
+- [ ] **[S0-12] “Existe vs se crea” por módulo (SISOC)** (Owner: Camilo / Miguel)  
+  - Nómina / rendiciones / mensajes / documentos  
+- [ ] **[S0-13] Confirmar entidad e ID de Espacio** (Owner: equipo SISOC)  
+  - Modelos/tablas y relaciones
+- [ ] **[S0-14] Definición mínima de permisos RBAC** (Owner: backend + Miguel)  
+  - Referente/Interno/Operador/Admin/Org  
+- [ ] **[S0-15] Contratos API v0 — revisión** (Owner: backend + Miguel)  
+  - Endpoints mínimos + paginación  
+  - Estrategia de archivos (descarga/URL firmada)
 
-Ambiente de pruebas (staging, credenciales, copia de DB)
+### Desarrollo (Preparación Sprint 1)
+- [ ] **[S0-16] Skeleton PWA** (Owner: Pablo)  
+  - Layout base + navegación + placeholders  
+- [ ] **[S0-17] Skeleton API mobile** (Owner: backend)  
+  - `/api/mobile/v1/health` + `/me` + auth placeholder
+- [ ] **[S0-18] Plan Sprint 1 validado** (Owner: Miguel + equipo)  
+  - Orden de módulos y entregables
 
-Lo que les tenés que mostrar
+---
 
-Preguntas para reunión SISOC (ya lo tenés)
-
-Contratos v0 (no para que implementen todo, sino para acordar nombres y endpoints)
-
-Plan QA smoke (para que sepan cómo se valida el MVP)
+## Definición de “Done” Sprint 0
+- Docs publicados + estructura estable
+- Prototipo UX navegable en Figma (v0)
+- Decisión de stack (PWA React + Tailwind + shadcn) confirmada
+- Lista de preguntas para SISOC cerrada y lista para reunión
+- Ambientes/devops en camino (o decisión tomada con alternativa)
