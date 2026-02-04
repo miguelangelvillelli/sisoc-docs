@@ -107,6 +107,7 @@ nav:
       - ADR-0005 · Storage archivos: adr/ADR-0005-storage-archivos.md
       - ADR-0006 · Estrategia integración módulos: adr/ADR-0006-estrategia-integracion-modulos.md
       - ADR-0007 · Tailwind: adr/ADR-0007-tailwind-ui.md
+      - ADR-0008 · Stack tecnológico MVP: adr/ADR-0008-stack-tecnologico-mvp.md
   - REUNIONES:
       - Reunión · 2026-02-04 minuta: reuniones/reunion-2026-02-04-ux.md
       - Reunión · 2026-02-06 agenda: reuniones/agenda-reunion-viernes-2026-02-04.md
