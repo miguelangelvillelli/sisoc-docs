@@ -2242,10 +2242,12 @@ Este documento está orientado a destrabar decisiones por sprint (qué nos bloqu
 <li>¿Cómo se relaciona con jurisdicción (provincia/municipio) y con “organización” si existe?</li>
 <li>¿Existe estado institucional del espacio (activo/suspendido/etc.)?</li>
 </ul>
-<p><strong>Salida esperada</strong>
-  - Confirmar <strong>space_id real</strong> (tipo y nombre de campo) + tabla/modelo.
-  - Lista de campos que vamos a exponer en “Perfil del espacio”.
-  - Catálogo real de “estado institucional del espacio”.</p>
+<p><strong>Salida esperada</strong></p>
+<ul>
+<li>Confirmar <strong>space_id real</strong> (tipo y nombre de campo) + tabla/modelo.</li>
+<li>Lista de campos que vamos a exponer en “Perfil del espacio”.</li>
+<li>Catálogo real de “estado institucional del espacio”.</li>
+</ul>
 <hr />
 <h2 id="b-usuarios-y-autenticacion-para-app-movil-bloquea-sprint-1">B) Usuarios y autenticación (para app móvil) — <em>Bloquea Sprint 1</em><a class="headerlink" href="#b-usuarios-y-autenticacion-para-app-movil-bloquea-sprint-1" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2255,13 +2257,17 @@ Este documento está orientado a destrabar decisiones por sprint (qué nos bloqu
 <li>¿Se usa JWT/Session/OAuth? ¿Hay algún estándar ya implementado?</li>
 <li>¿Se requiere 2FA o verificación por SMS/Email?</li>
 </ul>
-<p><strong>Salida esperada</strong>
-- Decisión: <strong>JWT vs Session</strong> (y por qué).
-  - Endpoints necesarios:
-      - <code>POST /auth/login</code> (si aplica)
-      - <code>POST /auth/refresh</code> (si aplica)
-      - <code>GET /me</code>
-  - Definición de <strong>roles reales</strong> y cómo se vinculan a permisos (RBAC).</p>
+<p><strong>Salida esperada</strong></p>
+<ul>
+<li>Decisión: <strong>JWT vs Session</strong> (y por qué).</li>
+<li>Endpoints necesarios:<ul>
+<li><code>POST /auth/login</code> (si aplica)</li>
+<li><code>POST /auth/refresh</code> (si aplica)</li>
+<li><code>GET /me</code></li>
+</ul>
+</li>
+<li>Definición de <strong>roles reales</strong> y cómo se vinculan a permisos (RBAC).</li>
+</ul>
 <hr />
 <h2 id="c-nominas-personas-bloquea-sprint-2">C) Nóminas / Personas — <em>Bloquea Sprint 2</em><a class="headerlink" href="#c-nominas-personas-bloquea-sprint-2" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2272,11 +2278,13 @@ Este documento está orientado a destrabar decisiones por sprint (qué nos bloqu
 </li>
 <li>¿Hay reglas actuales de deduplicación o validación?</li>
 </ul>
-<p><strong>Salida esperada</strong>
-- Confirmar si <strong>nómina existe</strong> (reutilizar) o si se <strong>crea</strong>.
-- Campos mínimos MVP: nombre, apellido, (doc opcional), teléfono opcional, activa/inactiva.
-- Regla de duplicados: por documento, por nombre+apellido, etc.
-- Volumen típico por espacio (para paginación/performance).</p>
+<p><strong>Salida esperada</strong></p>
+<ul>
+<li>Confirmar si <strong>nómina existe</strong> (reutilizar) o si se <strong>crea</strong>.</li>
+<li>Campos mínimos MVP: nombre, apellido, (doc opcional), teléfono opcional, activa/inactiva.</li>
+<li>Regla de duplicados: por documento, por nombre+apellido, etc.</li>
+<li>Volumen típico por espacio (para paginación/performance).</li>
+</ul>
 <hr />
 <h2 id="d-prestacion-alimentaria-solo-visualizacion-en-mvp-bloquea-sprint-4">D) Prestación alimentaria (solo visualización en MVP) — <em>Bloquea Sprint 4</em><a class="headerlink" href="#d-prestacion-alimentaria-solo-visualizacion-en-mvp-bloquea-sprint-4" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2285,26 +2293,32 @@ Este documento está orientado a destrabar decisiones por sprint (qué nos bloqu
 <li>¿Qué estados manejan hoy? (para mapear a <code>vigente</code>, <code>en_revision</code>, <code>observada</code>, <code>suspendida</code>, <code>sin_datos</code>)</li>
 <li>¿Qué información NO debe mostrarse al espacio (sensibilidad)?</li>
 </ul>
-<p><strong>Salida esperada</strong>
-- Definir exactamente qué campos se exponen en móvil (solo lectura).
-- Catálogo real de estados + mapeo a estados MVP.
-- Confirmar fuente de datos (tabla/modelo) y endpoint(s) propuestos.</p>
+<p><strong>Salida esperada</strong></p>
+<ul>
+<li>Definir exactamente qué campos se exponen en móvil (solo lectura).</li>
+<li>Catálogo real de estados + mapeo a estados MVP.</li>
+<li>Confirmar fuente de datos (tabla/modelo) y endpoint(s) propuestos.</li>
+</ul>
 <hr />
 <h2 id="e-rendiciones-y-comprobantes-bloquea-sprint-3">E) Rendiciones y comprobantes — <em>Bloquea Sprint 3</em><a class="headerlink" href="#e-rendiciones-y-comprobantes-bloquea-sprint-3" title="Permanent link">&para;</a></h2>
 <ul>
 <li>¿Existe hoy un módulo de rendiciones en SISOC? ¿Cómo guarda comprobantes?</li>
 <li>Si existe: ¿dónde se almacenan archivos (filesystem, S3, etc.)?</li>
-<li>Si NO existe: ¿aprueban crear tablas nuevas para:</li>
+<li>Si NO existe: ¿aprueban crear tablas nuevas para:<ul>
 <li>rendición (estado, período)</li>
 <li>comprobantes (archivo, estado, motivo)</li>
+</ul>
+</li>
 <li>¿Hay estados actuales para rendición (borrador/presentada/observada/aprobada/rechazada) o se definen nuevos?</li>
 <li>¿Quién revisa y aprueba (roles internos)?</li>
 </ul>
-<p><strong>Salida esperada</strong>
-- Confirmar si “rendiciones” existe o se crea.
-- Estados reales de rendición y reglas de transición (presentar, observar, aprobar).
-- Storage de comprobantes + mecanismo de descarga (URL firmada / endpoint).
-- Límite de archivos: tamaño máximo, tipos permitidos.</p>
+<p><strong>Salida esperada</strong></p>
+<ul>
+<li>Confirmar si “rendiciones” existe o se crea.</li>
+<li>Estados reales de rendición y reglas de transición (presentar, observar, aprobar).</li>
+<li>Storage de comprobantes + mecanismo de descarga (URL firmada / endpoint).</li>
+<li>Límite de archivos: tamaño máximo, tipos permitidos.</li>
+</ul>
 <hr />
 <h2 id="f-documentosconvenios-y-mensajes-operativos-bloquea-sprint-1">F) Documentos/convenios y mensajes operativos — <em>Bloquea Sprint 1</em><a class="headerlink" href="#f-documentosconvenios-y-mensajes-operativos-bloquea-sprint-1" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2313,10 +2327,12 @@ Este documento está orientado a destrabar decisiones por sprint (qué nos bloqu
 <li>¿Existe un mecanismo de “mensajes operativos” o news dentro de SISOC?</li>
 <li>¿Se necesita segmentar mensajes por espacio/jurisdicción?</li>
 </ul>
-<p><strong>Salida esperada</strong>
-- Confirmar si existe “Documentos” y “Mensajes”.
-- Si no existe mensajes: decisión MVP (tabla simple nueva / banner / módulo existente).
-- Definición de segmentación (por espacio, municipio, provincia).</p>
+<p><strong>Salida esperada</strong></p>
+<ul>
+<li>Confirmar si existe “Documentos” y “Mensajes”.</li>
+<li>Si no existe mensajes: decisión MVP (tabla simple nueva / banner / módulo existente).</li>
+<li>Definición de segmentación (por espacio, municipio, provincia).</li>
+</ul>
 <hr />
 <h2 id="g-auditoria-y-trazabilidad-recomendado-cerrar-antes-de-sprint-23">G) Auditoría y trazabilidad — <em>Recomendado cerrar antes de Sprint 2/3</em><a class="headerlink" href="#g-auditoria-y-trazabilidad-recomendado-cerrar-antes-de-sprint-23" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2324,9 +2340,11 @@ Este documento está orientado a destrabar decisiones por sprint (qué nos bloqu
 <li>Si existe: ¿cómo registrar eventos nuevos (<code>persona_create</code>, <code>rendicion_submit</code>, etc.)?</li>
 <li>¿Requisitos de retención de logs?</li>
 </ul>
-<p><strong>Salida esperada</strong>
-- Confirmar si se reutiliza auditoría existente o se implementa módulo mínimo.
-- Lista mínima de eventos a registrar en MVP.</p>
+<p><strong>Salida esperada</strong></p>
+<ul>
+<li>Confirmar si se reutiliza auditoría existente o se implementa módulo mínimo.</li>
+<li>Lista mínima de eventos a registrar en MVP.</li>
+</ul>
 <hr />
 <h2 id="h-performance-y-escalabilidad-minimo-impacta-sprint-14">H) Performance y escalabilidad (mínimo) — <em>Impacta Sprint 1–4</em><a class="headerlink" href="#h-performance-y-escalabilidad-minimo-impacta-sprint-14" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2334,10 +2352,12 @@ Este documento está orientado a destrabar decisiones por sprint (qué nos bloqu
 <li>¿Hay índices actuales para búsquedas por nombre/documento?</li>
 <li>¿Hay caché (Redis) o paginación en endpoints existentes?</li>
 </ul>
-<p><strong>Salida esperada</strong>
-- Reglas de paginación (<code>page</code>, <code>page_size</code>, máximo <code>page_size</code>).
-- Recomendaciones/limitaciones sobre queries (búsqueda, filtros).
-- Si se permite caching server-side en endpoints críticos.</p>
+<p><strong>Salida esperada</strong></p>
+<ul>
+<li>Reglas de paginación (<code>page</code>, <code>page_size</code>, máximo <code>page_size</code>).</li>
+<li>Recomendaciones/limitaciones sobre queries (búsqueda, filtros).</li>
+<li>Si se permite caching server-side en endpoints críticos.</li>
+</ul>
 <hr />
 <h2 id="i-entornos-y-despliegue-bloquea-ejecucion-sostenida">I) Entornos y despliegue — <em>Bloquea ejecución sostenida</em><a class="headerlink" href="#i-entornos-y-despliegue-bloquea-ejecucion-sostenida" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2345,10 +2365,12 @@ Este documento está orientado a destrabar decisiones por sprint (qué nos bloqu
 <li>¿Cómo se gestionan migraciones (Django migrations) en producción?</li>
 <li>¿Quién aprueba cambios en modelos/tablas?</li>
 </ul>
-<p><strong>Salida esperada</strong>
-- URL de entorno de prueba + credenciales de prueba (si aplica).
-- Proceso de aprobación para cambios (modelo, migrations, endpoints).
-- Ventana/ritual de despliegue.</p>
+<p><strong>Salida esperada</strong></p>
+<ul>
+<li>URL de entorno de prueba + credenciales de prueba (si aplica).</li>
+<li>Proceso de aprobación para cambios (modelo, migrations, endpoints).</li>
+<li>Ventana/ritual de despliegue.</li>
+</ul>
 <hr />
 <h2 id="resultado-esperado-de-la-reunion-resumen">Resultado esperado de la reunión (resumen)<a class="headerlink" href="#resultado-esperado-de-la-reunion-resumen" title="Permanent link">&para;</a></h2>
 <ul>
