@@ -2201,10 +2201,12 @@
 <h2 id="objetivo-del-modulo">Objetivo del módulo<a class="headerlink" href="#objetivo-del-modulo" title="Permanent link">&para;</a></h2>
 <p>Permitir que el espacio comunitario <strong>visualice</strong> información relevante de su relación con la prestación alimentaria asociada al Programa, de forma clara, mobile-first y con trazabilidad.</p>
 <h2 id="alcance-mvp-opcion-a-solo-visualizacion">Alcance MVP (Opción A — Solo visualización)<a class="headerlink" href="#alcance-mvp-opcion-a-solo-visualizacion" title="Permanent link">&para;</a></h2>
-<p>En el MVP el espacio:
-- <strong>No carga</strong> ni “declara” prestaciones.
-- <strong>Visualiza</strong> información validada/provista por los equipos del Programa (operadores/administración).
-- <strong>Recibe alertas</strong> y recordatorios (si se implementa canal notificaciones en MVP).</p>
+<p>En el MVP el espacio:</p>
+<ul>
+<li><strong>No carga</strong> ni “declara” prestaciones.</li>
+<li><strong>Visualiza</strong> información validada/provista por los equipos del Programa (operadores/administración).</li>
+<li><strong>Recibe alertas</strong> y recordatorios (si se implementa canal notificaciones en MVP).</li>
+</ul>
 <blockquote>
 <p>Regla: cualquier necesidad de carga o declaración por parte del espacio queda para evolución posterior (Release 2).</p>
 </blockquote>
@@ -2249,10 +2251,12 @@ El módulo muestra <strong>estado y mensajes operativos</strong>, no reemplaza l
 <p>Nota: en MVP la app del espacio solo contempla “ver”. Las acciones internas del Programa pueden existir en backoffice.</p>
 </blockquote>
 <h2 id="auditoria-y-trazabilidad-eventos-minimos">Auditoría y trazabilidad (eventos mínimos)<a class="headerlink" href="#auditoria-y-trazabilidad-eventos-minimos" title="Permanent link">&para;</a></h2>
-<p>Registrar como mínimo:
-- <code>prestacion_view_list</code> (usuario, espacio, timestamp)
-- <code>prestacion_view_detail</code> (usuario, espacio, período, timestamp)
-- <code>prestacion_support_contact</code> (si existe botón de contacto)</p>
+<p>Registrar como mínimo:</p>
+<ul>
+<li><code>prestacion_view_list</code> (usuario, espacio, timestamp)</li>
+<li><code>prestacion_view_detail</code> (usuario, espacio, período, timestamp)</li>
+<li><code>prestacion_support_contact</code> (si existe botón de contacto)</li>
+</ul>
 <h2 id="reglas-de-negocio-v0">Reglas de negocio (v0)<a class="headerlink" href="#reglas-de-negocio-v0" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Si el estado es “en revisión” o “observada”, el detalle debe incluir un <strong>mensaje operativo claro</strong>.</li>
@@ -2261,28 +2265,36 @@ El módulo muestra <strong>estado y mensajes operativos</strong>, no reemplaza l
 <li>Las alertas se muestran según regla de visibilidad (internas vs visibles al espacio).</li>
 </ul>
 <h2 id="criterios-de-aceptacion-bdd">Criterios de aceptación (BDD)<a class="headerlink" href="#criterios-de-aceptacion-bdd" title="Permanent link">&para;</a></h2>
-<p><strong>Escenario: ver resumen</strong>
-- Dado un usuario del espacio con permisos
-- Cuando ingresa al módulo “Prestación alimentaria”
-- Entonces ve el estado y el período actual (o “sin datos” si no hay)</p>
-<p><strong>Escenario: ver detalle</strong>
-- Dado que existe información del período
-- Cuando el usuario abre el detalle
-- Entonces visualiza estado, período, resumen y observaciones</p>
-<p><strong>Escenario: sin datos</strong>
-- Dado que no existe información del período
-- Cuando el usuario abre el módulo
-- Entonces visualiza un mensaje “sin datos” y una acción de orientación (contacto o requisitos)</p>
+<p><strong>Escenario: ver resumen</strong></p>
+<ul>
+<li>Dado un usuario del espacio con permisos</li>
+<li>Cuando ingresa al módulo “Prestación alimentaria”</li>
+<li>Entonces ve el estado y el período actual (o “sin datos” si no hay)</li>
+</ul>
+<p><strong>Escenario: ver detalle</strong></p>
+<ul>
+<li>Dado que existe información del período</li>
+<li>Cuando el usuario abre el detalle</li>
+<li>Entonces visualiza estado, período, resumen y observaciones</li>
+</ul>
+<p><strong>Escenario: sin datos</strong></p>
+<ul>
+<li>Dado que no existe información del período</li>
+<li>Cuando el usuario abre el módulo</li>
+<li>Entonces visualiza un mensaje “sin datos” y una acción de orientación (contacto o requisitos)</li>
+</ul>
 <h2 id="evolucion-release-2-alerta">Evolución (Release 2) — ALERTA<a class="headerlink" href="#evolucion-release-2-alerta" title="Permanent link">&para;</a></h2>
 <div class="admonition danger">
 <p class="admonition-title">Evolución posible: carga mínima por el espacio</p>
 <p>Si se decide que el espacio registre información (ej. confirmaciones, cantidades o evidencias),
-se debe abrir un ADR específico y revisar:
-- RBAC (quién puede cargar y aprobar)
-- Auditoría (eventos de creación/edición)
-- Validaciones y estados
-- UX (evitar carga pesada y errores)
-- Riesgos de integridad / fraude / duplicación</p>
+se debe abrir un ADR específico y revisar:</p>
+<ul>
+<li>RBAC (quién puede cargar y aprobar)</li>
+<li>Auditoría (eventos de creación/edición)</li>
+<li>Validaciones y estados</li>
+<li>UX (evitar carga pesada y errores)</li>
+<li>Riesgos de integridad / fraude / duplicación</li>
+</ul>
 </div>
 
 
