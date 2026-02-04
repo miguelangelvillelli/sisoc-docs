@@ -100,9 +100,7 @@ Se reafirmó como núcleo del MVP:
     - Back (endpoints/DRF): Mati como back + soporte analista (Camilo) para detalle
 - Se propuso foco: cerrar documentación funcional en la semana siguiente y comenzar desarrollo luego.
 
-### 10) Innovación / infraestructura
 
-- Se mencionó reunión con Nacho + Edu Vivas (arquitecto) para encuadre de necesidades hacia Innovación.
 - Regla de oro reafirmada: **la PWA no accede directo a MySQL**, todo vía API.
 
 ---
