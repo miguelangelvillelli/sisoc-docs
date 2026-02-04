@@ -19,20 +19,19 @@ documentación viva + decisiones técnicas mínimas + prototipo UX + setup de re
 - **Analista funcional (SISOC / datos / procesos):** Camilo (a confirmar)  
 - **Backend / API (Django DRF / RBAC / endpoints):** Equipo dev (Mati / Román / a definir)  
 - **Frontend PWA (React):** Pablo (con apoyo inicial de Miguel)  
-- **Infra / DevOps / ambientes / acceso restringido:** Nacho + Edu Vivas (AS)  
+- **Infra / DevOps / ambientes / acceso restringido:** Nacho  
 - **Revisión documentación (PR/merge):** Miguel (revisor principal) + suplente (a definir)
 
-> Sugerencia Trello: crear una tarjeta fija `[S0-00] Roles y responsables del proyecto` y pegar esto ahí.
 
 ---
 
-## Backlog Sprint 0 (copiar/pegar a Trello)
+## Backlog Sprint 0 (Trello)
 
 ### Infra / DevOps
 - [ ] **[S0-01] Repositorio GitHub + ramas + permisos** (Owner: Miguel)  
   - Definir estrategia de ramas (`main` + `gh-pages`)  
   - Definir revisores obligatorios (PR)  
-- [ ] **[S0-02] Acceso restringido al sitio** (Owner: Nacho / Edu)  
+- [ ] **[S0-02] Acceso restringido al sitio** (Owner: Nacho)  
   - Definir alternativa: GitHub Pages (limitado) vs. hosting privado (AS / VPN / Basic Auth)  
   - Propuesta y decisión documentada
 - [ ] **[S0-03] Ambientes dev/staging para API mobile** (Owner: Nacho / equipo backend)  
