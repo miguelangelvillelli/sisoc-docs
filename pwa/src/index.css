@@ -7,27 +7,18 @@
    - .dark.theme-poncho => optional (Poncho dark variant)
    ========================================================= */
 
-/* ------------- Fonts (Poncho) ------------- */
-@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Montserrat:wght@400;500;600;700&display=swap");
+/* ------------- Fonts ------------- */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Montserrat:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Default typography (app) */
+/* Default typography (Inter para Light y Dark) */
 :root {
   --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif;
-  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-}
-
-/* Apply fonts */
-html, body {
-  font-family: var(--font-sans);
-}
-
-h1, h2, h3, .font-title {
-  font-family: var(--font-serif);
+  --font-serif: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif;
 }
 
 /* ------------- Light (default - colores originales SISOC) ------------- */
@@ -174,10 +165,7 @@ h1, h2, h3, .font-title {
   }
   
   body {
-    @apply bg-background text-foreground font-sans antialiased;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-serif);
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
   }
 }
