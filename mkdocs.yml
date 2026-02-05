@@ -99,7 +99,6 @@ nav:
       - Mapa navegación: 08_wireflows/navigation-map.md
       - UI Data Contracts: 08_wireflows/ui-data-contracts.md
   - 09 · Relevamiento: 09_relevamiento/03_home-hub.md
-     
   - ADR:
       - ADR-0001 · Alcance MVP: adr/ADR-0001-alcance-mvp.md
       - ADR-0002 · Usuario organización: adr/ADR-0002-usuario-organizacion.md
