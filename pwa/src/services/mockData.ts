@@ -18,6 +18,8 @@ export interface Space {
   province?: string;
   status: 'activo' | 'suspendido' | 'sin_datos';
   whatsapp_soporte?: string; // Número de WhatsApp del técnico/soporte
+  latitude?: number; // Coordenadas para mapa
+  longitude?: number;
 }
 
 export interface Person {
@@ -116,6 +118,8 @@ export const mockSpaces: Space[] = [
     province: 'Buenos Aires',
     status: 'activo',
     whatsapp_soporte: '5491112345678', // Formato: código país + área + número
+    latitude: -34.7999, // Almirante Brown, Buenos Aires
+    longitude: -58.3970,
   },
 ];
 

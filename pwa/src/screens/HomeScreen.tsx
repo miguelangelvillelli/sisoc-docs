@@ -2,6 +2,7 @@ import { useAuth } from '@/context/AuthContext';
 import { useTheme } from '@/context/ThemeContext';
 import { useNavigate } from 'react-router-dom';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import SpaceMap from '@/components/SpaceMap';
 import { 
   Moon, 
   Sun, 
@@ -171,32 +172,45 @@ const HomeScreen = () => {
         </div>
 
         {/* Info adicional */}
-        <div className="mt-12 bg-surface border border-border rounded-2xl p-6">
-          <h3 className="text-lg font-semibold text-text mb-4">
+        <div className="mt-12 bg-card border border-border rounded-2xl p-6">
+          <h3 className="text-lg font-semibold text-foreground mb-4">
             Información del espacio
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-6">
             <div>
-              <span className="text-text-muted">Dirección:</span>
-              <p className="text-text font-medium">{currentSpace?.address || 'N/A'}</p>
+              <span className="text-muted-foreground">Dirección:</span>
+              <p className="text-foreground font-medium">{currentSpace?.address || 'N/A'}</p>
             </div>
             <div>
-              <span className="text-text-muted">Localidad:</span>
-              <p className="text-text font-medium">{currentSpace?.locality || 'N/A'}</p>
+              <span className="text-muted-foreground">Localidad:</span>
+              <p className="text-foreground font-medium">{currentSpace?.locality || 'N/A'}</p>
             </div>
             <div>
-              <span className="text-text-muted">Provincia:</span>
-              <p className="text-text font-medium">{currentSpace?.province || 'N/A'}</p>
+              <span className="text-muted-foreground">Provincia:</span>
+              <p className="text-foreground font-medium">{currentSpace?.province || 'N/A'}</p>
             </div>
             <div>
-              <span className="text-text-muted">Estado:</span>
+              <span className="text-muted-foreground">Estado:</span>
               <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-                currentSpace?.status === 'activo' ? 'bg-success/20 text-success' : 'bg-warning/20 text-warning'
+                currentSpace?.status === 'activo' ? 'bg-green-500/20 text-green-600' : 'bg-yellow-500/20 text-yellow-600'
               }`}>
                 {currentSpace?.status || 'N/A'}
               </span>
             </div>
           </div>
+
+          {/* Mapa si hay coordenadas */}
+          {currentSpace?.latitude && currentSpace?.longitude && (
+            <div className="mt-4">
+              <SpaceMap
+                latitude={currentSpace.latitude}
+                longitude={currentSpace.longitude}
+                spaceName={currentSpace.space_name}
+                address={`${currentSpace.address}, ${currentSpace.locality}, ${currentSpace.province}`}
+                height="200px"
+              />
+            </div>
+          )}
         </div>
       </main>
 
