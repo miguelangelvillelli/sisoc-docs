@@ -138,7 +138,7 @@ const HomeScreen = () => {
               <button
                 key={module.id}
                 onClick={() => handleModuleClick(module.route)}
-                className="bg-card hover:bg-accent/50 border border-border rounded-2xl p-6 text-left transition-all transform hover:scale-105 active:scale-95"
+                className="bg-card hover:bg-muted border border-border rounded-2xl p-6 text-left transition-all transform hover:scale-105 active:scale-95"
               >
                 <div className="flex items-start space-x-4">
                   <div className={`${module.bgColor} ${module.borderColor} w-14 h-14 rounded-full border-2 flex items-center justify-center flex-shrink-0 transition-transform`}>
