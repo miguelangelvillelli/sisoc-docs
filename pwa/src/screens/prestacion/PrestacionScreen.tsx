@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, Utensils, Calendar, AlertCircle, History, Loader } from 'lucide-react';
+import { ArrowLeft, Apple, Calendar, AlertCircle, History, Loader } from 'lucide-react';
 import { mockPeriodos } from '@/services/mockData';
 import type { Periodo } from '@/services/mockData';
 
@@ -69,7 +69,7 @@ const PrestacionScreen = () => {
           </div>
         ) : !currentPeriod ? (
           <div className="text-center py-12">
-            <Utensils className="w-16 h-16 text-text-muted mx-auto mb-4" strokeWidth={1.5} />
+            <Apple className="w-16 h-16 text-text-muted mx-auto mb-4" strokeWidth={1.5} />
             <p className="text-text-muted">No hay información disponible para este período</p>
           </div>
         ) : (
@@ -78,7 +78,7 @@ const PrestacionScreen = () => {
             <div className="bg-surface border border-border rounded-2xl p-6">
               <div className="flex items-start space-x-4 mb-6">
                 <div className="bg-orange-500/10 border-2 border-orange-500 w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Utensils className="w-7 h-7 text-orange-600" strokeWidth={1.5} />
+                  <Apple className="w-7 h-7 text-orange-600" strokeWidth={1.5} />
                 </div>
                 <div className="flex-1">
                   <h2 className="text-xl font-bold text-text mb-2">

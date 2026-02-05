@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { ArrowLeft, Users, Edit, Power, Loader, Calendar, Utensils, BookOpen } from 'lucide-react';
+import { ArrowLeft, Users, Edit, Power, Loader, Calendar, Apple, GraduationCap } from 'lucide-react';
 import { mockPersons } from '@/services/mockData';
 import type { Person } from '@/services/mockData';
 
@@ -133,7 +133,7 @@ const PersonDetailScreen = () => {
                 : 'bg-background border border-border'
             }`}>
               <div className="flex items-center space-x-3">
-                <Utensils className={`w-5 h-5 ${person.participa_alimentacion ? 'text-orange-600' : 'text-text-muted'}`} strokeWidth={1.5} />
+                <Apple className={`w-5 h-5 ${person.participa_alimentacion ? 'text-orange-600' : 'text-text-muted'}`} strokeWidth={1.5} />
                 <span className={person.participa_alimentacion ? 'text-text font-medium' : 'text-text-muted'}>
                   Prestación Alimentaria
                 </span>
@@ -151,7 +151,7 @@ const PersonDetailScreen = () => {
                 : 'bg-background border border-border'
             }`}>
               <div className="flex items-center space-x-3">
-                <BookOpen className={`w-5 h-5 ${person.participa_formacion ? 'text-purple-600' : 'text-text-muted'}`} strokeWidth={1.5} />
+                <GraduationCap className={`w-5 h-5 ${person.participa_formacion ? 'text-purple-600' : 'text-text-muted'}`} strokeWidth={1.5} />
                 <span className={person.participa_formacion ? 'text-text font-medium' : 'text-text-muted'}>
                   Formación
                 </span>

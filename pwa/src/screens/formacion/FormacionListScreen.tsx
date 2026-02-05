@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, BookOpen, Plus, Calendar, Users, Loader } from 'lucide-react';
+import { ArrowLeft, GraduationCap, Plus, Calendar, Users, Loader } from 'lucide-react';
 import { mockActividades } from '@/services/mockData';
 import type { Actividad } from '@/services/mockData';
 
@@ -88,7 +88,7 @@ const FormacionListScreen = () => {
                 >
                   <div className="flex items-start space-x-4">
                     <div className="bg-purple-500/10 border-2 border-purple-500 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
-                      <BookOpen className="w-6 h-6 text-purple-600" strokeWidth={1.5} />
+                      <GraduationCap className="w-6 h-6 text-purple-600" strokeWidth={1.5} />
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-start justify-between mb-2">
