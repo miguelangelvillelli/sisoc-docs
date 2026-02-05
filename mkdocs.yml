@@ -121,7 +121,7 @@ nav:
       - Rendiciones: 09_relevamiento/09_rendiciones.md
       - Rendiciones Lista: 09_relevamiento/09_1_rendiciones-lista.md
       - Rendiciones Detalle: 09_relevamiento/09_1_1_rendiciones-detalle.md
-      - Rendiciones Adjuntar Comprobantes: 09_relevamiento/09_1_2_rendiciones-adjuntar-comprobantes.md
+      - Rendiciones Adjuntar Comprobantes: 09_relevamiento/09_1_2_rendiciones-adjuntar-comprobante.md
       - Rendiciones Presentar Rendición: 09_relevamiento/09_1_3_rendiciones-presentar-rendicion.md
   - ADR:
       - ADR-0001 · Alcance MVP: adr/ADR-0001-alcance-mvp.md
