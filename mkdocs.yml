@@ -99,16 +99,14 @@ nav:
       - Mapa navegación: 08_wireflows/navigation-map.md
       - UI Data Contracts: 08_wireflows/ui-data-contracts.md
   - 09 · Relevamiento:  
-      - Acceso: 09_relevamiento/01_acceso-login
+      - Acceso: 09_relevamiento/01_acceso-login.md
       - Selector: 09_relevamiento/02_selector-espacio.md
       - Home-Hub: 09_relevamiento/03_home-hub.md
-      - Institucional: 04_info-institucional.md
       - Institucional: 09_relevamiento/04_info-institucional.md
       - Documentos Lista: 09_relevamiento/04_1_documentos-lista.md
       - Documentos Detalle: 09_relevamiento/04_1_1_documento-detalle.md
       - Mensajes Lista: 09_relevamiento/04_2_mensajes-lista.md
       - Mensajes Detalle: 09_relevamiento/04_2_1_mensaje-detalle.md
-      - Mensajes: 09_relevamiento/05_mensajes-operativos.md
       - Nóminas: 09_relevamiento/06_nominas.md
       - Nóminas Lista: 09_relevamiento/06_1_nominas-lista.md
       - Nóminas Persona Detalle: 09_relevamiento/06_2_nominas-persona-detalle.md
