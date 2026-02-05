@@ -1,11 +1,9 @@
 import { useAuth } from '@/context/AuthContext';
-import { useTheme } from '@/context/ThemeContext';
 import { useNavigate } from 'react-router-dom';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import ThemeToggle from '@/components/ThemeToggle';
 import SpaceMap from '@/components/SpaceMap';
 import { 
-  Moon, 
-  Sun, 
   LogOut, 
   FileText, 
   Users, 
@@ -18,7 +16,6 @@ import {
 
 const HomeScreen = () => {
   const { user, currentSpace, logout } = useAuth();
-  const { theme, toggleTheme } = useTheme();
   const navigate = useNavigate();
 
   const modules = [
@@ -91,37 +88,27 @@ const HomeScreen = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="bg-surface border-b border-border">
+      <header className="bg-card border-b border-border">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-lg font-bold text-white">S</span>
+                <span className="text-lg font-bold text-primary-foreground">S</span>
               </div>
               <div>
-                <h1 className="text-lg font-semibold text-text">
+                <h1 className="text-lg font-semibold text-foreground">
                   {currentSpace?.space_name || 'SISOC'}
                 </h1>
-                <p className="text-sm text-text-secondary">{user?.name}</p>
+                <p className="text-sm text-muted-foreground">{user?.name}</p>
               </div>
             </div>
             
             <div className="flex items-center space-x-2">
-              <button
-                onClick={toggleTheme}
-                className="p-2 rounded-lg bg-background hover:bg-border transition-colors"
-                aria-label="Cambiar tema"
-              >
-                {theme === 'light' ? (
-                  <Moon className="w-5 h-5 text-text" strokeWidth={1.5} />
-                ) : (
-                  <Sun className="w-5 h-5 text-text" strokeWidth={1.5} />
-                )}
-              </button>
+              <ThemeToggle />
               
               <button
                 onClick={logout}
-                className="flex items-center space-x-1 px-4 py-2 text-sm font-medium text-error hover:bg-error/10 rounded-lg transition-colors"
+                className="flex items-center space-x-1 px-4 py-2 text-sm font-medium text-destructive hover:bg-destructive/10 rounded-lg transition-colors"
               >
                 <LogOut className="w-4 h-4" strokeWidth={1.5} />
                 <span>Salir</span>
@@ -135,10 +122,10 @@ const HomeScreen = () => {
       <main className="container mx-auto px-4 py-8">
         {/* Bienvenida */}
         <div className="mb-8">
-          <h2 className="text-3xl font-bold text-text mb-2">
+          <h2 className="text-3xl font-bold text-foreground mb-2">
             ¡Hola, {user?.name?.split(' ')[0]}! 👋
           </h2>
-          <p className="text-text-secondary">
+          <p className="text-muted-foreground">
             Seleccioná un módulo para comenzar
           </p>
         </div>
@@ -151,17 +138,17 @@ const HomeScreen = () => {
               <button
                 key={module.id}
                 onClick={() => handleModuleClick(module.route)}
-                className="bg-surface hover:bg-border/50 border border-border rounded-2xl p-6 text-left transition-all transform hover:scale-105 active:scale-95"
+                className="bg-card hover:bg-accent/50 border border-border rounded-2xl p-6 text-left transition-all transform hover:scale-105 active:scale-95"
               >
                 <div className="flex items-start space-x-4">
                   <div className={`${module.bgColor} ${module.borderColor} w-14 h-14 rounded-full border-2 flex items-center justify-center flex-shrink-0 transition-transform`}>
                     <Icon className={`w-7 h-7 ${module.iconColor}`} strokeWidth={1.5} />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-lg font-semibold text-text mb-1">
+                    <h3 className="text-lg font-semibold text-foreground mb-1">
                       {module.title}
                     </h3>
-                    <p className="text-sm text-text-secondary">
+                    <p className="text-sm text-muted-foreground">
                       {module.description}
                     </p>
                   </div>
