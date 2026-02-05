@@ -15,6 +15,10 @@
         <link rel="canonical" href="https://miguelangelvillelli.github.io/sisoc-docs/09_relevamiento/03_home-hub/">
       
       
+        <link rel="prev" href="../../08_wireflows/ui-data-contracts/">
+      
+      
+        <link rel="next" href="../../adr/ADR-0001-alcance-mvp/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +26,7 @@
     
     
       
-        <title>03 — Ficha de relevamiento — Home (Hub) - SISOC · Legajo de Espacio (MVP)</title>
+        <title>09 · Relevamiento - SISOC · Legajo de Espacio (MVP)</title>
       
     
     
@@ -110,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              03 — Ficha de relevamiento — Home (Hub)
+              09 · Relevamiento
             
           </span>
         </div>
@@ -394,9 +398,11 @@
         
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../03_home-hub.md - 03-Home-Hub" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
         
   
     
@@ -1650,10 +1656,30 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../03_home-hub.md - 03-Home-Hub" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    09 · Relevamiento
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1662,6 +1688,158 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-objetivo-del-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) Objetivo del módulo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-usuarios-y-contexto-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      2) Usuarios y contexto de uso
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-contenido-a-mostrar-campos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3) Contenido a mostrar (campos)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3) Contenido a mostrar (campos)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-datos-visibles-arriba-del-todo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Datos visibles (arriba del todo)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-accesos-directos-cards-tiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Accesos directos (cards / tiles)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-contadoresbadges-pendientes-a-validar" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Contadores/Badges (pendientes a validar)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-acciones-del-usuario-cta" class="md-nav__link">
+    <span class="md-ellipsis">
+      4) Acciones del usuario (CTA)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-reglas-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      5) Reglas de negocio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-flujos-y-navegacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      6) Flujos y navegación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-estados-de-pantalla" class="md-nav__link">
+    <span class="md-ellipsis">
+      7) Estados de pantalla
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-notificaciones-si-aplica" class="md-nav__link">
+    <span class="md-ellipsis">
+      8) Notificaciones (si aplica)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-auditoria-minima-eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      9) Auditoría mínima (eventos)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-fuera-de-alcance-explicito-release-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      10) Fuera de alcance explícito (Release 2)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-decisiones-y-pendientes-tbd" class="md-nav__link">
+    <span class="md-ellipsis">
+      11) Decisiones y pendientes (TBD)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
