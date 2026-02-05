@@ -1,11 +1,9 @@
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
-import { getThemeColors, generateCSSVariables } from '@/config/theme.config';
 
-type Theme = 'light' | 'dark';
+type Theme = 'light' | 'dark' | 'poncho';
 
 interface ThemeContextType {
   theme: Theme;
-  toggleTheme: () => void;
   setTheme: (theme: Theme) => void;
 }
 
@@ -15,11 +13,29 @@ interface ThemeProviderProps {
   children: ReactNode;
 }
 
+// Función para aplicar tema al DOM
+const applyTheme = (theme: Theme) => {
+  const html = document.documentElement;
+  
+  // Limpiar clases previas
+  html.classList.remove('dark', 'theme-poncho');
+  
+  // Aplicar clase según tema
+  if (theme === 'dark') {
+    html.classList.add('dark');
+  } else if (theme === 'poncho') {
+    html.classList.add('theme-poncho');
+  }
+  // 'light' no necesita clase (es el default en CSS)
+};
+
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const [theme, setThemeState] = useState<Theme>(() => {
     // Intentar leer del localStorage
-    const saved = localStorage.getItem('sisoc-theme') as Theme;
-    if (saved) return saved;
+    const saved = localStorage.getItem('sisoc_theme') as Theme;
+    if (saved && ['light', 'dark', 'poncho'].includes(saved)) {
+      return saved;
+    }
     
     // Detectar preferencia del sistema
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -30,32 +46,19 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   });
 
   useEffect(() => {
-    // Aplicar clase 'dark' al documento
-    const root = document.documentElement;
-    root.classList.toggle('dark', theme === 'dark');
+    // Aplicar tema al documento
+    applyTheme(theme);
     
     // Guardar preferencia
-    localStorage.setItem('sisoc-theme', theme);
-    
-    // Aplicar variables CSS desde la configuración
-    const colors = getThemeColors(theme);
-    const cssVars = generateCSSVariables(colors);
-    
-    Object.entries(cssVars).forEach(([key, value]) => {
-      root.style.setProperty(key, value);
-    });
+    localStorage.setItem('sisoc_theme', theme);
   }, [theme]);
-
-  const toggleTheme = () => {
-    setThemeState(prev => prev === 'light' ? 'dark' : 'light');
-  };
 
   const setTheme = (newTheme: Theme) => {
     setThemeState(newTheme);
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme, setTheme }}>
+    <ThemeContext.Provider value={{ theme, setTheme }}>
       {children}
     </ThemeContext.Provider>
   );
@@ -67,4 +70,12 @@ export const useTheme = (): ThemeContextType => {
     throw new Error('useTheme must be used within a ThemeProvider');
   }
   return context;
+};
+
+// Aplicar tema inicial antes del render (evita flash)
+export const initTheme = () => {
+  const saved = localStorage.getItem('sisoc_theme') as Theme;
+  if (saved && ['light', 'dark', 'poncho'].includes(saved)) {
+    applyTheme(saved);
+  }
 };
