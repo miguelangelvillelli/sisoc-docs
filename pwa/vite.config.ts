@@ -59,5 +59,12 @@ export default defineConfig({
   server: {
     port: 8010,
     host: true,
+    allowedHosts: [
+      '.ngrok-free.app',
+      '.ngrok.io',
+      '.ngrok-free.dev',
+      '.loca.lt',
+      '.trycloudflare.com',
+    ],
   },
 });

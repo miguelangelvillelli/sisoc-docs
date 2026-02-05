@@ -1,5 +1,7 @@
 import { useAuth } from '@/context/AuthContext';
 import { useTheme } from '@/context/ThemeContext';
+import { useNavigate } from 'react-router-dom';
+import WhatsAppButton from '@/components/WhatsAppButton';
 import { 
   Moon, 
   Sun, 
@@ -16,6 +18,7 @@ import {
 const HomeScreen = () => {
   const { user, currentSpace, logout } = useAuth();
   const { theme, toggleTheme } = useTheme();
+  const navigate = useNavigate();
 
   const modules = [
     {
@@ -26,6 +29,7 @@ const HomeScreen = () => {
       bgColor: 'bg-blue-500/10',
       borderColor: 'border-blue-500',
       iconColor: 'text-blue-600',
+      route: '/perfil',
     },
     {
       id: 'nominas',
@@ -35,6 +39,7 @@ const HomeScreen = () => {
       bgColor: 'bg-green-500/10',
       borderColor: 'border-green-500',
       iconColor: 'text-green-600',
+      route: '/nomina',
     },
     {
       id: 'prestacion',
@@ -44,6 +49,7 @@ const HomeScreen = () => {
       bgColor: 'bg-orange-500/10',
       borderColor: 'border-orange-500',
       iconColor: 'text-orange-600',
+      route: '/prestacion',
     },
     {
       id: 'formacion',
@@ -53,6 +59,7 @@ const HomeScreen = () => {
       bgColor: 'bg-purple-500/10',
       borderColor: 'border-purple-500',
       iconColor: 'text-purple-600',
+      route: '/formacion',
     },
     {
       id: 'rendiciones',
@@ -62,6 +69,7 @@ const HomeScreen = () => {
       bgColor: 'bg-red-500/10',
       borderColor: 'border-red-500',
       iconColor: 'text-red-600',
+      route: '/rendiciones',
     },
     {
       id: 'mensajes',
@@ -71,11 +79,12 @@ const HomeScreen = () => {
       bgColor: 'bg-cyan-500/10',
       borderColor: 'border-cyan-500',
       iconColor: 'text-cyan-600',
+      route: '/mensajes',
     },
   ];
 
-  const handleModuleClick = (moduleId: string) => {
-    alert(`Módulo "${moduleId}" - Pantalla en desarrollo`);
+  const handleModuleClick = (route: string) => {
+    navigate(route);
   };
 
   return (
@@ -140,7 +149,7 @@ const HomeScreen = () => {
             return (
               <button
                 key={module.id}
-                onClick={() => handleModuleClick(module.id)}
+                onClick={() => handleModuleClick(module.route)}
                 className="bg-surface hover:bg-border/50 border border-border rounded-2xl p-6 text-left transition-all transform hover:scale-105 active:scale-95"
               >
                 <div className="flex items-start space-x-4">
@@ -190,6 +199,9 @@ const HomeScreen = () => {
           </div>
         </div>
       </main>
+
+      {/* Botón flotante de WhatsApp */}
+      <WhatsAppButton />
     </div>
   );
 };
