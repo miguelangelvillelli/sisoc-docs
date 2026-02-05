@@ -61,7 +61,7 @@
   --background: 0 0% 10%;         /* #1A1A1A */
   --foreground: 0 0% 100%;        /* #FFFFFF */
 
-  --card: 0 0% 18%;               /* #2D2D2D */
+  --card: 0 0% 12%;               /* #1E1E1E - más oscuro, cercano al fondo */
   --card-foreground: 0 0% 100%;
 
   --popover: 0 0% 18%;
