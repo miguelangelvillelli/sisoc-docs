@@ -5,7 +5,7 @@ import ThemeToggle from '@/components/ThemeToggle';
 import SpaceMap from '@/components/SpaceMap';
 import { 
   LogOut, 
-  FileText, 
+  Building2, 
   Users, 
   Apple, 
   GraduationCap, 
@@ -23,7 +23,7 @@ const HomeScreen = () => {
       id: 'info',
       title: 'Información Institucional',
       description: 'Perfil del espacio y documentos',
-      icon: FileText,
+      icon: Building2,
       bgColor: 'bg-blue-500/10',
       borderColor: 'border-blue-500',
       iconColor: 'text-blue-600',
