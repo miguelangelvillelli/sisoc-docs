@@ -30,70 +30,70 @@ h1, h2, h3, .font-title {
   font-family: var(--font-serif);
 }
 
-/* ------------- Light (default) ------------- */
+/* ------------- Light (default - colores originales SISOC) ------------- */
 :root {
-  /* Neutral base */
-  --background: 0 0% 100%;
-  --foreground: 0 0% 20%; /* ~#333 */
+  /* Base */
+  --background: 0 0% 100%;        /* #FFFFFF */
+  --foreground: 215 16% 15%;      /* #212529 */
 
-  --card: 0 0% 100%;
-  --card-foreground: 0 0% 20%;
+  --card: 210 17% 98%;            /* #F8F9FA */
+  --card-foreground: 215 16% 15%; /* #212529 */
 
   --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 20%;
+  --popover-foreground: 215 16% 15%;
 
-  /* Brand */
-  --primary: 204 100% 37%; /* #0072BB placeholder */
+  /* Brand - Azul institucional SISOC */
+  --primary: 211 100% 40%;        /* #0066CC */
   --primary-foreground: 0 0% 100%;
 
-  --secondary: 0 0% 96%; /* ~#F5F5F5 */
-  --secondary-foreground: 0 0% 20%;
+  --secondary: 210 17% 98%;       /* #F8F9FA */
+  --secondary-foreground: 215 16% 15%;
 
-  --muted: 0 0% 96%;
-  --muted-foreground: 0 0% 40%;
+  --muted: 210 17% 98%;           /* #F8F9FA */
+  --muted-foreground: 215 10% 42%; /* #6C757D */
 
-  --accent: 0 0% 96%;
-  --accent-foreground: 0 0% 20%;
+  --accent: 158 61% 35%;          /* #00A86B */
+  --accent-foreground: 0 0% 100%;
 
-  --destructive: 0 84% 50%;
+  --destructive: 354 70% 54%;     /* #DC3545 */
   --destructive-foreground: 0 0% 100%;
 
-  --border: 0 0% 90%;
-  --input: 0 0% 90%;
-  --ring: 204 100% 37%;
+  --border: 214 19% 89%;          /* #DEE2E6 */
+  --input: 214 19% 89%;           /* #DEE2E6 */
+  --ring: 211 100% 40%;           /* #0066CC */
 
   --radius: 1rem;
 }
 
-/* ------------- Dark (default) ------------- */
+/* ------------- Dark (colores originales SISOC) ------------- */
 .dark {
-  --background: 222 22% 10%;
-  --foreground: 0 0% 98%;
+  --background: 0 0% 10%;         /* #1A1A1A */
+  --foreground: 0 0% 100%;        /* #FFFFFF */
 
-  --card: 222 22% 12%;
-  --card-foreground: 0 0% 98%;
+  --card: 0 0% 18%;               /* #2D2D2D */
+  --card-foreground: 0 0% 100%;
 
-  --popover: 222 22% 12%;
-  --popover-foreground: 0 0% 98%;
+  --popover: 0 0% 18%;
+  --popover-foreground: 0 0% 100%;
 
-  --primary: 204 100% 50%;
-  --primary-foreground: 222 22% 10%;
+  --primary: 211 100% 64%;        /* #4A9EFF - más claro para dark */
+  --primary-foreground: 0 0% 10%;
 
-  --secondary: 222 18% 16%;
-  --secondary-foreground: 0 0% 98%;
+  --secondary: 0 0% 18%;          /* #2D2D2D */
+  --secondary-foreground: 0 0% 100%;
 
-  --muted: 222 18% 16%;
-  --muted-foreground: 0 0% 70%;
+  --muted: 0 0% 18%;              /* #2D2D2D */
+  --muted-foreground: 0 0% 69%;   /* #B0B0B0 */
 
-  --accent: 222 18% 16%;
-  --accent-foreground: 0 0% 98%;
+  --accent: 162 100% 41%;         /* #00D084 - acento verde más brillante */
+  --accent-foreground: 0 0% 10%;
 
-  --destructive: 0 72% 51%;
-  --destructive-foreground: 0 0% 98%;
+  --destructive: 4 90% 58%;       /* #F44336 */
+  --destructive-foreground: 0 0% 100%;
 
-  --border: 222 16% 20%;
-  --input: 222 16% 20%;
-  --ring: 204 100% 50%;
+  --border: 0 0% 25%;             /* #404040 */
+  --input: 0 0% 25%;              /* #404040 */
+  --ring: 211 100% 64%;           /* #4A9EFF */
 }
 
 /* ------------- Poncho (Gob AR) ------------- */

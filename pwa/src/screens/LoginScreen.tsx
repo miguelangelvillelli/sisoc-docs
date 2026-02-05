@@ -67,22 +67,6 @@ const LoginScreen = () => {
             </div>
 
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-text mb-2">
-                Contraseña
-              </label>
-              <input
-                id="password"
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-3 bg-background border border-border rounded-lg text-text placeholder-text-muted focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                placeholder="Ingresá tu contraseña"
-                required
-                disabled={loading}
-              />
-            </div>
-
-            <div>
               <label htmlFor="password" className="block text-sm font-medium text-foreground mb-2">
                 Contraseña
               </label>
