@@ -49,8 +49,8 @@
   --destructive: 354 70% 54%;     /* #DC3545 */
   --destructive-foreground: 0 0% 100%;
 
-  --border: 214 19% 89%;          /* #DEE2E6 */
-  --input: 214 19% 89%;           /* #DEE2E6 */
+  --border: 214 19% 85%;          /* #D5D9DD - más oscuro para mejor contraste */
+  --input: 214 19% 85%;           /* #D5D9DD */
   --ring: 211 100% 40%;           /* #0066CC */
 
   --radius: 1rem;

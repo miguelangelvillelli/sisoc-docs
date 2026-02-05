@@ -16,7 +16,7 @@ const ThemeToggle = () => {
   return (
     <div className="relative group">
       <button
-        className="p-2 rounded-lg bg-card hover:bg-accent transition-colors border border-border"
+        className="p-2 rounded-lg bg-card hover:bg-muted transition-colors border border-border"
         aria-label="Cambiar tema"
       >
         <Icon className="w-5 h-5 text-foreground" strokeWidth={1.5} />
@@ -30,8 +30,8 @@ const ThemeToggle = () => {
             <button
               key={t.value}
               onClick={() => setTheme(t.value)}
-              className={`w-full flex items-center gap-3 px-4 py-2.5 text-sm hover:bg-accent transition-colors first:rounded-t-lg last:rounded-b-lg ${
-                theme === t.value ? 'bg-accent text-primary font-medium' : 'text-foreground'
+              className={`w-full flex items-center gap-3 px-4 py-2.5 text-sm hover:bg-muted transition-colors first:rounded-t-lg last:rounded-b-lg ${
+                theme === t.value ? 'bg-muted text-primary font-medium' : 'text-foreground'
               }`}
             >
               <ThemeIcon className="w-4 h-4" strokeWidth={1.5} />
