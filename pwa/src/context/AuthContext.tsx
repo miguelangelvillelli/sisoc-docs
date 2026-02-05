@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import type { ReactNode } from 'react';
 import { api } from '@/services/api';
 import type { User, Space } from '@/services/mockData';
 
@@ -38,10 +39,21 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
           // Si hay un solo espacio, seleccionarlo automáticamente
           if (context.scope.spaces.length === 1) {
             setCurrentSpaceState(context.scope.spaces[0]);
+            localStorage.setItem('sisoc-current-space', context.scope.spaces[0].space_id);
+          } else {
+            // Si hay múltiples espacios, verificar si ya hay uno seleccionado
+            const savedSpaceId = localStorage.getItem('sisoc-current-space');
+            if (savedSpaceId) {
+              const savedSpace = context.scope.spaces.find((s: Space) => s.space_id === savedSpaceId);
+              if (savedSpace) {
+                setCurrentSpaceState(savedSpace);
+              }
+            }
           }
         } catch (error) {
           console.error('Error al verificar autenticación:', error);
           localStorage.removeItem('sisoc-token');
+          localStorage.removeItem('sisoc-current-space');
         }
       }
       setIsLoading(false);
@@ -62,7 +74,9 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       // Si hay un solo espacio, seleccionarlo automáticamente
       if (context.scope.spaces.length === 1) {
         setCurrentSpaceState(context.scope.spaces[0]);
+        localStorage.setItem('sisoc-current-space', context.scope.spaces[0].space_id);
       }
+      // Si hay múltiples espacios, NO seleccionar ninguno (mostrar selector)
     } catch (error) {
       throw error;
     }
@@ -75,6 +89,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       console.error('Error al cerrar sesión:', error);
     } finally {
       localStorage.removeItem('sisoc-token');
+      localStorage.removeItem('sisoc-current-space');
       setUser(null);
       setSpaces([]);
       setCurrentSpaceState(null);

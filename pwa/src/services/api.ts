@@ -10,6 +10,10 @@ import {
   mockPersons,
   mockMessages,
   mockDocuments,
+  mockUserEspacio,
+  mockUserOrganizacion,
+  mockSpaceEspacio,
+  mockSpacesOrganizacion,
   type User,
   type Space,
   type Person,
@@ -64,12 +68,23 @@ export const api = {
   async login(username: string, password: string): Promise<{ token: string; user: User }> {
     if (USE_MOCK) {
       await delay(500);
+      
+      // Usuario COMEDOR individual (1 espacio)
       if (username === 'demo' && password === 'demo') {
         return {
-          token: 'mock_token_12345',
-          user: mockContext.user,
+          token: 'mock_token_espacio_12345',
+          user: mockUserEspacio,
         };
       }
+      
+      // Usuario ORGANIZACIÓN (múltiples espacios)
+      if (username === 'orga' && password === 'orga') {
+        return {
+          token: 'mock_token_organizacion_67890',
+          user: mockUserOrganizacion,
+        };
+      }
+      
       throw new Error('Usuario o contraseña incorrectos');
     }
     
@@ -92,7 +107,29 @@ export const api = {
   async getContext(): Promise<{ user: User; scope: any }> {
     if (USE_MOCK) {
       await delay(300);
-      return mockContext;
+      
+      // Detectar tipo de usuario por token
+      const token = localStorage.getItem('sisoc-token');
+      
+      if (token === 'mock_token_organizacion_67890') {
+        // Usuario ORGANIZACIÓN → múltiples espacios
+        return {
+          user: mockUserOrganizacion,
+          scope: {
+            spaces: mockSpacesOrganizacion,
+            role: 'org_user',
+          },
+        };
+      }
+      
+      // Usuario COMEDOR → 1 espacio (default)
+      return {
+        user: mockUserEspacio,
+        scope: {
+          spaces: mockSpaceEspacio,
+          role: 'referente',
+        },
+      };
     }
     
     const response = await axiosInstance.get('/me');

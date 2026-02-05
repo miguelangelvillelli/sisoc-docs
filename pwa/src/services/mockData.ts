@@ -100,16 +100,44 @@ export interface Comprobante {
   motivo_invalidacion?: string;
 }
 
-// Mock user
-export const mockUser: User = {
+// Mock users
+// Usuario tipo COMEDOR (1 espacio)
+export const mockUserEspacio: User = {
   id: 'u_001',
   name: 'Juan Referente',
   email: 'referente@espacio.gob.ar',
   role: 'referente',
 };
 
+// Usuario tipo ORGANIZACION (múltiples espacios)
+export const mockUserOrganizacion: User = {
+  id: 'u_002',
+  name: 'María Coordinadora',
+  email: 'coordinadora@organizacion.gob.ar',
+  role: 'org_user',
+};
+
+// Para retrocompatibilidad
+export const mockUser = mockUserEspacio;
+
 // Mock spaces
-export const mockSpaces: Space[] = [
+// Espacio individual para comedor
+export const mockSpaceEspacio: Space[] = [
+  {
+    space_id: 'esp_001',
+    space_name: 'Centro Comunitario La Esperanza',
+    address: 'Av. Libertador 1234',
+    locality: 'Almirante Brown',
+    province: 'Buenos Aires',
+    status: 'activo',
+    whatsapp_soporte: '5491112345678',
+    latitude: -34.7999,
+    longitude: -58.3970,
+  },
+];
+
+// Múltiples espacios para organización
+export const mockSpacesOrganizacion: Space[] = [
   {
     space_id: 'esp_001',
     space_name: 'Centro Comunitario La Esperanza',
@@ -166,6 +194,9 @@ export const mockSpaces: Space[] = [
     longitude: -58.3647,
   },
 ];
+
+// Para retrocompatibilidad
+export const mockSpaces = mockSpaceEspacio;
 
 // Mock persons
 export const mockPersons: Person[] = [
