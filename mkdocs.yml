@@ -98,7 +98,33 @@ nav:
       - Estados UI: 08_wireflows/estados-ui.md
       - Mapa navegación: 08_wireflows/navigation-map.md
       - UI Data Contracts: 08_wireflows/ui-data-contracts.md
-  - 09 · Relevamiento: 09_relevamiento/03_home-hub.md
+  - 09 · Relevamiento:  
+      - Acceso: 09_relevamiento/01_acceso-login
+      - Selector: 09_relevamiento/02_selector-espacio.md
+      - Home-Hub: 09_relevamiento/03_home-hub.md
+      - Institucional: 04_info-institucional.md
+      - Institucional: 09_relevamiento/04_info-institucional.md
+      - Documentos Lista: 09_relevamiento/04_1_documentos-lista.md
+      - Documentos Detalle: 09_relevamiento/04_1_1_documento-detalle.md
+      - Mensajes Lista: 09_relevamiento/04_2_mensajes-lista.md
+      - Mensajes Detalle: 09_relevamiento/04_2_1_mensaje-detalle.md
+      - Mensajes: 09_relevamiento/05_mensajes-operativos.md
+      - Nóminas: 09_relevamiento/06_nominas.md
+      - Nóminas Lista: 09_relevamiento/06_1_nominas-lista.md
+      - Nóminas Persona Detalle: 09_relevamiento/06_2_nominas-persona-detalle.md
+      - Nóminas Persona Editar: 09_relevamiento/06_3_nominas-persona-editar.md
+      - Nóminas Persona Nueva: 09_relevamiento/06_4_nominas-persona-nueva.md  
+      - Prestación alimentaria: 09_relevamiento/07_prestacion-alimentaria.md
+      - Prestación alimentaria Período Actual: 09_relevamiento/07_1_prestacion-periodo-actual.md
+      - Prestación alimentaria Historial Periodos: 09_relevamiento/07_2_prestacion-historial-periodos.md
+      - Prestación alimentaria Detalle Periodo: 09_relevamiento/07_3_prestacion-detalle-periodo.md
+      - Formación: 09_relevamiento/08_formacion.md
+      - Formación Lista: 09_relevamiento/08_1_formacion-lista.md
+      - Rendiciones: 09_relevamiento/09_rendiciones.md
+      - Rendiciones Lista: 09_relevamiento/09_1_rendiciones-lista.md
+      - Rendiciones Detalle: 09_relevamiento/09_1_1_rendiciones-detalle.md
+      - Rendiciones Adjuntar Comprobantes: 09_relevamiento/09_1_2_rendiciones-adjuntar-comprobantes.md
+      - Rendiciones Presentar Rendición: 09_relevamiento/09_1_3_rendiciones-presentar-rendicion.md
   - ADR:
       - ADR-0001 · Alcance MVP: adr/ADR-0001-alcance-mvp.md
       - ADR-0002 · Usuario organización: adr/ADR-0002-usuario-organizacion.md
