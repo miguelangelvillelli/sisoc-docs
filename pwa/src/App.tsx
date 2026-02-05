@@ -3,6 +3,7 @@ import { ThemeProvider } from '@/context/ThemeContext';
 import { AuthProvider, useAuth } from '@/context/AuthContext';
 import LoginScreen from '@/screens/LoginScreen';
 import HomeScreen from '@/screens/HomeScreen';
+import SpaceSelectorScreen from '@/screens/SpaceSelectorScreen';
 
 // Información Institucional
 import SpaceProfileScreen from '@/screens/info/SpaceProfileScreen';
@@ -48,8 +49,26 @@ const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   return isAuthenticated ? <>{children}</> : <Navigate to="/login" replace />;
 };
 
+// Componente de ruta que requiere espacio seleccionado
+const SpaceRequiredRoute = ({ children }: { children: React.ReactNode }) => {
+  const { currentSpace, spaces } = useAuth();
+  
+  // Si no hay espacio seleccionado y hay múltiples espacios, redirigir al selector
+  if (!currentSpace && spaces.length > 1) {
+    return <Navigate to="/select-space" replace />;
+  }
+  
+  // Si hay un solo espacio y no está seleccionado, seleccionarlo automáticamente
+  // (esto no debería ocurrir, pero por precaución)
+  if (!currentSpace && spaces.length === 1) {
+    return <Navigate to="/" replace />;
+  }
+  
+  return <>{children}</>;
+};
+
 function AppRoutes() {
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, spaces, currentSpace, setCurrentSpace } = useAuth();
   
   return (
     <Routes>
@@ -57,11 +76,31 @@ function AppRoutes() {
         path="/login"
         element={isAuthenticated ? <Navigate to="/" replace /> : <LoginScreen />}
       />
+      
+      {/* Selector de espacios (solo si hay múltiples) */}
+      <Route
+        path="/select-space"
+        element={
+          <ProtectedRoute>
+            {spaces.length > 1 ? (
+              <SpaceSelectorScreen 
+                spaces={spaces} 
+                onSelectSpace={setCurrentSpace} 
+              />
+            ) : (
+              <Navigate to="/" replace />
+            )}
+          </ProtectedRoute>
+        }
+      />
+      
       <Route
         path="/"
         element={
           <ProtectedRoute>
-            <HomeScreen />
+            <SpaceRequiredRoute>
+              <HomeScreen />
+            </SpaceRequiredRoute>
           </ProtectedRoute>
         }
       />
@@ -71,7 +110,9 @@ function AppRoutes() {
         path="/perfil"
         element={
           <ProtectedRoute>
-            <SpaceProfileScreen />
+            <SpaceRequiredRoute>
+              <SpaceProfileScreen />
+            </SpaceRequiredRoute>
           </ProtectedRoute>
         }
       />
@@ -79,7 +120,9 @@ function AppRoutes() {
         path="/documentos"
         element={
           <ProtectedRoute>
-            <DocumentListScreen />
+            <SpaceRequiredRoute>
+              <DocumentListScreen />
+            </SpaceRequiredRoute>
           </ProtectedRoute>
         }
       />
@@ -87,7 +130,9 @@ function AppRoutes() {
         path="/documentos/:id"
         element={
           <ProtectedRoute>
-            <DocumentDetailScreen />
+            <SpaceRequiredRoute>
+              <DocumentDetailScreen />
+            </SpaceRequiredRoute>
           </ProtectedRoute>
         }
       />
@@ -97,7 +142,9 @@ function AppRoutes() {
         path="/mensajes"
         element={
           <ProtectedRoute>
-            <MessageListScreen />
+            <SpaceRequiredRoute>
+              <MessageListScreen />
+            </SpaceRequiredRoute>
           </ProtectedRoute>
         }
       />
@@ -105,7 +152,9 @@ function AppRoutes() {
         path="/mensajes/:id"
         element={
           <ProtectedRoute>
-            <MessageDetailScreen />
+            <SpaceRequiredRoute>
+              <MessageDetailScreen />
+            </SpaceRequiredRoute>
           </ProtectedRoute>
         }
       />
@@ -115,7 +164,9 @@ function AppRoutes() {
         path="/nomina"
         element={
           <ProtectedRoute>
-            <NominaListScreen />
+            <SpaceRequiredRoute>
+              <NominaListScreen />
+            </SpaceRequiredRoute>
           </ProtectedRoute>
         }
       />
@@ -123,7 +174,9 @@ function AppRoutes() {
         path="/nomina/nueva"
         element={
           <ProtectedRoute>
-            <PersonCreateScreen />
+            <SpaceRequiredRoute>
+              <PersonCreateScreen />
+            </SpaceRequiredRoute>
           </ProtectedRoute>
         }
       />
@@ -131,7 +184,9 @@ function AppRoutes() {
         path="/nomina/:id"
         element={
           <ProtectedRoute>
-            <PersonDetailScreen />
+            <SpaceRequiredRoute>
+              <PersonDetailScreen />
+            </SpaceRequiredRoute>
           </ProtectedRoute>
         }
       />
@@ -139,7 +194,9 @@ function AppRoutes() {
         path="/nomina/:id/editar"
         element={
           <ProtectedRoute>
-            <PersonEditScreen />
+            <SpaceRequiredRoute>
+              <PersonEditScreen />
+            </SpaceRequiredRoute>
           </ProtectedRoute>
         }
       />
@@ -149,7 +206,9 @@ function AppRoutes() {
         path="/prestacion"
         element={
           <ProtectedRoute>
-            <PrestacionScreen />
+            <SpaceRequiredRoute>
+              <PrestacionScreen />
+            </SpaceRequiredRoute>
           </ProtectedRoute>
         }
       />
@@ -157,7 +216,9 @@ function AppRoutes() {
         path="/prestacion/historial"
         element={
           <ProtectedRoute>
-            <PeriodoHistorialScreen />
+            <SpaceRequiredRoute>
+              <PeriodoHistorialScreen />
+            </SpaceRequiredRoute>
           </ProtectedRoute>
         }
       />
@@ -165,7 +226,9 @@ function AppRoutes() {
         path="/prestacion/periodo/:id"
         element={
           <ProtectedRoute>
-            <PeriodoDetailScreen />
+            <SpaceRequiredRoute>
+              <PeriodoDetailScreen />
+            </SpaceRequiredRoute>
           </ProtectedRoute>
         }
       />
@@ -175,7 +238,9 @@ function AppRoutes() {
         path="/formacion"
         element={
           <ProtectedRoute>
-            <FormacionListScreen />
+            <SpaceRequiredRoute>
+              <FormacionListScreen />
+            </SpaceRequiredRoute>
           </ProtectedRoute>
         }
       />
@@ -185,7 +250,9 @@ function AppRoutes() {
         path="/rendiciones"
         element={
           <ProtectedRoute>
-            <RendicionListScreen />
+            <SpaceRequiredRoute>
+              <RendicionListScreen />
+            </SpaceRequiredRoute>
           </ProtectedRoute>
         }
       />
@@ -193,7 +260,9 @@ function AppRoutes() {
         path="/rendiciones/:id"
         element={
           <ProtectedRoute>
-            <RendicionDetailScreen />
+            <SpaceRequiredRoute>
+              <RendicionDetailScreen />
+            </SpaceRequiredRoute>
           </ProtectedRoute>
         }
       />
