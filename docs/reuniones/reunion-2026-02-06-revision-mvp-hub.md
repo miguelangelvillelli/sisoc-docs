@@ -25,6 +25,7 @@
 ### ✅ Completado
 
 #### Infraestructura base
+
 - [x] Sistema de 3 temas (Claro/Oscuro/Poncho)
 - [x] Autenticación mock (demo/demo y orga/orga)
 - [x] Routing y navegación
@@ -32,6 +33,7 @@
 - [x] Selector de espacios múltiples (para organizaciones)
 
 #### Módulos implementados (17 pantallas)
+
 - [x] HomeScreen (Hub con 6 módulos)
 - [x] Información Institucional (3 pantallas)
 - [x] Mensajes (2 pantallas)
@@ -41,18 +43,21 @@
 - [x] Rendiciones (2 pantallas)
 
 #### Componentes reutilizables
+
 - [x] ThemeToggle (selector de temas)
 - [x] WhatsAppButton (contacto soporte)
 - [x] SpaceMap (Leaflet + OpenStreetMap)
 - [x] SpaceSelectorScreen (multi-espacio)
 
 ### 🚧 En Progreso
+
 - [ ] Integración con API real de SISOC
 - [ ] Validación de datos contra SISOC existente
 - [ ] Ajustes de UX según feedback
 - [ ] Testing en dispositivos reales
 
 ### ⏳ Pendiente
+
 - [ ] Autenticación real contra SISOC
 - [ ] Gestión de archivos/adjuntos (storage)
 - [ ] Importación CSV para nóminas
@@ -69,6 +74,7 @@
 #### Datos actuales en pantallas
 
 **SpaceProfileScreen (Perfil del espacio):**
+
 - Nombre del espacio
 - Dirección completa
 - Localidad / Provincia
@@ -82,12 +88,14 @@
   - Capacidad instalada
 
 **DocumentListScreen (Documentos):**
+
 - Listado de documentos
 - Tipo de documento
 - Fecha de documento
 - Acción: Ver/Descargar
 
 **DocumentDetailScreen:**
+
 - Título del documento
 - Tipo
 - Fecha
@@ -141,6 +149,7 @@
 #### Datos actuales en pantallas
 
 **NominaListScreen (Listado):**
+
 - Contador de personas activas/inactivas
 - Buscador (nombre, apellido, documento)
 - Filtros: Activo/Inactivo, Alimentación, Formación
@@ -152,6 +161,7 @@
 - CTA: Nueva persona
 
 **PersonDetailScreen (Detalle):**
+
 - Nombre completo
 - Tipo y número de documento
 - Fecha de nacimiento (edad calculada)
@@ -165,6 +175,7 @@
 - Acciones: Editar / Ver historial
 
 **PersonCreateScreen / PersonEditScreen:**
+
 - Nombre (requerido)
 - Apellido (requerido)
 - Tipo de documento (DNI/LC/LE/Pasaporte/Otro)
@@ -200,6 +211,7 @@
 #### 📝 Decisiones y notas
 
 **Reglas de validación a definir:**
+
 - ¿Es obligatorio el número de documento?
 - ¿Validamos duplicados por documento en el mismo espacio?
 - ¿Validamos edad mínima/máxima?
@@ -234,6 +246,7 @@
 #### Datos actuales en pantallas
 
 **PrestacionScreen (Estado actual):**
+
 - Período actual (mes/año)
 - Estado del período (badge: vigente/observado/aprobado/cerrado)
 - Alertas si hay observaciones
@@ -246,6 +259,7 @@
 - CTA: Ver historial de períodos
 
 **PeriodoHistorialScreen:**
+
 - Lista de períodos históricos
 - Cada período:
   - Mes/Año
@@ -254,6 +268,7 @@
   - Si tiene observaciones (indicador)
 
 **PeriodoDetailScreen:**
+
 - Título: Mes Año
 - Estado (badge grande)
 - Fechas (inicio/fin)
@@ -279,6 +294,7 @@
 #### 📝 Decisiones y notas
 
 **Puntos a definir:**
+
 - ¿Los espacios pueden editar algo o es solo lectura en MVP?
 - ¿Qué estados aplican: vigente/observado/aprobado/cerrado/rechazado?
 - ¿Mostramos montos? (doc dice "sin montos en MVP")
@@ -301,6 +317,7 @@
 #### Datos actuales en pantallas
 
 **FormacionListScreen:**
+
 - Contador de actividades (total/planificadas/finalizadas)
 - Filtros: Por estado (todas/planificadas/en curso/finalizadas/canceladas)
 - Lista de actividades:
@@ -312,6 +329,7 @@
 - CTA: Nueva actividad
 
 **Pantallas pendientes de implementar:**
+
 - Detalle de actividad
 - Crear/editar actividad
 - Gestionar participantes (asignar desde nómina)
@@ -332,6 +350,7 @@
 #### 📝 Decisiones y notas
 
 **Puntos a definir:**
+
 - ¿Qué campos tiene una actividad de formación en SISOC?
 - ¿Los participantes se toman automáticamente de nómina con flag formación=true?
 - ¿Se registra asistencia por actividad o es solo "participante sí/no"?
@@ -367,6 +386,7 @@
 #### Datos actuales en pantallas
 
 **RendicionListScreen:**
+
 - Contador por estado (todas/borrador/presentadas/observadas/aprobadas)
 - Filtros: Por estado
 - Lista de rendiciones:
@@ -378,6 +398,7 @@
 - CTA: Nueva rendición (si no existe para período actual)
 
 **RendicionDetailScreen:**
+
 - Título: Rendición Mes Año
 - Estado (badge grande)
 - Período asociado
@@ -412,6 +433,7 @@
 #### 📝 Decisiones y notas
 
 **Puntos críticos a definir:**
+
 - ¿Qué tipos de comprobante acepta SISOC?
 - ¿Límite de tamaño por archivo? ¿Límite de archivos por rendición?
 - ¿Formatos aceptados? (PDF, JPG, PNG?)
@@ -448,6 +470,7 @@
 #### Datos actuales en pantallas
 
 **MessageListScreen:**
+
 - Contador de mensajes no leídos
 - Filtros: Todos / No leídos / Leídos
 - Lista de mensajes:
@@ -458,6 +481,7 @@
   - Indicador de prioridad (si aplica)
 
 **MessageDetailScreen:**
+
 - Título del mensaje
 - Fecha de envío
 - Contenido completo
@@ -479,6 +503,7 @@
 #### 📝 Decisiones y notas
 
 **Puntos a definir:**
+
 - ¿Quién envía los mensajes? (administrador central, operador territorial?)
 - ¿Son mensajes masivos o dirigidos a espacios específicos?
 - ¿Hay categorías de mensajes? (urgente/normal/informativo)
@@ -502,12 +527,14 @@
 ### Componentes actuales
 
 **Header:**
+
 - Logo SISOC
 - Nombre del espacio
 - Selector de tema (Light/Dark/Poncho)
 - Botón logout
 
 **Tarjeta de información del espacio:**
+
 - Nombre completo
 - Dirección
 - Localidad, Provincia
@@ -515,6 +542,7 @@
 - Mapa con ubicación
 
 **Grid de módulos (6 cards):**
+
 1. Información Institucional (azul)
 2. Nóminas (verde)
 3. Prestación Alimentaria (naranja)
@@ -523,6 +551,7 @@
 6. Mensajes (cian)
 
 **Footer:**
+
 - Botón WhatsApp soporte
 
 ### ✅ Decisiones sobre el Hub
@@ -611,11 +640,13 @@ PUT  /api/mobile/v1/spaces/{space_id}/messages/{message_id}/read
 ### Storage de archivos
 
 **Decisión pendiente:**
+
 - ⬜ AWS S3
 - ⬜ Storage local Django + nginx
 - ⬜ Otro: _______________
 
 **Requisitos:**
+
 - Límite de tamaño por archivo: ___ MB
 - Formatos aceptados: PDF, JPG, PNG, ¿otros?
 - Tiempo de retención: ___________
@@ -638,22 +669,26 @@ PUT  /api/mobile/v1/spaces/{space_id}/messages/{message_id}/read
 ## 📊 Matriz de Prioridades para Sprint
 
 ### Sprint 1 (próxima semana)
+
 - [ ] Endpoint `/me` + autenticación real
 - [ ] API Información Institucional (GET)
 - [ ] API Mensajes (GET + mark as read)
 - [ ] Testing en dispositivos reales
 
 ### Sprint 2
+
 - [ ] API Nóminas (CRUD completo)
 - [ ] API Prestación Alimentaria (GET)
 - [ ] Importación CSV nóminas
 
 ### Sprint 3
+
 - [ ] API Formación (CRUD + participantes)
 - [ ] API Rendiciones (CRUD + comprobantes)
 - [ ] Storage de archivos
 
 ### Release 2 (fuera de MVP)
+
 - [ ] Push notifications
 - [ ] Offline-first
 - [ ] Analítica avanzada
